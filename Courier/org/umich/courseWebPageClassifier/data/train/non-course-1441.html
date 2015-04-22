@@ -1,0 +1,656 @@
+
+
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
+
+	<!--<![endif]-->
+
+  
+    
+    
+    
+    
+
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+
+    
+      <base href="http://www.engin.umich.edu/college/home" /><!--[if lt IE 7]></base><![endif]-->
+    
+		<!-- Mobile viewport optimized: j.mp/bplateviewport 
+    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+
+    
+        
+        
+        <script>var slideShowImgs = [{image:'/college/images/homepage-images/from-diag-to-grove/display-file/image/grovefinal-bigpic.jpg', title: "From Diag to Grove", subTitle: "Say hello to the Gerstacker Grove.", url:'/college/about/news/stories/2015/march/north-campus-grove-project'},{image:'/college/images/homepage-images/which-way-to-mars/display-file/image/whichwaytomars-bigpic.jpg', title: "Which Way to Mars?", subTitle: "How close are we to landing humans on the red planet?", url:'http://dme.engin.umich.edu/whichwaytomars'},{image:'/college/images/homepage-images/sirius/display-file/image/sirius-bigpic.jpg', title: "Sirius", subTitle: "Build your own digital assistant. (Look out, Siri!)", url:'/college/about/news/stories/2015/march/build-your-own-siri'},{image:'/college/images/homepage-images/drug-delivery-1/display-file/image/drug-delivery-nano-bigpic.jpg', title: "Drug Delivery", subTitle: "Tiny block M's lead to big ideas in drug delivery.", url:'/college/about/news/stories/2015/february/world2019s-smallest-block-m'}];</script>
+    
+
+        <meta content="Michigan Engineering: because the world needs breakthrough solutions." name="description" />
+<title>Welcome to Michigan Engineering | Michigan Engineering</title>
+
+<link rel="alternate" data-kss-base-url="kss-base-url" href="http://www.engin.umich.edu/college/home/" />
+
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/base-cachekey-ceb89578f96b2e210bb80b492339182f.css" />
+    <style type="text/css" media="screen">@import url(http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.app.jquerytools.dateinput-cachekey-41039e61b6a62f20b185f9c7a726ce3d.css);</style>
+    <style type="text/css" media="screen">@import url(http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete-cachekey-880d034522f0d4cf99cda5f60bb05a67.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.app.dexterity.overlays-cachekey-75100420323e26922de1609d88cd74da.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssjquerytools.dateinput-cachekey-aad5ef0c15c91ea68144ff352e9a4f73.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csssocialFeed-cachekey-1e2641b547bd6c3681905a88211a1764.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssflexslider-cachekey-478a3b292aeb1ebe0b87d902c3ff41b7.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csshomePage-cachekey-93f6904778acca9370e1d393638ae2db.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/ploneCustom-cachekey-210e63a20aaa3eb5bd1545160019728e.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssoverrides-cachekey-d2b7f7bb0f638d5ccf8fc0018a7192a6.css" />
+    <link rel="stylesheet" type="text/css" media="handheld, screen and (max-device-width: 480px)" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/mobile-cachekey-d4771a61d832bb609c229464e013cc21.css" />
+
+  
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="http://www.engin.umich.edu/portal_kss/Engineering%20Theme%202012/at-cachekey-091409de8c0baece8efa54973500b6bb.kss" />
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery-integration.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourcecssQuery-compat-cachekey-aae66dfee47fe66e4c3c7b1d9f085c18.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsform_tabbing-cachekey-8e989ba3c435888bca0d5a1f605ad96d.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.app.jquerytools-cachekey-21842c8f8aedf107c9fe1d011f499b1c.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/register_function-cachekey-64befed9c0fa05e75aa6621b3311fdd4.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete.min-cachekey-ed86ba9e40af0f1b1cb14b06c138d54b.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsmodernizr-2.5.3.min-cachekey-d30a05bf6c460dbfa20ff9d743d2a470.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jssupersized.3.2.5-cachekey-1d0abea188157ce87948ad4f97ef5105.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsplugins-cachekey-70e1c86b0bd5913dc07e393217d7052f.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsscripts-cachekey-dd7c27a8453c37da1d0137609bf619bb.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jssocialStream-cachekey-779831594e2a17e7a33c712559a96e55.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjquery.colorbox.min-cachekey-7bb8cef3b9111d688f78f7cfebbfc0ca.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjsrender-cachekey-788bd0ddb83f08ae10d43b6b15a01ccc.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jshomeScripts-cachekey-d0bc1287893bb4ea76172b0a2c63b511.js"></script>
+    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ec44a58724ed4d0"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/table_sorter-cachekey-3db594dbc6e8442fb4c4d90494cd77a2.js"></script>
+
+
+        
+          <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42612631-1', 'umich.edu');
+  ga('send', 'pageview');
+
+  // capture the events of the Social Feeds bubbles and the links inside
+  $('.socialFeeds .socialFeedDay span').bind('click', function(){
+  if($(this).attr('class').indexOf('twitter') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'twitter bubble'); };
+  if($(this).attr('class').indexOf('facebook') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'facebook bubble'); };
+  if($(this).attr('class').indexOf('instagram') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'instagram bubble'); };
+  if($(this).attr('class').indexOf('googleplus') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'googleplus bubble'); };
+  if($(this).attr('class').indexOf('flickr') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'flickr bubble'); };
+  if($(this).attr('class').indexOf('youTube') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'youTube bubble'); };
+  if($(this).attr('class').indexOf('blog') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'blog bubble'); };
+  if($(this).attr('class').indexOf('news') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'news bubble'); };
+  });
+
+  $('.socialFeeds .socialFeedDay span a').bind('click', function(){
+  if($(this).parent().attr('class').indexOf('twitter') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'twitter link'); window.open($(this).attr('href')); return false;};
+  if($(this).parent().attr('class').indexOf('facebook') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'facebook link'); window.open($(this).attr('href')); return false;};
+  if($(this).parent().attr('class').indexOf('instagram') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'instagram link'); window.open($(this).attr('href')); return false;};
+  if($(this).parent().attr('class').indexOf('googleplus') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'googleplus link'); window.open($(this).attr('href')); return false;};
+  if($(this).parent().attr('class').indexOf('flickr') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'flickr link'); window.open($(this).attr('href')); return false;};
+  if($(this).parent().attr('class').indexOf('youTube') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'youTube link'); window.open($(this).attr('href')); return false;};
+  if($(this).parent().attr('class').indexOf('blog') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'blog link'); window.open($(this).attr('href')); return false;};
+  if($(this).parent().attr('class').indexOf('news') > -1){ ga('send', 'event', 'SocialFeeds', 'click', 'news link'); window.open($(this).attr('href')); return false;};
+  });
+  // end
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.engin.umich.edu/++resource++umich_images/favicon.ico" />
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+        
+        <!-- Disable IE6 image toolbar -->
+        <meta http-equiv="imagetoolbar" content="no" />
+
+        
+        
+
+        
+        
+
+        
+        
+
+    
+
+  </head>
+
+  <body class="home template-view portaltype-uom-news-collegehomepage site-engin section-college icons-on hasBreadcrumbs contentNormal" dir="ltr">
+<div id="wrapper" class="lightBg">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+        <div id="portal-header">
+    <div id="portal-personaltools-wrapper">
+    <header><a href="/" id="logo" class="ir">Michigan Engineering</a>
+        <div id="skip">
+            <a href="#content">Skip to Main Content</a>
+        </div>
+        <nav id="utility">
+            <ul>
+                
+                <li class="contact"><a href="http://www.engin.umich.edu/college/about/contact">Contact</a></li>
+                <!--<li class="role">
+                    <span></span>
+                    <a href="#" class="roleChange">Select Role</a>
+                    <div>
+                        <ul>
+                            <li tal:repeat="item view/getRoles"><a tal:attributes="href item/url; title item/title | nothing" tal:content="item/name">Name Item</a></li>
+                        </ul>
+                    </div>
+                </li> -->
+                <li class="search">
+                    <form name="searchform" method="get" id="searchGadget_form" action="http://www-search.engin.umich.edu/search">
+                        <fieldset>
+                            <label for="q">Search</label>
+                            <input type="hidden" name="site" value="CoE" />
+                            <input type="hidden" name="client" value="coe_frontend" />
+                            <input type="hidden" name="proxystylesheet" value="coe_frontend" />
+                            <input type="hidden" name="output" id="output" value="xml_no_dtd" />
+                            <input name="q" id="q" type="text" />
+                        </fieldset>
+                    </form>
+                </li>
+                </ul>
+            </nav>
+            <nav id="mainBar">
+                <ul>
+                    
+                        
+                            <li class="about "><a href="http://www.engin.umich.edu/college/about" title="About">About</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/about/dean-welcome">Welcome from the Dean</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/news">News Center</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/cal">College Calendar</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/social">Social Feed</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/contact">Contact Us</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/about/campus ">Ann Arbor &amp; Campus</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/people">People</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/admin">College Administration</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/resources">College Resources</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/facts">Facts &amp; Figures</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="research "><a href="http://www.engin.umich.edu/college/research" title="Research">Research</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/research/centers">Research Centers &amp; Labs</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/research/faculty">Faculty</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/research/mcubed">MCubed</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/research/undergrad">Undergraduate Research Opportunities</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/research/funding">Getting Research Funding</a></li>
+                                        <li><a href="http://crlte.engin.umich.edu">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="academics "><a href="http://www.engin.umich.edu/college/academics" title="Education related links">Academics</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/academics/undergrad/">Undergraduate Degrees &amp; Programs</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/academics/grad">Graduate Degrees &amp; Programs</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/academics/resources">Student Resources</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/academics/cal">Academic Calendar</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/academics/bulletin">Course Guide &amp; Bulletin</a></li>
+                                        <li><a href="http://graduation.engin.umich.edu">Graduation</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="admissions "><a href="http://www.engin.umich.edu/college/admissions" title="Admissions related links">Admissions</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/admissions/undergrad">Undergraduate Admissions</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/admissions/graduate">Graduate Admissions</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/admissions/international">International Students</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/admissions/finances">Scholarships &amp; Financial Aid</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/admissions/faqs">FAQs</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/admissions/visit">Visit Us</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="departments "><a href="http://www.engin.umich.edu/college/departments" title="Links to departmental websites">Departments</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="/aero" onclick="javascript: pageTracker._trackPageview('/outgoing/http://engin.umich.edu/aero')">Aerospace Engineering</a></li>
+                                        <li><a href="http://aoss.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aoss.engin.umich.edu/')">Atmospheric, Oceanic and Space Sciences</a></li>
+                                        <li><a href="http://www.bme.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.bme.umich.edu/')">Biomedical Engineering</a></li>
+                                        <li><a href="/che" onclick="javascript: pageTracker._trackPageview('/outgoing/http://engin.umich.edu/che')">Chemical Engineering</a></li>
+                                        <li><a href="http://cee.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://cee.engin.umich.edu/')">Civil and Environmental Engineering</a></li>
+                                        <li><a href="http://eecs.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://eecs.umich.edu/')">Electrical Engineering and Computer Science</a></li>
+                                        <li><a href="http://ioe.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://ioe.engin.umich.edu/')">Industrial and Operations Engineering</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://isd.engin.umich.edu" onclick="javascript: pageTracker._trackPageview('/outgoing/http://isd.engin.umich.edu')">Integrative Systems + Design</a></li>
+                                        <li><a href="http://www.mse.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.mse.engin.umich.edu/')">Materials Science and Engineering</a></li>
+                                        <li><a href="http://me.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://me.engin.umich.edu/')">Mechanical Engineering</a></li>
+                                        <li><a href="http://name.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://name.engin.umich.edu/')">Naval Architecture and Marine Engineering</a></li>
+                                        <li><a href="/ners" onclick="javascript: pageTracker._trackPageview('/outgoing/http://engin.umich.edu/ners')">Nuclear Engineering and Radiological Sciences</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/departments/interdisciplinary">Interdisciplinary Graduate Programs</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/departments/college-wide">College-Wide Offerings</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="giving "><a href="http://www.engin.umich.edu/college/giving/" title="Supporting the college links">Giving</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/why">Why to Give</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/opportunities">Giving Opportunities</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/ways">Ways to Give</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/alumni-relations">Alumni Relations</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="last infoForYou "><a href="http://www.engin.umich.edu/college/info" title="Info for You">Info for You</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/info/prospective">Prospective Students</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/students">Current Students</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/alumni">Alumni</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/faculty">Faculty</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/staff">Staff</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/supporters">Supporters of the College</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/family">Family &amp; Parents</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/corporate">Corporate Partners</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/info/media">Media</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            <nav id="breadcrumbs">
+                <ul>
+                    <li>
+                        /
+                        <a href="/college/">College</a></li>
+                        <!--<a tal:attributes="href view/navigation_root_url">College</a></li>-->
+                </ul></nav>
+            </header>
+        </div>
+
+<span id="headerPrintOnly"><img class="printOnly" alt="print Logo" src="/engin/++resource++umich_images/mich-engin-print-only-logo.jpg" /></span>
+
+
+
+
+
+</div>
+
+      </div>
+
+      
+            
+                <div id="staticBG">
+                    
+                        <img width="100%" src="http://www.engin.umich.edu/college/images/homepage-images/from-diag-to-grove/@@display-file/image/grovefinal-bigpic.jpg" alt="From Diag to Grove" />
+                        <ul id="slide-list"></ul>
+                    
+                </div>
+            
+        
+
+      <div role="main" id="contentWrap" class="wideCol">
+      
+      
+
+        
+        
+          
+          
+          
+          <div id="content" class="content rightCol">         
+
+          <div id="viewlet-above-content">
+    
+
+
+
+</div>
+
+          
+            <div class="">
+
+              
+
+              <span id="contentTopLeft"></span>
+              <span id="contentTopRight"></span>
+
+              
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+
+              
+            <div class="contentOverlay"></div>
+            <div id="col1">
+                <nav class="homeNav">
+                    <ul>
+                        <li class="first exploreBg">Explore these links to find out more about us</li>
+                    </ul>
+                    <ul class="stories"></ul>
+                </nav>
+            </div>
+            <div id="contentHolder">
+                <div class="promoHolder">
+                    <div class="promo promoHolderBox1">
+                        
+                            <div class="promoHolderEvents">
+                                <a class="promoEvents" href="/college/about/cal/event-calendar">
+                 <h3>Events</h3>
+                 <h4>Mar</h4>
+                 <div class="pDateItem">
+                   <p class="pDate">24th</p>
+                   <p class="pDate_Info">An Engineering Student's Guide to Networking with LinkedIn</p>
+                 </div>
+                 <div class="pDateItem">
+                   <p class="pDate">24th</p>
+                   <p class="pDate_Info">Healthy Finances for Michigan Students</p>
+                 </div>
+                <span class="linkCtA">see all</span></a>
+                            </div>
+                        
+                        </div>
+                    <div class="promo promoHolderBox2"><p><img src="http://www.engin.umich.edu/college/images/home-box-promos/cpi-cert-promo" alt="cpi-cert-promo" title="cpi-cert-promo" /></p>
+<h3 class="top left">Become An Innovation Leader</h3>
+<p><span class="linkCtA bottom right"><a href="http://mconnex.engin.umich.edu/innovation/um-landing/">register now</a></span></p>
+</div>
+                    <div class="promo promoHolderBox3"><p><img src="http://www.engin.umich.edu/college/images/home-box-promos/umichengin15-apply-grad" alt="umichengin15-apply-grad" title="umichengin15-apply-grad" /></p>
+<h3 class="bottom right">#UmichEngin15: Ready to Graduate?</h3>
+<p><span class="linkCtA top left"><a href="https://t.co/9iug8lBxGV">RSVP by march 30</a></span></p>
+</div>
+                    <div class="promo promoHolderBox4"><p><img src="http://www.engin.umich.edu/college/images/home-box-promos/one-cool-thing-promo" alt="one-cool-thing-promo" title="one-cool-thing-promo" /></p>
+<h3 class="top">A Simple Promise</h3>
+<p><span class="linkCtA bottom right"><a href="/college/about/news/one-cool-thing/about">delivered each day</a></span></p>
+</div></div>
+            </div>
+        
+
+          
+
+          <div id="viewlet-below-content">
+
+
+</div>
+
+          
+
+
+            </div>             
+          
+      </div>     
+      
+      
+      </div>
+    </div>
+
+      
+
+        <div>
+    <div class="socialFeedsHolder">
+        <div class="socialFeeds">
+            <div class="mainSocialBar">
+                <div class="feedToggle arrowUp">
+                    <a href="#" title="News and Social Feed"><img alt="News and Social Feed" class="feedHeader" src="http://www.engin.umich.edu/++resource++umich_images/feedHeader.png" /></a>
+                </div>
+                <div class="socialLinks">
+                    <img alt="Recent Articles" src="http://www.engin.umich.edu/++resource++umich_images/recentArticles.png" />
+                    <a title="Blog" class="blogIcon articleIcon" href="/college/about/social"></a>
+                    <a title="News" class="newsIcon" href="/college/about/news"></a>
+                    <img src="++resource++umich_images/followUs.png" alt="Follow Us" class="follow" />
+                    <a title="Facebook" class="followIcon facebookIcon" href="https://facebook.com/michigan.engineering"></a>
+                    <a title="Twitter" class="followIcon twitterIcon" href="https://twitter.com/umengineering"></a>
+                    <a title="Instagram" class="followIcon instagramIcon" href="http://instagram.com/michiganengineering"></a>
+                    <a title="Flickr" class="followIcon flickrIcon" href="https://www.flickr.com/photos/michigan-engineering"></a>
+                    <a title="YouTube" class="followIcon youTubeIcon" href="https://youtube.com/michiganengineering"></a>
+                    <a title="YouTube" class="followIcon googlePlusIcon" href="https://plus.google.com/111653579154776311686/posts"></a>
+                    <img src="++resource++umich_images/view.png" alt="View:" class="view" />
+                    <a title="All Feeds" class="allFeeds" href="/college/about/social"></a>
+                </div>
+            </div>
+            <div class="feedScroller">
+                <a href="#" class="scrollLeft"></a>
+                <div class="comboHolder">
+                    <div class="innerHolder">
+                        <!-- feeds go here -->
+                        <div class="viewFeedsInScroll">
+                            <a title="View all feeds" href="/college/about/social">View all Feeds</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="scrollRight"></a>
+            </div>
+        </div>
+    </div>
+    
+   <script> var socialFeedWS="//api.engin.umich.edu/socialfeed/api/socialreader.php?feed=michigan_engineering&callback=?"; </script>
+   <script id="socialFeedDayHolder" type="text/x-jquery-tmpl">
+        <div class="socialFeedDay"> </div>
+   </script>
+
+    <script id="socialDayTemplate" type="text/x-jquery-tmpl">
+        <img src="/engin/++resource++umich_images/{{=day}}.png" class="dayMarker" />
+    </script>
+
+    <script id="socialFeedTemplate" type="text/x-jquery-tmpl">
+        <span title="{{=title}}" class="{{=feed}} feedLink" tabindex="0">
+
+            <div class="socialBubble {{=feed}}
+
+            {{#if facebookPreview}} fbPreview {{/if}}
+
+            {{#if flickrPreview}} flickrPreview {{/if}}
+            {{#if instagramPreview}} instagramPreview {{/if}}
+
+            ">
+
+            <a href="{{=imageUrl}}" target="_blank" class="imageLink">
+                <div class="iconImage {{=feed}}"></div>
+                <img src="{{=image}}" alt="{{=feed}}" class="image {{=feed}}" />
+            </a>
+
+            <div class="bubbleContentHolder {{=feed}}">
+                <a href="{{=feedUrl}}" target="_blank" class="socialName">{{=name}}</a>
+                <a href="#" class="close">X</a>
+                <a href="{{=postUrl}}" class="socialTitle">{{=title}}</a>
+                <a href="{{=postUrl}}" class="socialContent" target="_blank">{{=mainContent}}</a>
+                <div class="socialMetaData">{{=metaData}}</div>
+            </div>
+
+            <div class="belowLine">
+
+            {{#if facebookPreview}}
+                <img src="{{=facebookPreview.facebookPreviewImage}}" class="fbPreviewImage" alt="{{=feed}}" />
+                <a href="{{=postUrl}}" target="_blank" class="fbPreviewTitle">{{=facebookPreview.facebookPreviewTitle}}</a>
+                <span class="fbPreviewDescription">{{=facebookPreview.facebookPreviewDescription}}</span>
+            {{/if}}
+
+            {{#if instagramPreview}}
+                <a href="{{=postUrl}}" target="_blank">
+                  <img src="{{=instagramPreview.instagramPreviewImage}}" class="instagramPreviewImage" alt="{{=feed}}" />
+                </a>
+                <!--<a href="{{=postUrl}}" target="_blank" class="instagramPreviewTitle">{{=instagramPreview.instagramPreviewTitle}}</a>-->
+                <a href="{{=postUrl}}" target="_blank">
+                  <span class="instagramPreviewDescription">{{=instagramPreview.instagramPreviewDescription}}</span>
+                </a>
+            {{/if}}
+
+            {{#if flickrPreview}}
+                <a href="{{=postUrl}}" target="_blank">
+                  <img src="{{=flickrPreview.flickrPreviewImage}}" class="flickrPreviewImage" alt="{{=feed}}" />
+                </a>
+                <!--<a href="{{=postUrl}}" target="_blank" class="flickrPreviewTitle">{{=flickrPreview.flickrPreviewTitle}}</a>-->
+                <a href="{{=postUrl}}" target="_blank">
+                  <span class="flickrPreviewDescription">{{=flickrPreview.flickrPreviewDescription}}</span>
+                </a>
+            {{/if}}
+
+            {{#if facebookPreview}}
+
+            {{#else flickrPreview}}
+
+            {{#else instagramPreview}}
+
+            {{#else}}
+
+                <!-- If neither facebookPreview nor flickrPreview nor instagramPreview -->
+                <a href="{{=postUrl}}" target="_blank" class="socialAction">{{=actionCopy}}</a>
+
+            {{/if}}
+
+                </div>
+            </div>
+        </span>
+    </script>
+
+
+
+</div>
+
+
+<footer>
+  <div class="hidden" id="hostportinfo">caen-www-plone0.engin.umich.edu:8081</div>
+  <div class="left">
+    <a href="http://www.umich.edu/" class="left">
+      <img alt="University of Michigan" src="https://s3.amazonaws.com/caen-web-plone-static/images/u-m-logo-transp-263x276.png">
+    </a>
+    <span class="left">
+      <p class="copyright">&copy; <span class="year">2015</span>
+        <a href="http://regents.umich.edu">The Regents of the University of Michigan</a>
+      </p>
+      <p><a href="/college">Michigan Engineering</a> | College Administration, 1221 Beal Avenue, Ann Arbor, MI 48109-2102</p>
+      <p>+1 (734) 647-7000 | <a href="/college/about/contact/general">Contact the College</a></p>
+      <p><a href="http://safety.engin.umich.edu/"><span class="safety">Safety</span> Information</a></p>
+    </span>
+  </div>
+
+  <div class="right">
+    <span class="top">
+      <a href="http://www.facebook.com/michigan.engineering">
+        <img alt="Facebook Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-facebook-white.png">
+      </a>
+      <a href="http://twitter.com/UMengineering">
+        <img alt="Twitter Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-twitter-white.png">
+      </a>
+      <a href="http://instagram.com/michiganengineering">
+        <img alt="Instagram Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-instagram-white.png">
+      </a>
+      <a href="http://www.youtube.com/user/michiganengineering">
+        <img alt="YouTube Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-youtube-white.png">
+      </a>
+    </span>
+    <span class="bottom">
+      <a href="http://www.linkedin.com/edu/school?id=42083">
+        <img alt="LinkedIn Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-linkedin-white.png">
+      </a>
+      <a href="http://michiganengineering.tumblr.com/">
+        <img alt="Tumblr Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-tumblr-white.png">
+      </a>
+      <a href="http://plus.google.com/111653579154776311686/posts">
+        <img alt="Google+ Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-googleplus-white.png">
+      </a>
+      <a href="http://www.pinterest.com/umengineering/">
+        <img alt="Pinterest Icon" src="https://s3.amazonaws.com/caen-web-plone-static/images/circleicon-pinterest-white.png">
+      </a>
+    </span>
+  </div>
+</footer>
+
+
+
+
+      
+
+      
+      
+
+<div id="kss-spinner"><img alt="" src="http://www.engin.umich.edu/++resource++umich_images/spinner.png" /></div>
+</div>
+      
+      
+
+</body>
+</html>
+

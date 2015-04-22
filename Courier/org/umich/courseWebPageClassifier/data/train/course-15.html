@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CS4 : Intro to Scientific Computing and Problem Solving</title>
+<link href='http://fonts.googleapis.com/css?family=Flavors|Passion+One|PT+Sans' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Donegal+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load("jquery", "1.7.1");
+  google.load("jqueryui", "1.8.16");
+  google.setOnLoadCallback(function() {
+  	var page = $('#body').attr('name');
+    $('#'+page).css('color', '#E17114');
+    $('#nav a').hover(function() {
+    	$(this).animate({color: '#E17114'},{queue:false,duration:500});
+    }, function() {
+        if ($(this).attr('id')!=page) {
+            $(this).animate({color: '#ffffff'},{queue:false,duration:500});
+        }
+    });
+    $('.portrait .img1').hover(function() {
+    	  $(this).animate({opacity: 1.0},{queue:false,duration:250});
+    }, function() {
+  	  	$(this).animate({opacity: 0.0},{queue:false,duration:250});
+    });
+		$(".tbl tr:even").addClass("dark-section");
+		$(".tbl tr:odd").addClass("light-section");
+  });
+</script>
+<style type="text/css">
+html,body {
+	height: 100%;
+	min-width: 500px;
+}
+@font-face{
+	font-family: 'thin-disney';
+	src: url(waltograph42-webfont.woff);
+	
+}
+@font-face{
+	font-family: 'geosanslight';
+	src: url(geosanslight.woff);
+}
+@font-face{
+	font-family: 'geosanslight-italic';
+	src: url(geosanslight-oblique.woff);
+}
+.fishbowl {
+    background-color: rgba(0,0,100,0.9);
+}
+.cit219 {
+    background-color: rgba(0,100,0,0.9);
+}
+.sunlab {
+    background-color: rgba(100,0,0,0.9);
+}
+.light-section {
+    background-color: rgba(0,0,0,0.3);
+}
+.dark-section {
+    background-color: rgba(0,0,0,0.5);;
+}
+
+.article1{
+	font-size: 20px;
+	background-color: #CFE1C7;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+.article2{
+	font-size: 20px;
+	text-shadow: 0 0 3px #EAE7E5;
+	background-color: #A5BDD8;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+.article{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display:inline-block;
+    margin: 20px 20px 20px 0px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.article p {
+	font-family: geosanslight;
+	font-size: 18px;
+	font-weight: bold;
+}
+.article.wide {
+	width:100%;
+	font-family: geosanslight;
+	font-size: 18px;
+	font-weight: bold;
+}
+.article:nth-child(even){
+	background-color: #CFE1C7; /* pastel yellowgreen */
+}
+.article:nth-child(odd){
+	background-color: #A5BDD8; /* pastel blue */
+}
+#hour_prof{
+	font-size: 20px;
+	font-weight: bold;
+}
+#homepage{
+		position: relative;
+		background: white url(images/princesses.png) no-repeat;
+		background-position: 140px 70px;
+		-webkit-background-size: 50%;
+		-moz-background-size: 50%;
+		-o-background-size: 50%;
+		background-size: 80%;
+}
+#homepage h1,h2 {
+	color:black;
+	float:none;
+	text-align:center;
+}
+#homepage h1 {
+	width:100%;
+	padding:0;
+	margin: 100px auto 10px;
+	text-shadow: 0 0 5px #D6D5D5;
+	font-family: thin-disney;
+	font-size: 60px;
+	font-weight: bold;
+	color: #312E2E;
+}
+#four {
+	color:white;
+	display:inline-block;
+	width:75px;
+	height:75px;
+	padding-right:5px;
+	padding-top:5px;
+	background-color: #dc1537; /* rose */
+	border-radius:50%;
+}
+#homepage h2 {
+	width: 900px;
+	font-size: 40px;
+	float:none;
+	margin-top: -10px;
+	margin-bottom: 25px;
+	text-shadow: 0 0 5px #D6D5D5;
+	font-family: thin-disney;
+	color: #312E2E;
+}
+#homepage-blurb {
+	background-color: #F0E3D5;
+	color:black;
+	font-family: geosanslight-italic;
+	font-size: 21px;
+	text-shadow: 0 0 3px #EAE7E5;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+
+#body_ind {
+	margin: 0px;
+    min-height: 1000px;
+	font-family: geosanslight;
+	font-size: 18px;
+}
+.body_assignments {
+    min-height: 1000px;
+	background: white url(images/villains.png) no-repeat 600px 400px fixed;
+	-webkit-background-size: 50%;
+	-moz-background-size: 50%;
+	-o-background-size: 50%;
+	background-size: 40%;
+}
+.body_staff {
+	margin: 0px;
+    min-height: 1000px;
+	font-family: "PT Sans", Serif;
+	font-size: 18px;
+	position: relative;
+	background: white url(images/villains.png) no-repeat;
+	background-position: 250px 160px; 
+	-webkit-background-size: 50%;
+	-moz-background-size: 50%;
+	-o-background-size: 50%;
+	background-size: 75%;
+}
+.body_hours {
+	margin: 0px;
+    min-height: 1000px;
+    position: relative;
+	background: white url(images/princesses.png) no-repeat;
+	background-position: 350px 0px;
+	-webkit-background-size: 50%;
+	-moz-background-size: 50%;
+	-o-background-size: 50%;
+	background-size: 70%;
+}
+.body_lectures {
+	margin: 0px;
+    min-height: 1000px;
+    position: relative;
+	background: white url(images/princesses.png) no-repeat center 400px fixed;
+	-webkit-background-size: 50%;
+	-moz-background-size: 50%;
+	-o-background-size: 50%;
+	background-size: 70%;
+}
+
+h1,h2,h3{
+	font-family: 'Prosto One', sans-serif;
+		text-shadow: 0 0 1px rgba(0,0,0,0.7); /* horizontal-offset vertical-offset 'blur' colour */
+  		-moz-text-shadow: 0 0 1px rgba(0,0,0,0.7);
+  		-webkit-text-shadow: 0 0 1px rgba(0,0,0,0.7);
+}
+h1 {
+	
+	color: #fefefe;
+	font-size: 60px;
+	font-weight: normal;
+	margin: 10px 0px 0px 20px;
+
+  float: left;
+  width: 200px;
+}
+h2 {
+	float: left;
+	width: 685px;
+	color: black;
+	font-size: 32px;
+	letter-spacing: 1px;
+	margin: 11px 0px 0px 10px;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: thin-disney;
+	font-weight: normal;
+	color: white;
+	font-size: 45px;
+  	margin: 0px 0px 10px 0px;
+}
+
+h4 {
+	color: #312E2E; 
+	font-family: thin-disney;
+	font-weight: bold;
+	font-size: 30px;
+	padding: 20px;
+	margin: 10px 0px 20px 0px;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-weight: bold;
+	font-size: 22px;
+	margin: 0px;
+	text-transform: uppercase;
+}
+
+#cs4 {
+	float:left;
+	font-color:black;
+}
+#navbar {
+	background: #F0E07E;
+	height: 100px;
+	border-radius: 5px;
+}
+#nav {
+	margin: 0 auto;
+  	padding-top: 40px;
+  	text-align:center;
+}
+
+#nav a {
+	font-family: thin-disney;
+	text-decoration: none;
+	color: #fefefe;
+	font-size: 40px;
+	display:inline-block;
+	margin-right: 45px;
+	margin-top: -15px;
+	text-shadow: 0 0 1px #000; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 1px #000;
+  -webkit-text-shadow: 0 0 1px #000;
+}
+
+p {
+	margin: 0px 0px 20px 0px;
+}
+
+a {
+	color: black;
+	font-family: geosanslight-italic;
+	text-shadow: 0 0 2px rgb(0,0,0,.4);
+}
+
+a:hover {
+	color: #E17114;
+}
+
+table {
+	margin: 20px auto 0px;
+	width: 100%;
+	border-collapse:separate;
+    border-spacing:0px 10px;
+}
+
+td,th {
+	padding:10px 15px 10px 15px;
+}
+
+td {
+	color: white;
+	font-family: geosanslight-italic;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+th {
+	font-weight: bold;
+	font-family: geosanslight-italic;
+	font-size: 18px;
+	text-align: left;
+	background-color: black;
+	color: #1fb3e9; /* eve teal*/
+}
+
+#center {
+	width: 950px;
+	margin: 20px auto 0px auto;
+}
+
+
+.portrait {
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 40px;
+    background-repeat: no-repeat;
+	position: relative;
+}
+
+.portrait:nth-child(4n+1) {
+	clear:left;
+}
+
+.portrait .character, .portrait .person {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+	top: 0px;
+	left: 0px;
+	border-radius:50%;
+	box-shadow: 0 0 20px white;
+}
+
+.portrait:hover .character {
+        display: none;
+}
+
+.portrait .caption {
+	font-size: 16px;
+	height: 20px;
+	position: absolute;
+	bottom: 0px;
+	width:100%;
+	text-align:center;
+	text-shadow: 0 0 5px white;
+}
+
+.person {
+        background-size: 200px 200px;
+}
+
+td a {
+     color: white;
+}
+
+td a:hover {
+     color: #bbb;
+}
+
+td a:visited {
+     color: #ddd;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="homepage">
+<div id="navbar">
+	<div id="nav">
+	<a href="index.shtml" id="home">CS004</a>
+	<!-- <a href="labs.shtml" id="labs">Labs</a> -->
+	<!-- <a href="assignments.shtml" id="assignments">Assignments</a>
+	<a href="lectures.shtml" id="lectures">Lectures</a> -->
+	<a href="hours.shtml" id="hours">Sections</a>
+	<a href="staff.shtml" id="staff">Staff</a>
+	<a href="https://piazza.com/brown/spring2015/cs4/home" id="piazza">Piazza</a>
+	<a href="https://canvas.brown.edu/courses/956521" id="canvas">Canvas</a>
+	</div>
+</div>
+<div id="center">
+<div style="clear: both" />
+
+<div id="body_ind" name="home">
+<h1>CS4 &sdot; Spring 2015</h1> 
+<h2>Introduction to Scientific Computing and Problem Solving</h2>
+<div id="homepage-blurb">
+    <h3>Course Intro</h3>
+        <p>
+        CS4 provides a introduction to using computers to solve STEM (Science, Technology, Engineering and Mathematics) data analysis, visualization and simulation problems.  The main tool used will be MATLAB, with example applications drawn primarily from engineering, neuroscience, biology, mathematics and finance.<br></br>
+       
+        During the semester, students will access and analyze a number of "real world" data sets while becoming fluent MATLAB programmers.<br></br>
+       
+        By the end of the course, students should be comfortably able to use MATLAB to solve a large variety of scientific data analysis, visualization and simulation problems.<br></br>
+       
+        <strong>Requirements</strong>: No prior programming experience is required to take this course (MATLAB is easy and fun to use).  A calculus course (perhaps in high school) is highly recommended.<br></br>
+        </p>
+      
+<!--Articles are divided with the &lt;div class="article&gt; tag. 
+Line breaks are seperated with &lt;br&gt;.<br/> 
+<br/> -->
+      </div>    
+
+    <div class="article1">
+	    <h3>Handouts</h3>
+	<a href="docs/cs4_first_steps.pdf">First Steps</a><br />
+        <a href="docs/cs4_missive.pdf">Course Missive</a><br />
+        <a href="docs/cs4_collab_policy.pdf">Collaboration Policy</a><br />
+	<a href="docs/cs4_pair-programming.pdf">Pair Programming Guide</a><br />
+        <a href="docs/cs4_coding_conventions.pdf">Coding Requirements and Tips</a><br />
+    </div>
+    <div class="article2">
+	    <h3>Resources</h3>
+	<a href="http://tinyurl.com/lvvd32y>">Section Selection Preference Form</a><br />
+        <a href="http://www.brown.edu/information-technology/software/catalog/matlab">MATLAB Install Link</a><br />
+	<a href="http://www.brown.edu/information-technology/knowledge-base/article/1635">MATLAB Installation Guide (internal)</a><br />
+    <a href="http://www.mathworks.com/help/matlab/">MATLAB Documentation</a><br />
+    <a href="docs/cs4_unix_commands.pdf">Unix Commands</a><br />
+    <a href="http://cs.brown.edu/about/system/connecting/sunlab/"> Portable Sunlab</a><br />
+	<a href="http://cs.brown.edu/system/net_remote/ssh">How to Get Remote Access (SSH)</a><br />
+    <a href="docs/fugu.pdf">File Transfer: Fugu (Mac)</a><br />
+    <a href="docs/winSCP.pdf">File Transfer: WinSCP (Windows)</a><br />
+    <!--<a href="http://www.brown.edu/information-technology/knowledge-base/article/1621">iClicker Registration</a><br /> -->
+	<a href="http://piazza.com/brown/spring2015/cs4">Piazza Sign up</a><br />
+    </div>
+
+
+  </div>
+</div>
+<div style="height: 150px"></div>
+</div>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+
+<html>
+<head>
+<TITLE> Randomized Algorithms and Probabilistic Analysis (CS265/CME309), Fall 2014</TITLE>
+</head>
+<meta name="keywords" content="Greg, Gregory, Valiant, Stanford, Randomized Algorithms, Probabilistic Analysis, CS265, CME309">
+<meta name="description" content="Greg, Gregory, Valiant, Stanford, Randomized Algorithms, Probabilistic
+Analysis, CS265, CME309">
+<body>
+
+<h1> CS265/CME309: Randomized Algorithms and Probabilistic Analysis</h1>
+<hr style="width: 100%; height: 2px;"><br>
+<p>
+
+<b>Instructor:</b> <A HREF="http://theory.stanford.edu/~valiant/">Gregory Valiant</A> (Office hours: Wed 4:15-5:30, Gates 470. Contact info: send email to my last name at stanford dot edu).
+
+<p>
+
+<b>Teaching Assistants:</b> <p>
+* Yongxing Deng 
+(Office hours: Tues 3:15-5:15, and Fri 10:30-12:30 in Gates B24.  Contact info: send email to first name at cs dot stanford dot edu)
+
+<p>
+* Weihao Kong
+(Office hours: by appointment.  Contact info: send email to whkong at stanford dot edu)
+
+<p>
+* Jason Hirshman
+(Office hours: Mon 1:30-3:30, Gates 5th floor.  Contact info: send email to last name at stanford dot edu)
+<p>
+<p>
+
+
+<b>Time/location:</B> 11-12:15 Tue/Thu. Location: <a href = "http://campus-map.stanford.edu/?srch=Building+60">Building 60, room 120</a>
+
+<p>
+
+<b>Course description:</B>
+
+Randomness pervades the natural processes around us, from the formation of networks, to genetic recombination, to quantum physics. Randomness is also a powerful tool that can be leveraged to create algorithms and data structures which, in many cases, are more efficient and simpler than their deterministic counterparts. This course covers the key tools of probabilistic analysis, and application of these tools to understand the behaviors of random processes and algorithms. Emphasis is on theoretical foundations, though we will apply this theory broadly, discussing applications in machine learning and data analysis, networking, and systems. 
+
+
+<p>
+
+<b>Topics:</B> Markov and Chebyshev inequalities, Chernoff bounds, random graphs, moment generating functions, metric embeddings, the probabalistic method, markov chains and random walks, MCMC, martingales, stopping times, Azuma-Hoeffding inequality, and many powerful and elegant randomized algorithms whose analyses rely on the above tools.
+
+<p>
+
+<b>Prerequisites:</B> CS 161 and STAT 116, or equivalents and instructor consent.
+
+<p>
+
+<b>Textbook:</B> Mitzenmacher and Upfal, <a href="http://www.amazon.com/Probability-Computing-Randomized-Algorithms-Probabilistic/dp/0521835402"><i>Probability and Computing</i></a>   <br>
+Lecture notes will be provided and posted here for the material that we cover which is not in the book.  For the material we cover that is in the book, the treatment in class will frequently be in slightly greater depth than that in the book, with greater emphasis on more recent developments and open problems, though we will not provide additional lecture notes for this material.  
+
+
+<p>
+
+<b>Grading:</B> 50% problem sets, 20% midterm exam, 30% final exam.
+<p>
+<b>Problem Set Policies:</B> Late problem sets will not be accepted, though your two lowest problem set scores will be dropped.  We strongly encourage using LaTex to write up problem sets, and encourage submitting your problem sets electronically via email to <b>psetCS265@gmail.com</b>.  If you decide to hand in hard-copies of your problem sets, there is a submission box labelled (CS265/CME309) on the left as soon as you enter the East entrance to Gates.   Collaboration and discussion of the problems is encouraged, though you must write up your solution set on your own, and you must understand everything you write.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<b>Lecture 1 (9/23):</B>  Introduction/course overview, models of computation, randomized polynomial identity testing algorithm (Schwartz-Zippel), and (very brief) application to deciding whether a graph has a perfect matching.
+<p>
+<b>ANNOUNCEMENTS:  We have a Piazza page for class discussions.  This is for your benefit, though you do not need to join it.  The TAs and I will monitor it and will try to answer any questions asked on the forum, though please refer to this course website for all announcements/corrections, etc.</B> 
+<p>
+<b>Lecture 2 (9/25):</B>  Randomized min-cut algorithm (section 1.4 in <i> Probability and Computing</i>), linearity of expectation, coupon-collecting, and analysis of Quicksort with random pivoting (section 2.5 in <i>Prob. and Comp.</i>).
+<p>
+<a href = "ps1.pdf">Problem Set 1</a>  Due 10/2.   <a href = "ps1_sols.pdf">Solutions</a>
+<p>
+<b>ANNOUNCEMENTS:  Starting this week, I will be holding office hours Wednesday 4:15-5:15 in my office (470 Gates), and Yongxing will have office hours Tuesday, 3:15-5:15 in Gates B24.</B> 
+<p>
+<b>Lecture 3 (9/30):</B>  Randomized primality testing.  Lecture notes <a href="primality.pdf">here</a>.
+<p>
+<b>Lecture 4 (10/2):</b> Randomized fingerprinting and pattern matching (sorry, I have not made notes for this). Markov's inequality, Chebyshev's inequality, and the randomized sampling-based median algorithm (chapter 3 in <i>Prob. and Comp.</i>).
+<p>
+<a href = "ps2.pdf">Problem Set 2</a>  Due 10/9.  <a href = "ps2_sols.pdf">Solutions</a>
+
+<p>
+<b>Lecture 5 (10/7):</b> Moment generating functions and Chernoff bounds (sections 4.1 - 4.3 in <i>Prob. and Comp.</i>), and randomized routing (section 4.5 in <i>Prob. and Comp.</i>).
+<p>
+<b>Lecture 6 (10/9):</b> Finishing random routing (section 4.5 in <i>Prob. and Comp.</i>), begin "balls in bins" and "Poissonization" technique (sections 5.2--5.5 in <i>Prob. and Comp.</i>).
+<p>
+<a href = "ps3.pdf">Problem Set 3</a>  Due 10/16.  <a href = "ps3_sols.pdf">Solutions</a>
+<p>
+<b>Lecture 7 (10/14):</b> Balls in bins, and "power of 2 choices" (section 14.1 in <i>Prob. and Comp.</i>).
+<p>
+<b>Lecture 8 (10/16):</b> Metric embeddings, and the probabilistic embedding of any n-point metric into L1 with O(log(n)) distortion (due to Bourgain). Lecture notes <a href="metricE.pdf">here</a>.
+<p> 
+<p> <a href = "ps4.pdf">Problem Set 4</a>  Due 10/23.  <a href = "ps4_sols.pdf">Solutions</a>
+<p>
+<b>Lecture 9 (10/21):</b> Guest lecture by Yongxing Deng!!   Dimension reduction (the Johnson--Lindenstrauss metric embedding), and some comments on "locality sensitive hashing".  Lecture notes <a href="JL.pdf">here</a>.
+<p>
+<b>Lecture 10 (10/23):</b> The Probabilistic Method: bounding Ramsey numbers, derandomization via conditional expectations.  (Chapter 6 in <i>Prob. and Comp,</i> not including Lovasz Local Lemma sections).
+<p>
+<p> <a href = "ps5.pdf">Problem Set 5,</a>  due 10/30.  <a href = "ps5_sol.pdf">Solutions</a>.  For problem 3(a), no need to prove your answer--just describe the embedding and state the distortion.  CORRECTION:  The definition in 3(c) has been corrected, as of 3:45pm, Friday 10/24.  The bound in 4(c) has been tightened so as to make 4(d) work, the same argument will yield this tighter bound.  Fixed Tuesday 10am.   Question 3(c) had the inequalities flipped--new version posted at Tuesday, 4pm.   [The old version of 3(c) can actually be solved, though the new version is a bit more intuitive.  Feel free to submit a solution to either formulation.]
+<p>
+<b>Lecture 11 (10/28):</b> Lovasz Local Lemma, and examples.  (Section 6.7 in <i>Prob. and Comp.</i>)
+<p>
+<b>Lecture 12 (10/30):</b> Constructive version of the Lovasz Local Lemma.  Lecture notes <a href="LLLc.pdf">here</a>.
+<p>
+<b>Midterm (11/4)</b> 
+<p>
+<b>Lecture 13 (11/6):</b> Introduction to Markov Chains. (Sections 7.1 to 7.3 in <i>Prob. and Comp.</i>)
+<p>
+<p> <a href = "ps6.pdf">Problem Set 6,</a>  due 11/13.  <a href = "ps6_sol.pdf">Solutions</a>.   [Clarification:  in problems 3(a) and 3(b), the graphs are connected--ie they consist of a single connected component.  The pdf was updated at noon, on 11/10.]
+<p>
+<b>Lecture 14 (11/11):</b> More Markov Chains: stationary distributions (sections 7.3 and 7.4), Markov Chain Monte Carlo (Section 10.4), and a high-level description of how to use these ideas for inference (Gibbs sampling). 
+<p>
+<b>Lecture 15 (11/13):</b> Mixing Times, Strong Stationary Times, and Coupling (chapter 11 in <i>Prob. and Comp.</i>).
+<p>
+<p> <a href = "ps7.pdf">Problem Set 7,</a>  due 11/20.  <a href = "ps7_sol.pdf">Solutions</a>. [Update:  I split up problem 2 into two parts;  its the same problem as before, just broken into parts.  Updated 8pm Friday.]
+<p>
+<b>Lecture 16 (11/18):</b> Martingales, the Doob Martingale, and Azuma-Hoeffding tail bounds (sections 12.1, 12.4, and 12.5 in <i>Prob. and Comp.</i>).
+<p>
+<b>Lecture 17 (11/20):</b> The Martingale stopping theorem (section 12.3 in <i>Prob. and Comp.</i>), and illustrations (counting ballots, and analyzing the expected time until a random walk hits a boundary.
+<p> 
+<p> <a href = "ps8.pdf">Problem Set 8,</a>  due 12/4.   <a href = "ps8_sols.pdf">Solutions</a>.[UPDATED 11/22 at 11pm:  the last part of 5 is now a BONUS, and problem 4 has been slightly re-figured.  Sorry for the inconvenience.    Silly typos in subscripts for problem 4 fixed 11/24.]
+<p>
+<b>Lecture 18 (12/2):</b> Crash course on coding theory.
+<p> 
+<b>Lecture 19 (12/4):</b> Estimating the ``unseen".
+<p> 
+<p> <a href = "final_1.pdf">Take-Home Final,</a>  due 12/11 at 1pm.    [Corrections:  Problem 1(d) was clarified at 6pm, Thursday, 12/4, the typo in problem 4 was fixed at 11pm 12/4.   Problem 3, parts b and c have changed to reflect the fact that we need a slightly more powerful stopping theorem---updated 1am 12/5.   Bonus clarification: if you only have x dollars, you can bet at most x dollars.... (updated Sunday).]

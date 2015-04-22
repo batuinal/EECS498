@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>CS195-5 Intro. to Machine Learning</title>
+</head>
+
+<body>
+
+<center><h2>CS195-5: Introduction to Machine Learning</h2>
+<h3><font color=red>Fall 2006</font></h3>
+</center>
+
+<table>
+<tr>
+<td align="center" valign="top" width=100>
+<br><br><br>
+<a href="main.html">General info</a> <br><br>
+<a href="syllabus.html">Syllabus</a><br><br>
+<a href="calendar.html">Calendar</a><br><br>
+<a href="projects.html">Projects</a> <br><br>
+<a href="matlab.html">Matlab</a><br><br>
+LaTeX<br><br>
+<a href="mailist.html">Mailing List</a> <br><br>
+</td>
+<td>
+
+<p>
+There is an abundance of information on the Web on using LaTeX to
+prepare technical documents. One well organized collection of links
+has been put together by <a
+href="http://www.cs.technion.ac.il/~yogi/latex.html">Yossi Gil at the
+Technion</a>. If you haven't used LaTeX in the past, you will find it
+helpful to go over the relatively simple examples given there, and
+then peruse the tutorials on advanced topics.
+</p>
+
+<p>We also are providing the <i>extremely</i> brief tutorial below,
+that covers just the bare minimum, to get you started.
+</p>
+
+<ol>
+<li>
+<p>File <a href="example.tex">example.tex</a> contains a subset of
+essential commands, demonstrated in a simple manner. Download it.
+</p>
+<li><p>On the CS computer, run the command<br>
+<tt>latex example.tex</tt><br>
+You will need to run it a couple of times (LaTeX works pretty much
+like a compiler, and needs more than one pass to get all the labels,
+cross-references etc. right), until you no longer get complains about
+undefined references, or warnings that "labels may have changed".
+</p>
+<p> You will need to have a figure file named <a
+href="sin.eps">sin.eps</a>, which you can download from here as well.
+</p>
+<li><p>
+You now have a .dvi file with your document; convert it to PostScript
+using the command<br>
+<tt>dvips example.dvi -o example.ps</tt><br>
+You should get a document that looks like <a href="example.ps">this</a>.
+</p>
+<li><p>You can create a PDF version <a href="example.pdf">example.pdf</a> in two ways:
+<ul><li>Once you have the DVI, run<br>
+<tt>dvipdfm example.dvi</tt> 
+<li> Or, create PDF directly from LaTeX:<br>
+<tt>pdfl</tt><br>
+Unfortunately, for this you will need to first convert the .eps
+graphics into some other format, e.g. PDF or PNG:<br>
+<tt>convert sin.eps sin.png</tt><br>
+Note that Matlab can save a figure in many formats, including .eps,
+.pdf or .png.
+</ul> 
+</p>
+</ol>
+
+
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>

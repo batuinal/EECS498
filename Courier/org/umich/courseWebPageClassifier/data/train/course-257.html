@@ -1,0 +1,979 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+	<meta name="robots" content="noindex,nofollow" />
+	<meta name="Author" content="mailto:kaubry@caltech.edu" />
+  <meta name="description" content="Mathematics Course — California
+     Institute of Technology">
+
+  <!-- Use the Caltech icon as the shortcut or favicon: -->
+  <link rel="shortcut icon" href="http://www.caltech.edu/sites/all/themes/caltech_mte/favicon.ico?v=3" type="image/vnd.microsoft.icon" />
+
+  <link rel="stylesheet" type="text/css" href="css/math.css">
+
+  <!-- Use MathJax -->
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <title>
+     [Ma 3/103 - Winter 2015] - Introduction to Probability and Statistics
+  </title>
+
+</head>
+
+<!-- ................................................................ -->
+<!-- ................................................................ -->
+
+
+<body>
+  
+
+<!-- ................................................................ -->
+<!-- ......................... COURSE HEADER ........................ -->
+<!-- ................................................................ -->
+
+<section>
+
+<div id="top">
+  <span style="float: right;"><a href="http://www.math.caltech.edu/"><img src="img/Caltech-ICON-ORANGE-RGB.png" alt="Caltech icon" width="80" height="80"></a></span>
+
+<div id="course-number">Math 3/103</div>
+
+<div id="course-title">Introduction to Probability and Statistics </div>
+
+<div id="course-term">Winter 2014–15</div>
+
+<div id="course-time-and-place">MWF 10:00 AM // Baxter Lecture Hall</div>
+
+</div><!-- end div top -->
+  
+</section>
+
+<!-- ................................................................ -->
+<!-- ....................... TABLE OF CONTENTS ...................... -->
+<!-- ................................................................ -->
+
+<section>
+
+  <div id="table-of-contents">
+    <ul>
+      <li><a href="#contact">Contact Info</a></li>
+      <li><a href="#communication">Communication</a></li>
+      <!--
+      <li><a href="SectionChange.html">Section Change Request</a></li>
+      -->
+      <li><a href="#announcements">Announcements</a></li>
+      <li><a href="#desc">Course Description</a></li>
+      <li><a href="#sections">TAs and Recitations Sections</a></li>
+      <li><a href="#policies">Policies</a></li>
+      <li><a href="#textbooks">Textbooks</a></li>
+      <li><a href="#handouts">Notes and Handouts</a></li>
+      <li><a href="#hw">Homework and Solutions</a></li>
+      <li><a href="Readings.html">Readings</a></li>
+    </ul>
+  </div>
+
+</section>
+
+
+<!-- ................................................................ -->
+<!-- ...................... CONTACT INFORMATION ..................... -->
+<!-- ................................................................ -->
+
+<section>
+  
+  <div id="contact" class="tri-bar">
+    <span class="left-bar">Contact Information</span> 
+    <span class="right-bar"><a href="#top">Top</a></span>
+  </div>
+
+  <dl class="contact-info">
+    <dt>Instructor:</dt>
+
+    <dd>Kim Border, 205 Baxter Hall, x 4218, <a href=
+    "mailto:kcborder@caltech.edu">kcborder@caltech.edu</a></dd>
+    <dt class="subitem">Office Hours:</dt>
+    <dd class="subitem">Fridays, 1:30–3:00 pm</dd>
+
+    <dt>Lead TA:</dt>
+
+    <dd>Marius Lemm, <a href="mailto:mlemm@caltech.edu">mlemm@caltech.edu</a></dd>
+    <dt class="subitem">Office Hours:</dt>
+    <dd class="subitem">5:30 PM, Sunday<br>156 Sloan</dd>
+
+    <dt>Course Secretary:</dt>
+
+    <dd>Kristy Aubry, 253 Sloan, x 4087, <a href="mailto:kaubry@caltech.edu">kaubry@caltech.edu</a></dd>
+  </dl>
+
+</section>
+  
+<!-- ................................................................ -->
+<!-- ......................... COMMUNICATION ........................ -->
+<!-- ................................................................ -->
+
+<section>
+
+  <div id="communication" class="tri-bar">
+    <span class="left-bar">Communication</span> 
+    <span class="right-bar"><a href="#top">Top</a></span>
+  </div>
+
+  <ul>
+
+    <li>
+    <a href="Feedback.html">Send anonymous feedback to the professor</a>.
+    This really is anonymous, so you cannot receive a personal
+    response.  If you want a response, just send an ordinary email to
+    the address above.  Please be constructive rather than abusive.
+    </li>
+
+    <!-- <li><a href="SectionChange.html">Request a section
+    change</a></li> -->
+    
+  </ul>
+
+</section>
+
+
+<!-- ................................................................ -->
+<!-- ..................... ANNOUNCEMENTS GO HERE .................... -->
+<!-- ................................................................ -->
+
+<section>
+
+  <div id="announcements" class="tri-bar">
+    <span class="left-bar">Announcements</span> 
+    <span class="right-bar"><a href="#top">Top</a></span>
+  </div>
+
+  <ul>
+
+    <li>
+    <span class="bold">March 19.</span>
+    <a href="Solutions/ma3_w15_final_solutions.pdf">Solutions for
+    final exam</a> have been posted.
+    </li>
+    
+    <li>
+     <span class="bold">March 9.</span> Professor Gillen has
+     recommended perusing this <a href="Notes/Jorion_1986.pdf">supplementary reading for
+    Lecture 27</a>.
+    </li>
+
+    <li>
+    <span class="bold">March 8.</span>  It seems some of you like to
+    typeset your homework, so by popular demand, here is the \(\LaTeX\) <a
+    href="HW/Table8.tex">source code</a> for the Table in HW 8.
+    </li>
+
+    
+    <li>
+    <span class="bold">March 6.</span> On Wednesday, March 11,
+    which is the last day of instruction, there will be a <span
+    class="bold">special guest lecture</span> by Professor Ben
+    Gillen. The topic will be empirical Bayesian estimation and its
+    applications.  There will be no lecture notes posted on line, but
+    there may be a question on the final related to the material.
+    </li>
+    
+    <li>
+    <span class="bold">March 6.</span>  The <span class="bold">Final
+    Exam</span> will be available by Noon on Wednesday, March 11,
+    which is the last day of instruction.  It will be due on
+    Wednesday, March 18 at Noon.
+
+    There will be a <span class="bold">Review Session</span> on Friday
+    the 13th of March in Baxter Lecture Hall at 2:00 p.m.
+    </li>
+
+
+    <!--
+
+    <li>
+    <span class="bold">February 19</span> An anonymous student has
+    pointed out that there is a mistake on HW 6, in the first paragraph
+    of Question 1.  It says that we have shown that \(
+    (\hat\mu-\mu)/\sigma \) is a standard normal.  It should read   \(
+    (\hat\mu-\mu)/(\sigma/\sqrt{n}) \).  This expression occurs three
+    times in the paragraph.  A corrected version has been
+    posted.
+    </li>
+    
+    <li>
+    <span class="bold">February 11</span> The solution to the midterm
+    has been updated on the web site.  A minor typo has been corrected
+    in HW 5.  The typo was in the example of how to define a function
+    in R:  An n should have been an m, but since it was just an
+    example, and not a function that you would actually use, this is
+    probably harmless.
+    </li>
+
+    <li>
+    <span class="bold">February 2</span> There will be a <strong>midterm
+    review session</strong> hosted by Marius Lemm, on Saturday,
+    February 7, at 11:00 a.m. in the Baxter Lecture Hall.  
+    </li>
+    
+    <li>
+    <span class="bold">February 2</span> The <strong>midterm
+    exam</strong> will be 
+    available on Wednesday, February 4 in class, and afterward during
+    business hours in the Math Department office.  It is due Monday,
+    February 9, at 4:00 pm in the usual box at 253 Sloan.  
+    </li>
+    -->
+    <li>
+    <span class="bold">January 16</span>, 3:30 pm.  The second Bonus Question
+    already has two winners: Youry Aglyamov and Grace Lee.  If you get
+    me a solution soon, you may still qualify for a free lunch.  
+    </li>
+    
+    <li>
+    <span class="bold">January 14</span>.  The first Bonus Question
+    winners are Milica Kolundzija and Adrian Costantino.  
+    </li>
+
+    <!--
+    
+    <li>
+    <span class="bold">January 12</span>.  Several people have found an error in the notes
+    for Lecture 3.  In Section 3.7.7 I wrote
+    \(\binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13} \approx
+    1.34104 \times 10^{23}\).  The correct figure is
+    \(\binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13} \approx
+    5.36447\times 10^{28}\).  I am baffled, but apologize.  I have
+    posted corrected notes.
+    </li>
+   
+    <li>
+    <span class="bold">January 9</span>.  Before Lecture today I
+    announced that Assignment 1 may need revision.  It does not, at
+    least not for the reasons that were suggested to me. (I did
+    however add a footnote about what Samuel Pepys is known for.)
+    </li>
+    
+    <li>
+    <span class="bold">January 8</span>.  Homework Assignment 1 is now
+    available <a href="HW/15Ma3HW1.pdf">here</a>.  It is due Monday,
+    January 12, 4:00 pm in the box outside 253 Sloan.  You may want to
+    use a computer for computing some factorials or binomial coefficients.
+    </li>
+
+    -->
+
+    <li>
+    <span class="bold">Reading schedule for the term</span> (Subject
+    to change)
+        <ul class="no-bullet">
+          <li><a href="Readings.html">Reading list</a></li>
+        </ul>
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- ................................................................ -->
+<!-- ...................... COURSE DESCRIPTION ...................... -->
+<!-- ................................................................ -->
+
+<section>
+
+<div id="desc" class="tri-bar">
+  <span class="left-bar">Course Description</span> 
+  <span class="right-bar"><a href="#top">Top</a></span>
+</div>
+
+<p>Introduction to the fundamental ideas and techniques of
+probability theory and statistical inference.</p>
+
+<dl>
+  <dt>Prerequisites</dt>
+
+  <dd>Ma 1abc. In addition, some familiarity with a scientific
+    computing language or program (e.g., <code>Matlab</code>,
+    <code>Mathematica</code>, <code>R</code>, <code>NumPy</code>) is
+    assumed.</dd>
+    
+</dl>
+  
+  <p>Probability will be covered in the first half of the term (using
+  Pitman) and statistics (using Larsen and Marx) in the second half
+  (see below for information regarding textbooks). Main topics covered
+  are:</p>
+
+  <ul>
+    <li>Properties of probability</li>
+    <li>Independence, conditional probability, Bayes' Law</li>
+    <li>Random variables, distributions, densities, and expectation</li>
+    <li>Joint distributions, marginals, covariance, correlation</li>
+    <li>The Law of Large Numbers</li>
+    <li>The Central Limit Theorem</li>
+    <li>Important distributions
+      <ul>
+        <li>Bernoulli, Binomial</li>
+        <li>Uniform</li>
+        <li>Normal (Gaussian)</li>
+        <li>Exponential, Poisson</li>
+        <li>Gamma, Beta, Chi-square</li>
+        <li>Conjugate prior/posterior pairs</li>
+      </ul>
+    </li>
+    <li>Introduction to stochastic processes
+      <ul>
+        <li>Random walk</li>
+        <li>Markov chains</li>
+        <li>Martingales</li>
+      </ul>
+    </li>
+    <li>Estimation of parameters 
+    <ul>
+      <li>Consistency, unbiasedness</li> 
+      <li>Maximum likelihood estimation</li>
+      <li>Confidence intervals</li>
+      <li>Cramér–Rao lower bound</li>
+    </ul>
+    </li>  
+    <li>Testing statistical hypotheses
+    <ul>
+      <li>Significance tests
+      <ul>
+        <li>Likelihood ratio tests</li>
+        <li>Monotone Likelihood Ratio Property and the Neyman–Person Lemma</li>
+        <li>Type I and Type II errors</li>
+        <li>Critical values</li>
+      </ul>
+      </li>
+      <li>Specification tests
+      <ul>
+        <li>Kolmogorov–Smirnov</li>
+        <li>\(\chi^2\)</li>
+      </ul>
+      </li>
+      <li>Nonparametric tests
+      <ul>
+        <li>Wilcoxon</li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Linear regression analysis
+  <ul>
+    <li>Gauss Markov–Theorem</li>
+    <li>ANOVA</li>
+  </ul>
+</li>
+<li>Introduction to modern statistical techniques
+      <ul>
+        <li>Monte Carlo methods</li>
+        <li>Bootstrap</li>
+        <li>Statistics and machine learning</li>
+      </ul>
+  </li>
+  </ul>
+
+</section>
+
+
+<!-- ................................................................ -->
+<!-- ................... TAs AND SECTION SCHEDULES .................. -->
+<!-- ................................................................ -->
+
+<section>
+
+  <div id="sections" class="tri-bar">
+    <span class="left-bar">Recitation Sections</span> 
+    <span class="right-bar"><a href="#top">Top</a></span>
+  </div>
+
+<!-- Section Table  -->
+
+  <div class="narrower">
+    
+    <table class="sections boxed">
+      <caption>
+        List of Recitation Sections and TAs
+      </caption>
+
+      <thead>
+        <tr>
+          <th id="SectionCol">Section</th>
+
+          <th id="RecitationCol">Recitation</th>
+
+          <th id="TACol">TA</th>
+
+          <th id="HoursCol">Office Hours</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>1</td>
+          <td>9:00 am Thursday<br>159 Sloan</td>
+          <td>Jake Marcinek<br>
+          <a href="mailto:jmarcine@caltech.edu">jmarcine@caltech.edu</a></td>
+          <td>153 Sloan<br>3 PM, Saturday</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>9:00 am Thursday<br>153 Sloan</td>
+          <td>Dmtri Gekthman<br>
+          <a href="mailto:dgekhtma@caltech.edu">dgekhtma@caltech.edu</a></td>
+          <td>155 Sloan<br>2:30 PM, Sunday</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>10:00 am Thursday<br>115 BCK</td>
+          <td>Andrei Frimu<br>
+          <a href="mailto:afrimu@caltech.edu">afrimu@caltech.edu</a></td>
+          <td>155 Sloan<br>3:30, PM Sunday</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>10:00 am Thursday<br>101 Kerckhoff</td>
+          <td>Nathan Lawless<br>
+          <a href="mailto:nlawless@caltech.edu">nlawless@caltech.edu</a></td>
+          <td>155 Sloan<br>4:30 PM, Sunday</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>10:00 am Thursday<br>19 Baxter</td>
+          <td>Seunghee Ye<br>
+          <a href="mailto:syye@caltech.edu">syye@caltech.edu</a></td>
+          <td>160 Sloan<br>x4324<br>8 PM, Sunday</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>11:00 am Thursday<br>151 Sloan</td>
+          <td>Karlming Chen<br>
+            <a href="mailto:kchen7@caltech.edu">kchen7@caltech.edu</a></td>
+          <td>155 Sloan<br>Noon, Sunday</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>1:00 pm Thursday<br>27 Gates</td>
+          <td>Jim Tao<br>
+          <a href="mailto:jtao@caltech.edu">jtao@caltech.edu</a></td>
+          <td>155 Sloan<br>11 AM, Saturday</td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td>1:00 pm Thursday<br>107 Downs</td>
+          <td>Marius Lemm<span class="rust">*</span><br>
+          <a href="mailto:mlemm@caltech.edu">mlemm@caltech.edu</a></td>
+          <td>156 Sloan<br>5:30 PM, Sunday</td>
+        </tr>
+
+        <tr>
+          <td>9</td>
+          <td>2:00 pm Thursday<br>27 Gates</td>
+          <td>Pooya Vahidi<br>
+          <a href="mailto:pvahidif@caltech.edu">pvahidif@caltech.edu</a></td>
+          <td>155 Sloan<br>6 PM, Friday</td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+
+    <p class="footnote">
+    *Head TA
+    </p>
+
+  </div>  <!-- end   <div class="narrower"> -->
+
+</section>
+ 
+
+<!-- ................................................................ -->
+<!-- ........................ COURSE POLICIES ....................... -->
+<!-- ................................................................ -->
+
+<section>
+
+  <div id="policies" class="tri-bar">
+    <span class="left-bar">Policies</span> 
+    <span class="right-bar"><a href="#top">Top</a></span>
+  </div>
+
+  <dl>
+    <dt>Late Work</dt>
+
+    <dd>
+    As rule, late work is not accepted.  This is to protect the TAs,
+    who are talented hardworking students, just as you are.  At the
+    discretion of the Head TA, late homework turned in the day it is
+    due, but after the 4:00 pm deadline will be accepted with a 25%
+    penalty.  (If there are extenuating circumstances, you must notify
+    the Head TA in advance and a note from the Dean will be needed.)
+    As partial compensation, your lowest homework score will be
+    discarded.  (Since the homework assignments have different
+    weights, the Kasatkin Algorithm will be employed to decide which
+    assignment to drop.  It is designed to give you the best score
+    possible.)
+    </dd>
+    
+
+
+    <dt>Grading:</dt>
+
+    <dd>
+      Your course grade will be based on the weekly homework (40%), the
+      midterm (25% or 35%), and the final (35% or 25%). The weights on
+      the final and midterm will put the greater weight on the better
+      exam. In computing the homework average, your lowest homework
+      score will be dropped. This is in lieu of a late homework
+      policy: <strong>no late homework will be accepted without both
+      prior notification of your TA by midnight the night before the
+      set is due, <em>and</em> a note from the Dean.</strong> As this
+      course is for a letter grade, no one will be excused from the
+      final.
+    </dd>
+
+
+    <dt>Homework:</dt>
+
+    <dd>
+    Homework will be typically be due at 4:00 pm on Mondays in the
+    appropriate homework box outside 253 Sloan. (If Monday is a
+    holiday [which happens twice this term] homework will be due on
+    Tuesday.  Assignment 0 is a major exception.)  Problems (and
+    later solutions) will be posted on this course webpage. You are
+    encouraged to start the homework well in advance of the due date
+    in order not to risk missing the deadline. Homework is turned in
+    to locked boxes, so it can safely be submitted as soon as it is
+    completed.
+    </dd>
+
+
+    
+    <dt>Collaboration:</dt>
+
+    <dd>Collaboration is allowed on the homework, but your write-up
+    must be in your own words and may not be copied. Collaboration is
+    not allowed on the exams. Please ask for clarification if anything
+    is unclear.</dd>
+  </dl>
+
+  <p class="center rust">
+    *Information is subject to change*
+  </p>
+
+</section>
+
+<!-- ................................................................ -->
+<!-- ........................... TEXTBOOKS .......................... -->
+<!-- ................................................................ -->
+
+<section>
+
+  <div id="textbooks" class="tri-bar">
+    <span class="left-bar">Textbooks</span> 
+    <span class="right-bar"><a href="#top">Top</a></span>
+  </div>
+
+  <p>The <q>required</q> textbooks for the course are:</p>
+
+  <ul class="no-bullet">
+    <li class="BibItem">
+      <span class="Author">Jim Pitman</span>.
+      <span class="Year">1993</span>.
+      <span class="Booktitle">Probability</span>.
+      <span class="Publisher">Springer</span>,
+      <span class="Address">New York, Berlin, and Heidelberg</span>.
+      <span class="ISBN">ISBN: <a href=
+    "http://www.springer.com/statistics/statistical+theory+and+methods/book/978-0-387-97974-8">0-387-97974-8</a></span>.
+    </li>
+
+    <li class="BibItem">
+      <span class="Author">Richard J. Larsen and Morris L. Marx</span>.
+      <span class="Year">2012</span>.
+      <span class="Booktitle">An Introduction to Mathematical Statistics and Its Applications</span>, fifth edition.
+      <span class="Publisher">Prentice Hall</span>.
+      <span class="ISBN">ISBN: <a href=
+        "http://www.amazon.com/Introduction-Mathematical-Statistics-Its-Applications/dp/0321693949/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1354138553&amp;sr=1-1&amp;keywords=mathematical+statistics+and+its+applications">
+    0-321-69394-9</a></span>.
+    </li>
+  </ul>
+
+  <p>There will be additional readings from time to time, either as
+  handouts or articles available on line.</p>
+
+  <p>There are other books that you may find useful for this course or
+  perhaps later in life. Here are some of my recommendations.</p>
+
+  <ul class="no-bullet">
+    
+    <li class="BibItem">
+    <span class="Author">Robert B. Ash</span>. <span class="Year">2008</span>.
+    <span class="Booktitle">Basic Probability Theory</span>.
+    <span class="Publisher">Dover</span>,
+    <span class="Address">Mineola, New York</span>.
+    <span class="Note">Reprint of the 1970 edition
+    published by John Wiley and Sons.</span>
+    <span class="ISBN">ISBN: 0-486-46628-0</span>. This book, being
+    published by Dover, is very affordable. (I think it's still just
+    under $20.) The first chapter, especially sections 1.4 through 1.7
+    are very good at explaining how to count for combinatorial
+    problems.
+    </li>
+
+    <li class="BibItem">
+    <span class="Author">Calvin Dytham</span>.
+    <span class="Year">2011</span>.
+    <span class="Booktitle">Choosing and Using Statistics: A Biologist's Guide</span>.
+    <span class=
+    "Publisher">Wiley-Blackwell</span>. <span class="ISBN">ISBN: <a href=
+    "http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP002265.html">978-1-4051-9839-4</a></span>. This
+    is a <q>cookbook</q> and reference geared toward biologists, but is a useful reference for almost
+    everyone.</li>
+
+    <li class="BibItem">
+    <span class="Author">John B. Walsh</span>.
+    <span class="Year">2012</span>.
+    <span class="Booktitle">Knowing the Odds: An Introduction to Probability</span>.
+    <span class="Publisher">American Mathematical Society</span>,
+    <span class="Address">Providence, Rhode Island</span>.
+    <span class="ISBN">ISBN: <a href=
+    "http://www.ams.org/bookstore-getitem/item=GSM-139">978-0-8218-8532-1</a></span>. I almost used this as the textbook for the course, but decided to
+    stay with the <i>status quo</i>.
+    </li>
+
+    <li class="BibItem">
+    <span class="Author">Kai Lai Chung and Farid Ait-Sahlia</span>.
+    <span class="Year">2003</span>.
+    <span class="Booktitle">Elementary Probability Theory with Stochastic Processes and an Introduction to Mathematical Finance</span>.
+    <span class="Publisher">Springer-Verlag</span>,
+    <span class="Address">New York, Heidelberg, and Berlin</span>.
+    <span class="ISBN">ISBN: <a href=
+    "http://www.springer.com/mathematics/probability/book/978-0-387-95578-0">978-0-387-95578-0</a></span>.
+    This is a very well-written introduction to probability
+    theory. Chapter 3 on counting is especially good.
+    </li>
+
+    <li class="BibItem">
+    <span class="Author">Richard Isaac</span>.
+    <span class="Year">1995</span>.
+    <span class="Booktitle">The Pleasures of Probability</span>.
+    <span class=
+    "Publisher">Springer-Verlag</span>,
+    <span class="Address">New York, Berlin, and Heidelberg</span>.
+    <span class="ISBN">ISBN: <a href=
+    "http://www.springer.com/mathematics/probability/book/978-0-387-94415-9">0-387-94415-X</a></span>.
+    Another good introduction to probability theory, but a bit too
+    eccentric to use as the main text for this course.
+    </li>
+  </ul>
+
+  <p>Modern statistical practice is computationally intensive, but
+  this course is not especially so.  But you will have to use
+  computers to do some of the assignments.  Many of
+  the people on campus that I have talked to recommend the statistical
+  programming language <code>R</code> (the open source alternative to
+  AT&amp;T's <code>S</code>). The new <code>Mathematica 9 and 10</code>
+  claim to be highly integrated with <code>R</code>, but I haven't
+  tried it yet. Others I have talked to rave about
+  <code>NumPy</code>, an extension of <code>Python</code> that
+  provides much of the functionality of <code>Matlab</code>. Still
+  others continue to use other packages because they have invested a
+  lot of effort in learning to use them. (I myself often use
+  <code>Mathematica</code> because I started using it in 1992, so my
+  recommendation of <code>R</code> falls into the category of do as I
+  say, not as I do.)
+  My son recommends <code>R</code> and this <a href=
+  "http://www.youtube.com/watch?v=W2GZFeYGU3s">video</a> as an
+  endorsement.</p>
+
+  <p>Here are a couple of highly recommended books on <code>R</code>
+  that I mostly have not read. But I find the first two to be useful.</p>
+
+  <ul class="no-bullet">
+    <li class="BibItem">
+      <span class="Author">Claus Thorn Ekstrom</span>.
+      <span class="Year">2011</span>.
+      <span class="Booktitle">R Primer</span>.
+      <span class="Publisher">Chapman & Hall/CRC Press</span>.
+      Available for on-line reading from the <a
+    href="http://site.ebrary.com/lib/caltech/detail.action?docID=10502495">
+    Caltech Library</a>.
+    </li>
+
+    <li class="BibItem">
+      <span class="Author">Paul Teetor</span>.
+      <span class="Year">2011</span>.
+      <span class="Booktitle">R Cookbook</span>.
+      <span class="Publisher">O'Reilly Media</span>.
+      <span class="ISBN">ISBN: <a href="http://shop.oreilly.com/product/9780596809164.do">978-0-596-80915-7</a></span>.
+    </li>
+
+    <li class="BibItem">
+      <span class="Author">Joseph Adler</span>.
+      <span class="Year">2012</span>.
+      <span class="Booktitle">R in a Nutshell</span>, 2nd edition.
+      <span class="Publisher">O'Reilly Media</span>.
+      <span class="ISBN">ISBN: <a href=
+    "http://shop.oreilly.com/product/0636920022008.do">978-1449312084</a></span>.
+    </li>
+
+    <li class="BibItem">
+     <span class="Author">Alain F. Zuur, Elena N. Ieno, and Erik H. W. G.
+    Meesters</span>.
+      <span class="Year">2009</span>.
+      <span class="Booktitle">A Beginner's Guide to R</span>.
+      <span class="Publisher">Springer Science+Business Media</span>,
+      <span class="Address">New York</span>.
+      <span class="ISBN">ISBN: <a href=
+    "http://www.springer.com/statistics/computational+statistics/book/978-0-387-93836-3">978-0-387-93836-3</a></span>.
+    </li>
+
+    <li class="BibItem">
+      <span class="Author">Peter Dalgaard</span>.
+      <span class="Year">2008</span>.
+      <span class="Booktitle">Introductory Statistics with R</span>,
+      second edition.
+      <span class="Publisher">Springer Science+Business Media</span>,
+      <span class="Address">New York</span>.
+      <span class="ISBN">ISBN: <a href=
+    "http://www.springer.com/statistics/computational+statistics/book/978-0-387-79053-4">978-0-387-79053-4</a></span>
+    </li>
+    
+  </ul>
+
+</section>
+
+<!-- ................................................................ -->
+<!-- ............................ HANDOUTS .......................... -->
+<!-- ................................................................ -->
+
+<section>
+
+<div id="handouts" class="tri-bar">
+  <span class="left-bar">Handouts</span> 
+  <span class="right-bar"><a href="#top">Top</a></span>
+</div>
+
+<p>Please report any errors or suspected errors or confusing bits to
+the professor. You can use the <a href="Feedback.html">anonymous
+feedback form</a> if you wish.</p>
+
+
+
+<!-- List of handouts -->
+  
+<h4>Notes for Lectures:</h4>
+
+<ul class="inline">
+
+  <li><a href="Notes/Lecture01.pdf">Lecture 1</a></li>
+  <li><a href="Notes/Lecture02.pdf">Lecture 2</a></li>
+  <li><a href="Notes/Lecture03.pdf">Lecture 3</a></li>
+  <li><a href="Notes/Lecture04.pdf">Lecture 4</a></li>
+  <li><a href="Notes/Lecture05.pdf">Lecture 5</a></li>
+  <li><a href="Notes/Lecture06.pdf">Lecture 6</a></li>
+  <li><a href="Notes/Lecture07.pdf">Lecture 7</a></li>
+  <li><a href="Notes/Lecture08.pdf">Lecture 8</a></li>
+  <li><a href="Notes/Lecture09.pdf">Lecture 9</a></li>
+  <li><a href="Notes/Lecture10.pdf">Lecture 10</a></li>
+  <li><a href="Notes/Lecture11.pdf">Lecture 11</a></li>
+  <li><a href="Notes/Lecture12.pdf">Lecture 12</a></li>
+  <li><a href="Notes/Lecture13.pdf">Lecture 13</a></li>
+  <li><a href="Notes/Lecture14.pdf">Lecture 14</a></li>
+  <li><a href="Notes/Lecture15.pdf">Lecture 15</a></li>
+  <li><a href="Notes/Lecture16.pdf">Lecture 16</a></li>
+  <li><a href="Notes/Lecture17.pdf">Lecture 17</a></li>
+  <li><a href="Notes/Lecture18.pdf">Lecture 18</a></li>
+  <li><a href="Notes/Lecture19.pdf">Lecture 19</a></li>
+  <li><a href="Notes/Lecture20.pdf">Lecture 20</a></li>
+  <li><a href="Notes/Lecture21.pdf">Lecture 21</a></li>
+  <li><a href="Notes/Lecture22.pdf">Lecture 22</a></li>
+  <li><a href="Notes/Lecture23.pdf">Lecture 23</a></li>
+  <li><a href="Notes/Lecture24.pdf">Lecture 24</a></li>
+  <li><a href="Notes/Lecture25.pdf">Lecture 25</a></li>
+  <li><a href="Notes/Lecture26.pdf">Lecture 26</a></li>
+  <li><a href="Notes/Lecture27Gillen.pdf">Lecture 27</a></li>
+
+  <!--
+
+
+  -->
+
+</ul>
+
+  <h4>Data for the Final</h4>
+  <ul>
+    <li>
+    <a href="Data/HubbleData.txt">HubbleData.txt</a>
+    <a href="Data/HubbleData.xlsx">HubbleData.xlsx</a>
+    </li>
+    <li>
+    <a href="Data/TimesDeathData.txt">TimesDeathData.txt</a>
+    </li>
+  </ul>
+
+
+  <h4>Supplementary handouts:</h4>
+
+  <ul class="inline">
+
+    <li><a href="Notes/Jorion_1986.pdf">Supplementary reading for
+    Lecture 27</a>.
+    
+    <li><a href="Notes/FunSeries.pdf">Some sums</a></li>
+    
+    <li><a href="Notes/DistributionReview.pdf">A PDF of PDFs</a> (An
+    anonymous student suggested this title for the review of selected
+    distributions.  Thanks.)</li>
+    
+    <li><a
+    href="http://people.hss.caltech.edu/~kcb/Notes/LinearAlgebra.pdf">Quick
+    review of linear algebra</a>
+    
+    <li>Supplement to Lecture 17: The <a href="Notes/CramerRao.pdf">Fréchet-Cramér-Rao Lower Bound</a>.</li>
+
+    <li>Additional supplement to Lecture 17, providing citations for when you can <a href="Notes/DifferentiatingAnIntegral.pdf">differentiate under an integral sign</a>.</li>
+
+
+    
+    <!--
+
+    <li><a href="Notes/IndexForNotes.pdf">Partial index of notes</a></li>
+
+    <li><a href="Notes/Contents.pdf">Table of contents of
+    notes</a></li>
+
+    -->
+    
+  </ul>
+
+
+</section>
+  
+<!-- ................................................................ -->
+<!-- ........................... HOMEWORK ........................... -->
+<!-- ................................................................ -->
+
+<section>
+
+  <div id="hw" class="tri-bar">
+    <span class="left-bar">Homework</span> 
+    <span class="right-bar"><a href="#top">Top</a></span>
+  </div>
+
+<!--  List of Homework Assignments  -->
+
+  <ul>
+    
+    <li><a href="HW/15Ma3HW0.pdf">Assignment 0</a>.
+    Due Thursday, January 8, 4:00 p.m.
+    <a href="CoinTossResults.html">on line here</a>.
+    </li>
+    
+    <li><a href="HW/15Ma3HW1.pdf">Assignment 1</a>.  Due Monday,
+    January 12, 4:00 pm.
+    <ul>
+      <li><a href="Solutions/15Ma3HW1Soln.pdf">Solutions
+      for Assignment 1</a>.</li> 
+    </ul>
+    </li>
+    
+    <li><a href="HW/15Ma3HW2.pdf">Assignment 2</a>.  Due Tuesday,
+    January 20, 4:00 pm.
+    <ul>
+      <li><a href="Solutions/15Ma3HW2Soln.pdf">Solutions for
+      Assignment 2</a>.</li>
+    </ul>
+    </li>
+
+    <li><a href="HW/15Ma3HW3.pdf">Assignment 3</a>.  Due Monday,
+    January 26, 4:00 pm.
+    <ul>
+      <li><a href="Solutions/15Ma3HW3Soln.pdf">Solutions for
+      Assignment 3</a>.</li>
+    </ul>
+    </li>
+
+    <li><a href="HW/15Ma3HW4.pdf">Assignment 4</a>.  Due Groundhog  Monday,
+    February 2, 4:00 pm.
+    </li>
+
+     <li><a href="Solutions/15Ma3MQSolutionUpdated.pdf">Updated
+     midterm solutions</a> Updated 2015.02.11, 8:43 p.m.</li>
+
+    
+     <li><a href="HW/15Ma3HW5.pdf">Assignment 5</a>.  Due Fat Tuesday,
+    February 17, 4:00 pm.
+    <ul>
+      <li><a href="Solutions/ma3_w15_hw5_solutions.pdf">Solutions for
+      Assignment 5</a>.</li>
+      </ul>
+    </li>
+
+    <li><a href="HW/15Ma3HW6.pdf">Assignment 6</a>.  Due Monday,
+    February 23, 4:00 pm.
+    <ul>
+      <li><a href="Solutions/15Ma3HW6Solution.pdf">Solutions for
+      Assignment 6</a>.</li>
+    </ul>
+    </li>
+
+     <li><a href="HW/15Ma3HW7.pdf">Assignment 7</a>.  Due Monday,
+    March 2, 4:00 pm.
+    <ul>
+      <li><a href="Solutions/15Ma3HW7Solution.pdf">Solutions for
+      Assignment 7</a>.</li>
+    </ul>
+    </li>
+
+    <li><a href="HW/15Ma3HW8.pdf">Assignment 8</a>.  Due Monday, March
+    9, 4:00 pm.
+    <ul>
+      <li>By popular demand, here is the \(\LaTeX\) <a
+      href="HW/Table8.tex">source code</a> for the Table in HW 8.</li>
+      <li><a href="Solutions/15Ma3HW8Solution.pdf">Solutions for
+      Assignment 8</a>.</li>
+    </ul>
+    </li>
+
+    <li><a href="Solutions/ma3_w15_final_solutions.pdf">Solutions for
+    final exam</a>
+    </li>
+    
+  </ul>
+
+</section>
+
+<!-- ................................................................ -->
+<!-- .......................... PAGE FOOTER ......................... -->
+<!-- ................................................................ -->
+
+<footer>
+  
+  <div class="padded center smaller white on-rust">
+    Updated <script type="text/javascript" src="scripts/update.js"></script>
+    | © California Institute of Technology | Questions?
+    <a class="white" href= "mailto:kaubry@caltech.edu">
+    <span class="white">kaubry@caltech.edu</span></a>
+  </div>
+
+</footer>
+  
+<!-- ................................................................ -->
+
+</body>
+
+</html>

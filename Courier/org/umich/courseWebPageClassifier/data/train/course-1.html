@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> CS16: Algorithms and Data Structures</title>
+<link rel="alternate" type="application/rss+xml" title="CS16: Algorithms and Data Structures RSS Feed" href="http://blogs.brown.edu/csci-0160-s01/feed/" />
+<link rel="pingback" href="http://blogs.brown.edu/csci-0160-s01/xmlrpc.php" />
+
+<link rel="stylesheet" href="http://blogs.brown.edu/csci-0160-s01/wp-content/themes/motion/style.css" type="text/css" media="screen" />
+<!--[if lt IE 7]>
+<link href="/ie6.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">var clear="/images/clear.gif"; //path to clear.gif</script>
+<script type="text/javascript" src="/js/unitpngfix.js"></script>
+
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="CS16: Algorithms and Data Structures &raquo; Feed" href="http://blogs.brown.edu/csci-0160-s01/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CS16: Algorithms and Data Structures &raquo; Comments Feed" href="http://blogs.brown.edu/csci-0160-s01/comments/feed/" />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://blogs.brown.edu/csci-0160-s01/wp-content/plugins/jetpack/css/jetpack.css?ver=3.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://blogs.brown.edu/csci-0160-s01/wp-content/themes/motion/js/sfhover.js?ver=4.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blogs.brown.edu/csci-0160-s01/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blogs.brown.edu/csci-0160-s01/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.1" />
+<style type="text/css">
+@font-face { 
+  font-family: Arvo; 
+  src: url('http://www.cs.brown.edu/courses/cs016/fonts/Arvo/Arvo.ttf'); 
+} 
+
+html {
+  background: url('http://blogs.brown.edu/csci-0160-s01/files/2015/01/web_bg_v3_1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+body {
+  background: none;
+}
+
+#wrapper {
+ margin-top: 0px;
+}
+
+.hidden{
+display: none;
+}
+
+#wp-admin-bar-wp-logo, #wp-admin-bar-my-sites {
+  display: none;
+}
+
+.menupop.hover, .menupop.hover .ab-sub-wrapper {
+  background: rgba(0, 0, 0, .7) !important;
+}
+
+.menupop.hover a {
+  background: transparent !important;
+}
+
+.menupop.hover .ab-item:hover {
+  background: rgba(0, 0, 0,.2) !important;
+}
+
+.menupop.hover  .ab-submenu li:hover {
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+#wpadminbar #wp-admin-bar-user-info .display-name {
+  color: #fff;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper, #wpadminbar .shortlink-input {
+  border-color: #8B8B8B;
+}
+
+.primary_menu {
+  display: none;
+}
+
+table td {
+   background: rgba(0, 0, 0, .3);
+}
+
+table tr:hover td {
+   background: rgba(0, 0, 0, .3);
+}
+
+a {
+   color: #BDEFFF !important;
+}
+
+a:hover {
+   //color: #6EB9FF !important;
+   background: transparent !important;
+}
+
+input:hover {
+   color: #f2b676 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Arvo', sans-serif;
+   font-weight: lighter;
+}
+
+h2 a {
+   color: #fff !important;
+   border-bottom: none !important;
+   text-shadow: none;
+}
+
+th {
+   background: rgba(0, 0, 0, .7);
+   color: #fff !important;
+   font-weight: normal;
+}
+
+#comments ul.commentlist li.comment {
+   background: rgba(0, 0, 0, .6);
+}
+
+#comments ul.commentlist li ul.children li {
+   background: rgba(0, 0, 0, .3);
+   font-size: 1em;
+}
+
+#comments .commentbody .author a {
+     color: #fff !important;
+     border-bottom: 0px;
+}
+
+#comments .commentbody .author a:hover {
+     //color: #6EB9FF !important;
+     border-bottom: 0px;
+}
+
+#comments #respond p {
+    font-size: 12px;
+}
+
+#comments #respond p textarea {
+    font-size: 1em;
+}
+
+#comments #respond p input {
+    font-size: 1em !important;
+}
+
+#top {
+   //border-radius: 9px;
+   top: 150px;
+   position: relative;
+   margin-left: 10px;
+}
+
+#top .top_menu li {
+   background: rgba(0, 0, 0, .5);
+   margin: 0px 1px;
+}
+
+#top .top_menu li:hover, #top .top_menu li.current_page_item {
+   background: rgba(0, 0, 0, .7);
+}
+
+#top .top_menu li:hover a{
+   color: #fff !important;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, .5);
+}
+
+#top .top_menu li.page_item {
+   display: list-item;
+}
+
+#search {
+   display: none;
+}
+
+#header #logo {
+   width: inherit !important;
+   margin: 40px 0px 40px !important;
+}
+
+#header #logo h1 a {
+   font-size: 42px;
+   letter-spacing: -3px;
+   color: #fff !important;
+   text-shadow: 0 0 9px #94641B;
+}
+
+#header #logo h1 a:hover {
+   //color: #D88E3F !important;
+}
+
+#header #logo #desc {
+   color: #fff;
+   font-family: "Arvo", sans-serif;
+   font-size: 19px;
+   font-weight: lighter;
+   margin-top: 0px;
+   text-shadow: 0 0 9px #94641B;
+}
+
+#header {
+   padding: 0px;
+   margin-left: 10px;
+}
+
+#header #logo {
+   width: 650px;
+   margin: 20px 0 20px 0;
+}
+
+#header #logo img {
+   display: none;
+}
+
+#header #headerbanner {
+   display: none;
+}
+
+#main { 
+   padding: 0px 0px 20px 0px;
+   margin-top: 40px;
+}
+
+#sidebar {
+}
+
+#sidebar ul li.boxed {
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.posttop {
+   font-size: 20px;
+   font-family: "Arvo", sans-serif;
+   background: rgba(0, 0, 0, .7);
+   border-bottom: 1px solid #4a351e;
+//-webkit-border-top-left-radius: 10px;
+//-webkit-border-top-right-radius: 10px;
+//-moz-border-radius-topleft: 10px;
+//-moz-border-radius-topright: 10px;
+//border-top-left-radius: 10px;
+//border-top-right-radius: 10px;
+}
+
+.posttop h2.posttitle a {
+  font-size: 1em;
+}
+
+a:hover {
+  color: #fff !important;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, .5);
+}
+
+.postmetatop {
+   font-family: sans-serif;
+}
+
+.postmetatop .date {
+   width: 155px;
+}
+
+.postmetatop .date span {
+   background-image: none;
+}
+
+.postmetatop .categs {
+   background-image: none;
+   padding: 0px;
+}
+
+#comments .reply a {
+   background: none;
+   border: 1px solid #88989B;
+   border-radius: 5px;
+}
+
+#comments .reply a:hover {
+   background: rgba(0, 0, 0, 0.3) !important;
+}
+
+#contentdesc {
+   display: none;
+}
+
+#footer {
+   display: none;
+}
+
+#creditsleft {
+   display: none;
+}
+
+#creditsright {
+   display: none;
+}
+
+#content {
+  padding: 0px 10px;
+}
+
+#content .page{
+   color: transparent;
+}
+
+#content.full {
+   width: 670px;
+}
+
+.postcontent {
+   font-size: 14px;
+   background: rgba(0, 0, 0, .6);
+   margin-top: 0px;
+   padding: 10px;
+//-webkit-border-bottom-right-radius: 10px;
+//-webkit-border-bottom-left-radius: 10px;
+//-moz-border-radius-bottomright: 10px;
+//-moz-border-radius-bottomleft: 10px;
+//border-bottom-right-radius: 10px;
+//border-bottom-left-radius: 10px;
+}
+
+.postcontent a {
+     border-bottom: none !important;
+}
+
+.postcontent p {
+   font-family: sans-serif;
+   font-weight: lighter;
+}
+
+.nocomments {
+   display: none;
+}
+
+li.comment {
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+li.comment-author-dlaidlawbrown-edu, 
+li.comment-author-smparkerbrownedu,
+li.comment-author-pmaidenbrownedu,
+li.comment-author-aishabrownedu,
+li.comment-author-bsstonebrownedu,
+li.comment-author-cchretiebrownedu,
+li.comment-author-dkawamotbrownedu,
+li.comment-author-dziringbrownedu,
+li.comment-author-ereifbrownedu,
+li.comment-author-iywubrownedu,
+li.comment-author-knakagawbrownedu,
+li.comment-author-lfiorantbrownedu,
+li.comment-author-lrsteinbbrownedu,
+li.comment-author-mmkaplanbrownedu,
+li.comment-author-mprafsonbrownedu,
+li.comment-author-mz16brownedu,
+li.comment-author-nbahnsonbrownedu,
+li.comment-author-npucelbrownedu,
+li.comment-author-nwwebbbrownedu,
+li.comment-author-rkuchibhbrownedu,
+li.comment-author-sm15brownedu,
+li.comment-author-smsachsbrownedu,
+li.comment-author-taparsonbrownedu,
+li.comment-author-vratchevbrownedu,
+li.comment-author-wh7brownedu
+{
+   box-shadow: 0px 0px 10px #71D7FF;
+}
+
+.code {
+  text-shadow: none;
+}
+
+.commentmetadata {
+   margin-bottom: 10px !important;
+}
+
+.postmetabottom {
+   display: none;
+}
+
+table {
+   margin: auto;
+}
+
+span.port.dhl {
+    align: center;
+}
+
+.rollover {
+        width: 50%;
+}
+
+.rollover .port {
+display: table-cell;
+width: 300px;
+height: 225px;
+text-decoration: none;
+        vertical-align: bottom;
+        font-family: serif;
+        font-style: italic;
+        font-size: 14px;
+        text-shadow: 2px 2px 3px black;
+}
+
+.rollover p {
+   font-size: 11px;
+   line-height: 12px;
+}
+
+.rollover strong {
+    font-size: 11px;
+}
+
+.rollover .port.dhl {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/dhl.gif'); background-size: 100% 100%;
+}
+.rollover .port.smparker {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/smparker.gif'); background-size: 100% 100%;
+}
+.rollover .port.pmaiden {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/pmaiden.gif'); background-size: 100% 100%;
+}
+.rollover .port.aisha {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/aisha.gif'); background-size: 100% 100%;
+}
+.rollover .port.bsstone {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/bsstone.gif'); background-size: 100% 100%;
+}
+.rollover .port.cchretie {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/cchretie.gif'); background-size: 100% 100%;
+}
+.rollover .port.dkawamot {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/dkawamot.gif'); background-size: 100% 100%;
+}
+.rollover .port.dziring {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/dziring.gif'); background-size: 100% 100%;
+}
+.rollover .port.ereif {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/ereif_2.gif'); background-size: 100% 100%;
+}
+.rollover .port.iywu {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/iywu_2.gif'); background-size: 100% 100%;
+}
+.rollover .port.knakagaw {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/knakagaw.gif'); background-size: 100% 100%;
+}
+.rollover .port.lfiorant {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/lfiorant_2.gif'); background-size: 100% 100%;
+}
+.rollover .port.lrsteinb {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/lrsteinb.gif'); background-size: 100% 100%;
+}
+.rollover .port.mmkaplan {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/mmkaplan.gif'); background-size: 100% 100%;
+}
+.rollover .port.mprafson {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/mprafson.gif'); background-size: 100% 100%;
+}
+.rollover .port.mz16 {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/mz16.gif'); background-size: 100% 100%;
+}
+.rollover .port.nbahnson {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/npucel.gif'); background-size: 100% 100%;
+}
+.rollover .port.npucel {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2015/01/npucel.gif'); background-size: 100% 100%;
+}
+.rollover .port.nwwebb {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2015/01/nwwebb.gif'); background-size: 100% 100%;
+}
+.rollover .port.rkuchibh {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/rkuchibh.gif'); background-size: 100% 100%;
+}
+.rollover .port.sm15 {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/sm15.gif'); background-size: 100% 100%;
+}
+.rollover .port.smsachs {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/smsachs.gif'); background-size: 100% 100%;
+}
+.rollover .port.taparson {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/taparson.gif'); background-size: 100% 100%;
+}
+.rollover .port.vratchev {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/vratchev.gif'); background-size: 100% 100%;
+}
+.rollover .port.wh7 {
+        background: url('http://blogs.brown.edu/csci-0160-s01/files/2012/01/wh7.gif'); background-size: 100% 100%;
+}
+
+
+
+.displace {
+position: absolute;
+left: -5000px;
+}
+
+#header #logo img {
+        border: 2px ridge #4a351e;
+        margin-top: 2px;
+}
+
+.inline-block {
+        display: inline-block;
+        vertical-align: top;
+        padding: 30px;
+}
+
+#topmenu {
+        width: 100% !important;
+}
+
+#tag_cloud-3 a {
+       padding: 5px;
+}
+
+#top .top_menu {
+   float: left;
+   width: 670px;
+}
+</style>
+
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+
+									_gaq.push(['_setAccount', 'UA-34495025-1']);
+										_gaq.push(['_trackPageview']);
+											_gaq.push(['_trackPageLoadTime']);
+									
+				
+				(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+
+			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="home blog">
+<div id="wrapper">
+
+<div id="top">
+	<ul class="top_menu"><li class="page_item page-item-11"><a href="http://blogs.brown.edu/csci-0160-s01/assignments/">Assignments</a></li>
+<li class="page_item page-item-1468"><a href="http://blogs.brown.edu/csci-0160-s01/calendar-2/">Calendar</a></li>
+<li class="page_item page-item-2"><a href="http://blogs.brown.edu/csci-0160-s01/course-info/">Course Info</a></li>
+<li class="page_item page-item-97"><a href="http://blogs.brown.edu/csci-0160-s01/docs/">Docs</a></li>
+<li class="page_item page-item-9"><a href="http://blogs.brown.edu/csci-0160-s01/lectures/">Lectures</a></li>
+<li class="page_item page-item-13"><a href="http://blogs.brown.edu/csci-0160-s01/staff/">Staff</a></li>
+<li class="page_item page-item-15"><a href="http://blogs.brown.edu/csci-0160-s01/ta-hours/">TA Hrs, Clinics, Sections</a></li>
+</ul>
+	<div id="search">
+	<form method="get" id="searchform" action="/">
+		<p>
+			<input type="text" value="Search this site..." onfocus="if (this.value == 'Search this site...' ) { this.value = ''; }" onblur="if (this.value == '' ) { this.value = 'Search this site...'; }" name="s" id="searchbox" />
+			<input type="submit" class="submitbutton" value="GO" />
+		</p>
+	</form>
+</div></div><!-- /top -->
+
+<div id="header">
+	<div id="logo">
+		<a href="http://blogs.brown.edu/csci-0160-s01"><img src="http://blogs.brown.edu/csci-0160-s01/files/2012/01/cropped-george_washington_by_gilbert_stuart_williamstown_portrait1.jpg" alt="CS16: Algorithms and Data Structures" /></a>
+		<h1><a href="http://blogs.brown.edu/csci-0160-s01">CS16: Algorithms and Data Structures</a></h1>
+		<div id="desc">An Introduction in Computer Science | Spring 2015</div>
+	</div><!-- /logo -->
+
+	<div id="headerbanner" class="widget widget_text"><h3 class="widgettitle">abcd</h3>			<div class="textwidget"></div>
+		</div></div><!-- /header -->
+
+<ul class="primary_menu">	<li class="cat-item cat-item-18075"><a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" >Course News</a>
+</li>
+</ul>
+<div id="main">
+
+	<div id="content">
+
+		<h2 id="contentdesc">Latest <span>Entries</span> &raquo;</h2>
+
+				
+				<div class="post-2314 post type-post status-publish format-standard hentry category-course-news" id="post-2314">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/17/midterm-review-slides-posted/" rel="bookmark" title="Permanent Link to Midterm Review Slides Posted!">Midterm Review Slides Posted!</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by Patrick Maiden (HTA) &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/17/midterm-review-slides-posted/#comments" title="Comment on Midterm Review Slides Posted!">5 Comments</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/17/midterm-review-slides-posted/" rel="bookmark" title="Permanent Link to Midterm Review Slides Posted!">March 17, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Ask any questions here!</p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/17/midterm-review-slides-posted/#comments" title="Midterm Review Slides Posted!Comment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2300 post type-post status-publish format-standard hentry category-course-news" id="post-2300">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-project-posted-2/" rel="bookmark" title="Permanent Link to Convex Hull Project Posted">Convex Hull Project Posted</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-project-posted-2/#respond" title="Comment on Convex Hull Project Posted">Leave a comment</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-project-posted-2/" rel="bookmark" title="Permanent Link to Convex Hull Project Posted">March 12, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Convex Hull has been posted! Post any questions here. </p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-project-posted-2/#comments" title="Convex Hull Project PostedComment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2294 post type-post status-publish format-standard hentry category-course-news" id="post-2294">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-slides-posted/" rel="bookmark" title="Permanent Link to Convex Hull Slides Posted">Convex Hull Slides Posted</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-slides-posted/#respond" title="Comment on Convex Hull Slides Posted">Leave a comment</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-slides-posted/" rel="bookmark" title="Permanent Link to Convex Hull Slides Posted">March 12, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Ask any questions here!</p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/12/convex-hull-slides-posted/#comments" title="Convex Hull Slides PostedComment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2281 post type-post status-publish format-standard hentry category-course-news" id="post-2281">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/10/dags-and-topsort-lecture-posted-2/" rel="bookmark" title="Permanent Link to DAGs and Topsort Lecture Posted!">DAGs and Topsort Lecture Posted!</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/10/dags-and-topsort-lecture-posted-2/#respond" title="Comment on DAGs and Topsort Lecture Posted!">Leave a comment</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/10/dags-and-topsort-lecture-posted-2/" rel="bookmark" title="Permanent Link to DAGs and Topsort Lecture Posted!">March 10, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p><a href="https://www.cs.usfca.edu/~galles/visualization/TopoSortDFS.html"> Cool Topsort Visualization</a></p>
+<p>Post questions, comments, links, poems, here.</p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/10/dags-and-topsort-lecture-posted-2/#comments" title="DAGs and Topsort Lecture Posted!Comment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2272 post type-post status-publish format-standard hentry category-course-news" id="post-2272">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/" rel="bookmark" title="Permanent Link to Practice Midterm Posted">Practice Midterm Posted</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/#comments" title="Comment on Practice Midterm Posted">27 Comments</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/" rel="bookmark" title="Permanent Link to Practice Midterm Posted">March 5, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Hey class, we&#8217;ve posted a practice midterm to help you study. The best way to use this is to study first and then complete it without using any extra materials. The practice midterm is a little longer than the exam itself, but the problems are representative of the variety of content and the level of difficulty. Post any questions you may have here! </p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/#comments" title="Practice Midterm PostedComment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2264 post type-post status-publish format-standard hentry category-course-news" id="post-2264">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/intro-to-graphs-lecture-posted-2/" rel="bookmark" title="Permanent Link to Intro to Graphs Lecture Posted!">Intro to Graphs Lecture Posted!</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/intro-to-graphs-lecture-posted-2/#respond" title="Comment on Intro to Graphs Lecture Posted!">Leave a comment</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/intro-to-graphs-lecture-posted-2/" rel="bookmark" title="Permanent Link to Intro to Graphs Lecture Posted!">March 5, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Post your questions here!</p>
+<p>Extra Resources:<br />
+<a href="http://web.cecs.pdx.edu/~sheard/course/Cs163/Doc/Graphs.html">More info on graphs</a></p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/intro-to-graphs-lecture-posted-2/#comments" title="Intro to Graphs Lecture Posted!Comment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2255 post type-post status-publish format-standard hentry category-course-news" id="post-2255">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/selection-lecture-posted/" rel="bookmark" title="Permanent Link to Medians and Selection Lecture Posted">Medians and Selection Lecture Posted</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/selection-lecture-posted/#respond" title="Comment on Medians and Selection Lecture Posted">Leave a comment</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/selection-lecture-posted/" rel="bookmark" title="Permanent Link to Medians and Selection Lecture Posted">March 5, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Post any questions here! </p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/selection-lecture-posted/#comments" title="Medians and Selection Lecture PostedComment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2249 post type-post status-publish format-standard hentry category-course-news" id="post-2249">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/in-class-notes-posted/" rel="bookmark" title="Permanent Link to In-class Notes Posted!">In-class Notes Posted!</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/in-class-notes-posted/#respond" title="Comment on In-class Notes Posted!">Leave a comment</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/in-class-notes-posted/" rel="bookmark" title="Permanent Link to In-class Notes Posted!">March 3, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Hey everyone! If you were in class today, you probably noticed that we were projecting a google doc for anyone to write anonymous questions about the lecture in real time. We&#8217;re going to start doing this every class, and we&#8217;ll post the docs on the lectures page of this site afterward. The first one is already up! </p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/in-class-notes-posted/#comments" title="In-class Notes Posted!Comment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2243 post type-post status-publish format-standard hentry category-course-news" id="post-2243">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/improving-pseudocode-lecture-posted/" rel="bookmark" title="Permanent Link to Improving Pseudocode Lecture Posted">Improving Pseudocode Lecture Posted</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/improving-pseudocode-lecture-posted/#respond" title="Comment on Improving Pseudocode Lecture Posted">Leave a comment</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/improving-pseudocode-lecture-posted/" rel="bookmark" title="Permanent Link to Improving Pseudocode Lecture Posted">March 3, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Post your questions here!</p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/03/03/improving-pseudocode-lecture-posted/#comments" title="Improving Pseudocode Lecture PostedComment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+				<div class="post-2228 post type-post status-publish format-standard hentry category-course-news" id="post-2228">
+		
+			<div class="posttop">
+				<h2 class="posttitle"><a href="http://blogs.brown.edu/csci-0160-s01/2015/02/26/heap-posted/" rel="bookmark" title="Permanent Link to Heap Posted">Heap Posted</a></h2>
+				<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://blogs.brown.edu/csci-0160-s01/category/course-news/" rel="category tag">Course News</a> by CS16 TAs &mdash; <a href="http://blogs.brown.edu/csci-0160-s01/2015/02/26/heap-posted/#comments" title="Comment on Heap Posted">123 Comments</a></div>
+					<div class="date"><span><a href="http://blogs.brown.edu/csci-0160-s01/2015/02/26/heap-posted/" rel="bookmark" title="Permanent Link to Heap Posted">February 26, 2015</a></span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>Your second Java project, Heap, has been posted on the assignments page. In this project, you&#8217;ll implement a min-heap as we talked about in class on Tuesday with some cool extra functionality.</p>
+<p>This project is considerably larger than Seamcarve, so be sure to get started early! Your mini-assignment and section this week will go over some of the topics in the project.</p>
+<p>Post any questions here!</p>
+			</div>
+
+			<div class="postmetabottom">
+				<div class="tags"></div>
+				<div class="readmore">
+					<span>
+													<a href="http://blogs.brown.edu/csci-0160-s01/2015/02/26/heap-posted/#comments" title="Heap PostedComment on ">Comment </a>
+											</span>
+				</div>			
+			</div>
+
+		</div><!-- /post -->
+
+		
+		
+		<div id="navigation">
+							<div class="alignleft"><a href="http://blogs.brown.edu/csci-0160-s01/page/2/" >&laquo; Older Entries</a></div>
+				<div class="alignright"></div>
+					</div><!-- /navigation -->
+
+	</div><!-- /content -->
+
+	<div id="sidebar">
+	<ul>
+	<li id="text-4" class="boxed widget widget_text"><h3 class="widgettitle">Welcome!</h3>			<div class="textwidget">You're encouraged to participate actively on our blog. Comment on posts whenever you'd like and be sure to check out the comments for tips from your fellow students and TAs.</div>
+		</li><li id="meta-8" class="boxed widget widget_meta"><h3 class="widgettitle">Meta</h3>			<ul>
+						<li><a href="https://blogs.brown.edu/csci-0160-s01/wp-login.php?action=shibboleth">Log in</a></li>
+			<li><a href="http://blogs.brown.edu/csci-0160-s01/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://blogs.brown.edu/csci-0160-s01/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</li><li id="recent-comments-6" class="boxed widget widget_recent_comments"><h3 class="widgettitle">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Patrick Maiden (HTA)</span> on <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/#comment-3301">Practice Midterm Posted</a></li><li class="recentcomments"><span class="comment-author-link">Signe C Henderson</span> on <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/#comment-3300">Practice Midterm Posted</a></li><li class="recentcomments"><span class="comment-author-link">Patrick Maiden (HTA)</span> on <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/#comment-3299">Practice Midterm Posted</a></li><li class="recentcomments"><span class="comment-author-link">Patrick Maiden (HTA)</span> on <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/#comment-3298">Practice Midterm Posted</a></li><li class="recentcomments"><span class="comment-author-link">Signe C Henderson</span> on <a href="http://blogs.brown.edu/csci-0160-s01/2015/03/05/practice-midterm-posted/#comment-3297">Practice Midterm Posted</a></li></ul></li>	</ul>
+</div><!-- /sidebar -->
+</div><!-- /main -->
+
+<div id="footer">
+
+	<div class="foot1">
+		<ul>
+			<li id="text-5" class="widget widget_text">			<div class="textwidget"></div>
+		</li>		</ul>
+	</div>
+
+	<div class="foot2">
+		<ul>
+			<li id="text-6" class="widget widget_text">			<div class="textwidget"></div>
+		</li>		</ul>
+	</div>
+
+	<div class="foot3">
+		<ul>
+			<li id="text-8" class="widget widget_text">			<div class="textwidget"></div>
+		</li>		</ul>
+	</div>
+
+</div><!-- /footer -->
+
+<div id="credits">
+	<div id="creditsleft">Powered by <a href="http://wordpress.org/extend/themes/" rel="generator">WordPress</a> &amp; <a href="http://www.webdesigncompany.net">Web Design Company</a></div>
+	<div id="creditsright"><a href="#top">&#91; Back to top &#93;</a></div>
+</div><!-- /credits -->
+
+</div><!-- /wrapper -->
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.251 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-03-24 10:19:40 -->
+
+<!-- Compression = gzip -->

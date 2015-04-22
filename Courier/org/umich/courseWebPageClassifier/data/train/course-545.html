@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CS107 Computer Organization & Systems</title>
+
+	  <!-- Bootstrap, latest compiled and minified CSS -->
+	  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	  <!-- Optional theme -->
+	  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <!-- Custom stylesheet -->
+    <link href="stylesheet.css" rel="stylesheet">
+
+    <!-- Put the following javascript before the closing </head> tag. -->
+ <script>
+  (function() {
+    var cx = '010711812101250264353:p_9-hnfuwek';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+</head>
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+      <div class="navbar navbar-custom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">CS107</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="dropdown">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course materials<b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+              <li><a href="admin.html">Admin</a></li>
+		          <li><a href="syllabus.html">Syllabus</a></li>
+		          <li><a href="labs.html">Labs</a></li>
+		          <li><a href="assignments.html">Assignments</a></li>
+		          <li><a href="exams.html">Exams</a></li>
+		          <li><a href="http://cs107.stanford.edu/cgi-bin/gradebook">Gradebook</a></li>
+		        </ul>
+      		</li>
+            <li class="dropdown">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting help <b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="faq.html">FAQ</a></li>
+		          <li><a href="officehours.html">Office hours</a></li>
+		          <li><a href="forum_email.html">Forum & email</a></li>
+		          <li><a href="resources.html">Other resources</a></li>
+		        </ul>
+      		</li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+         
+
+
+
+          <!-- Direct use of Google Custom Search, bypass Stanford --
+          <form class="navbar-form navbar-right" role="search" onsubmit="return executeQuery();">
+          <div class="form-group">
+          <input type="text" class="form-control" id="cse-search-input-box-id" size="25" placeholder="Search CS107 site"/>
+          </div>
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+          </form>
+          !-- end Direct use -->
+
+          <!-- Stanford-version of Google Custom Search, broken as of 10/14/2014 -->
+          <form class="navbar-form navbar-right" role="search" action="http://web.stanford.edu/search">
+          <div class="form-group">
+          <input type="hidden" name="cx" value="003265255082301896483:sq5n7qoyfh8" />
+          <input type="hidden" name="cof" value="FORID:9" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <input type="hidden" name="as_dt" value="i" />
+          <input type="hidden" name="as_sitesearch" value="web.stanford.edu/class/cs107/" />
+          <input type="text" class="form-control" placeholder="Search CS107 site" name="q">
+          </div>
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+          </form>
+          <!-- end Stanford-version -->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+<!-- hide white box around search results -->
+<div style="width:0px;overflow:hidden;height:0px;"> 
+<gcse:searchresults-only></gcse:searchresults-only>
+</div>
+
+<!-- Element code snippet -->
+<script type="text/javascript">
+  function executeQuery() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+</script>
+
+    <div class="container">
+    <!-- Place this tag where you want the search results to render -->
+      <h1>Computer Organization & Systems</h1>
+      
+<!-- above replace turns announcements into bootstrap list-group -->
+
+<h2 id="announcements">Announcements</h2>
+<div class="panel panel-default" style="height: 200px; overflow-y: scroll;">
+<ul class="list-group">
+<li class="list-group-item">
+<p><strong>Assignment 1 deadline is MONDAY</strong></p>
+<p>This was changed Tuesday of last week and again in class Wednesday, but just a reminder so we make sure everyone gets the word: Assignment 1 is due MONDAY.</p>
+</li>
+<li class="list-group-item">
+<p><strong>Former CS107 student's "CS107 Survival Guide" website</strong></p>
+<p>CS107 alum Allison Yuen made a set of quick study documents to help future generations! Access them here at <a href="http://web.stanford.edu/~adyuen/107">Allison's CS107 Survival Guide</a>. Thanks, Allison!</p>
+</li>
+<li class="list-group-item">
+<p><strong>NEW Midterm date and Lecture time+location (starting Monday)</strong></p>
+<p>The registrar has arranged for us to move to a Monday/Friday schedule starting Monday of next week. Because there are two Monday holidays this quarter, moving from MWF to MF means they take a bigger bite out of our schedule, which necessitates moving our midterm back by one day for best fit of lecture topics and assignment deadlines. </p>
+<p>Wed 1/7 and Fri 1/9 lectures are still in 420-040 from 11:00-11:50am</p>
+<p>Starting Mon 1/12 lectures will be Mon &amp; Friday only, and moved to Bishop Auditorium </p>
+<p>Midterm is now Thursday Feb 12, 7:30-9:00pm (instead of Wed 2/11)</p>
+<p><span class="post">Tue Jan 6, by Cynthia</span></p>
+</li>
+<li class="list-group-item">
+<p><strong>Assignments 0 and 1 posted</strong></p>
+<p>The first two assignments have been posted to the <a href="assignments.html">assignments page</a>:</p>
+<p><a href="assign0.html">Assignment 0</a>: High-stakes testing
+Due date: Mon Jan 12 11:59 pm - Hard deadline: Mon Jan 12 11:59 pm<br />
+(NOTE hard deadline means no late days may be used past this time)</p>
+<p><a href="assign1.html">Assignment 1</a>: Reassemble
+Due date: <del>Tue Jan 20</del>Mon Jan 19 11:59 pm - Hard deadline: <del>Thu Jan 22</del> Wed 11:59 pm</p>
+<p>Happy coding! </p>
+<p><span class="post">Tue Jan 6, by Cynthia</span></p>
+</li>
+<li class="list-group-item">
+<p><strong>Welcome to Winter 2014!</strong></p>
+<p>Please come on in and browse around! The "FAQ" under the "Getting Help" menu above answers common questions from prospective students. Our class <a href="forum_email.html">forum and email</a> are open for business if you want to spark a conversation or ask a question.</p>
+<p>First lecture is Mon January 5 11:00am in 420-040 --- hope to see you there!</p>
+<p><span class="post">Sun Jan 4, by Cynthia</span></p>
+</li>
+</ul>
+</div>
+<h2 id="course-information">Course information</h2>
+<p>CS107 is the third course in Stanford's introductory programming sequence. Our CS106 courses provide students with a solid foundation in programming methodology and abstractions and CS107 follows on to build up their programming maturity and expand breadth and depth of experience. The course will work from the C programming language down to the microprocessor to de-mystify the machine. With a complete understanding of how computer systems execute programs and manipulate data, you will become a more effective programmer, especially in dealing with issues of debugging, performance, portability, and robustness. Topics covered include: the C programming language, data representation, machine-level code, computer arithmetic, elements of code compilation, optimization of memory and runtime performance, and memory organization and management.</p>
+<p><a href="cynthiameme.jpg"><img width=300 height=225 align="right" src="cynthiameme.jpg"></a> The class has two lectures a week and a weekly lab designed for hands-on learning and experimentation. There will be significant programming assignments and you can expect to work hard and be challenged by this course. Your effort can really pay off - once you master the machine and advance your programming skills to the next level, you will have powerful mojo to bring to any future project!</p>
+<p><strong>Lectures:</strong> (Week 1 only) MWF 11:00-11:50 in 420-040 <b>STARTING WEEK 2 CHANGES TO: Mon &amp; Fri ONLY 11:00-12:15pm in Bishop Auditorium (NO Wed lecture)</b></p>
+<p><strong>Labs:</strong> Tue/Wed/Thu various times Gates B08</p>
+<p><strong>Lecturer:</strong> Cynthia Lee</p>
+<p><strong>TAs:</strong> Matt Anderson, Duyun Chen, Laura Groenendaal, Patrick Harvey, Shantanu Joshi, Sumi Narayanan, Keziah Plattner, Shahriyar Pruisken, James Tran, Jacky Wang</p>
+<p><strong>Honorary Course Meme:</strong> A friend made this image after I told him about the content of CS107. He said, "After taking your class, Cynthia, I expect your students to walk out seeing the world like this." I hope he's right! So here's our theme image for the quarter:</b></p></p>
+<p><strong>CS107 Staff:</strong> <BR></p>
+<p><img src="img/cynthia.jpg"><BR>
+Cynthia Lee (Instructor)</p>
+
+<p><img src="img/duyun.jpg" height=230 width=230><BR>
+Duyun (TA) </p>
+
+<p><img src="img/jacky.jpg"><BR>
+Jacky (TA) </p>
+
+<p><img src="img/james.jpg"><BR>
+James (TA) </p>
+
+<p><img src="img/laura.jpg"><BR>
+Laura (TA) </p>
+
+<p><img src="img/keziah.jpg"><BR>
+Keziah (TA) </p>
+
+<p><img src="img/matt.jpg"><BR>
+Matt (TA) </p>
+
+<p><img src="img/patrick.jpg"><BR>
+Patrick (TA) </p>
+
+<p><img src="img/shahriyar.jpg"><BR>
+Shahriyar (TA) </p>
+
+<p><img src="img/shantanu.jpg"><BR>
+Shantanu (TA) </p>
+
+<p><img src="img/sumi.jpg"><BR>
+Sumi (TA) </p>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

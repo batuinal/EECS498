@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1"
+      http-equiv="Content-Type">
+    <title>COS598D Princeton University Overcoming Intractability in
+      Machine Learning</title>
+  </head>
+  <body>
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tbody>
+        <tr>
+          <td valign="top"><img style="width: 80px; height: 90px;"
+              alt="Princeton University logo" src="pulogo.gif">
+            <h5><a href="http://www.princeton.edu/">Princeton University</a><br>
+              <a href="http://www.cs.princeton.edu/">Computer Science
+                Department</a></h5>
+          </td>
+          <td align="center" valign="middle">
+            <h2>Computer Science 598D<br>
+              Overcoming Intractability in Machine Learning<br>
+              &nbsp;&nbsp;</h2>
+            <h2><a href="http://www.cs.princeton.edu/%7Earora/"><span
+                  style="font-weight: normal;">Sanjeev Arora </span><br>
+              </a></h2>
+            <h2><br>
+            </h2>
+          </td>
+          <td align="right" valign="middle">
+            <h3>&nbsp; Spring 2015<br>
+            </h3>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Course Summary</h2>
+    <blockquote>
+      <meta charset="utf-8">
+      <meta http-equiv="content-type" content="text/html;
+        charset=ISO-8859-1">
+      <p>This is a seminar course that will focus on the following
+        phenomenon: many problems in machine learning are formally
+        intractable (e.g., NP-hard). Nevertheless they are solved in
+        practice by heuristics. Can we design algorithms with provable
+        guarantees (running time, solution quality)? The course will
+        cover some successes in this direction and focus on discussing
+        open problems (of which there are many).</p>
+      <p>The course is geared towards graduate students but may be OK
+        for undergrads who are suitably prepared. (Undergrad level
+        training in algorithms and machine learning. Knowledge of
+        material in <a
+          href="http://www.cs.princeton.edu/courses/archive/fall14/cos521/">COS
+
+
+
+          521 as taught in Fall 2014</a> would be highly desirable,
+        especially the lectures on high dimensional geometry and SVD.) <br>
+      </p>
+      <p>Enrolled students as well as auditors are expected to come to
+        class regularly and participate in class discussion. To get a
+        grade in the class, students should also be prepared to present
+        a topic some time in the course, and write a brief paper or
+        lecture notes on somebody else's presentation. There may also be
+        an opportunity to do a course project, depending upon student
+        interest. <br>
+      </p>
+      <p>Rough list of contents: Topic models, sparse coding, deep nets,
+        matrix completion, maximum entropy models, tensor decomposition
+        methods, etc.</p>
+      <br>
+      <br>
+      <hr> </blockquote>
+    <h2>Administrative Information</h2>
+    <h4>Lectures: Thurs 13:30-16:20 <b> &nbsp; </b>Room: 302 CS
+      Building. First meeting: Feb 5.<br>
+    </h4>
+    <p><b>Instructor: </b><a
+        href="http://www.cs.princeton.edu/%7Earora/"><span
+          style="text-decoration: underline;">Sanjeev Arora</span>- </a>307
+CS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Building - 609-258-3869 arora AT the domain name cs.princeton.edu</p>
+    <hr>
+    <h2> Lecture Schedule</h2>
+    (Note: lecture notes are actually rough notes for myself from the
+    night before. They are completely unpolished, and possibly riddled
+    with inaccuracies.)<br>
+    <br>
+    <table border="1" cellpadding="2" cellspacing="2" width="100%">
+      <tbody>
+        <tr>
+          <td valign="top">Feb 5:&nbsp; Whirlwind intro to ML.
+            (Supervised, Unsupervised, Discriminative, Generative, Max
+            Entropy Models, Max likelihood, etc.). Intro to themes of
+            the course.<br>
+          </td>
+          <td valign="top"><a href="lecnotes/lec1.pdf">Lecture 1 notes <br>
+            </a><br>
+            <span style="font-size:12.0pt;font-family:Cambria;
+              mso-ascii-theme-font:minor-latin;mso-fareast-font-
+              family:&quot;&#65325;&#65331; &#26126;&#26397;&quot;;mso-fareast-theme-font:
+              minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times
+
+
+
+              New Roman&quot;;
+              mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
+
+
+
+              EN-US;mso-bidi-language:AR-SA"><br>
+              <a
+                href="http://www.cs.cmu.edu/%7Etom/mlbook/NBayesLogReg.pdf">Relevant
+
+
+
+                chapter on generative vs discriminative</a> in Tom
+              Mitchell&#8217;s book. <br>
+            </span><br>
+            <a
+href="http://www.math.uconn.edu/%7Ekconrad/blurbs/analysis/entropypost.pdf">Survey
+
+
+
+              by K Conrad on Max Entropy.</a><br>
+          </td>
+          <td valign="top">Readings: <br>
+            <meta name="Title" content="">
+            <span style="font-size:12.0pt;font-family:Cambria;
+              mso-ascii-theme-font:minor-latin;mso-fareast-font-
+              family:&quot;&#65325;&#65331; &#26126;&#26397;&quot;;mso-fareast-theme-font:
+              minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times
+
+
+
+              New Roman&quot;;
+              mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
+
+
+
+              EN-US;mso-bidi-language:AR-SA"><br>
+              <a
+href="http://ai.stanford.edu/%7Eang/papers/nips01-discriminativegenerative.pdf"><i
+                  style="mso-bidi-font-style:normal">On discriminative
+                  vs generative: A comparison of logistic regression and
+                  na&iuml;ve bayes,</i></a><i
+                style="mso-bidi-font-style: normal"> </i>by Ng and
+              Jordan in NIPS 2001.<br>
+              <br>
+              <a
+href="http://research.microsoft.com/en-us/um/people/cmbishop/downloads/bishop-valencia-07.pdf"><i
+                  style="mso-bidi-font-style:normal">Generative or
+                  Discriminative? Getting the best of both worlds</i></a>
+              by Bishop and Lasserre. <span style="mso-spacerun:yes">&nbsp;</span>Bayesian
+
+
+
+              Statistics 2007.<br style="mso-special-character:
+                line-break">
+              <!--[if !supportLineBreakNewLine]--><br>
+              <a
+href="http://www.ski.org/Rehab/Coughlan_lab/General/TutorialsandReference/MaxEnt.pdf">Connection
+
+
+
+                between max likelihood and <br>
+                max entropy. </a>(Note by J. Coughlan.)<br>
+              <br>
+              More philosophical: Steinhardt's blogpost on the old <a
+href="https://jsteinhardt.wordpress.com/2012/10/31/beyond-bayesians-and-frequentists/">Bayesian
+
+
+
+                vs Frequentist argument</a><br>
+              (and how it relates to more&nbsp; modern arguments in ML).<br
+                style="mso-special-character:line-break">
+              <!--[endif]--></span>
+            <meta name="Keywords" content="">
+            <meta http-equiv="Content-Type" content="text/html;
+              charset=ISO-8859-1">
+            <meta name="ProgId" content="Word.Document">
+            <meta name="Generator" content="Microsoft Word 14">
+            <meta name="Originator" content="Microsoft Word 14">
+            <link rel="File-List"
+href="file://localhost/Users/arora/Library/Caches/TemporaryItems/msoclip/0/clip_filelist.xml">
+            <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Revision>0</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Pages>1</o:Pages>
+  <o:Words>84</o:Words>
+  <o:Characters>483</o:Characters>
+  <o:Company>Princeton University</o:Company>
+  <o:Lines>4</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>566</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+            <link rel="themeData"
+href="file://localhost/Users/arora/Library/Caches/TemporaryItems/msoclip/0/clip_themedata.xml">
+            <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+            <style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"&#65325;&#65331; &#26126;&#26397;";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"&#65325;&#65331; &#26126;&#26397;";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"&#65325;&#65331; &#26126;&#26397;";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"&#65325;&#65331; &#26126;&#26397;";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><!--StartFragment--><!--EndFragment--><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 12: Linearized models in ML.<br>
+            SVD: A swiss army knife for solving many such problems.<br>
+          </td>
+          <td valign="top"><a href="lecnotes/lec2.pdf">Brief Lecture
+              notes.</a><br>
+            COS521 lecture notes (<a
+href="http://www.cs.princeton.edu/courses/archive/fall14/cos521/lecnotes/lec13.pdf">Lec
+
+              1</a> and <a
+href="http://www.cs.princeton.edu/courses/archive/fall14/cos521/lecnotes/lec14.pdf">Lec
+
+              2</a>) on SVD. <br>
+            Moitra's chapter on Sparse Recovery.<br>
+            Hopcroft Kannan Section 8.4<br>
+            (spectral clustering).<br>
+          </td>
+          <td valign="top">Read wikipedia pages on topic modeling,<br>
+            sparse coding, restricted isometry property (RIP).<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 19: Nonnegative Matrix Factorization and
+            Topic Modeling.<br>
+          </td>
+          <td valign="top">Moitra's Chapter 2 except Sec 2.3<br>
+          </td>
+          <td valign="top">Papers: <a
+              href="http://arxiv.org/abs/1111.0952">Arora, Ge, Moitra,
+              Kannan on NMF (STOC 2012)</a>; <a
+              href="http://arxiv.org/pdf/1204.1956v2.pdf">Arora, Ge
+              Moitra on Topic Models</a><br>
+            (FOCS 2012;<br>
+            and <a href="http://arxiv.org/abs/1212.4777">Arora et al.
+              on efficient versions of <br>
+              topic modeling algorithm (ICML'13)</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <hr size="2" width="100%"><br>
+    <h2>General Resources</h2>
+    <ol>
+      <li>Rob Schapire's <a
+href="http://www.cs.princeton.edu/courses/archive/spring14/cos511/schedule.html">notes
+
+
+
+          on Machine Learning Theory.</a></li>
+      <li>Ankur Moitra's notes <a
+          href="http://people.csail.mit.edu/moitra/docs/bookex.pdf">Algorithmic
+
+
+
+          Aspects of Machine Learning.</a></li>
+      <li>Sanjeev Arora's grad course on <a
+          href="http://www.cs.princeton.edu/courses/archive/fall14/cos521/">Advanced
+
+
+
+          Algorithm Design.</a></li>
+      <li>Draft of <a
+          href="http://www.cs.cornell.edu/jeh/book11April2014.pdf">Foundations
+
+
+
+          of Data Science</a> by Hopcroft and Kannan. <br>
+      </li>
+    </ol>
+    <br>
+    <br>
+  </body>
+</html>

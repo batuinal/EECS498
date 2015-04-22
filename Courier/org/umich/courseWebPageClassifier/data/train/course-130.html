@@ -1,0 +1,538 @@
+
+<html>
+<head>
+<title>Brown CS: CSCI195X</title>
+<style>
+  body { max-width: 1000px; }
+  h2 { white-space: pre; font-family: monospace; }
+  h2:before { content: "> "; }
+  code { white-space: pre; }
+  td { vertical-align: top; padding-right: 1em }
+</style>
+</head>
+<body>
+  <h1>CS195X: Software Foundations</h1>
+  <h2>About the Course</h2>
+<pre>
+As developers, how do we convince ourselves that the programs we write
+are correct?  What does &ldquo;correctness&rdquo; even mean, particularly at
+the ouset of designing a program?  Depending on the correctness
+notion, does it suffice to test random inputs, or is the property
+sufficiently crucial that we want authoritative proof that it holds?
+And as programs evolve, how can we reuse any certification effort to
+verify the new versions of our programs?
+
+In this course, we will focus on correctness properties for
+<b>*programming languages*</b>, and examine in detail two techniques
+for verifying those properties.  One approach (Redex) allows for quick
+exploration and random testing, while the other (Coq) allows for
+computer-verified proof.  This course will provide a technical guide
+to using these two tools, leading up to non-trivial projects in both.
+The prerequisite for this course is CSCI 1730.
+</pre>
+
+<h2>Course Management</h2> 
+<pre>
+We are going to use the cs195x.2012-13.s mailing list. Go to 
+<a href="http://lists.cs.brown.edu">lists.cs.brown.edu</a> and subscribe to the list.
+
+Instructor:   <a href="http://www.cs.brown.edu/~blerner">Ben Lerner</a>
+Office hours: Wednesday, 1-3pm, or by appointment
+</pre>
+
+<h2>Course textbook</h2>
+<pre>
+We are using the <a href="http://www.cis.upenn.edu/~bcpierce/sf/">Software Foundations</a> textbook
+by Pierce et al.  I will be posting chapters from this book
+incrementally on this course site; the full book is freely available
+should you want to read ahead.
+</pre>
+
+<h2>Using Course Software</h2>
+<pre>
+The standard versions of course software are Coq 8.4pl1 (if you
+install it on OS X, the latest version is simply 8.4) and DrRacket
+5.3.  If you are using the i-lab machines, Coq is installed in the
+course directory.  To use it with emacs, add the following line to
+your .emacs file:
+
+(load-file "/course/cs195x/share/emacs/site-lisp/pg-setup.el")
+
+You can also use coqide, in /course/cs195x/bin. <b>Note:</b> there is
+an installation of Coq 8.2pl2 in /usr/bin.  Due to tstaff policy, by
+default course directories do not take precedence over system ones in
+your path, so merely typing "coqide" will run the wrong
+version.  Version 8.4 is <i>almost</i> backwards-compatible with
+earlier versions, but some proofs require small changes to work.  Be
+sure you use the course version!
+
+DrRacket is installed in /pro/plt/software/racket/5.3/, and if you are
+a member of the cs195xstudent group, then by default it should be in
+your path.  Email me to confirm you are in the course, and I will add
+you to the student group if you aren't already in it.
+</pre>
+
+<h2>Lecture notes and assignments</h2>
+<table border="1">
+<tr>
+  <th>Date</th><th>Lecture notes</th><th>Assignment</th>
+</tr>
+<tr>
+  <td>1/23/13</td><td><a href="sf/html/Basics_inclass.html">Basics_inclass</a></td><td>Due
+    1/28: <a href="sf/Basics.v">Basics.v</a></td>
+</tr>
+<tr>
+  <td>1/25/13</td><td>More practice with Basics_inclass</td><td>Due
+    1/30: <a href="sf/Lists.v">Lists.v</a></td>
+</tr>
+<tr>
+  <td>1/28/13</td><td><a href="sf/html/Lists.html">Lists</a></td><td>No
+    homework assigned</td>
+</tr>
+<tr>
+  <td>1/30/13</td><td><a href="sf/html/Poly.html">Polymorphism</a></td><td>Due
+    2/4: <a href="sf/hw3.v">hw3.v</a> and <a href="sf/Cases.v">the
+    Cases support library</a></td>
+</tr>
+<tr>
+  <td>2/1/13</td><td><a href="sf/html/MoreCoq.html">More information
+      on Coq</a></td><td>No homework assigned</td>
+</tr>
+<tr>
+  <td>2/4/13</td><td><a href="sf/Prop-part1.v">Inductive propositions,
+      part 1</a></td><td>Due 2/11: Hw4, part 1: Exercises in
+      Prop-part1.v (and <a href="sf/Cases.v">the Cases support
+      library</a>)</td>
+</tr>
+<tr>
+  <td>2/6/13</td><td><a href="sf/html/Prop.html">Inductive
+  propositions</a>, and <a href="sf/html/MoreProp.html">More on
+      inductive propositions</a></td>
+  <td>Due 2/11: Hw4, part 2: selection of exercises
+    in <a href="sf/html/MoreProp.html">MoreProp</a>: <code>ex_set</code>, <code>tree</code>,
+    <code>mytype</code>, <code>foo</code>, <code>p_provability</code>,
+    and <code>no_longer_than_ind</code>.</td>
+</tr>
+<tr>
+  <td>2/8/13</td><td>Snow day; no class</td>
+<tr>
+  <td>2/11/13</td><td><a href="sf/html/Logic.html">Logic</a></td><td>Due
+    2/15: <a href="sf/hw5.v">Hw5.v</a>
+    and <a href="sf/miu.v">the MIU puzzle</a></td>
+</tr>
+<tr>
+  <td>2/13/13</td><td>More
+  in <a href="sf/html/Logic.html">Logic</a></td><td><a href="sf/inclass/Logic-inclass2.v">Worked
+      examples in Logic.v</a></td>
+</tr>
+<tr>
+  <td>2/15/13</td><td>More about
+    Logic</td><td><a href="sf/inclass/Logic-inclass3.v">Worked
+    examples</a>, <a href="sf/even-odd.v">even/odd induction, strong
+      induction principles</a></td>
+</tr>
+<tr>
+  <td>2/18/13</td><td colspan="2">Presidents' Day; no class</td>
+</tr>
+<tr>
+  <td>2/20/13</td><td>Introduction
+  to <a href="sf/inclass/Imp-inclass1.v">IMP</a>.  Also,
+    the <a href="sf/SfLib.v">SfLib support library</a></td><td>Finish the proof of
+    correctness for <code>optimize_0plus</code>, construct a
+    similar optimization for <code>bexp</code>s that
+  uses <code>optimize_0plus</code>, define a similar correctness
+  claim, and prove your optimization sound.</td>
+</tr>
+<tr>
+  <td>2/22/13</td><td>More IMP: state, identifiers, subtleties of
+    equivalence on states</td><td>No assignment</td>
+</tr>
+<tr>
+  <td>2/25/13</td><td><a href="sf/html/Imp.html">IMP Commands</a></td>
+  <td>Due 3/1: Hw 6: <a href="sf/Imp.v">Imp.v</a>.  Prove update_example,
+  update_shadow, update_permute, pup_to_n, pup_to_2_ceval,
+  loop_never_stops, no_whilesR, no_whiles_eqv; define s_execute, s_compile,
+  and prove s_compile_correct.  Three hints for s_compile_correct:
+    <ol>
+      <li>You'll need to generalize-dependent something that is not obvious, to get a
+	strong enough inductive hypothesis. </li>
+      <li>You'll likely need to prove a lemma about how evaluation
+	commutes with stack-concatenation.</li>
+      <li>And, you'll need to think carefully about the error cases in
+	s_execute, or else that lemma (and/or the final proof for
+	s_compile_correct) won't go through.</li>
+    </ol>
+  </td>
+</tr>
+<tr>
+  <td>2/27/13</td><td><a href="sf/html/Equiv.html">Equivalences in
+  IMP</a></td>
+  <td>For Friday, work through IFB_false, swap_if_branches, and WHILE_true.  Why
+    do you need WHILE_true_nonterm as its own lemma?  You do not need
+    to hand these in.</td>
+</tr>
+<tr>
+  <td>3/1/13</td><td><a href="sf/html/Rel.html">Binary relations</a>
+    and <a href="sf/html/Smallstep-1.html">Small-step semantics</a></td>
+  <td>Due 3/6: Hw 7, part 1: <a href="sf/Smallstep-1.v">Proving equivalence</a> between
+  fixpoint, big-step-with-numbers, big-step-with-terms,
+  small-step-with-constants, and small-step-with-value formulations
+    of the Numbers+Plus language.  (Support file: <a href="sf/Rel.v">Rel.v</a>)</td>
+</tr>
+<tr>
+  <td>3/4/13</td><td><a href="sf/html/Smallstep.html">The rest of
+      small-step semantics</a></td>
+  <td>Due 3/6: Hw 7, part 2: <a href="sf/Contexts.v">Defining and
+      using evaluation contexts for IMP</a></td>
+</tr>
+<tr>
+  <td>3/6/13</td><td>No lecture notes; review of techniques and
+    Q&amp;A</td><td>Hw 7 is extended until 3/8</td>
+</tr>
+<tr>
+  <td>3/8/13</td><td><a href="sf/html/Types.html">Types for a simple
+      numbers-and-booleans language</a></td><td>Recommended for Monday: finish
+    the proofs of Progress and Preservation
+    in <a href="sf/Types.v">Types.v</a> for this language</td>
+</tr>
+<tr>
+  <td>3/11/13</td><td><a href="sf/html/Stlc.html">The simply-typed
+      lambda calculus</a></td>
+</tr>
+<tr>
+  <td>3/13/13</td><td><a href="sf/html/Stlc.html">The simply-typed
+      lambda calculus</a>: building towards preservation</td>
+</tr>
+</table>
+
+<h2>Coq Cheat Sheet</h2>
+<pre>
+Keeping the tactics and incidental commands of Coq straight is
+challenging.  The full documentation can be found <a href="http://coq.inria.fr/refman/Reference-Manual011.html">here</a>.
+Here's a quick-reference for the commands we've encountered so far:
+</pre>
+<table border="1">
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr>
+    <td>Theorem, Lemma, Example, Goal</td>
+    <td><p>The main structuring elements of Coq.  Typical syntax is <code>
+Theorem <i>theoremName</i> : <i>statement of theorem</i>.
+Proof.
+  <i>proof statements...</i>
+Qed.</code></p>
+      <p><code>Goal</code> is the same, but has no name (or opening
+      colon).  Don't forget the periods!</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code><i>tactic1 ; tactic2</i></code></td>
+    <td>Used to sequence tactics: run <code>tactic1</code>, then
+      run <code>tactic2</code> in every subgoal generated
+      by <code>tactic1</code></td>
+  </tr>
+  <tr>
+    <td><code><i>tacticA</i> ; [ <i>tactic1</i> | ... | <i>tacticN</i> ]</code></td>
+    <td>The more general form of sequencing.  Run <code>tacticA</code>, then
+      run <code>tactic<i>i</i></code> in the <i>i<sup>th</sup></i>
+      generated subgoal.  This will produce an error if there aren't
+      exactly <i>N</i> subgoals.</td>
+  </tr>
+  <tr>
+    <td><code>repeat <i>tactic</i></code></td>
+    <td>Runs <code>tactic</code> zero or more times, until it fails.  Be careful; if
+      the tactic always succeeds, repeat will never terminate.</td>
+  </tr>
+  <tr>
+    <td><code>solve <i>tactic</i></code> or 
+      <code>solve [<i>tac1</i> | ... | <i>tacN</i>]</code></td>
+    <td>Tries to completely solve the current goal using (one of) the
+      supplied tactic(s).  If it can't, then the tactic as a whole
+      fails.</td>
+  </tr>
+  <tr>
+    <td><code>try <i>tactic</i></code></td>
+    <td>Tries <code>tactic</code>, and if it doesn't succeed, does
+      nothing to the goal.  This is particularly useful in
+      combination with solve: <code>try solve [simpl; auto]</code>
+      will simplify the goal and solve it, or else do
+      nothing.  <code>try T</code> is equivalent to <code>first [T | idtac]</code>.</td>
+  </tr>
+  <tr>
+    <td><code>first [<i>tac1</i> | ... | <i>tacN</i>]</code></td>
+    <td>Tries applying <code>tac1</code>, and if it fails, moves on to
+    the next one.  If any tactic succeeds, the whole tactic succeeds;
+      if none do, the whole tactic fails.</td>
+  </tr>
+  <tr>
+    <td><code>idtac</code> and <code>fail</code></td>
+    <td>The no-op tactic that always succeeds, and the no-op tactic
+      that always fails.  These are useful when writing your own
+      tactics, and rather useless otherwise.</td>
+  </tr>
+  <tr>
+    <td><code>auto</code>, <code>auto <i>##</i></code>, or 
+      <code>auto with <i>HintDatabase</i></code></td>
+    <td>Attempts to solve the goal using a limited amount of
+      intros, reflexivity, assumptions, and applications.
+      See <a href="http://www.cis.upenn.edu/~bcpierce/sf/UseAuto.html">UseAuto</a>
+      for more details. </td>
+  </tr>
+  <tr>
+    <td><code>omega</code></td>
+    <td>Solves arithmetic goals that rely only on
+      addition/subtraction, multiplication by constants,
+      (in-)equalities, and logical operators (and/or/implies/not), or
+      states that they are false.  It's not available by
+      default; <code>Require Import Omega.</code> to use it.</td>
+  </tr>
+  <tr>
+    <td><code>simpl</code></td>
+    <td><p>Simplifies the expression as much as possible: applies
+	functions to their arguments, executes match statements when
+	possible, and then tries to simplify functions calls some
+	more.</p>
+      <p>Variants: <code>simpl in <i>H</i></code> tries to simplify
+	the hypothesis named <i>H</i>, and <code>simpl in *</code>
+	tries simplifying
+	everywhere.</p> <code>simpl <i>expr</i></code> will only
+	simplify the named function, rather than the entire
+	expression.</td>
+  </tr>
+  <tr>
+    <td><code>reflexivity</code></td>
+    <td>Solves a goal of the form <code><i>foo</i>=<i>foo</i></code>.
+	It will try simplifying first, so for instance it can
+	solve <code>1+5 = 2+4</code></td>
+  </tr>
+  <tr>
+    <td><code>assumption</code></td>
+    <td>Solves a goal if there's any assumption that is exactly equal
+      to the goal (after simplification)</td>
+  </tr>
+  <tr>
+    <td><code>intros</code> or <code>intros <i>nameA nameB ... nameC</i></code></td>
+    <td><p>Introduces a premise of the goal into the context, either
+    with a generated name or with the ones supplied by the programmer.
+    If no names are provided, it will introduce as many premises as
+    possible -- so be careful that it does not introduce more than are
+    wanted!  If only one name is wanted, use the
+    singular <code>intro</code> instead.  The effect
+    of <code>intros</code> typically takes two forms:</p>
+      <p>Applying <code>intro H</code> to a goal of the form 
+	<code>A -> B</code> yields <code>
+H : A
+=====
+B</code></p>
+      <p>Applying <code>intros</code> to a goal of the form
+	<code>forall (x : T), P</code> yields <code>
+x : T
+=====
+P</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>apply <i>expr</i></code> or
+      <code>apply <i>expr</i> with (<i>var := expr</i>)</code></td>
+    <td><p>Applying a hypothesis <code>H : A -> B</code> to a goal of the
+      form <code>B</code> changes the goal to <code>A</code>:
+      since <code>H</code> says that A implies B, then if we could
+      only prove A, we could use H to derive B.  This is a form
+      of <i>backward reasoning</i> from goals to givens.  On the other
+	hand, we can apply H to a hypothesis of the form 
+	<code>a : A</code> to obtain a <code>B</code> hypothesis: this
+	is a form of <i>forward reasoning</i>, from givens to
+	goals.</p>
+
+      <p>If the hypothesis being used contains variables that cannot
+	be inferred from the goal, then you need to specify 
+	<code>with (<i>var:=value</i>)</code> to tell Coq what values to use.
+	For instance, 
+	<code>lt_trans : forall p q r, p &lt; q -> q &lt; r -> p &lt; r</code>
+	can't be used without specifying a value for <code>q</code>,
+	since it is not mentioned in the conclusion.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>eapply <i>expr</i></code></td>
+    <td>Much like <code>apply</code>, but allows you to leave out
+    variables that Coq can't guess.  Instead, Coq will create
+      existential variables, written <code>?1234</code> (or some other
+    number), which you must eventually instantiate before the end of
+    the proof.  This approach is particularly useful when the
+      variables to be guessed <i>can be inferred</i>, just not at the
+      current point of the proof.</td>
+  </tr>
+  <tr>
+    <td><code>exists <i>expr</i></code></td>
+    <td>Used to solve a goal of the form <code>exists x, P</code> by
+      supplying the particular <code>x</code> for which you can
+      prove <code>P</code></td>
+  </tr>
+  <tr>
+    <td><code>Inductive</code> definitions</td>
+    <td><p>Defines new inductive data types.  These can get quite
+    elaborate, but the simplest examples roughly match intuition from
+    data type declarations in ML or Haskell.  See the definitions
+    of <code>bool</code> and <code>nat</code>
+    in <a href="sf/Basics.v">Basics</a>, and <code>natlist</code>
+	and <code>list</code>
+    in <a href="sf/Lists.v">Lists</a></p></td>
+  </tr>
+  <tr>
+    <td><code>remember <i>expr</i> as <i>var</i></code></td>
+    <td>Creates a new variable named <code>var</code> and an equation
+      <code>Heq<i>var</i> : <i>var</i> = <i>expr</i></code>.  It also
+      automatically replaces <code>expr</code> with <code>var</code>
+      everwhere it can.  This technique is useful when you need to
+      keep a subexpression around, to do case analysis on it later.
+      (But see the second form of <code>destruct</code>, below.)</td>
+  <tr>
+    <td><code>destruct <i>expr</i></code></td>
+    <td><p>Given an expression whose type is inductive, split the
+    current goal into several subgoals, one for each constructor of
+    the inductive type.  In each one, substitute the appropriate
+    constructor in place of the given expression.  (Note: most often,
+    you want to destruct a single variable, but it could be useful to
+    destruct entire expressions.)  So for
+    example, <code>destruct</code>ing a boolean value will result in
+    two subgoals, where that value is turned into <code>true</code>
+    and <code>false</code> respectively.  Destructing a list
+    value <code>l</code> will result in two cases: one
+    for <code>nil</code>, and one with two new
+    variables <code>a</code> and <code>l0</code> such that 
+	<code>l = a :: l0</code>.</p>
+
+      <p>Variants: <code>destruct <i>expr</i> as [ name1 name2 | name3 name4 name5 ... | ... ]</code>
+	destructs the expression and introduces any new hypotheses
+	using the supplied names.</p></td>
+  </tr>
+  <tr>
+    <td><code>destruct <i>expr</i> eqn:<i>Name</i></code></td>
+    <td>Much like <code>destruct</code> above, except it remembers the
+      expression being destructed, and creates a new hypothesis 
+      <code>Name : <i>expr</i> = <i>value</i></code>,
+      where <code>value</code> is one of the possible destructed
+      values.  For example, <code>destruct (beq_nat x y) eqn:Exy</code> 
+      will produce two subgoals, with <code>Exy : beq_nat x y = true</code>
+      in the first and <code>Exy : beq_nat x y = false</code> in the
+      second.  This is almost the same thing as 
+      <code>remember <i>expr</i> as <i>v</i>; destruct <i>v</i></code>, 
+      except the equation is named differently and is symmetric from
+      the version produced by remember/destruct: the destructed value is on the
+      right, rather than on the left.</td>
+  </tr>
+  <tr>
+    <td><code>split</code></td>
+    <td>Useful for splitting a conjunction or an iff into its two
+      components.  Can be used in the goal or in hypotheses.</td>
+  </tr>
+  <tr>
+    <td><code>left</code>, <code>right</code></td>
+    <td>Useful for picking one branch out of a disjunction in the
+    goal.  CANNOT be used in a hypothesis, because we cannot know
+      which branch was used in building the disjunction.  Equivalent
+      to applying <code>or_introl</code>
+    and <code>or_intror</code>.</td>
+  </tr>
+  <tr>
+    <td><code>generalize dependent <i>expr</i></code></td>
+    <td>Takes an expression <i>expr</i> in the context and generalizes
+    it into a forall-quantified variable in the goal, along with every
+    hypothesis in the context that mentioned the expression.  Useful
+    for undoing over-eager introduction of variables, and for
+      strengthening the goal in preparation for an inductive
+    proof.</td>
+  </tr>
+  <tr>
+    <td><code>specialize H with <i>expr</i></code></td>
+    <td>The "inverse" of generalize; this takes a forall-quantified
+      hypothesis and instantiates it at a specific value.  This has
+      the unfortunate side effect of destroying the original
+      forall-quantified hypothesis, so frequently you'll want to
+      write <code>assert (S := H); specialize S with <i>expr</i></code> 
+      to copy <code>H</code> to a new
+      hypothesis that you can then specialize independently.</td>
+  </tr>
+  <tr>
+    <td><code>induction <i>expr</i></code></td>
+    <td><p>Like <code>destruct</code>, this tries to prove the current
+	goal by splitting it into one subgoal per constructor for the
+	inductive data type.  Unlike <code>destruct</code>, you get
+	inductive hypotheses that let you assume the current goal for
+	structurally-smaller instances of the expression.  See any of
+	the examples of induction on numbers or lists, for an
+	intuition of how this works.  We'll see more precise details
+	later.</p></td>
+  </tr>
+  <tr>
+    <td><code>rewrite <i>H</i></code> or <code>rewrite &lt;- <i>H</i></code></td>
+    <td><p>Given a hypothesis <code>H : <i>foo</i> = <i>bar</i></code>, 
+      saying <code>rewrite H</code> will replace all occurrences
+      of <i>foo</i> with <i>bar</i> in the current goal.  If you want
+      to replace <i>bar</i> with <i>foo</i>, use the 
+	<code>rewrite &lt;- H</code> form.</p>
+      <p>Variants: <code>rewrite H in H'</code> tries to rewrite the
+	hypothesis <code>H'</code>, and <code>rewrite H in *</code>
+	tries to rewrite everywhere possible.</p>
+      <p><code>rewrite H at <i>n</i></code> tries to rewrite
+	the <i>n<sup>th</sup></i> occurrence of <i>foo</i> in the
+	goal.  You can combine these variants in the obvious ways.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code>replace <i>e1</i> with <i>e2</i></code> or
+      <code>replace <i>e1</i> with <i>e2</i> by <i>tactic</i></code></td>
+    <td>Replaces the first  expression with the second, and generates
+      a new goal to prove <code>e1 = e2</code>.  If you
+      supply <code>by tactic</code>, then it tries to prove that
+      equality goal with the given tactic.  (Note that the tactic
+      could be the general form of a branching sequence of tactics,
+      provided you parenthesize the whole thing.) You can also
+      replace values <code>in H</code>ypotheses.</td>
+  </tr>
+  <tr>
+    <td><code>change <i>e1</i> with <i>e2</i></code></td>
+    <td>Much like <code>replace</code>, except Coq tries to prove the
+      replacement equality automatically.  You can apply this in the
+      goal or in hypotheses.</td>
+  </tr>
+  <tr>
+    <td><code>subst</code> or <code>subst <i>v</i></code></td>
+    <td>Looks for all equations of the form <code>var = value</code>
+      or <code>value = var</code>, rewrites them and
+      eliminates <code>var</code>.  If you supply a
+      variable <code>v</code>, it only rewrites equations involving
+      that variable.  The tactic will fail if you have equations that
+      mention the variable on both sides (e.g., <code>a = 2 * a</code>)</td>
+  </tr>
+  <tr>
+    <td><code>Notation "x ++ y" : (app x y)
+  (at level <i>N</i>, left associativity)
+  : list_scope.</code></td>
+    <td><p><code>Notation</code>s let you extend the grammar of Coq with
+    syntactic sugar.  Alphanumeric things in the notation string are
+    treated as variables (which can be arbitrary expressions); the
+    expression after the first colon uses those variables to define
+    what the notation means.  The level declaration defines precedence
+    levels, and the notation can have left, right or no
+    associativity.  Finally, the scope at the end acts as a namespace,
+	so that different notations can be turned on or off as
+    needed.</p>
+
+      <p>You won't have to write many notations yourself in this
+	course.</p></td>
+  </tr>
+  <tr>
+    <td><code>Locate "_ ++ _".</code></td>
+    <td>Used find out where and how a notation is defined.  The
+    underscores are wildcards, so you don't have to know in advance
+      the variable names used in the notation declaration.</td>
+  </tr>
+  <tr>
+    <td><code>Check <i>expr</i>.</code></td>
+    <td>Used to find out the type of the expression.</td>
+  </tr>
+</table>
+
+</body>
+</html>

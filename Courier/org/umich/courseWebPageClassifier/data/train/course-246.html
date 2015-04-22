@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>(CS/EE 144) The ideas behind the web</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=2819341;
+var sc_invisible=0;
+var sc_partition=28;
+var sc_security="132cd2ed";
+</script>
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c29.statcounter.com/2819341/0/132cd2ed/0/" alt="counter stats" /></a></div></noscript>
+<!-- End of StatCounter Code -->
+
+</head>
+<body>
+
+<h1>(CS/EE/CMS 144) <br>Networks: Structure & Economics</h1>
+
+
+<h3>Course details</h3>
+<p class="indented">
+The course meets MW 9-10:25am in Annenberg 105. <br>
+We will often have ``makeup'' and ``bonus'' lectures on F 9-10:25am in Annenberg 105.<br><br> 
+
+The course will be managed using Piazza.  All communication will happend and all materials will be posted through <a href="http://piazza.com/caltech/winter2015/cseecms144">http://piazza.com/caltech/winter2015/cseecms144</a>. Email Adam if you have problems enrolling yourself at the site.
+</p>
+
+</p>
+
+
+<a name="desc"></a>
+<h3>Course Description</h3>
+<p class="indented">
+Social networks, the web, and the internet are an essential parts of our lives and we all depend on them every day, but do you really know what makes them work? This course studies the "big" ideas behind our networked lives. Things like, what do networks actually look like (and why do they all look so similar)? How do search engines work? Why to memes spread the way they do? How does web advertising work? For all these questions and more, the course will provide a mixture of both mathematical analysis and hands-on labs.<i>This course can be combined with CS/EE 145 and CS 141a or CS/EE 143 to satisfy the project requirement for CS undergraduate degree, but CS/EE 143 and CS 141a are not required prerequisites. The course assumes students are comfortable with graph theory, probability, and basic programming.</i></p>
+
+
+<h3>Instructor</h3>
+<p class="indented">
+<a href="http://www.cs.caltech.edu/~adamw">Adam Wierman</a>, adamw@caltech.edu<br>
+</p>
+
+<h3>Teaching Assistants</h3>
+<p class="indented">
+Niangjun Chen (lead TA)<br>
+Jianchi Chen <br>
+Joseph Choi <br>
+Alexandru Cioc <br>
+Chung Eun Kim <br>
+Ryan Langman <br>
+</p>
+
+<a name="textbook"></a>
+<h3>Required Textbook</h3>
+<p class="indented">
+<a href="http://www.amazon.com/Networks-Crowds-Markets-Reasoning-Connected/dp/0521195330">Networks, Crowds, and Markets: Reasoning About a Highly Connected World</a>,<br>
+by David Easley and Jon Kleinberg. <br><br>
+This book is quite reasonably priced, but there is also a pre-publication pdf available <a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">here</a>.  I think the book is excellent, so I highly recommend you buy a copy and read it cover-to-cover.  We will not be going through it in order, but I will point to the relevant parts of the book for each lecture. Additionally, I will post course notes and supplementary papers on this site at the end of each class.
+</p>
+
+
+<a name="lectures"></a>
+<h3> Lectures</h3>
+
+<p class="indented"> This is only a tentative outline of the topics we will discuss and will likely change as the term goes by.  But, I put it up to give you an idea of where we're going. The course is basically organized as a collection of topics that I think are important and interesting and which provide a modern perspective on our networked lives. <br><br>
+<!--<b> Note: </b> I am posting my slides and handwritten notes for each lecture, but they are incomplete and certainly are not meant to serve as a replacement for attending class.  I typically dovetail powerpoint and boardwork together, so the notes and slides should be looked at together.<br><br>-->
+</p>
+
+
+<p class="indented"><b>Introduction to the class</b></p>
+
+<ul>
+
+<li> What is this course about?
+
+<!--<p class="indented2">
+lecture slides: <a href="lectures/lecture1.ppt">[ppt]</a> <br>
+required handout: <a href="informationsheet.pdf">Information Sheet</a>, be sure to return this to Adam ASAP <br>
+required reading: Chapter 13 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">[Easley & Kleinberg 2010]</a><br>
+suggested reading: <a href="http://www.theatlantic.com/doc/194507/bush">[Bush 1945]</a><br>
+suggested reading: <a href="http://www.w3.org/History/1989/proposal.html">[Berners-Lee 1990]</a>
+</p>
+</li>-->
+
+</ul>
+
+<p class="indented"><b>Part I: Understanding Network structure</b></p>
+
+<ul>
+
+<li> The web graph & beyond -- universal properties of networks</a>
+
+<!--
+<p class="indented2">
+Note for next year -- do the web graph the first day with a shortened "history" to save time.  Also, add a discussion of the "darknet" to it.
+
+lecture notes: <a href="lectures/lecture2.pdf">[pdf]</a> <br>
+lecture slides: <a href="lectures/lecture2.ppt">[ppt]</a> <br>
+required reading: Chapters 1 and 2 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">[Easley & Kleinberg 2010]</a><br>
+data sets to play with: <a href="http://snap.stanford.edu/snap/index.html">[SNAP]</a><br>
+suggested reading: <a href="http://www.www9.org/w9cdrom/160/160.html">[Broder et al. 2000]</a> <br>
+if you want more: Chapter 1 of <a href="http://www.stanford.edu/~jacksonm/netbook.pdf">Social and Economic networks by Matthew Jackson</a>.
+</p>-->
+
+</li>
+
+
+<li> Bonus lecture: A probability refresher
+
+<!--<p class="indented2">
+given by JK on Friday Jan. 6, 1-2:30pm in Annenberg 213 <br>
+lecture notes: <a href="lectures/probability_refresher.ppt">[ppt]</a> <br>
+</p>
+
+</li>-->
+
+
+<li> Why do we see a giant component?
+
+<!--<p class="indented2">
+lecture notes: <a href="lectures/lecture3.pdf">[pdf]</a> <br>
+lecture slides: <a href="lectures/lecture3.ppt">[ppt]</a> <br>
+required reading: none <br>
+if you want more: <a href="http://books.google.com/books?id=u2c3LpjWs7EC&printsec=frontcover&dq=The+strange+logic+of+random+graphs&source=bl&ots=j68zEP38Ga&sig=J9EE83E575ePF1tYTnUZl3z2KRQ&hl=en&ei=GT0rTeWmLYu6sQOk_6WIBw&sa=X&oi=book_result&ct=result&resnum=3&ved=0CCkQ6AEwAg#v=onepage&q&f=false">The strange logic of random graphs</a>, by Joel Spencer <br>
+if you want (a lot) more: <a href="http://www.win.tue.nl/~rhofstad/NotesRGCN.html"> Random Graphs and complex networks</a> by Remco van der Hofstad <br>
+if you want (a lot) more: <a href="http://books.google.com/books?id=o9WecWgilzYC&printsec=frontcover&dq=Random+Graphs+by+Bela+Bollobas&source=bl&ots=YyMOpUYmVf&sig=BVWh8DDU_5BTAF0rijrkC-m2YYk&hl=en&ei=Nj0rTcLdC4u6sQOk_6WIBw&sa=X&oi=book_result&ct=result&resnum=3&ved=0CDIQ6AEwAg#v=onepage&q=Random%20Graphs%20by%20Bela%20Bollobas&f=false">Random Graphs</a> by Bela Bollobas, Chapters 2,5, and 6.
+</p>
+</li>
+-->
+
+<li> Are heavy-tails actually "normal"?
+
+<!--<p class="indented2">
+lecture notes: <a href="lectures/lecture4.pdf">[pdf]</a> <br>
+lecture plots: <a href="lectures/lecture4.ppt">[ppt]</a> <br>
+required reading:  Chapter 18 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">[Easley & Kleinberg 2010]</a><br>
+suggested reading: <a href="http://arxiv.org/abs/0706.1062">[Clauset, Shalizi, & Newman 2009]</a> <br>
+suggested reading: <a href="http://xxx.lanl.gov/abs/cond-mat/0106096">[Albert and Barabasi 2002]</a> <br>
+suggested reading: <a href="http://arxiv.org/abs/cond-mat/0503087">[Achlioptas, Clauset, Kempe, Moore 2009]</a><br>
+if you want (a lot) more: <a href="http://www3.interscience.wiley.com/cgi-bin/summary/109870106/SUMMARY?CRETRY=1&SRETRY=0">[Bollobas 2003]</a>
+</p>-->
+</li>
+
+<li> Why is it a small world (after all)?
+<!--<p class="indented2">
+Talk about "Freenet" here...and hyperbolic networks.  Highlight how small world can be useful for design too.
+
+lecture slides: <a href="lectures/lecture5.ppt">[ppt]</a> <br>
+lecture notes: <a href="lectures/lecture5.pdf">[pdf]</a> <br>
+required reading:  Chapter 20 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">[Easley & Kleinberg 2010]</a><br>
+suggested reading: <a href="http://en.wikipedia.org/wiki/Watts_and_Strogatz_model">[Watts and Strogatz model]</a> <br>
+suggested reading: <a href="http://portal.acm.org/citation.cfm?id=335325">[Kleinberg 2000]</a>
+</p>-->
+</li>
+
+</ul>
+
+<p class="indented"><b>Part II. The impact of network structure</b></p>
+
+<ul>
+
+<li> How search works
+<!--<p class="indented2">
+lecture slides (1st half): <a href="lectures/lecture6.ppt">[ppt]</a><br>
+lecture notes (2nd half): <a href="lectures/lecture6.pdf">[pdf]</a><br>
+required reading:  <a href="http://www.cs.cornell.edu/home/kleinber/networks-book">Chapter 14 of [Easley & Kleinberg 2010]</a><br>
+required reading: <a href="lectures/google.pdf">[Brin and Page 1998]</a> <br>
+required reading: <a href="lectures/pagerank.ps">[Page et al. 1999]</a> <br>
+suggested reading: <a href="lectures/DeeperInsidePR.pdf">[Langville and Meyer 2004]</a>-->
+</li>
+
+<li> Data centers: What's in them and how to program them
+<!--
+<p class="indented2">
+lecture slides: <a href="lectures/lecture10.ppt">[ppt]</a><br>
+suggested reading: <a href="http://code.google.com/edu/parallel/mapreduce-tutorial.html"> Google's intro to MapReduce</a>
+</p>
+-->
+
+
+<li> Bonus lecture: An introduction to game theory
+<!--<p class="indented2">
+given by Raga on Feb. 1, 1-2:30pm in ARMS 155 <br>
+lecture slides: <a href="lectures/game_theory_intro.pdf">[pdf]</a> <br>
+required reading:  Chapters 6 and 7 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book">[Easley & Kleinberg 2010]</a><br>
+suggested reading: Chapters 1 and 2 of <a href="http://books.google.com/books?id=YCu2alSw0w8C&lpg=PP1&pg=PP1#v=onepage&q=&f=false">[Algorithmic Game Theory]</a>-->
+</li>
+
+<li> Cascading behavior in networks
+<!--<p class="indented2">
+lecture slides: <a href="lectures/lecture7.ppt">[ppt]</a> <br>
+lecture notes: <a href="lectures/lecture7.pdf">[pdf]</a> <br>
+required reading:  Chapters 16 and 19 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book">[Easley & Kleinberg 2010]</a><br>
+suggested reading: <a href="http://www.hss.caltech.edu/~lyariv/Papers/DiffusionChapter.pdf">[Jackson & Yariv 2010]</a>
+<br>-->
+</li>
+
+<li> Project idea session
+<!--<p class="indented2">
+lecture slides: <a href="lectures/project_ideas.ppt">[ppt]</a> <br>
+past project reports: <a href="http://courses.cms.caltech.edu/cs145/"> [www]</a>
+</p>-->
+</li>
+
+</ul>
+
+<p class="indented"><b>Part III. Network economics</b></p>
+
+<ul>
+
+<li> Load Balancing & Routing games
+
+<!--<p class="indented2">
+SHRINK!
+lecture slides: <a href="lectures/lecture8.ppt">[ppt]</a> <br>
+lecture notes: <a href="lectures/lecture8.pdf">[pdf]</a><br>
+required reading:  Chapter 8 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book">[Easley & Kleinberg 2010]</a><br>
+suggested reading: Chapters 17-18 of <a href="http://books.google.com/books?id=YCu2alSw0w8C&lpg=PP1&pg=PP1#v=onepage&q=&f=false">[Algorithmic Game Theory]</a>-->
+</li>
+
+<!--<li> Net neutrality (1 lecture)
+<p class="indented2">
+given by Simon Wilke at Lunch Bunch on Tuesday March 1, 12-1pm in Annenberg 105 <br>
+lecture slides: <a href="lectures/wilke.ppt">[ppt]</a> <br>
+</p>
+</li> -->
+
+
+
+<li> Computational advertising
+<!--<p class="indented2">
+lecture slides (ad auction intro): <a href="lectures/lecture9.ppt">[ppt]</a><br>
+lecture notes (auction basics): <a href="lectures/lecture9a.pdf">[pdf]</a> <br>
+lecture notes (ad auction details): <a href="lectures/lecture9b.pdf">[pdf]</a> <br>
+lecture slides (ad auction exchanges): <a href="lectures/lecture9c.ppt">[ppt]</a>  <br>
+required reading:  Chapter 9 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book">[Easley & Kleinberg 2010]</a><br>
+required reading:  Chapter 15 of <a href="http://www.cs.cornell.edu/home/kleinber/networks-book">[Easley & Kleinberg 2010]</a><br>
+suggested reading: <a href="lectures/gsp.pdf">[Edelman, Ostrovsky, & Schwarz 2005]</a><br>
+if you want more: <a href="http://www.stanford.edu/class/msande239/">Stanford's Computational Advertising course</a>-->
+</li>
+
+<li> Strategic network formation
+<!--<p class="indented2">
+suggested reading: <a href="http://books.google.com/books?id=YCu2alSw0w8C&lpg=PP1&pg=PP1#v=onepage&q=&f=false">Algorithmic game theory</a> Chapter 19-->
+</li>
+
+</ul>
+
+<p class="indented"><b>Course Summary</b></p>
+
+<ul>
+
+<li> Course wrapup
+<!--<p class="indented2">
+lecture slides: <a href="lectures/lecture11.ppt">[ppt]</a>
+</p>-->
+</li>
+
+<!--
+<li> Miscellaneous topics: Crowdsourcing, P2Ps and CDNs, CAPTCHAs,  prediction markets, content aggregation, etc. (skipped)
+</li>
+-->
+
+
+</ul>
+
+<!--
+<a name="grading"></a>
+<h3>Grading</h3>
+<p class="indented">This is a preliminary breakdown that may change during the term.  In particular, I reserve the right to decide that I want to have a final, in which case it will change dramatically! <br>
+
+<p class="indented">
+<ul>
+<li> Homeworks -- 70%
+<li> Blog posts -- 10%
+<li> Project proposal -- 10%
+<li> Project plan -- 10%
+</ul>
+-->
+
+<a name="homeworks"></a>
+<h3> Homeworks </h3>
+<p class="indented"> Homeworks will be assigned every 1-2 weeks.  Many of the problems will be challenging, so please start immediately and please come to office hours to discuss the problems! The assignments will represent a mixture of theory (proofs) and practice (coding).  I assume that you can code and use Matlab/Mathematica and Python.<br><br>
+
+<!--You are strongly encouraged to collaborate with your classmates on these problems, but each person must write up the final solutions individually.  You should note on your homework specifically which problems were a collaborative effort and with whom.  <br><br>-->
+</p>
+
+<ul>
+<li> Homework 1: Warming up</p>
+</li>
+<li> Homework 2: Starting with a crawl
+</li>
+<li> Homework 3: Heavy tails and small worlds
+</li>
+<li> Homework 4: Search & MapReduce
+</li>
+<li> Miniproject 1: Rankmaniac
+</li>
+<li> Homework 5: Game theory warmup
+</li>
+<li> Minproject 2: Pandemaniac
+</li>
+<li> Homework 6: Auctions and sponsored search
+</li>
+<li> Miniproject 3: Clickmaniac
+</li>
+<li> Homework 7: Network Economics
+</li>
+
+</ul>
+
+<!--
+<p class="indented"><br> <b>Late policy:</b> Assignments are typically due Fridays at 1pm. I will allocate each student 4 tokens at the beginning of the term.  Each of these tokens can be used to buy a one day extension on any homework during the term.  You cannot get extra tokens and zero credit will be given to late assignments, so use your tokens wisely and start early!</p>
+-->
+
+<h3>Mini-project winners</h3>
+<p class="indented">We have several mini-projects during the course:  one related to pagerank (rankmaniac), one related to epidemics/pandemics (pandemaniac), and one related to computational advertising (clickmaniac).  The projects change year to year, but the winners are immortalized here:
+<br>
+<br>
+In 2015... <br>
+  &nbsp &nbsp   the rankmaniacs were: ??? <br>
+  &nbsp &nbsp   the pandemaniacs were: ??? <br>
+  &nbsp &nbsp   the clickmaniacs were: ??? <br>
+
+<br>
+In 2014... <br>
+  &nbsp &nbsp   the rankmaniacs were: Ryan Batterman, Joseph Choi, and Kevin Yang <br>
+  &nbsp &nbsp   the pandemaniacs were: Kun Huang, Shupin Mao, Danlei Yang <br>
+  &nbsp &nbsp   the clickmaniacs were: Alex Cioc, David Foor <br>
+
+<br>
+In 2013... <br>
+  &nbsp &nbsp   the rankmaniacs were: Benjamin Cosman, Matthew Dughi, Suzannah Fraker, Yuchen Lin<br>
+  &nbsp &nbsp   the clickmaniacs were: Eduardo Gonzalez, Li Gu, Josie Kishi, Jesse Salomon<br>
+
+<br>
+In 2012... <br>
+  &nbsp &nbsp   the rankmaniacs were: Michael Burd, Michael Hirshleifer, Ramya Vinayak <br>
+  &nbsp &nbsp   the clickmaniacs were: Kevin Lo, Nathan Watson, Mikhail Sushkov, Stasja Stanisic<br>
+
+<br>
+In 2011... <br>
+  &nbsp &nbsp   the rankmaniacs were: Giordon Stark, Jamie Jackson <br>
+  &nbsp &nbsp   the clickmaniacs were: Dai Wei, Doris Xin, Wenqi Yao <br>
+
+<br>
+In 2010... <br>
+  &nbsp &nbsp   the rankmaniacs were: Daniel Erenrich, Chis Kennelly, Andy Matuschak <br>
+   &nbsp &nbsp  the clickmaniacs were: Jonathan Krause, Manuel Lagang <br>
+</p>
+
+<!--
+
+<a name="blog"></a>
+<h3> Blog Post Guidelines </h3>
+
+<p class="indented"> We will maintain a <a href="http://cs144-caltech.blogspot.com/">CS144 course blog</a> as part of the course, with the goal of ensuring that everyone takes the time to connect what we are discussing in class with what's going on in the world.  Every student will be responsible for making two posts during the term.  The deadline for these posts is rolling, depending on your last name. <a href="blogpolicies.pdf">The details of the policies, grading, and due dates for these blog posts is here.</a> <br><br>
+
+Pretty much anything related to "our networked life" is an appropriate topic for posts.  Possibilities range from (i) topics related to the robustness, structure, growth of networks broadly defined; (ii) anything about the interaction of networks with economics or markets; (iii) topics about what runs the web (data centers, cdns, etc); and (iv) topics related to how fads, opinions, or political movements spread.    For inspiration, check out the <a href="http://blogs.cornell.edu/info2040/">course blog from the Cornell "Networks" course</a>. <br><br>
+
+To allow students to make posts anonymously (if desired), we have a common userid and password, which will be announced in class.  If you missed it, or forgot it, email a TA.  To allow for grading, if you post anonymously please be sure to email JK "claiming" your post.</p>
+
+
+
+<a name="projects"></a>
+<h3> Project Information</h3>
+
+<p class="indented">
+We will not be having a course project during this term, but those doing the project sequence (143/144/145) will be preparing for the project they will complete during the third term.  To accomplish this we will have two project-related assignments:</p>
+
+<ul>
+<li> <a href="projectproposal.pdf">Project proposal</a> (due: Feb 22 at 1:30pm)<br>
+<p>
+You will provide 1-2 page proposals for 3 possible projects related to 144 (or 143).  These can be completed in groups of 2-4. We will provide more detail and guidance on possible areas soon, but this is meant to be very open ended. <b>Even those not doing the project sequence will be required to submit proposals. </b>
+
+We hope that you consult with the TAs and/or the professor about your ideas before the deadline of the project proposal.  This will allow us to suggest ideas if you're stuck or give early feedback/pointers related to ideas you are considering. <br><br>
+
+Those not taking the project sequence will still be required to submit project proposals -- this is because I think this is an excellent exercise that forces you to think creatively about the material in the course. <br><br>
+
+If you're having trouble coming up with a good idea for a project, here are some possible places to start looking:</p>
+<ul>
+<li> <a href="http://courses.cms.caltech.edu/cs145/">Past student projects</a>
+<li> Yahoo's <a href="http://labs.yahoo.com/ksc">key scientific challenges</a>
+<li> Interesting network data sets: <a href="http://www.nndb.com/">NNDB</a>, <a href="http://theinfo.org/get/data"> theinfo.org</a>, <a href="http://www-personal.umich.edu/~mejn/netdata/">Mark Newman's repository</a>, <a href="http://snap.stanford.edu/">Jure Leskovec's repository</a>
+      </li>
+<li> Research papers: <a href="http://www.cs.cornell.edu/Courses/cs685/2007fa/">Jon Kleinberg's course</a> has a nice list
+<li> The chapters we haven't covered in <a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">[Easley & Kleinberg]</a>
+<li> Web applications: Facebook apps, twitter, digg, capthcas, prediction markets, ebay, iphone/android apps, etc...
+<li> Mung Chiang's <a href="http://scenic.princeton.edu/network20q/">20Q about networked life course website</a>
+</ul>
+<p>Here's an example <a href="proposals.pdf">project proposals report</a> to give you an idea of what I'm looking for.  (You only need to do 3, they just did 6 because they were enthusiastic!)
+</p>
+</li>
+
+<li><a href="projectplan.pdf">Project plan</a> (due: March 16 at 1:30pm) <br>
+<p>
+At the end of the course, those doing the project sequence will provide a 5-10 page detailed proposal including a literature review and timeline for the project that they will pursue during the spring term.  Again groups of 2-4 are preferred. Those not doing the project sequence will instead be asked to design a new ``course module'', including 1-2 lectures and a few homework problems.
+<br>
+<br>
+Here's an example <a href="module.pdf">course module</a> and <a href="plan.pdf">project plan</a> to give you an idea of what I'm looking for.  (For the module, you can also turn in annotated ppt slides if you prefer.)
+
+</li>
+</ul>
+
+-->
+
+
+</body>

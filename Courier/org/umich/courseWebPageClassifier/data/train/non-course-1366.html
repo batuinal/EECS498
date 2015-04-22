@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Stanford Computer Science</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="Stanford Computer Science RSS" href="https://cs.rss.xml" />
+<link rel="shortcut icon" href="https://cs.stanford.edu/sites/all/themes/stanford_cs/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/modules/book/book.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/modules/node/node.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/modules/system/defaults.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/modules/system/system.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/modules/system/system-menus.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/modules/user/user.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/modules/cck/theme/content-module.css?j" />
+<!-- <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/modules/filefield/filefield.css?j" /> -->
+<!-- <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/modules/views_slideshow/contrib/views_slideshow_singleframe/views_slideshow.css?j" /> -->
+<!-- <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/modules/views_slideshow/contrib/views_slideshow_thumbnailhover/views_slideshow.css?j" /> -->
+<!-- <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/modules/cck/modules/fieldgroup/fieldgroup.css?j" /> -->
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/modules/views/css/views.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/style.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/typography.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/superfish.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/superfish-navbar.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/superfish-vertical.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/stanford_cs/css/fusion-stanford-cs-style.css?j" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/grid16-960.css" />
+  <!--[if IE 8]>
+  <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/ie8-fixes.css" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/stanford_cs/css/ie8-fixes.css" />
+  <![endif]-->
+  <!--[if IE 7]>
+  <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/ie7-fixes.css" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/stanford_cs/css/ie7-fixes.css" />
+  <![endif]-->
+  <!--[if lte IE 6]>
+  <link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css" />
+<link type="text/css" rel="stylesheet" media="all" href="https://cs.stanford.edu/sites/all/themes/stanford_cs/css/ie6-fixes.css" />
+  <![endif]-->
+
+
+<script src="https://cs.stanford.edu/webdb//js/jquery-1.4.4.js"></script>
+<script src="https://cs.stanford.edu/webdb//js/jquery.ui.core.js"></script>
+<script src="https://cs.stanford.edu/webdb//js/jquery.ui.widget.js"></script>
+<script src="https://cs.stanford.edu/webdb//js/jquery.ui.tabs.js"></script>
+<script src="https://cs.stanford.edu/webdb//js/jquery.cookie.js"></script>
+<script src="https://cs.stanford.edu/webdb//js/jquery.floatingmessage.js"></script>
+<link rel="stylesheet" href="https://cs.stanford.edu/webdb//css/jquery.ui.tabs.css" />
+<link rel="stylesheet" href="https://cs.stanford.edu/webdb//css/stanford_cs.css" />
+<!-- <link rel="stylesheet" href="https://cs.stanford.edu/webdb//css/ui-darkness/jquery-ui-1.7.2.custom.css" /> -->
+<script>
+
+/* Global JavaScript File for working with jQuery library */
+
+// execute when the HTML file's (document object model: DOM) has loaded
+$(document).ready(function() {
+	$( "#tabs" ).tabs({
+//      Remember what tab we were on last
+        cookie: { expires: 1 }
+    });
+
+//$( ".selector" ).tabs( "option", "selected", 3 );
+
+});
+
+function next_tab() {
+	var selected = $( "#tabs" ).tabs( "option", "selected" );
+	var length = $( "#tabs" ).tabs( "length" );
+	var index = ( selected % length ) + 1
+	$( "#tabs" ).tabs( "select", index );
+	//$( "#tabs" ).tabs( "select", selected++ );
+}
+
+function prev_tab(index) {
+	var selected = $( "#tabs" ).tabs( "option", "selected" );
+	var length = $( "#tabs" ).tabs( "length" );
+	var index = selected - 1 ;
+	if(index<0) index = length;
+	$( "#tabs" ).tabs( "select", index );
+}
+
+
+</script>
+
+</head>
+
+<body id="pid-node" class="front not-logged-in page-node no-sidebars layout-first-main sidebars-split font-size-12 grid-type-960 grid-width-16">
+  <div id="page" class="page">
+    <div id="page-inner" class="page-inner">
+      <div id="skip">
+        <a href="#main-content-area">Skip to Main Content Area</a>
+      </div>
+
+      <!-- header-top row: width = grid_width -->
+
+      <!-- header-group row: width = grid_width -->
+      <div id="header-group-wrapper" class="header-group-wrapper full-width">
+        <div id="header-group" class="header-group row grid16-16">
+          <div id="header-group-inner" class="header-group-inner inner clearfix">
+                        <div id="header-group-inner-top" class="clearfix">
+                                    <div id="logo">
+                    <a href="https://cs.stanford.edu/" title="Home"><img src="https://cs.stanford.edu/sites/default/files/stanford_cs_logo.png" alt="Home" /></a>
+                  </div>
+                                <div id="search-box" class="search-box block">
+<div id="search-box-inner" class="search-box-inner inner clearfix">
+<form action="/"  accept-charset="UTF-8" method="post" id="search-theme-form">
+<div>
+<div id="search" class="container-inline">
+    <input class="search-input form-text" type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-header"  size="15" value="" title="Enter the terms you wish to search for" />
+  <input class="search-submit" type="submit" name="op" value="Search"/>
+  <input type="hidden" name="form_build_id" id="form-0f99c2de628be38b3b0505796ecbd770" value="form-0f99c2de628be38b3b0505796ecbd770"  />
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form"  />
+  </div>
+<div class="corner-bottom"><div class="corner-bottom-right corner"></div><div class="corner-bottom-left corner"></div></div>
+</div></form>
+</div><!-- /search-box-inner -->
+</div><!-- /search-box -->
+              <div id="secondary-menu" class="secondary-menu block">
+<div id="secondary-menu-inner" class="secondary-menu-inner inner clearfix">
+<ul class="links"><li class="menu-955 active-trail first active"><a href="https://cs.stanford.edu/" title="" class="active">Home</a></li>
+<li class="menu-165"><a href="https://cs.stanford.edu/info/contact" title="">Contact Us</a></li>
+<li class="menu-354"><a href="https://cs.stanford.edu/info/directions" title="">Directions</a></li>
+<li class="menu-312"><a href="http://soe.stanford.edu" title="">School of Engineering</a></li>
+<li class="menu-355 last"><a href="http://www.stanford.edu" title="">Stanford University</a></li>
+</ul></div><!-- /secondary-menu-inner -->
+</div><!-- /secondary-menu -->
+</div>
+    <div id="header-group-inner-inner" class="clearfix">
+        <div id="header-site-info" class="header-site-info block">
+            <div id="header-site-info-inner" class="header-site-info-inner inner">
+            </div><!-- /header-site-info-inner -->
+        </div><!-- /header-site-info -->
+    </div>
+
+
+</div><!-- /header-group-inner -->
+        </div><!-- /header-group -->
+      </div><!-- /header-group-wrapper -->
+
+      <!-- preface-top row: width = grid_width -->
+
+            <div id="preface-top-wrapper" class="preface-top-wrapper full-width">
+        <div id="preface-top" class="preface-top row grid16-16">
+          <div id="preface-top-inner" class="preface-top-inner inner clearfix">
+          </div><!-- /preface-top-inner -->
+        </div><!-- /preface-top -->
+      </div><!-- /preface-top-wrapper -->
+    <!-- main row: width = grid_width -->
+    <div id="main-wrapper" class="main-wrapper full-width">
+      <div id="main" class="main row grid16-16">
+        <div id="main-inner" class="main-inner inner clearfix">
+
+
+<div id="main-group" class="main-group row nested grid16-13">
+<div id="main-group-inner" class="main-group-inner inner clearfix">
+<div id="main-content" class="main-content row nested">
+<div id="main-content-inner" class="main-content-inner inner clearfix">
+<!-- content group: width = grid_width - (sidebar_first_width + sidebar_last_width) -->
+<div id="content-group" class="content-group row nested grid16-13">
+<div id="content-group-inner" class="content-group-inner inner clearfix">
+
+<div class="form-item">
+<!-- end $Id: header.php 3077 2011-08-10 17:09:25Z miles $ -->
+<form name="csid_form" method="POST">
+
+<div id="tabs" class="content-tabs row">
+<h1 class="title">CSID </h1>
+<div id="content-tabs" class="content-tabs row  ">
+    <div id="content-tabs-inner" class="content-tabs-inner inner clearfix">
+    <ul class="tabs primary">
+    <li><a href="#Name">Name</a></li><li><a href="#Misc">Misc</a></li><li><a href="#CSID">CSID</a></li>    </ul>
+    </div>
+</div>
+<div id="Name" class="ui-tabs-hide"><h3>Welcome to the Computer Science Department!</h3>
+
+<p>Over the next few pages, we'll gather some information about you for the department database. The information you provide will be used to establish a CS ID for access to department computing resources.</p>
+<p>Affiliation with CS department is required and will be verified before CSid is approved.</p>
+<p>New CS students, please wait until after new students orientation before filling out this form.</p>
+<p>Enter your true, full (legal) name. No nicknames, please. If you have a Stanford University ID, an 8-digit number found on your ID card as shown below, please enter it also.</p>
+
+<table>
+<tr>
+	<td align="right"><label>First and Middle Name(s):</label></td><td><input type="text" name="applicant[nam_first_mi]" size="30" tabindex="1" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>Last Name / Surname:</label></td><td><input type="text" name="applicant[nam_last]" size="30" tabindex="2" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>University ID (if you have one):</label></td><td><input type="text" name="applicant[suid]" size="8" tabindex="3" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>Email Address (required):</label></td><td><input type="text" name="applicant[email]" size="50" tabindex="4" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>Gender:</label></td><td>
+        <select name="applicant[sex]">
+        <option value="x">Please select one...</option>
+        <option value="M" >Male</option>
+        <option value="F" >Female</option>
+        <!--<option value="D" >Decline to state</option>-->
+        </select></td>
+</tr>
+<tr>
+    <td colspan="4" align=center>
+    <input type=button onClick="next_tab()" value="Next ��" class="form-submit"/>    </td>
+
+</tr>
+</table>
+<img src="https://cs.stanford.edu/images/idcard.jpg" />
+</div><div id="Misc" class="ui-tabs-hide"><br>
+<h3>Tell us a little more about yourself</h3>
+
+<!--  <p>All the fields on this page are optional, though it is recommended
+that you fill in at least the <b>Department</b> and <b>Title</b> fields. You
+will be able to change these at any time once your application has been
+approved.</p> -->
+
+<p> The <b>Friendly Name</b> (by default your first name) field should have the name you are known as by
+most CSD faculty, staff, and students. For example, it can be your actual,
+legal first name or a nick name. </p>
+
+<!--     <p>Feel free to leave the <b>Birthday</b> field blank if you don't want to
+publicize your birthday. Feel free to leave out the year if you don't want
+to publicize the year you were born.</p>-->
+
+<p>If you have a web home page please enter the complete URL. If you enter a home page here a link will be automatically
+created from the department home page to your home page.</p>
+
+
+<table width="100%">
+<tr>
+	<td align="right"><label>Friendly Name:</label></td><td><input type="text" name="applicant[nam_friendly]" size="40" tabindex="1" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>Professional Title:</label></td><td><input type="text" name="applicant[nam_title]" size="40" tabindex="2" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>Department:</label></td><td><input type="text" name="applicant[dept]" size="40" tabindex="2" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>Reason for CSID:</label></td><td><textarea rows="5" cols="30" name="applicant[reason]" size="30" tabindex="2" value=""></textarea></td>
+</tr>
+<tr>
+	<td align="right"><label>HomePage:</label></td><td><input type="text" name="applicant[homepage]" size="40" tabindex="2" value=""/></td>
+</tr>
+<tr>
+    <td colspan="4" align=center>
+            <input type=button onClick="prev_tab()" value="�� Previous" class="form-submit" />    <input type=button onClick="next_tab()" value="Next ��" class="form-submit"/>    </td>
+</tr>
+</table>
+</div><div id="CSID" class="ui-tabs-hide"><h3>Choose a CS ID and password</h3>
+
+<p>The <b>CS ID</b> will be your login or username on CSD computer systems
+and will be your primary CS email alias. It must start with a letter,
+consist of only letters and numbers, and be less than 8 characters long. The<u>
+CS ID cannot be changed</u>, so please choose carefully.</p>
+
+<p><b>If you have a SUNetID, we highly recommend you use it as your CS ID.</b></p>
+
+<p>Your password is the most important single aspect of the security of your account. Choose and protect your password with care.</p>
+
+<table>
+<tr>
+	<td align="right"><label>Sponsor or Advisor in CS:</label></td>
+    <td><input type="text" name="applicant[sponsor_name]" size="64" tabindex="1" value=""></td>
+</tr>
+
+<tr>
+	<td align="right"><label>CSID (login name) you would like:</label></td>
+    <td><input type="text" name="applicant[acct]" size="30" tabindex="2" value=""/></td>
+</tr>
+<tr>
+	<td align="right"><label>Password:</label></td>
+    <td><input type="password" name="applicant[password]" size="30" tabindex="3" value=""/></td>
+</tr>
+<tr>
+	<td align="right">Confirm Password</td>
+    <td><input type="password" name="applicant[confirm_password]" size="30" tabindex="4" value=""/></td>
+</tr>
+<tr>
+    <td colspan="4" align=center>
+    <input type=button onClick="prev_tab()" value="�� Previous" class="form-submit" />        <input type="submit" name="action" id="edit-submit-1" value="Save" class="form-submit" />
+        </td>
+</tr>
+</table>
+</div></div></form>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+          </div><!-- /main-inner -->
+        </div><!-- /main -->
+      </div><!-- /main-wrapper -->
+
+      <!-- postscript-bottom row: width = grid_width -->
+
+      <!-- footer row: width = grid_width -->
+
+      <!-- footer-message row: width = grid_width -->
+      <div id="footer-message-wrapper" class="footer-message-wrapper full-width">
+        <div id="footer-message" class="footer-message row grid16-16">
+          <div id="footer-message-inner" class="footer-message-inner inner clearfix">
+            <div id="footer-message-text" class="footer-message-text block">
+<div id="footer-message-text-inner" class="footer-message-text-inner inner clearfix">
+<span class="fn org">WebDBedit 4.3.3. &copy; Stanford University</span>. <span class="adr">353 Serra Mall, <span class="locality">Stanford</span>,
+<span class="region">California</span> <span class="postal-code">94305</span>. <span class="tel">(650) 723-2300</span></span>.
+<a href="http://www.stanford.edu/site/terms.html">Terms of Use</a> | <a href="http://www.stanford.edu/site/copyright.html">Copyright Complaints</a></div><!-- /footer-message-text-inner -->
+</div><!-- /footer-message-text -->
+          </div><!-- /footer-message-inner -->
+        </div><!-- /footer-message -->
+      </div><!-- /footer-message-wrapper -->
+
+    </div><!-- /page-inner -->
+  </div><!-- /page -->
+</body>
+</html>

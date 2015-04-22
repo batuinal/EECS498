@@ -1,0 +1,571 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD html 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<title>CSCI 129 Computational Photography</title>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<script src="./bin/lib.js" type=text/javascript></script>
+<script src="./bin/popup.js" type=text/javascript></script>
+
+<script type=text/javascript>
+// redefining default features
+var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,status=1';
+</script>
+
+<link media=all href="./css/glab.css" type=text/css rel=StyleSheet>
+<style type=text/css media=all>
+img {
+	padding-right: 0px; padding-left: 10px; FLOAT: right; padding-bottom: 10px; padding-top: 10px
+}
+
+#primarycontent {
+	margin-left: auto;  
+    width: expression(document.body.clientWidth > 995? "995px": "auto" );
+    margin-right: auto;
+    text-align: left;
+    max-width: 995px 
+}
+
+body {
+	text-align: center
+}
+</style>
+
+<meta content="MShtml 6.00.2800.1400" name=GENERATOR></HEAD>
+
+<body>
+
+<div id=primarycontent>
+<center><h1>CSCI 129 Computational Photography</h1>
+<h2>Fall 2012, MWF 11:00 to 11:50, CIT 477 (Lubrano)<br>
+Instructor: <a href="http://www.cs.brown.edu/~hays/">James Hays</a> <br> HTA: Sam Birch and GTA: Emanuel Zgraggen
+</h2>
+
+</center>
+
+<a href="./images/montage_large.jpg">
+    <img style="float: right; padding: 10px; padding-right: 0px;" alt="Computational Photography Montage" src="./images/montage_small.jpg" width="600" height="509"></a>
+
+<h2>Course Description</h2>
+<small><a href="http://www.cs.brown.edu/courses/csci1950-g.html">Course Catalog Entry</a></small> 
+<br>Computational Photography describes the convergence of computer graphics, computer vision, and the Internet with photography. Its goal is to overcome the limitations of traditional photography using computational techniques to enhance the way we capture, manipulate, and interact with visual media. 
+In this course we will study many interesting, recent image based algorithms and implement them to the degree that is possible.
+We will cover topics such as
+<ul id=topics>
+  <li>Cameras and image formation</li>
+  <li>Human visual perception</li>
+  <li>Image processing (filtering, pyramids)</li>
+  <li>Image blending and compositing</li>
+  <li>Image retargeting</li>
+  <li>Texture synthesis and transfer</li>
+  <li>Image completion / inpainting</li>
+  <li>Super-resolution, deblurring, and denoising.</li>
+  <li>Image based lighting and rendering</li>
+  <li>High dynamic range</li>
+  <li>Depth and defocus</li>
+  <li>Flash / no flash photography</li>
+  <li>Coded aperture photography</li>
+  <li>Single / multi view reconstruction</li>
+  <li>Photo quality assessment</li>
+  <li>Non photorealistic rendering</li>
+  <li>Modeling and synthesis using Internet data</li>
+  <li> ... more interesting topics.</li>
+</ul>
+
+The course will consist of six programming projects, two written exams, and a student-chosen final project.  
+Students can earn graduate credit for the course but will need to meet higher requirements on all projects throughout the semester. The graduate version can count towards a graphics specialization.
+<p>
+
+<h2>Prerequisites</h2>
+This course requires programming experience as well as linear algebra, basic calculus, and basic probability. Previous knowledge of computer graphics or computer vision will be helpful. It is strongly recommended that students have taken one of the following courses (or equivalent courses at other institutions):
+<ul id=prereqs>
+  <li><a href="http://www.cs.brown.edu/courses/csci1230.html">CSCI 1230, Introduction to Computer Graphics</a>
+  <li><a href="http://www.cs.brown.edu/courses/csci1430.html">CSCI 1430, Introduction to Computer Vision</a>
+  <li><a href="http://mesh.brown.edu/engn1610/">ENGN 1610, Image Understanding</a>
+</li></ul>
+Some of the course topics overlap with these related courses, but none of the assignments will.
+
+<table border=0 cellpadding=5>
+<tr><td width="35%"><h2>Assignments</h2> </td><td width="45%"><h2>Winning projects</h2></td><td 
+width="20%"><h2>All Results</h2></td></tr>
+
+<tr><td>
+  <a href="asgn/proj1/">Image alignment with pyramids</a>
+</td><td>
+  <a href="results/proj1/hangsu"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Hang Su</a>
+</td><td>
+  <a href="http://www.cs.brown.edu/courses/cs129/results/proj1/">Project 1 Results</a>
+</td></tr>
+
+<tr><td>
+  <a href="asgn/proj2/">Gradient domain fusion using Poisson blending</a>
+</td><td>
+  <a href="results/proj2/damoreno"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Daniel Moreno</a>
+</td><td>
+  <a href="http://www.cs.brown.edu/courses/cs129/results/proj2/">Project 2 Results</a>
+</td></tr>
+
+<tr><td>
+  <a href="asgn/proj3/">Image retargeting with Seam Carving</a>
+</td><td>
+  <a href="results/proj3/jcmace"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Jonathan Mace</a>
+  <a href="results/proj3/baebi"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Bryce Aebi</a>
+</td><td>
+<a href="http://www.cs.brown.edu/courses/cs129/results/proj3/">Project 3 Results</a>
+</td></tr>
+
+<tr><td>
+  <a href="asgn/proj4/">Texture synthesis and transfer with Image Quilting</a>
+</td><td>
+  <a href="results/proj4/huag"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Hua Guo</a>
+</td><td>
+<a href="http://www.cs.brown.edu/courses/cs129/results/proj4/">Project 4 Results</a>
+</td></tr>
+
+<tr><td>
+  <a href="asgn/proj5">High dynamic range and tone mapping</a>
+</td><td>
+  <a href="results/proj5/yanli"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Yan Li</a>
+</td><td>
+<a href="http://www.cs.brown.edu/courses/cs129/results/proj5/">Project 5 Results</a>
+</td></tr>
+
+<tr><td>
+   <a href="asgn/proj6">Automatic Panorama Construction</a>
+</td><td>
+  <a href="results/proj6/damoreno"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Daniel Moreno</a>
+</td><td>
+<a href="http://www.cs.brown.edu/courses/cs129/results/proj6/">Project 6 Results</a>
+</td></tr>
+
+<tr><td>
+  <a href="asgn/final">Your choice for final project</a>
+</td><td>
+  <a href="results/final/istrickm"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Ian Strickman</a>
+  <a href="results/final/yanli"><img src="images/gold_trophy.gif" style="padding:0;float:none"  width="17" height="16">Yan Li</a>
+</td><td>
+<a href="http://www.cs.brown.edu/courses/cs129/results/final/">Final Project Results</a>
+</td></tr>
+</table>
+
+It is strongly recommended that all projects be completed in Matlab. All starter code will be provided for Matlab. Students may implement projects through other means but it will generally be more difficult.
+
+<h2>Equipment</h2>
+Students are encouraged to capture their own photographic data for their projects. There's no need for anything fancy -- any 
+digital camera with manual controls should work. 
+
+<h2>Textbook</h2>
+Readings will be assigned in the free, online textbook <a 
+href="http://szeliski.org/Book/">"Computer Vision: Algorithms and 
+Applications"</a> by <a href="http://research.microsoft.com/en-us/um/people/szeliski/">Richard Szeliski</a>.
+
+<h2>Grading</h2>
+Your final grade will be made up from
+<ul id=grades>
+  <li>65% 6 programming projects</li>
+  <li>15% final project</li>
+  <li>20% 2 written examinations</li>
+</ul>
+You have three "late days" for the whole course. That is to say, the 
+first 24 hours after the due date and time counts as 1 day, up to 48 hours 
+is two and 72 for the third late day. This will not be reflected in
+the initial grade reports for your assignment, but they will be factored
+in and distributed at the end of the semester so that you get the most
+points possible.
+<br>
+<br>
+Graduate credit is available and each project will specifiy the minimum requirements to earn such credit.
+
+<h2> Important Links: </h2>
+<ul id=all>
+     <li><a href="docs/collaboration.pdf">Collaboration Policy</a></li>
+    <li><a href="docs/matlab/matlabtutorialcode.html">Matlab Tutorial</a></li>
+</ul>
+
+<h2> Contact Info and Office Hours: </h2>
+You can contact the professor or TA staff with any of the following:
+<ul>
+<li> Professor James: hays[at]cs.brown.edu </li>
+<li> TAs and Professor: cs129tas[at]cs.brown.edu </li>
+</ul>
+
+Professor James' office hours will be held in his office (CIT 445). TA office 
+hours will be held in CIT 227 or CIT 271.
+<ul>
+    <li>James Hays (hays), Monday and Wednesday 1:00-2:00pm </li>
+    <li>HTA Sam Birch (sbirch), Sunday, 7:30-9:30pm, (CIT 227, Moonlab) </li>
+    <li>GTA Emanuel Zgraggen (ez), Monday 5:00-7:00pm, (CIT 271, Fishbowl) </li>
+</ul>
+
+
+<h2><i>Tentative</i> Syllabus</h2>
+<table cellpadding=5 border=1  width="100%">
+<tr>    
+        <td style="width:100px"><b>Class Date</b></td> 
+        <td style="width:350px"><b>Topic</b></td>
+        <td style="width:100px"><b>Slides</b></td>
+        <td style="width:200px"><b>Reading</b></td>
+        <td style="width:100px"><b>Projects</b></td>
+</tr>
+<tr>
+    <td>W, Sept 5</td>
+    <td>Introduction to computational photography</td>
+    <td><a href="lectures/01.ppt">.ppt</a>, <a href="lectures/01.pdf">.pdf</a></td> 
+    <td>Szeliski chapter 1</td> 
+    <td></td> 
+</tr>
+<tr>
+    <td>F, Sept 7</td>
+    <td>Cameras and optics</td>
+    <td><a href="lectures/02.ppt">.ppt</a>, <a href="lectures/02.pdf">.pdf</a></td> 
+    <td>Szeliski chapter 2, especially 2.1.5</td> 
+    <td><a href="asgn/proj1/">Project 1 out</a></td> 
+</tr>
+
+<tr>
+    <td>M, Sept 10</td>
+    <td>Capturing light, man vs machine</td>
+    <td><a href="lectures/03.ppt">.ppt</a>, <a href="lectures/03.pdf">.pdf</a></td> 
+    <td>Szeliski chapter 2</td>
+    <td></td>
+</tr>
+<tr>
+    <td>W, Sept 12</td>
+    <td>Sampling and reconstruction</td>
+    <td><a href="lectures/04.ppt">.ppt</a>, <a href="lectures/04.pdf">.pdf</a></td> 
+    <td>Szeliski chapter 2</td>
+    <td></td>                                                            
+</tr>
+
+<tr>
+    <td>F, Sept 14</td>
+    <td>Linear Filters</td>
+    <td><a href="lectures/05.ppt">.ppt</a>, <a href="lectures/05.pdf">.pdf</a></td> 
+    <td>Szeliski 3.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Sept 17</td>
+    <td>Frequency Domain</td>
+    <td><a href="lectures/06.ppt">.ppt</a>, <a href="lectures/06.pdf">.pdf</a></td> 
+    <td>Szeliski 3.4</td>
+    <td><b>Project 1 due</b><br>  <a href="asgn/proj2/">Project 2 out</a></td>
+</tr>
+
+<tr>
+    <td>W, Sept 19</td>
+    <td>Blending and compositing</td>
+    <td><a href="lectures/07.ppt">.ppt</a>, <a href="lectures/07.pdf">.pdf</a></td> 
+    <td>Szeliski 3.3 and 9.3.4</td>
+    <td></td>
+</tr>
+<tr>
+    <td>F, Sept 21</td>
+    <td>Project 2 and Morphology</td>
+    <td><a href="lectures/project2.pptx">.pptx</a>, <a href="lectures/project2.pdf">.pdf</a><br><a href="lectures/08.ppt">.ppt</a>, <a href="lectures/08.pdf">.pdf</a></td> 
+    <td>Szeliski 3.3.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Sept 24</td>
+    <td>Point Processing and Image Warping</td>
+    <td><a href="lectures/09a.ppt">.ppt</a>, <a href="lectures/09a.pdf">.pdf</a><br><a href="lectures/09b.ppt">.ppt</a>, <a href="lectures/09b.pdf">.pdf</a></td>
+    <td>Szeliski 3.1 and 3.6.1</td>
+    <td></td>
+</tr>
+<tr>
+    <td>W, Sept 26</td>
+    <td>Image Retargeting</td>
+    <td><a href="lectures/10.pptx">.ppt</a>, <a href="lectures/10.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>F, Sept 28</td>
+    <td>Image Retargeting, continued</td>
+    <td>see above</td>
+    <td></td>
+    <td><b> Project 2 due </b><a href="asgn/proj3/"><br>Project 3 out</a></td>
+</tr>
+
+<tr>
+    <td>M, Oct 1</td>
+    <td>Video Textures</td>
+    <td><a href="lectures/12.ppt">.ppt</a>, <a href="lectures/12.pdf">.pdf</a></td>
+    <td>Szeliski 13.5</td>
+    <td></td>
+</tr>
+<tr>
+    <td>W, Oct 3</td>
+    <td>Texture synthesis and filling</td>
+    <td><a href="lectures/13.ppt">.ppt</a>, <a href="lectures/13.pdf">.pdf</a></td>
+    <td>Szeliski 10.5</td>
+    <td></td>
+</tr>
+<tr>
+    <td>F, Oct 5</td>
+    <td>Image analogies, Graph cut, Scene completion</td>
+    <td><a href="lectures/14.ppt">.ppt</a>, <a href="lectures/14.pdf">.pdf</a><br><a href="lectures/scene_completion.ppt">.ppt</a>, <a href="lectures/scene_completion.pdf">.pdf</a></td>
+    <td>Szeliski 9.3.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Oct 8</td>
+    <td><font color="red">No class</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 10</td>
+    <td>Exam review, Single image super-resolution</td>
+    <td><a href="lectures/15.pptx">.pptx</a>, <a href="lectures/15.pdf">.pdf</a></td>
+    <td></td>
+    <td><b>Project 3 due</b></td>
+</tr>
+
+<tr>
+    <td>F, Oct 12</td>
+    <td><font color="blue">Exam 1</font></td>
+    <td></td>
+    <td></td>
+    <td><a href="asgn/proj4/">Project 4 out</a></td>
+</tr>
+
+<tr>
+    <td>M, Oct 15</td>
+    <td><font color="green">Invited Speaker: Connelly Barnes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>W, Oct 17</td>
+    <td>Matting, Transparency, and Illumination</td>
+    <td><a href="lectures/16.ppt">.ppt</a>, <a href="lectures/16.pdf">.pdf</a></td> 
+    <td>Szeliski 10.4 and 13.4</td>
+    <td></td>
+</tr>
+<tr>
+    <td>F, Oct 19</td>
+    <td>Recovering High Dynamic Range</td>
+    <td><a href="lectures/17.pptx">.pptx</a>, <a href="lectures/17.pdf">.pdf</a></td> 
+    <td>Szeliski 10.2</td> 
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Oct 22</td>
+    <td><font color="green">Invited Speaker: John F. Hughes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 24</td>
+    <td>Tone mapping</td>
+    <td><a href="lectures/18.pptx">.pptx</a>, <a href="lectures/18.pdf">.pdf</a></td> 
+    <td>Szeliski 10.2</td>
+    <td><b>Project 4 due</b></td>
+</tr>
+
+<tr>
+    <td>F, Oct 26</td>
+    <td>Stereo</td>
+    <td><a href="lectures/19.pptx">.pptx</a>, <a href="lectures/19.pdf">.pdf</a></td> 
+    <td>Szeliski chapter 11</td>
+    <td><a href="asgn/proj5/">Project 5 out</a></td>
+</tr>
+
+<tr>
+    <td>M, Oct 29</td>
+    <td><font color="red">No class - Hurricane Sandy</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 31</td>
+    <td><font color="green">Invited Speaker: Sylvain Paris. Fast Bilateral Filter</font></td>
+    <td><a href="lectures/bf_course_Brown_Oct2012.ppt">.ppt</a>, <a href="lectures/bf_course_Brown_Oct2012.pdf">.pdf</a></td>  
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 2</td>
+    <td>Project 5 and Stereo, continued</td>
+    <td><a href="lectures/project5.pptx">.pptx</a>, <a href="lectures/project5.pdf">.pdf</a><br><a href="lectures/20.ppt">.ppt</a>, <a href="lectures/20.pdf">.pdf</a></td>
+    <td>Szeliski chapter 11</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Nov 5</td>
+    <td>Modeling light and lightfields</td>
+    <td><a href="lectures/21.ppt">.ppt</a>, <a href="lectures/21.pdf">.pdf</a></td> 
+    <td>Szeliski 13.3</td>
+    <td></td>
+</tr>
+<tr>
+    <td>W, Nov 7</td>
+    <td>Image-based lighting</td>
+    <td><a href="lectures/22.ppt">.ppt</a>, <a href="lectures/22.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 9</td>
+    <td>Homographies and mosaics</td>
+    <td><a href="lectures/23.ppt">.ppt</a>, <a href="lectures/23.pdf">.pdf</a></td> 
+    <td>Szeliski 9.1</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Nov 12</td>
+    <td>Automatic image correspondence</td>
+    <td><a href="lectures/24.pptx">.pptx</a>, <a href="lectures/24.pdf">.pdf</a></td> 
+    <td>Szeliski 4.1</td>
+    <td><b>Project 5 due</b><br><a href="asgn/proj6/">Project 6 out</a></td>
+</tr>
+<tr>
+    <td>W, Nov 14</td>
+    <td>RANSAC and mosaic wrapup</td>
+    <td><a href="lectures/25.pptx">.pptx</a>, <a href="lectures/25.pdf">.pdf</a></td> 
+    <td>Szeliski 6.1 and 9.1.6</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 16</td>
+    <td>Taking good photographs</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>M, Nov 19</td>
+    <td>Photo quality assessment</td>
+    <td><a href="lectures/27.pptx">.pptx</a>, <a href="lectures/27.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Nov 21</td>
+    <td>Project 6 and Final Project Discussion</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>F, Nov 23</td>
+    <td><font color="red">No class, Thanksgiving break</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Nov 26</td>
+    <td>Coded Aperture Photography</td>
+    <td><a href="lectures/29.ppt">.ppt</a>, <a href="lectures/29.pdf">.pdf</a></td> 
+    <td><a href="http://groups.csail.mit.edu/graphics/CodedAperture/">Levin et al., SIGGRAPH 2007</a></td> 
+    <td><b>Project 6 due</b><br><a href="asgn/final">Final Project</a></td>
+</tr>
+
+<tr>
+    <td>W, Nov 28</td>
+    <td>Visual Data and the Internet</td>
+    <td><a href="lectures/30.ppt">.ppt</a>, <a href="lectures/30.pdf">.pdf</a></td> 
+    <td>Szeliski 14.5.1 and 14.4.4</td>
+    <td></td>
+</tr>
+<tr>
+    <td>F, Nov 30</td>
+    <td>Visual Data and the Internet II</td>
+    <td><a href="lectures/31.ppt">.ppt</a>, <a href="lectures/31.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>M, Dec 3</td>
+    <td><font color=green>Invited speaker: Pierre-Yves Laffont. Intrinsic Images</font></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Dec 5</td>
+    <td><font color="blue">Exam 2</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Dec 7</td>
+    <td>Exam 2 recap, Final project discussion</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Dec 10</td>
+    <td><font color="red">No class, reading period</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>W, Dec 12</td>
+    <td><font color="red">No class, reading period</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>F, Dec 21, 2pm</td>
+    <td><font color="blue">Final Presentations during exam period</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</table>
+
+<h2>Acknowledgements</h2>
+The materials from this class rely heavily on slides prepared by other instructors. In particular, many 
+materials are modified from those of Alexei A. Efros, who in turn uses materials from Steve Seitz, Rick 
+Szeliski, Paul Debevec, Stephen Palmer, Paul Heckbert, David Forsyth, Steve Marschner and others, as noted 
+in the slides. Feel free to use these slides for academic or research purposes, but please maintain all 
+acknowledgements.
+
+<h2>Similar Courses at other Universities</h2>
+<ul id=related_courses>
+  <li><a href="http://www.cs.illinois.edu/class/fa10/cs498dwh/">Computational Photography</a> (Derek Hoiem, UIUC)
+  <li><a href="http://web.media.mit.edu/~raskar/photo/">Computational Photography SIGGRAPH Course</a> (Raskar &amp; Tumblin)
+  <li><a href="http://cameraculture.media.mit.edu/Fall2009ComputationalCamera">Computational Camera and Photography</a> (Raskar, MIT Media Lab)
+  <li><a href="http://groups.csail.mit.edu/graphics/classes/CompPhoto06/">Digital and Computational Photography</a> (Durand &amp; Freeman, MIT)
+  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2008_fall/463.html">Computational Photography</a> (Efros, CMU)
+  <li><a href="http://www.cc.gatech.edu/classes/AY2005/cs4803cp_summer/">Computational Photography</a> (Essa, Georgia Tech)
+  <li><a href="http://graphics.stanford.edu/courses/cs448a-08-spring/">Computational Photography</a> (Levoy, Adams, Pulli, Stanford)
+  <li><a href="http://www.cs.unc.edu/~lazebnik/research/fall08/">Computational Photography</a> (Lazebnik, UNC)
+  <li><a href="http://cs.nyu.edu/~fergus/teaching/comp_photo/index.html">Computational Photography</a> (Fergus, NYU)
+  <li><a href="http://www.tamaraberg.com/teaching/Fall_08/index.html">Internet Vision</a> (T.Berg, SUNY)
+  <li><a href="http://www.cs.washington.edu/education/courses/cse576/08sp/">Computer Vision</a> (Seitz &amp; Szeliski, UWashington)
+  <li><a href="http://www.cs.toronto.edu/~kyros/courses/320/">Instroduction to Visual Computing</a> and <a href="http://www.cs.toronto.edu/~kyros/courses/2530/">Visual Modeling</a> (Kutulakos, UToronto)
+</ul>
+<div id=footer>
+<p style="CLEAR: both; margin: 0px">Comments, questions to <A 
+href="http://www.cs.brown.edu/~hays/">James Hays</A>. 
+</p></div></div></body></html>

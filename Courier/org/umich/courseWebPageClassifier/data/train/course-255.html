@@ -1,0 +1,695 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=ISO-8859-1">
+  <meta name="description"
+ content="Mathematics - California Institute of Technology">
+  <title>[Ma1b Analytic - Winter 14-15] - Linear Algebra</title>
+  <csactions></csactions> <csaction name="116bde93"
+ class="Wipe Transition" type="onevent" val0="" val1="5"
+ val2="&quot;_inCenter&quot;"></csaction> <csscriptdict import=""></csscriptdict>
+  <script type="text/javascript"
+ src="file:///C:/Documents%20and%20Settings/scroomes/Application%20Data/Adobe/Adobe%20GoLive/Settings8/JScripts/GlobalScripts/CSScriptLib.js"></script>
+  <csactiondict></csactiondict>
+  <script type="text/javascript"><!--
+CSAct[/*CMP*/ '116bde93'] = new Array(CSStartWipe,/*CMP*/ '',5,"_inCenter");
+
+// --></script>
+  <style type="text/css">
+<!--
+.style4 {font-size: 36px}
+.style18 {font-size: 14px}
+.style19 {
+	font-size: large;
+	font-weight: bold;
+}
+.style20 {
+	font-size: medium;
+	font-style: italic;
+}
+.style21 {font-size: small}
+.style23 {font-size: 10pt}
+.style24 {font-size: 10px}
+.style32 {font-size: 10px; font-weight: bold; }
+.style33 {
+	font-size: 14pt;
+	font-weight: bold;
+	color: #990000;
+}
+-->
+        </style>
+</head>
+<body style="font-family: Verdana; font-size: 8pt;" alink="#6666ff"
+ bgcolor="#ffffff" link="#006699" text="#333333" vlink="#006699">
+<table align="center" border="0" cellpadding="0" cellspacing="0"
+ width="750">
+  <tbody>
+    <tr>
+      <td width="60%"><span class="style19"><font color="#ba650a"
+ face="Verdana, Arial, Helvetica, sans-serif">Math 1b
+Analytic</font></span></td>
+      <td rowspan="4">
+      <div align="center"> &nbsp;<a href="http://www.math.caltech.edu/"
+ target="http://www.math.caltech.edu/"><img
+ src="Caltech-ICON-ORANGE-RGB.jpg" alt=""
+ style="border: 0px solid ; width: 100px; height: 100px;"></a></div>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%"><span class="style20"><font color="#000000"
+ face="Verdana, Arial, Helvetica, sans-serif">Linear
+Algebra</font></span></td>
+    </tr>
+    <tr>
+      <td width="60%"><span class="style21">Winter 2014 - 15</span></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table align="center" bgcolor="#cccccc" border="0" cellpadding="1"
+ cellspacing="0" height="20" width="750">
+  <tbody>
+    <tr>
+      <td bgcolor="#ba650a" height="15">
+      <div align="right"> <a id="top" name="top"></a><span
+ class="style21"><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><b>MWF 10:00 AM // 22 Gates</b></font></span></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table align="center" bgcolor="#dcdcdc" border="0" cellpadding="3"
+ cellspacing="0" height="30" width="750">
+  <tbody>
+    <tr>
+      <td height="15">
+      <center> <font face="Verdana, Arial, Helvetica, sans-serif"><a
+ href="#des">Course Description</a> | <a href="#pol">Policies</a> | <a
+ href="#text">Textbooks</a> | <a href="#lect">Lecture Notes</a> | <a
+ href="#hand">Handouts</a> | <a href="#hw">Homework</a> | <a
+ href="#sections">Sections</a></font> </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffffff">
+      <div class="style23" align="left"> <b><font color="#000000"
+ face="Verdana, Arial, Helvetica, sans-serif">Instructor:</font></b> <font
+ color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Elena
+Mantovan, 262 Sloan, 626-395-4342, <a href="mailto:mantovan@caltech.edu">mantovan@caltech.edu</a>,
+		<b>Office Hours</b>: Fri 2:30-3:30
+</font></div>
+      <div align="left"> <span class="style23"><font color="#000000"
+ face="Verdana, Arial, Helvetica, sans-serif"><b>Lead
+TA: </b><a href="mailto:bhwang@caltech.edu">Brian Hwang</a></font></span><font color="#000000"
+ face="Verdana, Arial, Helvetica, sans-serif"> 158 Sloan, 626-395-4373<br>
+      <b>Course Secretary: </b> <a href="mailto:kcarreon@caltech.edu">Kathy
+Carreon</a>, 253 Sloan, 626-395-4335, <a
+ href="mailto:kcarreon@caltech.edu">kcarreon@caltech.edu</a><br>
+      </font>
+      <hr noshade="noshade" size="1" width="750"> </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table align="center" border="0" cellpadding="8" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr>
+      <td colspan="2" align="left" valign="top">
+      <div align="center"><strong><font
+ face="Verdana, Arial, Helvetica, sans-serif">Send
+us
+Feedback</font></strong></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" valign="top">
+      <div align="center"></div>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td style="font-weight: bold; color: rgb(255, 255, 255);"
+ onmouseover="CSAction(new Array(/*CMP*/'116bde93'));return true;"
+ csover="116bde93" bgcolor="#ba650a" width="175">
+      <div class="style4" align="center"><font
+ face="Verdana, Arial, Helvetica, sans-serif"><span class="style18">Announcements</span></font>
+      </div>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">
+      <div align="center">
+      <p>&nbsp;</p>
+      <br>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table align="center" border="0" cellpadding="3" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr align="left" valign="top">
+      <td align="center">
+      <p></p>
+      <p align="left"> <b> <font face="Verdana, Arial, Helvetica, sans-serif"><br>
+      </font></b>Homeworks are due on MONDAYs at 1AM</p>
+      </td>
+    </tr>
+    <tr align="left" valign="top">
+      <td>&nbsp;<p>Students switching tracks before Add Day may choose to have their HW 
+		sets 1 &amp; 2 grades &quot;transferred&quot; in place of submitting past sets. <br>
+      </td>
+    </tr>
+    <tr align="left" valign="top">
+      <td>&nbsp;<p>Midterm will be handed out in class on WEDNESDAY 2/4.
+      <p>Please hand in midterms in the <b>MA 1b Analytic</b> HW slot outside 
+		Sloan 255.<br>
+      </td>
+    </tr>
+    <tr align="left" valign="top">
+      <td>&nbsp;
+      <p>Final will be handed out in class on WEDNESDAY 3/11.<p>Please hand in 
+		finals in the MA 1b Analytic HW slot outside Sloan 255.<p>Students who 
+		are excused from the final will be notified via email by Thursday 3/12<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><a id="sections"
+ name="sections"></a><span class="style23">Sections</span></font></b> </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">
+      <div align="right"> <font
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<a href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table align="center" border="1" cellpadding="8" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr>
+      <td align="left" valign="top">
+      <p> <span style="font-weight: bold;"><font size="1">Section 8</font></span><font size="1"> 
+		- <a href="mailto:lfu@caltech.edu">Lei Fu</a></font></p>
+      <p><font size="1">Office Hours: Sunday 3pm, 353 Sloan<br>
+        </font>
+      </p></td>
+      <td valign="top" width="174"><font size="1">9:00 AM, Thursday<br>
+      <br>
+11 Downs</font></td>
+      <td width="173"><font size="1">&nbsp; </font> </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+      <p><span class="style32 style24">Section
+9 -</span> <a href="mailto:wcchan@caltech.edu">William Chan</a><br>
+      </p>
+      Office Hours: Saturday 5pm, 160 Sloan<br>
+      </td>
+      <td valign="top" width="174">
+      <p><span class="style24">10:00 AM, Thursday</span></p>
+      <p class="style24">27 Gates<br>
+      </p>
+      </td>
+      <td width="173">&nbsp; </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+      <p class="style24"><span class="style32"><strong>Section 10</strong> - 
+		<span style="font-weight: 400"> <a href="mailto:pjburton@caltech.edu">Peter Burton</a></span></p>
+      Office Hours: Saturday 6pm, 156 Sloan<br>
+      </td>
+      <td class="style24" valign="top" width="174">
+      <p><span class="style24">10:00 AM, Thursday</span></p>
+      <p class="style24">142 Keck<br>
+      </p>
+      </td>
+      <td class="style24" width="173">&nbsp; </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+      <p class="style24"><strong><span class="style32">Section 11</strong> - <a href="mailto:bhwang@caltech.edu">Brian Hwang</a> Lead TA</p>
+      Office Hours: Sunday 4pm, 158 Sloan<br>
+      </td>
+      <td class="style24" valign="top">
+      <p><span class="style24">1:00 PM, Thursday</span></p>
+      <p class="style24">102 Steele<br>
+      </p>
+      </td>
+      <td class="style24">&nbsp;</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+      <p class="style24"><span class="style32">Section 12 - </span><a href="mailto:bhwang@caltech.edu">Brian Hwang</a> Lead TA<br>
+      </p>
+      Office Hours: Sunday 4pm, 158 Sloan<br>
+      </td>
+      <td class="style24" valign="top">
+      <p><span class="style24">2:00 PM, Thursday</span></p>
+      <p class="style24">102 Steele</p>
+      </td>
+      <td class="style24">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><a name="des" id="des"></a>Course
+Description</font></b></center>
+      </td>
+      <td class="style24" bgcolor="#dcdcdc" width="575">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<a href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<br>
+<table align="center" border="0" cellpadding="8" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr>
+      <td style="font-family: Verdana;" colspan="2" class="style24"
+ align="left" valign="top">Math 1b is a one term course on linear
+algebra over the real and complex numbers. Vector spaces are dened
+axiomatically and proofs are supplied for most results. Topics include:
+vector spaces and inner product spaces; subspaces, dimension, and
+bases; linear transformations; systems of linear equations; matrices;
+determinants; eigenvalues and eigenvectors; the characteristic
+polynomial; symmetric, hermitian,and unitary matrices and
+transformations.</td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#2d465f" width="175">
+      <center><b><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><a name="pol" id="pol"></a>Policies</font></b>
+      </center>
+      </td>
+      <td class="style24" bgcolor="#dcdcdc" width="575">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<a href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" border="0" cellpadding="8" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr>
+      <td colspan="2" class="style24" align="left" valign="top"><font
+ face="Verdana, Arial, Helvetica, sans-serif"><strong>GRADES:</strong>
+Roughly 1/3 Homework, 1/3 Midterm, and 1/3 Final.<br>
+Those with high scores on the homework and midterm<i> will be excused </i>from
+the final.</font>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><strong>HOMEWORK
+POLICY:</strong> Students may work together on homework problems as
+long as each student writes up their own homework in their own words
+and understands the solution.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">At most one
+late homework set will be accepted, and only at your TA's discretion,
+if arrangements have been made in advance with your TA, and if the work
+is less than a week late.&nbsp; Other than in exceptional
+circumstances, homework will not be accepted more than a week after the
+deadline.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Many of the
+problems which will be assigned this year in Math 1b, also were
+assigned in previous years in Math 1b.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Do not
+consult the solution sets from previous years in working this years
+problems.</font></p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif">Recitations:</font></b></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Go to the
+recitations! Some weeks, a portion of the recitation will be dedicated
+to introducing some computational (or even theoretical) aspect which
+the Instructor will not have time to present in class. In general, get
+to know your TA and bug him/her to death (figuratively speaking) with
+your questions, and try to fill in all the holes in your understanding
+of the subject.<br>
+      </font></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#2d465f" width="175">
+      <center><b><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><a name="text" id="text"></a>Textbooks</font></b>
+      </center>
+      </td>
+      <td class="style24" bgcolor="#dcdcdc" width="575">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<a href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" border="0" cellpadding="3" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr align="left" valign="top">
+      <td class="style24">
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><strong>Apostol,
+Vol.
+II</strong>, 2nd Ed., John Wiley, 1967, <a
+ href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471000078.html"
+ target="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471000078.html">ISBN:
+0-471-00007-8</a>. <br>
+      <br>
+Class lectures will sometimes cover slightly different material or
+cover material from a different point of view.&nbsp; In particular,
+exams and homework will sometimes involve material covered in lectures
+but not in Apostol.</font></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#2d465f" width="175">
+      <center><b><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><a name="lect" id="lect"></a>Lecture
+Notes
+      </font></b> </center>
+      </td>
+      <td class="style24" bgcolor="#dcdcdc" width="575">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<a href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" border="0" cellpadding="0" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#999999" height="31">
+      <center>
+      <table border="0" cellpadding="4" cellspacing="1" width="700">
+        <tbody>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="125"><font
+ face="Verdana, Arial, Helvetica, sans-serif"><b>Date</b></font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="125"><br>
+            </td>
+            <td><a href="2015ma1b-ana.pdf">Class syllabus</a> (to be updated 
+			weekly, on Wednesday)<br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#2d465f" width="175">
+      <center><b><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><a name="hand" id="hand"></a>Handouts</font></b>
+      </center>
+      </td>
+      <td class="style24" bgcolor="#dcdcdc">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<a href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" border="0" cellpadding="0" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#999999" height="31">
+      <center>
+      <table border="0" cellpadding="4" cellspacing="1" width="700">
+        <tbody>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="125"><br>
+            </td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="125"><br>
+            </td>
+            <td><a href="2015MA1b-Midtermreviewsheet.pdf">Midterm Review Sheet</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="125"><br>
+            </td>
+            <td><a href="2015MA1b-Finalreviewsheet.pdf">Final Review Sheet</a><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="2"
+ cellspacing="0" width="750">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#2d465f" width="175">
+      <center><b><font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif"><a name="hw" id="hw"></a>Homework</font></b>
+      </center>
+      </td>
+      <td class="style24" bgcolor="#dcdcdc" width="575">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<a href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<table align="center" border="0" cellpadding="0" cellspacing="0"
+ width="700">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#999999" height="31">
+      <center>
+      <table border="0" cellpadding="4" cellspacing="1" width="713">
+        <tbody>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="188"><font
+ face="Verdana, Arial, Helvetica, sans-serif"><b>Due Date </b></font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"><b>Homework</b>&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"><b>Solutions
+
+
+
+
+
+
+
+
+
+            </b> </font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="188">1/12/15<br>
+            </td>
+            <td bgcolor="#ffffff"><a href="2015Ma1b-HW1.pdf">set 1</a><br>
+            </td>
+            <td bgcolor="#ffffff"><a href="2015Ma1b-SOL1.pdf">set 1</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="188">Tue 1/20/15<br>
+            </td>
+            <td><a href="2015Ma1b-HW2.pdf">set 2</a><br>
+            </td>
+            <td>
+		<a href="2015Ma1b-SOL2.pdf">set 2</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="188">1/26/15<br>
+            </td>
+            <td><a href="2015Ma1b-HW3.pdf">set 3</a><br>
+            </td>
+            <td>
+		 <a href="2015Ma1b-SOL3.pdf">set 3</a>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td width="188">2/02/15<br>
+            </td>
+            <td><a href="2015Ma1b-HW4.pdf">set 4</a><br>
+            </td>
+            <td>
+	 <a href="2015Ma1b-SOL4.pdf">set 4</a>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td>2/09/15<br>
+            </td>
+            <td>Midterm (handed out in class on 2/4)<br>
+            </td>
+            <td><a href="2015MA1b-MidtermSol.pdf">midterm</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td>Tue 2/17/15<br>
+            </td>
+            <td><a href="2015Ma1b-HW5.pdf">set 5</a><br>
+            </td>
+            <td>
+		  <a href="2015Ma1b-SOL5.pdf">set 5</a>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td>2/23/15<br>
+            </td>
+            <td><a href="2015Ma1b-HW6.pdf">set 6</a><br>
+            </td>
+            <td>
+ 			<a href="2015Ma1b-SOL6.pdf">set 6</a>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td>3/02/15<br>
+            </td>
+            <td><a href="2015Ma1b-HW7(update).pdf">set 7</a> (updated 2/26)<br>
+            </td>
+            <td>
+			<a href="2015Ma1b-SOL7.pdf">set 7</a>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td>3/09/15<br>
+            </td>
+            <td><a href="2015Ma1b-HW8.pdf">set 8</a><br>
+            </td>
+            <td>
+	<a href="2015Ma1b-SOL8.pdf">set 8</a>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" align="left" bgcolor="#ffffff"
+ valign="top">
+            <td>3/16/15<br>
+            </td>
+            <td>Final<br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+<hr noshade="noshade" size="1" width="750">
+<table align="center" bgcolor="#cccccc" border="0" cellpadding="1"
+ cellspacing="0" height="20" width="750">
+  <tbody>
+    <tr>
+      <td class="style24" bgcolor="#ba650a" height="15">
+      <center> <font color="#ffffff"
+ face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<b>Last update:
+January 7, 2015| &copy;
+California Institute of Technology | Questions? &nbsp;kaubry@caltech.edu</b></font>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span class="style24"><br>
+</span>
+</body>
+</html>

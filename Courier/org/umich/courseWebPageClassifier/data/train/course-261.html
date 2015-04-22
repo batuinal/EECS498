@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="description" content="Applied Physics Course - California Institute of Technology">
+  <title>[Ma110b - Winter 2014-15] - Analysis, I</title>
+  </head><body style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);" link="#006699" vlink="#006699" alink="#6666ff"><csactions></csactions> <csaction name="116bde93" class="Wipe Transition" type="onevent" val0="" val1="5" val2="&quot;_inCenter&quot;"></csaction><csscriptdict import=""></csscriptdict>
+  <script type="text/javascript" src="file:///C:/Documents%20and%20Settings/scroomes/Application%20Data/Adobe/Adobe%20GoLive/Settings8/JScripts/GlobalScripts/CSScriptLib.js"></script><csactiondict></csactiondict>
+  <script type="text/javascript"><!--
+CSAct[/*CMP*/ '116bde93'] = new Array(CSStartWipe,/*CMP*/ '',5,"_inCenter");
+
+// --></script>
+  <style>
+<!--
+
+div.buying {
+  padding: 0.25em 0em;
+  font-size: .86em;
+}
+
+.sans {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: small;
+}
+
+td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: x-small;
+}
+
+td.bucket {
+  padding: 5px 0em;
+}
+
+td.bucket div.content {
+  margin: 0.5em 0px 0em 25px;
+}
+-->
+  </style>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td width="60%"><font color="#ba650a" size="5" face="Verdana, Arial, Helvetica, sans-serif"><b>Math 110b</b></font></td>
+      <td rowspan="4">
+      <div align="center"> &nbsp;<a href="http://www.math.caltech.edu/" target="http://www.math.caltech.edu/"><img src="../../main/Caltech-ICON-ORANGE-RGB.jpg" alt="" style="border: 0px solid ; width: 100px; height: 100px;"></a></div>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%"><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif"><i>Analysis, I</i></font></td>
+    </tr>
+    <tr>
+      <td width="60%"><font color="#999999" size="-1" face="Verdana, Arial, Helvetica, sans-serif"> Winter
+2014-2015</font></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table bgcolor="#cccccc" border="0" cellpadding="1" cellspacing="0" width="750" align="center" height="20">
+  <tbody>
+    <tr>
+      <td bgcolor="#ba650a" height="15">
+      <div align="right"> <font color="#ffffff" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>MWF
+11:00
+//
+159
+Sloan</b></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table bgcolor="#dcdcdc" border="0" cellpadding="3" cellspacing="0" width="750" align="center" height="30">
+  <tbody>
+    <tr>
+      <td height="15">
+      <center> <font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="#des">Course
+Description</a> | <a href="#pol">Policies</a>
+| <a href="#text">Textbook</a> | <a href="#lect">Lecture Notes</a>| <a href="#lect">Telegraphic Notes</a> | <a href="#hand">Handouts</a> | <a href="#hw">Homework</a> </font> </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffffff">
+      <div align="left"><small><b> <font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif"><small>Instructor:</small></font></b></small>
+      <big><span style="font-family: Verdana;">Eric Rains</span></big><font color="#000000" size="-1" face="Verdana, Arial, Helvetica, sans-serif"><span style="font-family: Verdana;">, </span>286 Sloan, 395-4322,<a href="mailto:rains@caltech.edu"> </a><a href="mailto:rains@caltech.edu">rains@caltech.edu<br>
+      </a>Office hours: TBA<br>
+      </font> <font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif"><small><b>Grader:</b>
+TBA</small></font><font color="#000000" size="3" face="Verdana, Arial, Helvetica, sans-serif"> </font></div>
+      <div align="left">
+      <hr size="1" noshade="noshade" width="750"> </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table border="0" cellpadding="8" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left">
+      <div align="center"> <font size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>Feedback
+Form</strong></font></div>
+      <div align="center"> &nbsp;</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td onmouseover="CSAction(new Array(/*CMP*/'116bde93'));return true;" csover="116bde93" bgcolor="#ba650a" width="175">
+      <center> <b><font color="#ffffff" size="-1" face="Verdana, Arial, Helvetica, sans-serif"><a name="ann"></a>Announcements</font></b> </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table border="0" cellpadding="3" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr valign="top" align="left">
+      <td>&nbsp;</td>
+    </tr>
+    <tr valign="top" align="left">
+      <td><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff" size="-1" face="Verdana, Arial, Helvetica, sans-serif"><a name="des" id="des"></a>Course
+Description</font></b> </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table border="0" cellpadding="8" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left"><br>
+      <big><font size="2">Math 110b is our graduate course in complex
+analysis, the second in the required graduate analysis
+sequence.&nbsp;Topics include Cauchy's integral theorem (in great
+generality: contractible rectifiable contours) with applications, some
+discussion of complex functional analysis (uniform convergence, Vitali,
+Montel, Hurwitz theorems), conformal maps (linear fractional
+transformations, the Riemann mapping theorem), the Weierstrass and
+Mittag-Leffler theorems (representations of entire functions as
+products, resp. meromorphic functions as sums), and some theory of
+special functions (the Gamma function, as well as an introduction to
+elliptic functions).&nbsp;Further topics as time allows will probably
+include Picard's theorem, Paley-Wiener theorems, global analytic
+functions and the Poincare metric.</font> </big>&nbsp;<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff" size="2" face="Verdana, Arial, Helvetica, sans-serif"><a name="pol" id="pol"></a>Policies</font></b>
+      </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table border="0" cellpadding="8" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#800000"> Grading:</font></strong></font><font color="black" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>&nbsp;
+
+      </strong>Based
+on
+homework;
+no
+exams. <br>
+      <br>
+      </font> <font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#800000"> Homework: </font></strong></font>
+      <font color="black" size="2" face="Verdana, Arial, Helvetica, sans-serif">There
+will be four homeworks due roughly every two
+weeks. They will definitely be longer than a one-week homework. The
+first three homeworks will have roughly equal weight and the last
+homework, which will have a three-week time period, will be longer and
+be worth somewhat more. Until one week before the homework is due, you
+may not collaborate but you may use any books. For the last week you
+may collaborate with others in the class or ask leading questions of
+the TA or Professor. The spirit of this is that you should be making
+significant effort to do the homework yourself before speaking to
+others (so if you leave the homework for the last few days, you really
+shouldn't collaborate until a day after you seriously start). Also,
+this should be primarily your own efforts. So it is contrary to the
+spirit (but not technically the letter) of the collaboration policy for
+two or more students to sit down and do the homework as a joint
+project. Included in "use any books" is googling on the Internet.
+However, posting the homework on a chat site is definitely an example
+of collaboration NOT with others in the class and is therefore not
+allowed.<br>
+      <br>
+      </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#800000"> Late homework policy: </font></strong>&nbsp;If you
+get a note from the Dean's Office (personal problems) or
+infirmary&nbsp; (medical problems) requesting a postponement, it will
+be honored. Otherwise, late homework will not be accepted EXCEPT ONE
+time (per term) you may email me PRIOR to the due time requesting an
+extension of up to one week (for the last HW up to two days) and it
+will granted. </font></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff" size="-1" face="Verdana, Arial, Helvetica, sans-serif"><a name="text" id="text"></a>Textbook</font></b>
+      </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table border="0" cellpadding="3" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr valign="top" align="left">
+      <td>
+      <p> </p>
+      <span style="font-family: Verdana;"><font size="2">We will use a
+draft book by Barry Simon on Complex Analysis (that covers both Ma 110b
+and 111b). We are getting this 920-page manuscript "printed" by Caltech
+graphic arts at a cost of to be determined per copy.&nbsp;</font></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+&nbsp;<br>
+<table id="table10" bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff" size="-1" face="Verdana, Arial, Helvetica, sans-serif"> <a name="lect1" id="lect1"></a>Lecture
+Notes </font></b> </center>
+      </td>
+      <td font="" size="-1" bgcolor="#dcdcdc" width="575">&nbsp; <b><a href="http://classes.caltech.edu/index.php?title=Ma110b"><font size="3" face="Verdana"><br>
+      </font></a></b></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table id="table11" border="0" cellpadding="0" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#999999" height="31">
+      <center>
+      <table id="table12" border="0" cellpadding="4" cellspacing="1" width="700">
+        <tbody>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Date</b></font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td bgcolor="#999999" width="148"><br>
+            </td>
+            <td colspan="1" bgcolor="#999999"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="148"><br>
+            </td>
+            <td width="175"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+&nbsp;
+<table id="table1" bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff" size="-1" face="Verdana, Arial, Helvetica, sans-serif"><a name="lect" id="lect"></a>Telegraphic
+Notes </font></b> </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table id="table2" border="0" cellpadding="0" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#999999" height="31">
+      <center>
+      <table id="table3" border="0" cellpadding="4" cellspacing="1" width="700">
+        <tbody>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Date</b></font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td bgcolor="#cccccc" width="125"><br>
+            </td>
+            <td bgcolor="#cccccc"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<table id="table13" bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff" size="-1" face="Verdana, Arial, Helvetica, sans-serif"> <a name="hand" id="lect2">Handouts</a> </font></b>
+      </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table id="table14" border="0" cellpadding="0" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#999999" height="31">
+      <center>
+      <table id="table15" border="0" cellpadding="4" cellspacing="1" width="700">
+        <tbody>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Date</b></font></td>
+            <td width="279"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Description</b></font></td>
+            <td><b><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Mode</font></b></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td bgcolor="#cccccc" width="125"><br>
+            </td>
+            <td bgcolor="#cccccc" width="279"><br>
+            </td>
+            <td bgcolor="#cccccc">&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125">&nbsp;</td>
+            <td width="279">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125">&nbsp;</td>
+            <td width="279">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> <br>
+</p>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="750" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#2d465f" width="175">
+      <center> <b><font color="#ffffff" size="2" face="Verdana, Arial, Helvetica, sans-serif"><a name="hw" id="hw"></a>Homework</font></b> </center>
+      </td>
+      <td bgcolor="#dcdcdc" width="575">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="700" align="center">
+  <tbody>
+    <tr>
+      <td bgcolor="#999999" height="31">
+      <center>
+      <table style="width: 700px;" border="0" cellpadding="4" cellspacing="1">
+        <tbody>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="125"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Due Date </b></font></td>
+            <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Homework</b>&nbsp;</font></td>
+            <td style="vertical-align: top;"><big style="font-weight: bold;">Solutions</big><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td style="width: 155px;"><big>January 21, 2015</big><br>
+            </td>
+            <td><big><a href="14ma110bhw1.pdf">Homework 1</a></big><br>
+            </td>
+            <td style="vertical-align: top;"><a href="14ma110bhw1sol.pdf"><big>Homework 1</big></a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="155"><big>February 4, 2015</big><br>
+            </td>
+            <td><big><a href="15ma110bhw2.pdf">Homework 2</a></big><br>
+            </td>
+            <td style="vertical-align: top;"><big><a href="14ma110bhw2sol.pdf">Homework 2</a></big><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="155"><big>February 18, 2015</big><br>
+            </td>
+            <td><big><a href="15ma110bhw3.pdf">Homework 3</a></big><br>
+            </td>
+            <td style="vertical-align: top;"><a href="14ma110bhw3sol.pdf"><big>Homework 3</big></a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="#ffffff" valign="top" align="left">
+            <td width="155"><big>March 11, 2015</big><br>
+            </td>
+            <td><a href="15ma110bhw4.pdf"><big>Homework 4</big></a><br>
+            </td>
+            <td style="vertical-align: top;"><big><a href="14ma110bhw4sol.pdf">Homework 4</a></big><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+&nbsp;
+<hr size="1" noshade="noshade" width="750">
+<table bgcolor="#cccccc" border="0" cellpadding="1" cellspacing="0" width="750" align="center" height="20">
+  <tbody>
+    <tr>
+      <td bgcolor="#ba650a" height="15">
+      <center> <font color="#ffffff" size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<b><font size="-2">
+| © California Institute of
+Technology</font></b></font><b><font color="#ffffff" size="-2" face="Verdana, Arial, Helvetica, sans-serif">
+| Questions? &nbsp;kaubry @ caltech.edu</font></b> </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+
+</body></html>

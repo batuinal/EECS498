@@ -1,0 +1,156 @@
+
+<html>
+<h1>CSCI2951-F: Learning and Sequential Decision Making</h1>
+
+<font size="+2" color="brown">Brown University</font><br>
+<font size="+2">Fall 2013</font><br>
+<font size="+1"><a href="http://www.cs.brown.edu/~mlittman/">Michael L. Littman</a></font> (mlittman@cs.brown.edu, CIT 301)<br>
+<font size="+1">TA: <a href="http://www.cs.brown.edu/~hannahqd/">Hannah Quay-de la Vallee</a></font> (hannahqd@cs.brown.edu) <br>
+<font size="+1">course
+  design: <a href="http://cs.brown.edu/people/jmacglashan/">James MacGlashan</a></font> (jmacglashan@cs.brown.edu, CIT 460)<p>
+
+<u>Time</u>: TTh 3-4:20 <br>
+<u>Place</u>: Brown CIT 506 <br>
+<u>Semester</u>: Fall 2013 <p>
+
+Office hours: Hannah 4-5pm Tuesdays and by appointment. <br>
+
+<hr>
+
+<b>Description</b>: Through a combination of classic papers and more
+recent work, the course explores automated decision making from a
+computer-science perspective.  It examines efficient algorithms, where
+they exist, for single agent and multiagent planning as well as
+approaches to learning near-optimal decisions from experience.  Topics
+include Markov decision processes, stochastic and repeated games,
+partially observable Markov decision processes, and reinforcement
+learning.  Of particular interest will be issues of generalization,
+exploration, and representation.  Students will replicate a result in
+a published paper in the area.  Participants should have taken a
+graduate-level machine-learning course and should have had some
+exposure to reinforcement learning from a previous computer-science
+class or seminar; check with instructor if not sure. <p>
+
+<b>Prerequisites</b>:  CSCI 1950F or CSCI 1420 or permission of the instructor. <p>
+
+<b>Online quizzes</b>:  There will be one online quiz per class to solidify the concepts. <p>
+
+<b>Result replication presentation</b>: Students will form into small
+groups of two to four, and select a relevant paper from the literature.
+They will choose a graph in the paper and create an independent
+implementation/replication of this result.  Students often find that
+important parameters needed to replicate the result are not stated in
+the paper and that obtaining the same pattern of results is sometimes
+not possible.  Students will present their work at the end of the
+semester.  Grades are based on the fidelity of the replication (25%),
+how well they show they understand the original paper (25%), the
+quality of the presentation itself in terms of clarity and creativity
+(25%), and their short written report (25%).  The grade on this
+project will represent 50% of the final grade in the class.<p>
+
+<b>BURLAP</b>:  We will try to use and extend BURLAP, the Brown-UMBC
+Reinforcement Learning and Planning system, to learn about the
+algorithms in the class and for the result replications. <p>
+
+<b>Grading</b>: Final grade is derived from: Online quizzes (50%),
+result replication presentation (50%).
+
+<h3>Calendar</h3>
+
+<ul>
+<li> <b>9/5</b> (Rosh Hashana) <font color="red">[quiz
+    closed]</font>: Please read Chapters 1 and 2
+    of <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.4565">Littman
+    (1996)</a>.  The space of sequential decision-making problems,
+    geometric discounting implies no decision reversals.  Work out a
+    concrete example of a reversal.
+<li><b>9/10</b> <font color="red">[quiz closed]</font>: Please read Chapters 1 and 2
+    of <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.4565">Littman
+    (1996)</a>.  Define MDP.  Talk about representations (math, graph,
+    table, OO).  Work out a concrete example of an MDP and its value.
+    Policies and optimality.  Discuss 1/(1-gamma).  Bellman's
+    equation.   BURLAP.
+<li><b>9/12</b> <font color="red">[quiz closed]</font>: Value
+  iteration and Bellman's equation.  Value of a 
+  policy is the solution to a system of linear equations.  Define
+  contraction mapping and show value iteration contacts.
+<li><b>9/17</b> <font color="red">[quiz closed]</font>:  Hoeffding bounds for
+  epsilon-delta assurance of Monte Carlo. Q-learning with a fixed
+  policy.  Connection to averaging, learning rates, and Bellman
+  equation. 
+<li><b>9/19</b> <font color="red">[quiz closed]</font>: Model-based estimate.
+  TD(lambda).  Read <a href="http://www.cs.ualberta.ca/~sutton/papers/sutton-88.pdf">Sutton
+  (1988)</a>. 
+<li><b>9/24</b> <font color="red">[quiz closed]</font> (James): VI for policy optimization in BURLAP.
+<li><b>9/26</b> <font color="red">[quiz closed]</font>: Convergence proof of VI. 
+	Read <a href="http://www.sztaki.hu/~szcsaba/papers/ml96.ps.gz">Littman
+	and Szepesv&aacute;ri (1996)</a>.  Q-learning.  The absolute difference between the
+	kth order statistic of two lists is less than the pairwise absolute
+  differences between the lists.  
+<li><b>10/1</b> <font color="red"></font>: Generalized Q-learning
+	convergence.  Policy iteration.  Each iteration of policy
+	iteration results in an improvement, policy iteration
+	converges in finite time.
+<li><b>10/3</b> <font color="red">[quiz closed]</font>: Linear programming.  Linear programming can solve MDPs in polynomial
+	time.  MDP dual LP.  Zero-sum games.
+  Read <a href="http://students.cs.byu.edu/~cs670ta/Fall2009/MinimaxQLearning.pdf">Littman
+  (1994)</a>.
+<li><b>10/8</b> <font color="red">[quiz closed]</font>: General sum
+  games, Nash equilibria.  Nash equilibria in
+  repeated games.
+  Read: <a href="http://www.cs.ucla.edu/~awm/cs288/class3.pdf">Littman
+  and Stone (2003)</a>.  
+<li><b>10/10</b> <font color="red">[quiz closed]</font>: Stochastic games.  Minimax-Q.
+  Grid games. Read: <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2003_GreenwaldH03.pdf">
+  Greenwald and Hall (2003)</a>, 
+  <a href="http://arxiv.org/pdf/1206.3277.pdf">Munoz de Cote and
+  Littman (2008)</a>.  
+<li><b>10/15</b> <font color="red">[quiz closed, EC planned]</font>: Exploration, bandits,
+  algorithms.  <a href="http://reference.kfupm.edu.sa/content/q/u/a_quantitative_study_of_hypothesis_selec_104654.pdf">Fong
+  (1995)</a>.  
+<li><b>10/17</b> <font color="red">[quiz closed]</font>: KWIK learning and efficient
+    RL.  <a href="http://icml2008.cs.helsinki.fi/papers/627.pdf">Li, 
+    Littman, Walsh (2008)</a>.  
+<li><b>10/22</b> <font color="red">[EC planned]</font>:
+     POMDPs.  <a href="http://www.cs.rutgers.edu/~mlittman/papers/jmp09-pomdp.pdf">Littman
+     (2009)</a>. 
+<li><b>10/24</b> <font color="red"></font>: HSVI. 
+	<a href="http://arxiv.org/pdf/1207.1412.pdf">Smith, Simmons (2005)</a>.
+<li><b>10/29</b><font color="red">[EC planned]</font>: Shaping.  <a href="http://www.cs.berkeley.edu/~pabbeel/cs287-fa09/readings/NgHaradaRussell-shaping-ICML1999.pdf">
+    Ng, Harada, Russell (1999)</a>,
+	<a href="http://paul.rutgers.edu/~jasmuth/pub/aaai08-shaping.pdf">Asmuth,
+	    Littman, Zinkov (2008)</a>.
+<li><b>10/31</b>: Project discussion, break early for Artzi talk.
+<li><b>11/5</b>: Options. <a href="http://www-anw.cs.umass.edu/~barto/courses/cs687/Sutton-Precup-Singh-AIJ99.pdf">Sutton,
+  Precup, Singh (1999)</a>,
+  <a href="http://www.cs.utexas.edu/~pstone/Papers/bib2html-links/AAMAS08-jong.pdf">Jong,
+  Hester, Stone (2008)</a> (including
+  <a href="http://www.cs.utexas.edu/~pstone/Courses/394Rspring13/resources/week8a-nick.pdf">slides</a>).
+<li><b>11/7</b>: Generalization.  <a href="http://www.cs.cmu.edu/~ggordon/ml95-stable-dp.pdf">
+	Gordon (1995)</a>: Introduces averagers and "hill car the hard
+	way".  <a href="http://webdocs.cs.ualberta.ca/~sutton/book/ebook/node90.html">Baird
+	(1995)</a> provides a counter example for more general
+	convergence.
+<li><b>11/12</b> <font color="red"></font>: Policy gradient. <a href="http://pdf.aminer.org/000/335/124/reinforcement_learning_in_pomdps_with_function_approximation.pdf">
+     Baxter and Bartlett (1999)</a>.
+<li><b>11/14</b> <font color="red">[EC planned]</font>: LSPI.  <a href="http://www.cs.duke.edu/research/AI/LSPI/nips01.pdf">
+    Lagoudakis and Parr (2001)</a>.
+<li><b>11/19</b>: UCT.  <a href="http://www.sztaki.hu/~szcsaba/papers/ecml06.pdf">
+    Kocsis and Szepesv&aacute;ri (2006)</a>.
+<li><b>11/21</b> <font color="red"></font>: Brad Knox speaks in class on
+  training RL agents.  In 368.
+<li><b>11/26</b> <font color="red">[EC planned]</font>: Bayesian RL.  <a href="http://www.cs.uwaterloo.ca/~ppoupart/publications/bayesian-rl/icml-brl-8pages.pdf">
+    Poupart, Vlassis, Hoey, and Regan 2006)</a>.
+<li><b>11/28</b> (Thanksgiving): No class!
+<li><b>12/3</b>: Memory-based RL.  <a href="http://people.csail.mit.edu/lpk/papers/smarticml00.ps">
+     Smart and Kaelbling (2000)</a>
+<hr>
+<li><b>12/5</b>: Inverse reinforcement learning.  <a href="http://www.aaai.org/Papers/AAAI/2008/AAAI08-227.pdf">Zeibart
+    et al. (2008)</a>. <a href="http://www.icml-2011.org/papers/478_icmlpaper.pdf">Babes et al. (2011)</a>.
+<li><b>12/10</b> <a href="">Project presentations!</a>
+<li><b>12/12</b> <a href="">Project presentations!</a>
+</ul>
+
+<a href="projects.html">Suggested project papers</a>.
+
+</html>

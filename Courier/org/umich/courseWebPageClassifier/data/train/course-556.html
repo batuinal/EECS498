@@ -1,0 +1,168 @@
+<html><head>  
+<title>CS 249A Fall 2014</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://www.stanford.edu/stanfordmodern/css/stanfordmodern.css">
+<link rel="stylesheet" href="http://www.stanford.edu/stanfordmodern/css/ceebox-min.css">
+<script>
+
+var load = function() {
+    link("linton");
+};
+
+var link = function(addr, host) {
+    var elem = document.getElementById(addr);
+    var a = document.createElement("a");
+    a.href = "mailto:" + addr + "@" + host;
+    a.appendChild(document.createTextNode(addr + "@cs.stanford.edu"));
+    elem.appendChild(a);
+}
+
+window.addEventListener("load", load, false);
+
+</script>
+</head>
+
+<body style="margin-left:0.75in; margin-right:0.75in; margin-top:0.125in">
+
+Stanford University<br>
+Computer Science 249A: Fall 2014 (3 units)<br>
+TTh 11:00-12:15, Thornton 102 (also broadcast on
+<a href="http://scpd.stanford.edu/">SCPD</a>)<br>
+Instructor: <a href="mark.pdf">Mark Linton</a>, <span id="linton"></span><br>
+Course Assistants: TBD
+
+<h1>Object-Oriented Programming from a<br>Modeling and Simulation Perspective</h1>
+<p>
+This course examines object-oriented programming techniques and issues,
+emphasizing programming as modeling and simulation, and covers the role of
+programming conventions, style, restrictions, and design patterns
+to leverage object-oriented programming for programming-in-the-large.
+</p>
+<p>
+The objectives of the course include to cover issues involved
+in developing large-scale object-oriented software systems,
+to show how programming style conventions and language restrictions can ease
+object-oriented software development, and to provide insights
+into software component interface design.
+</p>
+<p>For more background information,
+see the <a href="ad.txt">email</a> message sent in the past
+to advertise the course.</p>
+<p>Students will design and implement simulations in C++,
+applying the techniques covered in the course.
+You may develop your C++ code on any machine with a modern C++ implementation
+(must support C++11 language features), but you should test your code
+on one of the Stanford corn machines (corn.stanford.edu)
+because we will evaluate assignments on these machines.</p>
+<p>
+There will also be a midterm exam in class on Thursday, October 23, and
+the final exam will be on Wednesday, December 10 from 7:00-10:00pm.</p>
+
+<dl>
+  <dt>Prerequisites: Knowledge of C/C++ and programming methodology as developed in CS 106B or 106X, and 107.
+</dl>
+
+<h4>Required Readings</h4>
+The course reader is available <a href="coursereader">here</a>:
+<ul>
+  <li><a href="coursereader/ch1.pdf">
+  Chapter 1: Software Husbandry and Software Development
+  </a></li>
+  <li><a href="coursereader/ch2.pdf">
+  Chapter 2: Attribute-based Interface Design
+  </a></li>
+  <li><a href="coursereader/ch3.pdf">
+  Chapter 3: Events, Notifications, and Callbacks
+  </a></li>
+  <li><a href="coursereader/ch4.pdf">
+  Chapter 4: Objects: Entities, Values, and Descriptions
+  </a></li>
+  <li><a href="coursereader/ch56.pdf">
+  Chapter 5 and 6: Relationship and Reference Management with Smart Pointers and Garbage Collection
+  </a></li>
+  <li><a href="coursereader/ch7.pdf">
+  Chapter 7: Exceptions and Exception Handling
+  </a></li>
+  <li><a href="coursereader/ch8.pdf">
+  Chapter 8: Naming, Introspection, and Modules
+  </a></li>
+  <li><a href="coursereader/ch9.pdf">
+  Chapter 9: Inter-Object Relationships: Components to Dynamic Discovery
+  </a></li>
+  <li><a href="coursereader/ch10.pdf">
+  Chapter 10: Type Hierarchy and Inheritance
+  </a></li>
+</ul>
+
+<h4 id="optional-readings">Optional Readings</h4>
+
+<p>
+<ul>
+  <li><a href="coursereader/cpp.pdf">Appendix A: Introduction to C++</a></li>
+  <li><a href="coursereader/style.pdf">Appendix B: C++ Programming Style </a></li>
+  </a></li> 
+  <li>Booch, Object-Oriented Analysis and Design With Applications, Addison-Wesley,
+      1994, ISBN: 0-805-35340-2</li>
+  <li>Cargill, C++ Programming Style, Addison-Wesley, 1992, ISBN: 0-201-56365-7</li>
+  <li><a href="http://www.mindview.net/Books/TICPP/ThinkingInCPP2e.html">
+  Eckel, Thinking in C++
+  </a></li>
+  <li>Ellis, Annotated C++ Reference Manual, Addison-Wesley, 1990, ISBN: 0-201-51459-1</li>
+  <li>Lippman, C++ Primer, Addison-Wesley, 2013, ISBN: 9780321714114</li>
+  <li>Meyer, Object-Oriented Software Construction, Prentice Hall, 2000,
+      ISBN: 0-13-629155-4</li>
+  <li>Meyers, Effective C++: 50 Specific Ways to Improve, Addison-Wesley, 1997,
+      ISBN: 0-201-92488-9</li>
+  <li>Stroustrup, Design and Evolution of C++, Addison-Wesley, 1994,
+      ISBN: 0-201-54330-3</li>
+  <li><a href="http://www.hpts.ws/agenda.html">
+  High-Performance Transaction Systems (HPTS) 2009 slides
+  <li><a href="http://www.fastcompany.com/online/06/writestuff.html">They Write
+      the Right Stuff</a>: a look at how software is designed at NASA.</li>
+</ul>
+</p>
+
+<h4>Collaboration</h4>
+<p>
+Under the
+<a href="http://www.stanford.edu/dept/vpsa/judicialaffairs/guiding/honorcode.htm"
+>Stanford Honor Code</a>, each of you must submit your own work
+in this course.  However, we expect you will ask others
+(instructor, CAs, other students) for hints and debugging help, as well as
+discussing problem-solving and program-structuring techniques.</p>
+<p><b>We encourage you to collaborate with others, but we require
+that you indicate on your assignments any assistance you received</b>.
+You are also responsible for understanding and being able to explain
+the work that you submit.</p>
+<p>Any assistance not cited may be considered a violation of the Honor Code, and
+suspected violations of the honor code will be investigated and referred to the
+Board on Judicial Affairs.
+Honor code violations are a serious matter, and being found guilty of one
+can ruin your academic career.  Please review the
+<a href="http://www.stanford.edu/dept/vpsa/judicialaffairs/guiding/honorcode.htm"
+>honor code</a>. If you ever find yourself uncertain about
+how it applies to your situation, please ask.
+Asking what you might think is a silly question is
+better than risking your career.</p>
+
+<h4>Late assignments</h4>
+<p>
+Each student has 5 24-hour extensions to use for late projects.
+No more than 3 extensions can be used for any single project.
+</p>
+<p>
+Lectures are made available via SCPD on the same day they are taped,
+so SCPD students are expected to follow the same schedule
+as the rest of the class. This means that the above late assignment policy
+applies to SCPD students as well; exceptions are not granted
+due to students' work obligations.
+</p>
+
+<h4>Incomplete policy</h4>
+
+<p>No incompletes can be given in this course. Please make sure
+you determine before the drop deadline whether you can complete
+the course satisfactorily.</p>
+
+
+</body></html>

@@ -1,0 +1,204 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii">
+  <title>CS266 -- Parameterized Algorithms and Complexity</title>
+<script src="ASCIIMathML.js" type="text/javascript"></script>
+  <style>
+body{margin:10px 10px 10px 10px;width: 1000px; font-family:cambria;background-color:#f6f3e5;}
+a{text-decoration:none}
+a:link{color:#8C1515;}
+a:visited{color:#400909;}
+a:hover{background-color:#ddcf99;}
+li{line-height : 130%;}
+  </style>
+<style type="text/css"></style></head>
+
+<body onLoad="translate()">
+<h2> CS266 -- Parameterized Algorithms and Complexity -- Autumn 2014<br>
+</h2>
+<dl>
+<dd> <b>Instructor</b>: <a href="http://www.stanford.edu/%7Errwill">Ryan Williams</a>
+<br>
+</dd><dd><b>Time</b>: Fridays 2:15--4:45ish, Gates B12
+</dd><dd><b>Office Hours:</b> By appointment/email<br>
+</dd></dl>
+<hr>
+
+<h3>Description:</h3>
+
+<p>Many problems we want to solve are often NP-hard or worse, but somehow, they need to get solved anyway. What can we do? Over the years, multiple paradigms for coping with NP-hardness have been introduced: for instance, approximation algorithms, average-case analysis, and randomized algorithms were all borne out of a desire to solve hard problems by relaxing the problem or strengthening the model. 
+</p>
+
+<p>
+Within the last 20 years, a new paradigm has been introduced, where one measures the time complexity of an algorithm not just in terms of the <i>input length</i> but also a small side 
+<i>parameter</i>. A priori, the parameter can be anything, but the interesting case is when complex instances of the problem still have relatively small parameter values. The overall goal is to identify interesting parameterizations of hard problems where we can design algorithms running in time polynomial in the input length but possibly exponential (or worse) in the small parameter. Such an algorithm is called "fixed-parameter tractable" and it is the gold standard for parameterized algorithms. 
+</p>
+
+<p>
+This is a subject which is still very new and fresh. Although many papers on the subject appear in the top theory conferences each year, there are few systematic courses within the United States. We will attempt to correct this. Parameterization has become an important topic that has bearing on other strands of theory as well (including circuit complexity). The course will be heavily research-oriented with lots of open problems, and it will introduce you to new ways of thinking about existing theory. 
+</p>
+
+<b>Workload for this course:</b>  
+
+<ul>
+ <li> A few large problem sets, about two weeks apart.
+ <li> In-class presentation on a topic of interest related to the course, or on your own research! 
+ <li> You may be asked to scribe a lecture in LaTeX.
+</ul>
+
+<p><b>Prerequisites:</b> This is technically a graduate course, but it is open to anyone. You should probably have had CS154 (undergrad automata) and CS161 (undergrad algorithms) or their equivalents -- otherwise, the course may be tough to follow in some places. We will try to recall the concepts needed along the way. There is no textbook for the course, but we will catalogue some reading material found on the web as we go. 
+</p>
+
+<hr>
+<!--<h3>Announcements:</h3>
+<ul>
+ <li>  4/23 The papers for your presentations are <b><a href="#presentations"> below</a></b><P></p></li>
+<li>  4/16 <b><a href="scribe.tex">Here is the template</a> to base your scribe notes on.</b> <p></p></li>
+<li>  4/15 Scribe notes for lecture 1 are up. The other lectures will be posted soon <p></p></li> 
+<li>  9/25 Look here for cool stuff to happen! <p></p></li>
+</ul>-->
+
+<hr>
+<!-- <b><font color="8C1515">WARNING, INTERNET TRAVELERS: THE FOLLOWING SCRIBE NOTES HAVE ONLY BEEN LIGHTLY EDITED AND MAY CONTAIN ERRORS. YOU HAVE BEEN WARNED.</font></b>-->
+
+<!-- <h3>What we've done so far </h3>
+<ul>
+<li>Nothin' yet!
+</li>
+</ul>-->
+
+<h3>Course outline (the rough plan) </h3>
+<ul>
+<li><b>9/26</b> &nbsp;&nbsp; Overview of course, some basic properties of FPT, kernelization <br>
+</li>
+<li><b>10/3</b> &nbsp;&nbsp; Vertex Cover: backtracking FPT algorithms, kernelization by graph theory and LP, backtracking algorithms for SAT<br>
+</li>
+<li><b>10/10</b> &nbsp;&nbsp; Hamiltonian Path and TSP: dynamic programming and inclusion-exclusion<br>
+&nbsp;&nbsp; $k$-Path: FPT algorithms, color-coding, random partitioning, vector coding and linear algebra mod 2<br>
+</li>
+<li><b>10/17</b> &nbsp;&nbsp; GUEST LECTURER Virginia<br>
+&nbsp;&nbsp; Algorithms for $k$-Clique, $k$-SUM, $k$-Dominating Set<br>
+</li>
+<li><b>10/24</b> &nbsp;&nbsp; SAT Algorithms: randomized reduction, intro to local search<br>
+&nbsp;&nbsp; Schoening's local search algorithm, intro to Parameterized Complexity<br>
+</li>
+<li><b>10/31</b> &nbsp;&nbsp; Spooky Halloween lecture on $W[1]$ and completeness: $k$-Clique, Weighted $c$-SAT<br>
+&nbsp;&nbsp; $FPT=W[1]$ implies subexponential time 3SAT, $k$-Dominating Set is W[2]-complete<br>
+</li>
+<li> <b>11/7</b> &nbsp;&nbsp; $k$-Dominating Set in $n^{k-\varepsilon}$ implies faster CNF-SAT, $k$-SUM is $W[1]$-hard <br>
+ &nbsp;&nbsp; The Exponential Time Hypothesis, Sparsification, and $k$-SUM <br>
+</li>
+<li> <b>11/14</b> &nbsp;&nbsp; Solving $NP$-hard problems with bounded treewidth <br>
+</li>
+<li> <b>11/21</b> &nbsp;&nbsp; Student Presentations <br>
+</li>
+<li> <b>11/28</b> &nbsp;&nbsp; THANKSGIVING -- NO CLASS  <br>
+</li>
+<li> <b>12/5</b> &nbsp;&nbsp; Student Presentations<br>
+</li>
+</ul> 
+<p></p>
+
+<hr>
+
+<h3> <a name="presentations">Papers for presentations</a></h3> 
+
+You may pick one or more papers to present, or you may present your own work, if it falls within the scope of the course! Email Ryan with what you decide (first-come, first-serve); the deadline will be posted later. We currently expect your presentations to be at most 30 minutes long (note this estimate will only go down... it won't go up!).
+<br>The papers that have already been claimed will be crossed out.
+<ol>
+<li> <a href="presentations/bjorklund-hamcycle.pdf">Determinant Sums for Undirected Hamiltonicity</a>, Andreas Bjorklund.<br>
+<i><font color=gray><b>Summary:</b> This paper presents an O*(1.66^n) time algorithm for Hamiltonian cycle in undirected graphs. This result was a breakthrough, giving the first improvement over the classic Held-Karp O*(2^n) time algorithm presented in class.</font></i>
+
+<li> <strike> <a href="presentations/hertli-focs11.pdf">3-SAT Faster and Simpler - Unique-SAT Bounds for PPSZ Hold in General,</a> T. Hertli.<br> 
+<i><font color=gray><b>Summary:</b> This presents the fastest algorithm for 3SAT to date, by analyzing an algorithm from the 90s in a new way.</font></i></strike> (Claimed by Aran)
+
+<li> <a href="presentations/Lenstra81.pdf">Integer programming with a fixed number of variables,</a> H.W. Lenstra.<br>
+<i><font color=gray><b>Summary:</b> This is a classic paper giving an FPT algorithm for integer programming where the parameter is the number of variables.</font></i>
+
+<li> <strike><a href="presentations/moser-scheder.pdf">A Full Derandomization of Schoning's k-SAT Algorithm, </a>R. Moser and D. Scheder.<br>
+<i><font color=gray><b>Summary:</b> This paper presents a deterministic k-SAT algorithm that has roughly the same running time as the randomized local search algorithm presented in class.</font></i></strike> (Claimed by Dan Stubbs)
+
+<li> <a href="presentations/iter-compress">Iterative Compression and Exact Algorithms,
+</a> F. V. Fomin, S. Gaspers, D. Kratsch, M. Liedloff, S. Saurabh.<br>
+<i><font color=gray><b>Summary:</b> This paper uses a technique called iterative compression to give new exact and parameterized algorithms for problems such as Max Independent Set and Min Hitting Set.</font></i>
+
+<li> <strike> <a href="presentations/fortnow-santhanam.pdf"> Infeasibility of Instance Compression and Succinct PCPs for NP</a>, L. Fortnow and R. Santhanam.<br> <i><font color=gray><b>Summary:</b> This paper shows that several problems such as k-clique and k-dominating set do not have polynomial-size kernels under standard complexity assumptions (in particular, under the assumption that $coNP \not\subset NP/poly$).</font></i> </strike> (Claimed by Daniel Steffee)
+
+<li> <a href="presentations/drucker.pdf">New Limits to Classical and Quantum Instance Compression</a> , A. Drucker.<br> 
+<i><font color=gray><b>Summary:</b> This paper strengthens the results in the above Fortnow-Santhanam paper, showing that polynomial-size "instance compression" for satisfiability problems is even more unlikely. </font></i>
+
+<li> <a href="presentations/p251-dell.pdf"> Satisfiability Allows No Nontrivial Sparsification Unless The Polynomial-Time Hierarchy Collapses, </a> H. Dell and D. van Melkebeek.<br>
+<i><font color=gray><b>Summary:</b> This paper considers the problem of finding small kernels for $d$-SAT on $n$ variables. A kernel of size $O(n^d log n)$ is easy to construct, and this paper shows that there is no $O(n^{d-\varepsilon})$-size kernel (under standard complexity assumptions).</font></i>
+
+<strike><li> <a href="http://www.cs.technion.ac.il/~harnik/Compress.pdf">On the Compressibility of NP Instances and Cryptographic Application,</a> D. Harnik and M. Naor.<br>
+<i><font color=gray><b>Summary:</b> This paper shows that certain strong compressibility results for SAT related to kernelization imply interesting things in cryptography.</font></i></strike> (Claimed by Rio)
+
+<li> <a href="presentations/no-poly-kernels.pdf"> On Problems Without Polynomial Kernels,
+</a> H. Bodlaender, R. G. Downey,
+M. R. Fellows, D. Hermelin.<br>
+<i><font color=gray><b>Summary:</b> This paper shows that many FPT problems such as k-path don't admit polynomial kernels (under standard assumptions).</font></i>
+
+<li> <strike> <a href="presentations/marx-approx.pdf">Parameterized complexity and
+approximation algorithms,</a> D. Marx.<br>
+<i><font color=gray><b>Summary:</b> This paper presents relationships between parameterized complexity and approximation schemes.</font></i> </strike> (Claimed by Mikaela)
+
+<li> <strike><a href="presentations/subset-conv.pdf"> Fourier Meets Mobius: Fast Subset Convolution,</a> A. Bjorklund, T. Husfeldt, P. Kaski, M. Koivisto.<br>
+<i><font color=gray><b>Summary:</b> This paper presents an inclusion-exclusion based approach for obtaining $O^*(2^k)$ time algorithms for many problems where $O^*(3^k)$ is the easy algorithm. One example application is to $k$-Steiner tree.</font></i></strike> (Claimed by Arjun)
+
+<li> <a href="presentations/w1-vs-eth.pdf"> Tight Lower Bounds for Certain
+Parameterized NP-Hard Problems,
+</a> J. Chen. B. Chory, M. Fellows,X. Huang, D. Juedes, I. A. Kanj,  G. Xia.<br>
+<i><font color=gray><b>Summary:</b> This paper shows that $n^{o(k)}$ time algorithms for many natural parameterized problems such as $k$-clique would imply unexpected results in parameterized complexity.</font></i>
+
+<li> <strike> <a href="presentations/counting-k-paths.pdf">The parameterized complexity of counting problems, </a>J. Flum and M. Grohe.<br>
+<i><font color=gray><b>Summary:</b> This paper defines the #W[t] hierarchy which is the analogue to the W hierarchy for counting problems.</font></i> </strike> (Claimed by Sam and Michael)
+
+<li> <strike> <a href="presentations/DHMTW12final.pdf">Exponential Time Complexity
+of the Permanent and the Tutte Polynomial</a>, H. Dell, T. Husfeldt, D. Marx, N. Taslaman, M. Wahlen.<br>
+<i><font color=gray><b>Summary:</b> This paper presents several conditional lower bounds based on ETH and its counting version, #ETH. </font></i> </strike> (Claimed by Sam and Michael)
+
+<strike> <li> <a href="presentations/comsoc-fpt.pdf"> Fixed-Parameter Tractability and Parameterized Complexity, Applied to Problems From Computational Social Choice</a>, C. Lindner and J. Rothe. <br>
+<i><font color=gray><b>Summary:</b> This paper shows some applications of parameterized complexity to computational problems in social choice, such as algorithmic questions in election manipulation.</font></i> </strike> (Claimed by Ilan)
+
+<li> <strike> <a href="presentations/measure-and-conquer.pdf">A Measure & Conquer Approach for the
+Analysis of Exact Algorithms,</a> F. Fomin, F. Grandoni, D. Kratsch.<br>
+<i><font color=gray><b>Summary:</b> The original paper introducing the Measure and Conquer Approach.</font></i> </strike>  (Claimed by Trey)
+
+<li> <a href="presentations/as-hard-as-sat.pdf">On Problems as Hard as CNF-SAT,
+</a> M. Cygan, H. Dell, D. Lokshtanov, D. Marx,
+J. Nederlof, Y. Okamoto, R. Paturi, 
+S. Saurabh, M. Wahlstrom.<br>
+<i><font color=gray><b>Summary:</b> This paper shows that designing $O^{*}((2-\varepsilon)^n)$ time algorithms for problems such as Hitting Set, Set Splitting,
+and NAE-Sat is equivalent to disproving the strong exponential time hypothesis (SETH).</font></i>
+
+<li> <a href="presentations/treewidth-opt.pdf">Known Algorithms on Graphs of Bounded Treewidth are Probably Optimal,</a> D. Lokshtanov, D. Marx, S. Saurabh.<br>
+<i><font color=gray><b>Summary:</b> This paper shows that the known algorithms for problems such as dominating set and independent set when parameterized by the graph treewidth are optimal unless the strong exponential time hypothesis fails.</font></i>
+
+<li> <a href="presentations/saving-space.pdf">Saving Space by Algebraization,</a>  D. Lokshtanov and J. Nederlof.<br>
+<i><font color=gray><b>Summary:</b> This paper gives interesting polynomial-space algorithms for problems such as Subset Sum, Knapsack, Traveling Salesman, Weighted Set Cover and Weighted Steiner Tree. </font></i>
+
+<li> <a href="presentations/counting-matchings-w1.pdf">Counting Matchings of Size k is #$W[1]$-Hard,</a> R. Curticapean.<br>
+<i><font color=gray><b>Summary:</b> This paper resolved a thorny open problem: is counting matchings of size $k$ in a graph as hard as finding a $k$-clique, or is it FPT? </font></i>
+
+<li> <strike> <a href="http://arxiv.org/pdf/1406.3700">The Parameterized Complexity of Biclique,</a> B. Lin.<br>
+<i><font color=gray><b>Summary:</b> This paper resolved another longstanding open problem: is finding a $k$ by $k$ biclique in a bipartite graph FPT, or not? Ryan gave this problem to several PhD rotation students in the past...</font></i> </strike> (Claimed by Ling-Ling)
+
+<strike> <li> <a href="http://arxiv.org/abs/1404.0799">Threesomes, Degenerates, and Love Triangles,</a> A. Gronlund and S. Pettie.<br>
+<i><font color=gray><b>Summary:</b> A ridiculously titled paper containing a major advance in $k$-SUM algorithms. Appeared very recently.</font></i> </strike> (Claimed by Andy)
+
+<!---
+<li> <a href="presentations/"> </a> <br>
+<i><font color=gray><b>Summary:</b> </font></i>
+
+<li> <a href="presentations/"> </a> <br>
+<i><font color=gray><b>Summary:</b> </font></i>
+-->
+</ol>
+
+<br><br>
+<!--
+
+<br>
+<hr>
+-->
+
+</body></html>

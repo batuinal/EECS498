@@ -1,0 +1,1024 @@
+<p>
+<h1>CS295-Z Robot Learning and Autonomy<h1>
+<h3>Instructor: Prof. Chad Jenkins<br>
+M 2:30-5:20<br>
+CIT 345<br>
+<a href="http://www.cs.brown.edu/courses/cs296-3">http://www.cs.brown.edu/courses/cs296-3</a><br>
+<a href="http://list.cs.brown.edu/mailman/listinfo/cs295-z">cs295-z a_t list.cs.brown.edu</a><br>
+<h3>
+
+<p>
+<hr>
+<hr>
+
+<h3>Introduction</h3>
+
+<p>
+
+This course attempts to address the question "What are the driving applications of robotics?"  How will robots move out of structured laboratory settings into real-world applications where a diversity of users, environments, and tasks abound?  How will robots become the path of least resistance for managing physical environments, similar to how computing has become the preferred tool for digital environments?  How should robots be programmed?  Can robot learning be used to develop engineering solutions to practical problems, or is robot learning itself our primary motivation?       
+
+<p>
+
+Towards this end, CS295-Z is a seminar course that covers current research topics related to perceiving and acting in the real world, emphasizing robot learning from demonstration (LfD) and physical object manipulation.  These topics will be pursued through independent reading, class discussion, and project implementations.  Papers covered will be drawn mostly from robotics and machine learning as well as related domains, such as computer vision, neuroscience, and animation. Special emphasis will be given to learning autonomous robot control from human demonstration and video game style interfaces.
+
+<p>
+<hr>
+<hr>
+
+<h3>Grading</h3>
+
+<p>
+
+Grading for individual enrolled students is broken down as follows:
+
+<p>
+
+20% Attendance and participation<br>
+40% Paper presentations<br>
+40% Contribution towards final project<br>
+
+<p>
+
+Students are expected to attend all class meetings (unless an exception is given beforehand), actively participate in discussion, present (at least) 2 papers to the class, and significantly contribute towards the development and implemenation of a final project.
+
+<p>
+
+Students are expected to send summaries of papers they are not presenting to the course mailing list (cs295-z@list) prior to the corresponding class meeting.
+
+<p>
+
+For paper presentations, student presenters must have a rough draft prepared and consult with the instructor <b>at least 2 days</b> before the presentation date.
+
+
+<p>
+<hr>
+<hr>
+
+<h3>Previous versions of this course</h3>
+
+<a href="http://www.cs.brown.edu/courses/cs296-3/2007">Spring 2007</a>
+<p>
+
+<hr>
+<hr>
+
+<h3>Tentative schedule</h3>
+
+Each class meeting will consist of 2 paper presentations given by students.  This should take between 1-2 hours.  The remaining time will be devoted to a collaborative hacking session to prototype, implement, and evaluate new ideas.
+
+<p>
+
+<h4>2/1 Course Overview</h4>
+
+<ul>
+<li> Overview presentation: "What are the driving applications of robotics?" 
+<ul>
+	<li><a href="presentations/cs295z_overview_spring2010_subset_compress.pdf">Presentation (pdf)</a> by <a href="http://www.cs.brown.edu/~cjenkins">Chad Jenkins</a>
+</ul>
+</ul>
+
+<ul>
+<li> Robot systems architecture and demo by <a href="http://www.cs.brown.edu/~tjay">Trevor Jay</a>
+ <br>
+</ul>
+
+<ul>
+	<li> <a href="http://ai.stanford.edu/~ang/papers/icraoss09-ROS.pdf">ROS: an open-source Robot Operating System</a> <br>
+	M. Quigley, B. Gerkey, K. Conley, J. Faust, T. Foote, J. Leibs, E. Berger, R. Wheeler, and A. Y. Ng<br> 
+	<i>Open-Source Software workshop at the International Conference on Robotics and Automation (ICRA)</i>, 2009.
+</ul>
+
+<ul>
+	<li> <a href="http://dspace.mit.edu/handle/1721.1/46708">Lightweight Communications and Marshalling for Low-Latency Interprocess Communication</a><br> 
+	D. Moore, E. Olson, A. Huang <br>
+	<i>MIT CSAIL Tech Report MIT-CSAIL-TR-2009-041</i>, 2009.
+</ul>
+
+
+
+<ul>
+<li> <b>Action item</b>: go through Brown-ROS tutorial on <a href="http://code.google.com/p/brown-ros-pkg/">brown-ros-pkg</a>
+</ul>
+<p>
+
+<hr>
+<h4>2/8 Surveys of Robot LfD and Manipulation </h4>
+
+<ul>
+	<li>  <a href="http://www.cs.cmu.edu/~soniac/files/ArgallEtAlRAS09.pdf"> A Survey of Robot Learning from Demonstration.</a> <br>
+	B. Argall, S. Chernova and M. Veloso. <br>
+	Robotics and Autonomous Systems. Vol. 57, No. 5, pages 469-483, 2009.
+<ul>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~alexta">Alex Tarvo</a>
+</ul>
+</ul>
+
+
+<ul>
+	<li> <a href="http://www.hsi.gatech.edu/cckemp/challenges_for_robot_manipulation_in_human_environments__kemp_edsinger_torres-jara__RAM_2007.pdf">Challenges for Robot Manipulation in Human Environments.</a>  <br>
+	C.C. Kemp, A. Edsinger, and E. Torres-Jara. <br>
+      	IEEE Robotics & Automation Magazine. (Volume 14, Issue 1), pg 20-29, March 2007. 
+<ul>
+<li><a href="presentations/"gpeleg_challenges_robot_manipulation.pdf">Presentation (pdf)</a> <a href="presentations/gpeleg_challenges_robot_manipulation.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~gpeleg">Gal Peleg</a>
+</ul>
+</ul>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h4>2/15 Mixed-initiative LfD </h4>
+
+
+<ul>
+<li><a href="http://faculty.cs.byu.edu/~mike/mikeg/papers/IJCAI01.pdf">Experiments in Adjustable Autonomy</a><br>
+M.A. Goodrich, D.R. Olsen Jr., J.W. Crandall, and T.J. Palmer<br>
+<i>IJCAI01 workshop on Autonomy, Delegation, and Control: Interacting with Autonomous Agents</i>.
+<ul>
+<li><a href="presentations/Adjustable_Autonomy.pdf">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~stone">Stone Wang</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www.cs.brown.edu/~cjenkins/papers/dang_icra2008.pdf">Sparse incremental learning for interactive robot control policy estimation.</a> <br>
+D. H. Grollman and O. C. Jenkins<br>
+<i>International Conference on Robotics and Automation (ICRA 2008)</i>, pages 3315-3320, Pasadena, CA, USA, May 2008. 
+<ul>
+<li><a href="http://robotics.cs.brown.edu/projects/lrsfd/">Project page</a>
+<li><a href="http://www.cs.brown.edu/~dang/publications/GrollmanJenkins_FMILR2009.pdf">Book chapter with position on scope of learned automata</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~jbutterf">Jesse Butterfield</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www.cs.cmu.edu/~soniac/files/ChernovaVelosoIROS08.pdf">Learning Equivalent Action Choices from Demonstration.</a> <br>
+S. Chernova and M. Veloso<br>  
+<i>International Conference on Intelligent Robots and Systems (IROS 2008)</i>, Nice, France, September 2008.
+<ul>
+<li><a href="http://www.cs.cmu.edu/~soniac/thesis.html">Project page</a>
+<li><a href="presentations/"bkorel_equivalent_action_choices.pdf>Presentation (pdf)</a> <a href="presentations/bkorel_equivalent_action_choices.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~bkorel">Basia Korel</a>
+</ul>
+</ul>
+
+<p>
+	
+
+
+
+
+<hr>
+<h4>2/22 No class (Long weekend) </h4>
+
+<p>
+
+
+<hr>
+<h4>3/1 Reinforcement Learning with Human Guidance </h4>
+
+<ul>
+<li><a href="http://www.cs.wustl.edu/~wds/papers/2002/icra2002.pdf">Effective Reinforcement Learning for Mobile Robots</a><br>
+William D. Smart and Leslie Pack Kaelbling<br>
+<i>Proceedings of IEEE International Conference on Robotics and Automation (ICRA 2002)</i>, volume 4, pages 3404-3410, 2002.
+<ul>
+<li><a href="presentations/gpeleg_effective_rl_for_mobile_robots.pdf">Presentation (pdf)</a> <a href="presentations/gpeleg_effective_rl_for_mobile_robots.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~gpeleg">Gal Peleg</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://web.media.mit.edu/~alockerd/papers/Sophie-Guidance.pdf"> Reinforcement Learning with Human Teachers: Evidence of feedback and guidance with implications for learning performance</a><br>
+A. L. Thomaz C. Breazeal<br>
+<i>Proceedings of the 21st National Conference on Artificial Intelligence (AAAI)</i>, 2006.
+<ul>
+<li><a href="http://robotic.media.mit.edu/projects/iswgc/sophie/sophie.html">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~dwyner">Dan Wyner</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www-clmc.usc.edu/publications/A/atkeson-ICML1997.pdf">Robot learning from demonstration</a><br>
+C.G. Atkeson, S. Schaal <br>
+<i>Proceedings of the Fourteenth International Conference (ICML '97)</i>, pp.12-20, Morgan Kaufmann, 1999. 
+<ul>
+<li><a href="http://www-clmc.usc.edu/Research/ReinforcementLearning">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~spucci">Sam Pucci</a>
+</ul>
+</ul>
+
+
+<ul>
+<li><a href="http://www.cs.arizona.edu/~ianfasel/homepage/publications_files/AAAIsymp09-knox.pdf">Design Principles for Creating Human-Shapable Agents</a><br>
+W. B. Knox, I. Fasel, and P. Stone<br>
+<i>AAAI Spring 2009 Symposium on Agents that Learn from Human Teachers</i>, March 2009. (pdf)
+<ul>
+<li><a href="http://www.cs.utexas.edu/~bradknox/TAMER.html">Project page</a>
+<li><a href="presentations/pjwhite_Design_Principles_for_Shapable_Agents.pdf">Presentation (pdf)</a> <a href="http://docs.google.com/present/view?id=dd9pgjnk_172f9w5fbdn">(online)</a> by <a href="http://www.cs.brown.edu/~pjwhite">Pete White</a>
+</ul>
+</ul>
+
+
+
+
+
+
+
+<p>
+	
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h4>3/8 Inverse Reinforcement Learning </h4>
+
+<ul>
+<li><a href="http://ai.stanford.edu/~ang/papers/icml00-irl.pdf">Algorithms for inverse reinforcement learning</a><br>
+A. Y. Ng and S. Russell<br> 
+<i>Seventeenth International Conference on Machine Learning</i>, 2000.
+<ul>
+<li><a href="http://heli.stanford.edu/">Project page: Autonomous Helicopter</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~jbutterf">Jesse Butterfield</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www.ri.cmu.edu/pub_files/2009/4/stochastic.pdf"> Inverse Optimal Heuristic Control for Imitation Learning</a><br>
+N. Ratliff, B. Ziebart, K. Peterson, J. Bagnell, M. Hebert, A. Dey, and S. Srinivasa<br>
+<i>Twelfth International Conference on Artificial Intelligence and Statistics (AIStats)</i>, April, 2009.
+<ul>
+<li><a href="http://www.cs.cmu.edu/~bziebart/">Project page</a>
+<li><a href="http://robotwhisperer.org/learning-locomotion/">Project page: Learning Locomotion</a>
+<!--<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~tbn">Francois Baldassari</a> and <a href="http://www.cs.brown.edu/~pjwhite">Pete White</a> -->
+</ul>
+</ul>
+
+
+<ul>
+<li><a href="http://ai.stanford.edu/~ang/papers/iros08-ApprenticeshipLearningParkingLotNavigation.pdf">Apprenticeship Learning for Motion Planning with Application to Parking Lot Navigation</a><br>
+P. Abbeel, D. Dolgov, A. Y. Ng and S. Thrun<br> 
+<i>International Conference on Intellegent Robots and Systems (IROS)</i>, 2008.
+<ul>
+	<li><a href="http://www.youtube.com/watch?v=BSS0MZvoltw&NR=1"> Stanford's "Junior" autonomous car</a>
+       	<li><a href="presentations/pas_apprenticeship_learning.pdf">Presentation (pdf)</a> <a href="presentations/pas_apprenticeship_learning.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~pas">Paul Savickas</a>
+</ul>
+</ul>
+
+<p>
+	
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h4>3/15 Behavior-based and Layered Learning </h4>
+
+<ul>
+<li><a href="http://userweb.cs.utexas.edu/~pstone/Papers/bib2html/b2hd-AAMAS03.html"> Concurrent Layered Learning</a><br>
+S. Whiteson and P. Stone<br> 
+<i>Second International Joint Conference on Autonomous Agents and Multiagent Systems</i>, pp. 193-200, ACM Press, New York, NY, July 2003.
+<ul>
+<li><a href="http://www.cs.utexas.edu/~pstone/thesis/index.html">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~hojoon">Hojoon Park</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://cres.usc.edu/cgi-bin/print_pub_details.pl?pubid=344">Natural Methods for Robot Task Learning: Instructive Demonstration, Generalization and Practice</a><br>
+Monica Nicolescu, Maja J Mataric<br>
+<i>Second International Joint Conference on Autonomous Agents and Multi-Agent Systems</i>, Melbourne, AUSTRALIA, July 14-18, 2003.
+<ul>
+<li><a href="http://www-robotics.usc.edu/~agents/?l=Research:Projects:Action_Embedded:index">Project page</a>
+<li><a href="../videos/exec-fdb-small.avi">Project video 1 (codec issue: IV50)</a>
+<li><a href="../videos/exec-feedback-small.avi">Project video 2 (codec issue: IV50)</a>
+<li><a href="../videos/exec-task1-small.avi">Project video 3 (codec issue: IV50)</a>
+<li><a href="../videos/exec-task3-new-env-small.avi">Project video 4 (codec issue: IV50)</a>
+<li><a href="../videos/fdb-wtxt-small.avi">Project video 5 (codec issue: IV50)</a>
+<li><a href="../videos/feedback-wtxt-small.avi">Project video 6 (codec issue: IV50)</a>
+<li><a href="../videos/t1-wtxt-small.avi">Project video 7 (codec issue: IV50)</a>
+<li><a href="../videos/"t3-wtxt-small.avi>Project video 8 (codec issue: IV50)</a>
+<li><a href="presentations/NaturalMathodsForRobotLearning_03-12.pdf">Presentation (pdf)</a> <a href="http://app.sliderocket.com/app/FullPlayer.aspx?id=4B06B43F-2998-4552-03D5-6014CC59C519">(online)</a> by <a href="http://www.cs.brown.edu/~fbaldass">Francois Baldassari</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www-robotics.cs.umass.edu/Papers/icra04_rob.pdf">Manipulation Gaits: Sequences of Grasp Control Tasks</a><br>
+R. Platt, A.H. Fagg, R. Grupen<br>
+<i>Proceedings of the 2004 IEEE Conference on Robotics and Automation (ICRA)</i>, New Orleans, Louisiana, April 2004
+<ul>
+	<li><a href="presentations/pjwhite_Manipulation_Gaits.pdf">Presentation (pdf)</a> <a href="http://docs.google.com/present/view?id=dd9pgjnk_191rth2sbpf">(online)</a> by  <a href="http://www.cs.brown.edu/~pjwhite">Pete White</a>  
+</ul>
+</ul>
+
+<p>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h4>3/22 Mobile Manipulation: Grasp Types and Planning </h4>
+
+<ul>
+<li><a href="http://ieeexplore.ieee.org/iel4/70/1436/00034763.pdf?arnumber=34763"> On grasp choice, grasp models, and the design of hands for manufacturing tasks</a><br>
+M. Cutkosky<br> 
+<i>IEEE Transactions on Robotics and Automation</i>, 5(3), pp. 269-279, 1989.
+<ul>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://ijr.sagepub.com/cgi/content/abstract/28/7/851"> Hand Posture Subspaces for Dexterous Robotic Grasping</a><br>
+M. Ciocarlie and P. Allen <br> 
+<i>The International Journal of Robotics Research</i>, 28(7), pp. 851-867, 2009.
+<ul>
+<li><a href="http://www.cs.brown.edu/~cjenkins/papers/aggeliki_isrr2007.pdf">Related paper (Tsoli and Jenkins ISRR 2007)</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~alexta">Alex Tarvo</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www.roboticsproceedings.org/rss02/p36.pdf"> Elastic Roadmaps: Globally Task-Consistent Motion for Autonomous Mobile Manipulation in Dynamic Environments </a><br>
+Y. Yang and O. Brock <br> 
+<i>Robotics: Science and Systems</i>, 2006.
+<ul>
+<li><a href="http://www.youtube.com/watch?v=VPJw_JApTJU">Project video</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+
+
+<p>
+
+<hr>
+<h4>3/29 No class (Spring Recess) </h4>
+
+<p>
+
+
+<hr>
+<h4>4/5 Mobile Manipulation: Domestic Service Systems </h4>
+
+<ul>
+<li><a href="http://www.springerlink.com/content/g24h80710863x653/?p=11efef1f8b874b8681cc69cf8c6c8e89&pi=2"> Generality and legibility in mobile manipulation</a><br>
+M. Beetz, F. Stulp, P. Esden-Tempski, A. Fedrizzi, U. Klank, I. Kresse, A. Maldonado, F. Ruiz <br> 
+<i>Autonomous Robots</i>, 28(1), pp. 21-44, 2010.
+<ul>
+<li><a href="http://ias.cs.tum.edu/media/video-blog/2009/12/06/copy3_of_robot-manipulation-at-the-tum-munich-october-2009">Project video</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www.hsi.gatech.edu/cckemp/hri2008.pdf"> A Point-and-Click Interface for the Real World: Laser Designation of Objects for Mobile Manipulation</a><br>
+C. Kemp, C. Anderson, H. Nguyen, A. Trevor, and Z. Xu<br> 
+<i>Human-Robot Interaction </i>, pp. 241-248, 2008.
+<ul>
+<li><a href="http://www.hsi.gatech.edu/hrl/project_clickable_world.shtml">Project page</a>
+<li><a href="http://www.hsi.gatech.edu/hrl/project_dustpan.shtml">Dustpan robot</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~gpeleg">Gal Peleg</a>
+</ul>
+</ul>
+
+
+<ul>
+<li><a href="http://www.springerlink.com/content/6k4k638881284758/?p=11efef1f8b874b8681cc69cf8c6c8e89&pi=1"> HERB: a home exploring robotic butler</a><br>
+S. Srinivasa, D. Ferguson, C. Helfrich, D. Berenson, A. Collet, R. Diankov, G. Gallagher, G. Hollinger, J. Kuffner, M. Vande Weghe <br> 
+<i>Autonomous Robots</i>, 28(1), pp. 5-20, 2010.
+<ul>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~fbaldass">Francois Baldassari</a>
+</ul>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<p>
+
+<hr>
+<h4>4/12 Mobile Manipulation: Compliant Grasping and Assembly  </h4>
+
+<ul>
+<li><a href="http://www.cs.cornell.edu/~asaxena/learninggrasp/IJRR_saxena_etal_roboticgraspingofnovelobjects.pdf"> Robotic Grasping of Novel Objects using Vision</a><br>
+A. Saxena, J. Driemeyer, A. Ng <br> 
+<i>The International Journal of Robotics Research</i>, 27(2), pp. 157-173, 2008.
+<ul>
+<li><a href="http://ai.stanford.edu/~asaxena/clutteredgrasping/">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+
+
+<!--
+<ul>
+<li><a href=""> title</a><br>
+author <br> 
+<i>venue</i>, pp. 193-200, ACM Press, New York, NY, July 2003.
+<ul>
+<li><a href="">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+-->
+
+<ul>
+<li><a href="http://www.eng.yale.edu/grablab/pubs/Dollar_ContactSensing.pdf">Contact sensing and grasping performance of compliant hands</a><br>
+A. Dollar, L. Jentoft, J. Gao, R. Howe <br> 
+<i>venue</i>, pp. 65-75, ACM Press, New York, NY, July 2003.
+<i>Autonomous Robots</i>, 28(1), pp. 65-75, 2010.
+<ul>
+<li><a href="http://biorobotics.harvard.edu/research/compliantgrasping.html">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~spucci">Sam Pucci</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www.ri.cmu.edu/pub_files/2010/1/HamnerAssemblyRobotAURO2010.pdf">An autonomous mobile manipulator for assembly tasks</a><br>
+B. Hamner, S. Koterba, J. Shi, R. Simmons, S. Singh <br> 
+<i>Autonomous Robots</i>, 28(1), pp. 131-149, 2010.
+<ul>
+<li><a href="http://www.frc.ri.cmu.edu/projects/ace/">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+
+
+<p>
+
+<hr>
+<h4>4/19 Manipulation: Developmental Robotics </h4>
+
+<!--
+<ul>
+<li><a href=""> Learning and Generalization of Behavior-Grounded Tool Affordances</a><br>
+J. Sinapov, A. Stoytchev <br> 
+<i>IEEE International Conference on Development and Learning (ICDL 2007)</i>, 2007.
+<ul>
+<li><a href="">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+-->
+
+<ul>
+<li><a href=""> Learning and Generalization of Behavior-Grounded Tool Affordances</a><br>
+J. Sinapov, A. Stoytchev <br> 
+<i>IEEE International Conference on Development and Learning (ICDL 2007)</i>, 2007.
+<ul>
+<li><a href="http://www.ece.iastate.edu/~alexs/tooluse/">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~hojoon">Hojoon Park</a>
+</ul>
+</ul>
+
+
+<ul>
+online<li><a href="http://www.calinon.ch/papers/Hersch-TRO2008.pdf"> Dynamical System Modulation for Robot Learning via Kinesthetic Demonstrations</a><br>
+Hersch, M., Guenter, F., Calinon, S. and Billard, A. <br> 
+<i>IEEE Transactions on Robotics</i>, pp. 1463-1467, 24(6), 2007.
+<ul>
+<li><a href="http://www.calinon.ch/research.php">Project page</a>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~">tbd</a>
+</ul>
+</ul>
+
+<ul>
+<li><a href="http://www.nada.kth.se/~danik/Papers/2007_PLANNING_ek_IAR.pdf"> Robot learning from demonstration: a task-level planning approach
+</a><br>
+S. Ekvall, D. Kragic <br> 
+<i>International Journal of Advanced Robotic Systems</i>, 5(3), 2008.
+<ul>
+<li><a href="presentations/">Presentation (pdf)</a> <a href="presentations/">(ppt)</a> by <a href="http://www.cs.brown.edu/~dwyner">Dan Wyner</a>
+</ul>
+</ul>
+
+
+
+<hr>
+<h4>4/26 Experiments with Human Subjects and Signifance Testing (papers TBD) </h4>
+
+<p>
+
+<hr>
+<h4>5/3 Final project demos </h4>
+
+<p>
+
+
+
+<p>
+
+
+<!--
+<ul>
+<li><a href="http://www.cse.wustl.edu/~fwph/papers/Maxwell+etal-SIGCHI-2003.pdf">Game-Based Design of Human-Robot Interfaces for Urban Search and Rescue</a><br>
+B. Maxwell, N. Ward, F. Heckel<br>
+<i>CHI 2004</i>
+<ul>
+<li><a href="presentations/usar-design.pdf">Presentation (pdf)</a> <a href="presentations/usar-design.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~mk">Mykhaylo Kostandov</a>
+</ul>
+<p>
+
+<li><a href="http://www.ieor.berkeley.edu/~goldberg/pubs/icra04-unsupervised.pdf">Unsupervised Scoring for Internet-based Collaborative Tele-operation</a><br>
+K. Goldberg, D. Song, I. Song, J. McGonigal, W. Zheng, D. Plautz<br>
+<i>ICRA 2007</i>
+<ul>
+<li><a href="presentations/unsupervisedScoring_wzhou.pdf">Presentation (pdf)</a> <a href="presentations/unsupervisedScoring_wzhou.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~wzhou">Wenjin Zhou</a>
+</ul>
+<p>
+</ul>
+
+<ul>
+<li><a href="http://pharos.cpsc.ucalgary.ca/Dienst/Repository/2.0/Body/ncstrl.ucalgary_cs/2006-842-35/pdf">Robot Expressionism Through Cartooning</a><br>
+J. Young, M. Xin, E. Sharlin<br>
+<i>HRI 2007</i>
+<p>
+</ul>
+-->
+
+
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<hr>
+<h4>3/15 Interfaces for Robot Teleoperation </h4>
+
+<ul>
+<li><a href="http://www.cse.wustl.edu/~fwph/papers/Maxwell+etal-SIGCHI-2003.pdf">Game-Based Design of Human-Robot Interfaces for Urban Search and Rescue</a><br>
+B. Maxwell, N. Ward, F. Heckel<br>
+<i>CHI 2004</i>
+<ul>
+<li><a href="presentations/usar-design.pdf">Presentation (pdf)</a> <a href="presentations/usar-design.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~mk">Mykhaylo Kostandov</a>
+</ul>
+<p>
+
+<li><a href="http://www.ieor.berkeley.edu/~goldberg/pubs/icra04-unsupervised.pdf">Unsupervised Scoring for Internet-based Collaborative Tele-operation</a><br>
+K. Goldberg, D. Song, I. Song, J. McGonigal, W. Zheng, D. Plautz<br>
+<i>ICRA 2007</i>
+<ul>
+<li><a href="presentations/unsupervisedScoring_wzhou.pdf">Presentation (pdf)</a> <a href="presentations/unsupervisedScoring_wzhou.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~wzhou">Wenjin Zhou</a>
+</ul>
+<p>
+</ul>
+
+<ul>
+<li><a href="http://pharos.cpsc.ucalgary.ca/Dienst/Repository/2.0/Body/ncstrl.ucalgary_cs/2006-842-35/pdf">Robot Expressionism Through Cartooning</a><br>
+J. Young, M. Xin, E. Sharlin<br>
+<i>HRI 2007</i>
+<p>
+</ul>
+
+
+
+
+
+
+
+
+<hr>
+<h4>3/22 No class </h4>
+
+<p>
+
+
+
+
+
+
+<hr>
+<h4>3/29 Mobile Manipulation </h4>
+
+<p>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<hr>
+
+<!--
+<hr>
+<h4>2/7 Papers Fast Forward</h4>
+<ul>
+<li>Overview by <a href="http://www.cs.brown.edu/~cjenkins">Chad Jenkins</a>
+</ul>
+
+<hr>
+<h4>2/14 Autonomous control architectures</h4>
+
+<ul>
+<li><a href="http://www.kuffner.org/james/papers/kuffner_icra2000.pdf">RRT-Connect: An efficient approach to single-query path planning.</a> <br> 
+J.J. Kuffner and S.M. LaValle <br>
+<i>In Proc. IEEE Int'l Conf. on Robotics and Automation (ICRA'2000)</i>, pages 995-1001, San Francisco, CA, April 2000.
+<ul>
+<li><a href="presentations/rrt-connect.pdf">Presentation (pdf)</a> <a href="presentations/rrt-connect.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~jr">Radu Jianu</a>
+</ul>
+<p>
+	
+<li><a href="http://robotics.usc.edu/~maja/teaching/cs584/papers/AIM-864.pdf">A Robust Layered Control System for a Mobile Robot</a><br>
+Rodney A. Brooks<br>
+<i>IEEE Transactions on Robotics and Automation</i>, 2(1), pages 14-23, April 1986.
+<p>
+
+<li> <a href="http://robotics.usc.edu/~maja/teaching/cs584/papers/tla.pdf">On Three-Layer Architectures</a><br>
+Eran Gat<br>
+<i>Artificial Intelligence and Mobile Robotics</i>, in D. Kortenkamp, R. P. Bonnasso and R. Murphy (eds.), AAAI Press, pages 195-210, 1998.
+<ul>
+<li><a href="presentations/matt_gat.pdf">Presentation (pdf)</a> <a href="presentations/matt_gat.odp">(odp)</a> by <a href="http://www.cs.brown.edu/~matt">Matt Loper</a>
+</ul>
+<p>
+
+<li><a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=8196">Behavior-based Robotics</a><br>
+Ronald C. Arkin<br>
+MIT Press, 1998.
+<p>
+
+<li><a href="http://robotics.usc.edu/~maja/teaching/cs584/papers/AIM-1293.pdf">"Intelligence Without Reason"</a><br>
+Rodney A. Brooks<br> 
+<i>Proceedings of 12th International Joint Conference on Artificial Intelligence (IJCAI-91)</i>, Sydney, Australia, pages 569-595, August 1991.
+</ul>
+
+<hr>
+<h4>2/21 Motor learning and neuroscientific models</h4>
+
+<ul>
+<li><a href="http://citeseer.ist.psu.edu/jordan96computational.html">Computational aspects of motor control and motor learning</a><br>
+M. Jordan<br>
+<i>Handbook of Perception and Action: Motor Skills</i>, H. Huer and S. Keele, eds, 1993.
+<ul>
+<li><a href="presentations/CS296-3-mbuller0221-jordan.pdf">Presentation (pdf)</a> <a href="presentations/CS296-3-mbuller0221-jordan.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~mbuller">Mark Buller</a>
+</ul>
+<p>
+
+<li><a href="http://brain.oxfordjournals.org/cgi/content/abstract/119/2/593">Action recognition in the premotor cortex</a><br>
+G. Rizzolatti, L. Gadiga, V. Gallese, L. Fogassi<br>
+</i>Brain</i>, 119(2):593-609, 1996.
+
+<a href="http://">Premotor cortex and the recognition of motor actions</a><br>
+G. Rizzolatti, L. Gadiga, V. Gallese, L. Fogassi<br>
+</i>Cognitive Brain Research</i>, 3:131-141, 1996.
+<p>
+
+<li><a href="http://web.mit.edu/bcs/bizzilab/publications/mussa-ivaldi2000.pdf">Motor learning through the combination of primitives</a><br>
+F. Mussa-Ivaldi, E. Bizzi<br>  
+<i>Phil. Trans. R. Soc.  Lond. B</i> 355:1755-1769, 2000.
+<p>
+
+<li><a href="http://robotics.usc.edu/~maja/publications/imit.ps.gz">Sensory-Motor Primitives as a Basis for Learning by Imitation: Linking Perception to Action and Biology to Robotics</a><br>
+M. Mataric<br>
+<i>Imitation in Animals and Artifacts</i>, MIT Press, 2002, 392-422.
+<ul>
+<li><a href="presentations/imitation.pdf">Presentation (pdf)</a> <a href="presentations/imitation.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~dhartman">Dan Hartmann</a>
+</ul>
+<p>
+
+<li><a href="http://www-clmc.usc.edu/publications/S/schaal-TICS1999.pdf"> Is imitation learning the route to humanoid robots?</a><br>
+S. Schaal<br>
+<i>Trends in Cognitive Sciences</i>, 3, 6, pp.233-242, 1999. 
+</ul>
+
+<hr>
+<h4>2/28 Robot learning: nonparametric regression </h4>
+
+<ul>
+<li><a href="http://www-clmc.usc.edu/publications/A/atkeson-ICML1997.pdf">Robot learning from demonstration</a><br>
+C.G. Atkeson, S. Schaal <br>
+<i>Proceedings of the Fourteenth International Conference (ICML '97)</i>, pp.12-20, Morgan Kaufmann, 1999. 
+<ul>
+<li><a href="Feb28-dang.pdf">Presentation (pdf)</a> <a href="presentations/Feb28-dang.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~dang">Dan Grollman</a>
+</ul>
+<p>
+
+<li><a href="http://www.inference.phy.cam.ac.uk/mackay/itprnn/ps/534.548.pdf">Information Theory, Inference and Learning Algorithms (Chapter 45)</a><br>
+D. J. C. MacKay<br>
+Cambridge University Press, Cambridge, UK, 2003. 
+<ul>
+<li><a href="presentations/gp_presentation.pdf">Presentation (pdf)</a> <a href="presentations/gp_presentation.tgz">(Prosper)</a> by <a href="http://www.cs.brown.edu/~melsner">Micha Elsner</a>
+</ul>
+<p>
+
+<li><a href="http://www.cs.brown.edu/~dang/ICRA2007.pdf">Dogged Learning for Robots</a><br>
+D.H. Grollman, O.C. Jenkins <br>
+<i>IEEE International Conference on Robotics and Automation (ICRA 2007)</i>, 2007.
+<p>
+</ul>
+
+
+<hr>
+<h4>3/7 Interfaces for Robot Teleoperation </h4>
+
+<ul>
+<li><a href="http://www.cse.wustl.edu/~fwph/papers/Maxwell+etal-SIGCHI-2003.pdf">Game-Based Design of Human-Robot Interfaces for Urban Search and Rescue</a><br>
+B. Maxwell, N. Ward, F. Heckel<br>
+<i>CHI 2004</i>
+<ul>
+<li><a href="presentations/usar-design.pdf">Presentation (pdf)</a> <a href="presentations/usar-design.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~mk">Mykhaylo Kostandov</a>
+</ul>
+<p>
+
+<li><a href="http://www.ieor.berkeley.edu/~goldberg/pubs/icra04-unsupervised.pdf">Unsupervised Scoring for Internet-based Collaborative Tele-operation</a><br>
+K. Goldberg, D. Song, I. Song, J. McGonigal, W. Zheng, D. Plautz<br>
+<i>ICRA 2007</i>
+<ul>
+<li><a href="presentations/unsupervisedScoring_wzhou.pdf">Presentation (pdf)</a> <a href="presentations/unsupervisedScoring_wzhou.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~wzhou">Wenjin Zhou</a>
+</ul>
+<p>
+</ul>
+
+<ul>
+<li><a href="http://pharos.cpsc.ucalgary.ca/Dienst/Repository/2.0/Body/ncstrl.ucalgary_cs/2006-842-35/pdf">Robot Expressionism Through Cartooning</a><br>
+J. Young, M. Xin, E. Sharlin<br>
+<i>HRI 2007</i>
+<p>
+</ul>
+
+
+
+
+<hr>
+<h4>3/14 Robot learning: reinforcement learning </h4>
+
+<ul>
+<li><a href="http://www.cse.wustl.edu/~wds/content/papers/icra2002/icra2002.pdf">Effective Reinforcement Learning for Mobile Robots</a><br>
+William D. Smart and Leslie Pack Kaelbling<br>
+<i>Proceedings of IEEE International Conference on Robotics and Automation (ICRA 2002)</i>, volume 4, pages 3404-3410, 2002.
+<ul>
+<li><a href="presentations/CS296-3ClassPresentation0314-Smart0.09.pdf">Presentation (pdf)</a> <a href="presentations/CS296-3ClassPresentation0314-Smart0.09.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~mbuller">Mark Buller</a>
+</ul>
+<p>
+
+<li><a href="http://web.media.mit.edu/~alockerd/papers/Sophie-Guidance.pdf"> Reinforcement Learning with Human Teachers: Evidence of feedback and guidance with implications for learning performance</a><br>
+A. L. Thomaz C. Breazeal<br>
+<i>Proceedings of the 21st National Conference on Artificial Intelligence (AAAI)</i>, 2006.
+<ul>
+<li><a href="presentations/js_rl_with_human_guidance.pdf">Presentation (pdf)</a> <a href="presentations/askjonas.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~js">Jonas Schwertfeger</a>
+</ul>
+<p>
+
+
+<li><a href="http://http://www.cns.atr.jp/~dbent/Docs/dbent_iros02.pdf">Humanoid Robot Learning and Game Playing Using PC-Based Vision</a><br> 
+Darrin C. Bentivegna, Ales Ude, Christopher G. Atkeson, and Gordon Cheng<br>
+<i>IROS 2002</i>, Swiss Federal Institute of Technology Lausanne (EPFL), Switzerland, October, 2002.
+<p>
+
+<li><a href="http://robotics.usc.edu/~monica/Research/Publications/agents03.pdf">Natural Methods for Robot Task Learning: Instructive Demonstration, Generalization and Practice</a><br>
+Monica Nicolescu, Maja J Mataric<br>
+<i>Second International Joint Conference on Autonomous Agents and Multi-Agent Systems</i>, Melbourne, AUSTRALIA, July 14-18, 2003.
+<p>
+
+<li><a href="http://www.cs.umass.edu/~mahadeva/papers/nips-paper1-v5.pdf">Value Function Approximation using Diffusion Wavelets and Laplacian Eigenfunctions</a><br>
+Sridhar Mahadevan and Mauro Maggioni<br>
+<i>Neural Information Processing Systems (NIPS)</i>, 2006.
+<p>
+</ul>
+
+<hr>
+<h4>3/21 Manifold learning and dynamical systems </h4>
+
+<ul>
+<li><a href="http://www.sciencemag.org/content/vol290/issue5500/">A Global Geometric Framework for Nonlinear Dimensionality Reduction</a><br>
+J. B. Tenenbaum, V. de Silva and J. C. Langford<br>
+<i>Science</i> 290 (5500): 2319-2323, 22 December 2000 
+<ul>
+<li> (Rescheduled to 4/4) <a href="presentations/js_isomap.pdf">Presentation (pdf)</a> <a href="presentations/js_isomap.odp">(odp)</a> by <a href="http://www.cs.brown.edu/~js">Jonas Schwertfeger</a>
+</ul>
+<p>
+
+
+<li><a href="http://www.seas.upenn.edu/~kilianw/publications/PDFs/nips07.pdf">Graph Laplacian Regularization for Large-Scale Semidefinite Programming</a><br>
+K. Q. Weinberger, F. Sha, Q. Zhu and L. K. Saul<br> 
+<i>Advances in Neural Information Processing Systems 19</i>. MIT Press: Cambridge, MA, 2006. 
+<ul>
+<li><a href="presentations/aggeliki_fastmvu.pdf">Presentation (pdf)</a> <a href="presentations/aggeliki_fastmvu.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~aggeliki">Aggeliki Tsoli</a>
+</ul>
+<p>
+
+<li><a href="http://www.cs.brown.edu/~cjenkins/papers/cjenkins_stisomap.pdf">A spatio-temporal extension to isomap nonlinear dimension reduction</a> <br>
+O. C. Jenkins and M. J. Mataric<br>
+<i>International Conference on Machine Learning (ICML 2004)</i>, pages 441-448, Banff, Alberta, Canada, Jul 2004
+<p>
+
+<li><a href="http://www.dgp.toronto.edu/~jmwang/gpdm/nips05final.pdf">Gaussian Process Dynamical Models</a><br>
+J.M. Wang, D.J. Fleet, A. Hertzmann<br>
+<i>NIPS 2005</i>, December, 2005. Vancouver, Canada. pp. 1441-1448.
+<ul>
+<li><a href="presentations/Dang-Mar21.pdf">Presentation (pdf)</a> <a href="presentations/Dang-Mar21.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~dang">Dan Grollman</a>
+</ul>
+<p>
+
+
+<li><a href="http://birg2.epfl.ch/publications/fulltext/ijspeert01d.pdf">Nonlinear dynamical systems for imitation with humanoid robots</a><br>
+A.J. Ijspeert, J. Nakanishi, T. Shibata, and S. Schaal
+<i> Proceedings of the IEEE/RAS International Conference on Humanoids Robots (Humanoids2001)</i>, pages 219-226, 2001.
+</ul>
+<p>
+
+<hr>
+<h4> 3/28 Spring Break </h4>
+
+<p>
+
+<hr>
+<h4>4/4 Image features and object recognition  </h4>
+
+<ul>
+<li><a href="http://www.cs.ubc.ca/~lowe/papers/ijrr02.pdf">Mobile robot localization and mapping with uncertainty using scale-invariant visual landmarks</a><br>
+Stephen Se, David G. Lowe and Jim Little<br>
+<i>International Journal of Robotics Research</i>, 21, 8 (2002), pp. 735-758 
+<ul>
+<li><a href="presentations/sift_slam.pdf">Presentation (pdf)</a> <a href="presentations/sift_slam.odp">(odp)</a> by <a href="http://www.cs.brown.edu/~matt">Matt Loper</a>
+</ul>
+<p>
+
+<li><a href="http://www.vision.ee.ethz.ch/~surf/eccv06.pdf">SURF: Speeded Up Robust Features</a><br>
+Herbert Bay, Tinne Tuytelaars, Luc Van Gool
+<i>European Conference on Computer Vision</i>, May 2006
+</ul>
+<p>
+
+
+<hr>
+<h4>4/11 Social robotics </h4>
+
+<ul>
+<li><a href="http://www.cs.yale.edu/homes/scaz/papers/AutonomousRobots-02-TOM.pdf">Theory of mind for a humanoid robot </a><br>
+Brian Scassellati<br>
+<i>Autonomous Robots</i>, vol. 12, p. 13-24, 2002.
+<p>
+
+<li><a href="http://www.cs.cmu.edu/~illah/PAPERS/socialroboticssurvey.pdf">A survey of socially interactive robots </a><br>
+T. Fong, I. Nourbakhsh, K. Dautenhahn<br>
+<i>Robotics and Autonomous Systems</i>, Special issue on Socially Interactive Robots 42 (3-4), pp 143-166, 2003.
+<ul>
+<li><a href="presentations/askdan.pdf">Presentation (pdf)</a> <a href="presentations/dhartman_social_robotics.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~dhartman">Dan Hartmann</a>
+</ul>
+<p>
+
+<li><a href="http://neural.cs.washington.edu/files/RSMChap-04.pdf"> A Bayesian model of imitation in infants and robots</a><br>
+R. Rao, A. Shon and A. Meltzoff<br>
+<i>Imitation and Social Learning in Robots, Humans, and Animals</i>, Cambridge University Press, 2005
+<ul>
+<li><a href="presentations/presentation.pdf">Presentation (pdf)</a> <a href="presentations/presentation.odp">(odp)</a> by <a href="http://www.cs.brown.edu/~melsner">Micha Elsner</a>
+</ul>
+<p>
+
+<li><a href="http://faculty.cs.byu.edu/~mike/mikeg/papers/IJCAI01.pdf">Experiments in Adjustable Autonomy</a><br>
+M.A. Goodrich, D.R. Olsen Jr., J.W. Crandall, and T.J. Palmer<br>
+<i>IJCAI01 workshop on Autonomy, Delegation, and Control: Interacting with Autonomous Agents</i>.
+<p>
+
+<li><a href="http://groups.csail.mit.edu/lbr/hrg/2001/MITPress-Imitation.pdf">Challenges in building robots that imitate people</a><br>
+C. Breazeal and B. Scassellati <br> 
+<i>Imitation in Animals and Artifacts</i>, MIT Press, 2002.
+</ul>
+<p>
+
+<hr>
+<h4>4/18 Group behavior and task allocation </h4>
+
+<ul>
+<li><a href="http://robotics.usc.edu/~maja/teaching/cs584/papers/stone.pdf">Task decomposition, dynamic role assignment, and low-bandwidth communication for real-time strategic teamwork</a><br> 
+Peter Stone and Manuela Veloso<br>
+<i>Artificial Intelligence</i>, 110(2), pages 241-273, 1998.
+<ul>
+<li><a href="presentations/robotteam_jr.pdf">Presentation (pdf)</a> <a href="presentations/robotteam_jr.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~jr">Radu Jianu</a>
+</ul>
+<p> 
+
+<li><a href="http://www.ai.sri.com/~gerkey/papers/mrta-taxonomy.pdf">A formal analysis and taxonomy of task allocation in multi-robot systems</a><br>
+Brian P. Gerkey and Maja J Mataric<br>
+<i>Intl. Journal of Robotics Research</i>, 23(9):939-954, September 2004.
+<p>
+
+<li><a href="http://www.ri.cmu.edu/pub_files/pub3/dias_m_bernardine_2002_1/dias_m_bernardine_2002_1.pdf">Opportunistic Optimization for Market-Based Multirobot Control</a><br>
+M.B. Dias and A. Stentz<br>
+<i>International Conference on Intelligent Robots and Systems (IROS '02)</i>, Vol. 3, September, 2002, pp. 2714 - 2720.
+<ul>
+<li><a href="presentations/multi-robot.pdf">Presentation (pdf)</a> <a href="presentations/multi-robot.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~wzhou">Wenjin Zhou</a>
+</ul>
+<p>
+
+<li><a href="http://www.merl.com/papers/docs/TR2001-22.pdf"> Understanding Belief Propagation and Its Generalizations</a><br>
+J.S. Yedidia, W.T. Freeman W.T., Y. Weiss<br>
+<i>IJCAI 2001 Distinguished Lecture trac</i>
+</ul>
+<p>
+
+<hr>
+<h4>4/25 Manipulation </h4>
+
+<ul>
+<li><a href="http://www-robotics.cs.umass.edu/Papers/icra04_rob.pdf">Manipulation Gaits: Sequences of Grasp Control Tasks</a><br>
+R. Platt, A.H. Fagg, R. Grupen<br>
+<i>Proceedings of the 2004 IEEE Conference on Robotics and Automation (ICRA)</i>, New Orleans, Louisiana, April 2004
+<ul>
+<li><a href="presentations/.pdf">Presentation (pdf)</a> <a href="presentations/.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~aggeliki">Aggeliki Tsoli</a>
+</ul>
+<p>
+
+<li><a href="http://people.csail.mit.edu/edsinger/doc/edsinger_kemp_humanoids2006.pdf">Manipulation in Human Environments</a><br>
+A. Edsinger, C. Kemp.<br> 
+<i>Proceedings of the IEEE/RSJ International Conference on Humanoid Robotics</i>, 2006. 
+<ul>
+<li><a href="presentations/.pdf">Presentation (pdf)</a> <a href="presentations/.ppt">(ppt)</a> by <a href="http://www.cs.brown.edu/~mk">Mykhaylo Kostandov</a>
+</ul>
+<p>
+
+
+<li><a href="http://graphics.cs.cmu.edu/nsp/papers/IJRR04.pdf"> Closure and Quality Equivalence for Efficient Synthesis of Grasps from Examples</a><br>
+N. S. Pollard<br>
+<i>International Journal of Robotics Research</i>, 23(6), 595--614, June 2004.
+<p>
+</ul>
+
+
+<hr>
+<h4>5/2: Open for paper selections</h4>
+
+<p>
+
+<hr>
+<h4>5/9: Final project demos</h4>
+
+<p>
+-->

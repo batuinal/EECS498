@@ -1,0 +1,100 @@
+<html>
+<head>
+
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title> Digital Canvas </title>
+	<script src="//use.typekit.net/hbv1kcb.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style/bootstrap.min.css"/>
+	<link rel="stylesheet" href="style/bootstrap-theme.min.css"/>	
+	<link rel="stylesheet" href="style/style.css"/>
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/paper-full.min.js"></script>
+	<script type="text/paperscript" src="scripts/paperplay2.js" canvas="c"></script>
+
+</head>
+<body>
+	<div id="first">
+		<canvas id="c"></canvas>
+
+		<div class="container hidden header">
+			<h2 id="subhead">STANFORD CS 91SI </h2>
+			<h1 id="head"> DIGITAL CANVAS </h1>
+			<p> <a id="arrow" class="button" href="#" target="_blank"> LEARN MORE </a> </p>
+			<br>
+			<p> <a id="learn" class="button" href="https://cs91si.typeform.com/to/flmvAn" target="_blank"> APPLY NOW </a> </p>
+		</div> <!-- end header -->
+
+	</div> <!-- end first -->
+
+	<div id="navbar"></div>
+
+		<div class="page container hidden">
+
+					<div id="text" class="row">
+						<div id="logistics" class="col-md-4">
+							<h1> LOGISTICS </h1>
+							<p> <span>Day</span> Tuesdays </p>
+							<p> <span>Time</span> 4:15-6:05PM </p>
+							<p> <span>Location</span> Cubberley 130 </p>
+							<p> <span>Instructors</span> Paula + Ishita </p>
+							<p> <span>Prereqs</span> Application + cs142 or equivalent</p>
+							<p> <span>Limit</span> 20 students, by application only
+							<p> <span>Questions?</span> cs91si-spr1415-staff at lists.stanford.edu </p>
+							<br>
+							<p> <a class="button" href="https://cs91si.typeform.com/to/flmvAn" target="_blank"> APPLY NOW </a> </p>
+						</div>
+
+						<div class="col-md-1"></div>
+
+						<div id="description" class="col-md-7">
+							<h1>WHAT IS CS 91SI: DIGITAL CANVAS?</h1>
+							<p> Visual design is an essential skill for anyone who wants to make a product, especially a digital one. In this class, the spotlight's on you &mdash; and what you make. Through the quarter, you'll work on your very own web-focused visual design projects. The course will provide you with the framework you need to build something great &mdash; that means peer reviews, technical guidance, and an environment for you to focus on design. In addition, you'll have the opportunity to interact with professional designers, and through your project, build your professional portfolio. </p>
+							<p class="red"> visual principles / layout / grids / typography / color / branding / interaction / data viz </p>
+						</div>
+
+					</div>
+
+			<!-- end container -->
+
+		</div>
+</div>
+
+</body>
+
+<noscript>
+	<style>
+
+		canvas, #subhead {
+			display: none;
+		}
+
+		#first {
+			z-index: 999;
+			pointer-events:none;
+		}
+
+		#header, #page {
+			display: initial;
+			visibility: visible;
+		}
+
+		#header {
+			width: 100%;
+			text-align: center;
+			background-color: rgba(255,255,255,0.9);
+		}
+
+		#page {
+			top: 150px;
+		}
+
+
+	</style>
+</noscript>
+
+</html>

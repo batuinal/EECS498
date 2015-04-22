@@ -1,0 +1,226 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="Monday, 16-Apr-73 13:10:00 GMT" />
+<title>U-M Weblogin </title>
+<link rel="icon" href="/cosign/images/blockm.png" type="image/png" />
+<link rel="stylesheet" type="text/css" href="/cosign/cosign_base.css" media="screen" />
+<!--[if lt IE 8.0]><link rel="stylesheet" type="text/css" href="/cosign/ie.css" media="screen" /><![endif]-->
+<script type="text/javascript">
+	var link = document.createElement('link');
+	link.setAttribute('rel', 'stylesheet');
+	link.setAttribute('type', 'text/css');
+	link.setAttribute('href', '/cosign/cosign_js.css');
+	link.setAttribute('media', 'screen');
+	document.getElementsByTagName('head')[0].appendChild( link );
+</script>
+<link rel="stylesheet" type="text/css" href="/cosign/cosign_mobile.css" media="handheld" />
+</head>
+<body>
+<div id="page">
+  <div id="body">
+  	<div id="head"> <a id="mast" href="https://weblogin.umich.edu/" title="University of Michigan Weblogin"><span><img src="/cosign/images/blockm.png" alt="" width="16" height="16" /></span> <strong>University of Michigan: Weblogin</strong></a></div>
+<hr class="text" />
+    <ul class="text">
+      <li><a href="#instruct" title="Jump to the Weblogin instructions [ALT + 1 Windows / CONTROL + 1 Mac]" accesskey="1">Jump
+        to the Weblogin instructions</a></li>
+      <li><a href="#error" title="Jump to the error message (if present) [ALT + 2 Windows / CONTROL + 2 Mac]" accesskey="2">Jump
+        to the error message (if present)</a></li>
+      <li><a href="#kerberos" title="Jump to the ID and Password login section [ALT + 3 Windows / CONTROL + 3 Mac]" accesskey="3">Jump
+        to the ID and Password login section</a></li>
+      <li><a href="#mtokenFactor" title="Jump to the MToken login section [ALT + 4 Windows / CONTROL + 4 Mac]" accesskey="4">Jump
+        to the MToken login section</a></li>
+    </ul>
+	<hr class="text" />
+<div class="alert">
+	<p class="text">You are browsing the text-only version of this page. The text-only version contains the <em>complete</em> content and navigation of this page, without purely cosmetic visual styling.</p>
+	<p class="text"><em>NOTE: Older browsers, or those with poor support for web standards, may not be able to display the graphical version of our website.</em> A list of <a href="http://www.umich.edu/Web-standards/#browsers">standards-friendly browsers</a> capable of displaying the graphic version is available.</p>
+</div>
+<hr class="text" />
+    <div id="main">
+      <form name="factors" action="/cosign-bin/cosign.cgi" method="post" id="rightUIcol">
+        <input type="hidden" name="ref" value="https://www.eecs.umich.edu/eecs/dept-affairs/index.html" />
+        <input type="hidden" name="service" value="cosign-www.eecs" />
+        <input type="hidden" name="required" value="" />
+        <div class="factor" id="kerberos">
+          <div class="factorComplete" id="kerbComplete" style="display: none;"></div>
+          <table id="kerbFactor">
+            <tr>
+              <td style="width: 35%"><label for="login">Login ID</label></td>
+              <td><input id="login" name="login" type="text" class="textbox" value=""/>
+                <div class="ieMinWidth100">&nbsp;</div></td>
+            </tr>
+            <tr>
+              <td><label for="password">Password</label></td>
+              <td><input id="password" name="password" type="password" class="textbox" value=""/></td>
+            </tr>
+            <tr class="capsLock" style="display: none;">
+              <td>&nbsp;</td>
+              <td>Caps Lock is on</td>
+            </tr>
+          </table>
+          <div class="factorComplete" id="mtokenComplete" style="display: none;"></div>
+          <div class="factorRequire" id="mtokenRequire" style="display: none;"></div>
+          <div class="factorToggle" id="mtknToggleCntr">
+            <h2 id="mtokenToggle">MToken</h2>
+          </div>
+          <div id="mtokenFactor" class="subFactor" style="display: none;">
+            <table>
+              <tr>
+                <td style="width: 40%;"><label for="tokencode" id="tCodeLabel">Tokencode</label>
+                  <div id="tokenBalloon" style="display: none;"></div></td>
+                <td style="width: 60%;"><input id="tokencode" name="tokencode" type="password" class="textbox" value="" maxlength="8"/></td>
+              </tr>
+              <tr id="noTokenCheck" style="display: none;">
+                <td colspan="2" id="noTokenOpt"><input name="noToken" id="noToken" type="checkbox" value="1"/>&nbsp;<label for="noToken" id="noTokenLabel">I don't have an MToken</label></td>
+              </tr>
+              <tr id="mtokenOptnl">
+                <td>&nbsp;</td>
+                <td>Optional for this site</td>
+              </tr>
+            </table>
+            <ul class="contextHelp">
+              <li><a href="#mtokenInfo" id="mtokenInfoShow">What is an MToken?</a></li>
+              <li><a href="#mtokenForgot" id="mtokenForgotShow">Forgot yours?</a> <a href="#mtokenHelp" id="mtokenHelpShow">MToken Help</a></li>
+            </ul>
+          </div>
+          <div id="loginButton">
+            <input type="submit" name="doLogin" id="loginSubmit" value="Log In"/>
+            <div id="loginWait" style="display: none;">&nbsp;</div>
+          </div>
+          <ul class="contextHelp">
+            <li><a href="#kerbPswInfo" id="kerbPswInfoShow">Forgot your password?</a></li>
+            <li style="margin-top: 3px;"><a href="#kerbHelp" id="kerbHelpShow">Login Help</a></li>
+          </ul>
+        </div>
+      </form>
+      <div id="leftUIcol">
+        <h1 id="instruct">Authentication Required</h1>
+        <div id="mainInfo">
+          <p>Please enter your Login ID (uniqname or Friend&nbsp;ID) and password to continue.</p>
+          <div id="extraInfo">
+            <h3>Need a Login ID?</h3>
+            <!--p>If you don't have a Login ID, you can <a href="#kerbActInfo" id="kerbActInfoShow">create one now</a>.</p-->
+            <p><a href="#kerbActInfo" id="kerbActInfoShow">Create a Login ID now</a>.</p>
+	   <h3>Important Security Tips</h3>
+	   <ul>
+	   <li><p>U-M will <strong>never</strong> send you an email asking for your password. <a href=http://safecomputing.umich.edu/main/phishing_alerts/spear-phish.php>Learn more about phishing scams</a>.</p></li>
+	   <li><p>Before entering your UMICH password (Level-1) on a web page, check that the page's web address/URL begins with <em>https://weblogin.umich.edu/</em></p></li>
+	  </ul>
+          </div>
+          <p class="noScript">This page displays best when JavaScript is enabled in your web
+            browser. JavaScript is required for MToken authentication.</p>
+          <p class="mobileOnly">Please Note: MToken is not available on mobile devices.</p>
+        </div>
+        <div id="kerbHelp" class="infoBox">
+	<div class="header"><a href="#mainInfo" class="hideInfo" id="kerbHelpHide">Hide this Information</a> <a href="#body" class="toTop">Back to Top</a></div>
+	<h2>Login Help</h2>
+	<p>To access many U-M computing services, you will need a Login ID (uniqname or Friend ID) and the associated password. Never share your password with anyone.</p>
+	<p>Faculty, staff, students, retirees and sponsored affiliates should already have a uniqname. Alumni can <a href="https://accounts.www.umich.edu/create/alumniassoc/">verify or create a uniqname online</a>. All others can <a href="https://friend.weblogin.umich.edu/friend/">create a Friend account</a>.</p>
+	<p>For assistance with uniqnames, passwords, and accounts, contact the <a href="http://its.umich.edu/help/" target="_blank">ITS Service Center</a>.</p>
+	<div class="infoBoxBotm">&nbsp;</div>
+</div>
+<div id="kerbPswInfo" class="infoBox">
+	<div class="header"><a href="#mainInfo" class="hideInfo" id="kerbPswInfoHide">Hide this Information</a> <a href="#body" class="toTop">Back to Top</a></div>
+	<h2>Forgot Your Password?</h2>
+	<ul>
+		<li><a href="http://www.itcs.umich.edu/itcsdocs/r1162/#forgot" target="_blank">UMICH password</a> (Level-1)<br/>
+		<a href="https://password.it.umich.edu/pwm/public/ForgottenPassword">Answer your pre-set security questions</a> to reset your password yourself or request a reset from the ITS Service Center</li>
+		<li><a href="https://friend.weblogin.umich.edu/friend/account/" target="_blank">Friend guest account password</a><br/>
+		Request a Friend password reset online</li>
+	</ul>
+	<p>We recommend you choose a strong password and change it periodically. See <a href="http://www.itcs.umich.edu/your-account/password.php" target="_blank">How to Change Your UMICH Password</a>.</p>
+	<p>Please contact the <a href="http://its.umich.edu/help/">ITS Service Center</a> if you have any questions.</p>
+	<div class="infoBoxBotm">&nbsp;</div>
+</div>
+<div id="kerbActInfo" class="infoBox">
+	<div class="header"><a href="#mainInfo" class="hideInfo" id="kerbActInfoHide">Hide this Information</a> <a href="#body" class="toTop">Back to Top</a></div>
+	<h2>Need a Login ID?</h2>
+	<ul>
+		<li><a href="http://www.itcs.umich.edu/accounts/uniqname-processes/" target="_blank">Faculty, Staff, Students, Retirees</a><br/>
+		Faculty, staff, students, retirees and sponsored affiliates should already have a uniqname.</li>
+		<li><a href="https://accounts.www.umich.edu/create/alumnirec/" target="_blank">Alumni</a><br/>
+		Alumni can create or verify a uniqname online.</li>
+		<li><a href="http://www.itcs.umich.edu/itcsdocs/s4316/" target="_blank">Others</a><br/>
+		Friend guest accounts are available to those who are not eligible for a uniqname.</li>
+	</ul>
+	<p>Questions about computing accounts can be directed to the <a href="http://its.umich.edu/help/" target="_blank">ITS
+		Service Center</a>.</p>
+	<div class="infoBoxBotm">&nbsp;</div>
+</div>
+<div id="mtokenHelp" class="infoBox">
+	<div class="header"><a href="#mainInfo" class="hideInfo" id="mtokenHelpHide">Hide this Information</a> <a href="#body" class="toTop">Back to Top</a></div>
+	<h2>MToken Help</h2>
+	<p>See <a href="http://www.mais.umich.edu/mtoken/">MToken and Two-Factor Authentication<br \>at U-M</a> for</p>
+	<ul>
+	    <li>How to obtain, activate, and use MTokens</li>
+	    <li>MToken Distribution Centers</li>
+	    <li>Getting help</li>
+	    <li>and more</li>
+	</ul>
+<!--
+	<ul>
+		<li><a href="http://www.mais.umich.edu/mtoken/mtoken_distribution.html" target="_blank">MToken Distribution
+			and Service Centers</a></li>
+		<li><a href="http://www.mais.umich.edu/mtoken/mtoken_faq.html" target="_blank">MToken FAQ</a></li>
+		<li><a href="http://www.mais.umich.edu/mtoken/" target="_blank">Systems that require
+			an MToken</a></li>
+	</ul>
+	<p>Individuals with access to a system requiring two factor authentication should pick up an MToken from one of the campus MToken Distribution Centers (MDC), and activate it. Once you have activated your MToken, you will need to use the tokencode displayed on the front of your MToken every time you log into a department or administrative system that requires two-factor (strong) authentication. <strong>Please do not insert your MToken into a USB port.</strong></p>
+	<p>For assistance with using your MToken, contact an <a href="http://www.mais.umich.edu/mtoken/mtoken_distribution.html" target="_blank">MToken administrator</a>.</p>
+-->
+	<div class="infoBoxBotm">&nbsp;</div>
+</div>
+<div id="mtokenInfo" class="infoBox">
+	<div class="header"><a href="#mainInfo" class="hideInfo" id="mtokenInfoHide">Hide this Information</a> <a href="#body" class="toTop">Back to Top</a></div>
+	<h2>What is an MToken? Do I need one?</h2>
+	<p>An MToken is required for access to some U-M systems. An MToken is a device or software application that displays a new tokencode once every minute. You must enter the tokencode from your MToken when logging in to systems that require an MToken. For details, see <a href="http://www.itcs.umich.edu/itcsdocs/s4394/">Obtaining, Activating, and Using an MToken (S4394).</a></p>
+	<div class="infoBoxBotm">&nbsp;</div>
+</div>
+<div id="mtokenForgot" class="infoBox">
+	<div class="header"><a href="#mainInfo" class="hideInfo" id="mtokenForgotHide">Hide this Information</a> <a href="#body" class="toTop">Back to Top</a></div>
+	<h2>Forgot your MToken?</h2>
+	<p>If you need your MToken and don't have it with you, you can request an emergency access code online if you have set up security questions ahead of time. See <a href="http://www.itcs.umich.edu/itcsdocs/s4394/#temp">Emergency Access If You Forget Your MToken</a> for details. Or for further assistance, contact the <a href="http://its.umich.edu/help/">ITS Service Center.</a></p>
+	<div class="infoBoxBotm">&nbsp;</div>
+</div>
+
+      </div>
+      <div class="clear">&nbsp;</div>
+      <p class="policies">By your use of these resources, you agree to abide by <a href="http://spg.umich.edu/policy/601.07">Proper Use of Information Resources, Information Technology, and Networks at the University of Michigan (SPG 601.07)</a>, in addition to all relevant state and federal laws.</p>
+    </div>
+  </div>
+</div>
+<div id="foot">
+    <p><a href="http://www.umich.edu/" title="University of Michigan Homepage">University of Michigan</a> &nbsp; | &nbsp; 
+    &#169; 2015 <a href="http://www.umich.edu/~regents/" title="Regents of the University of Michigan">The Regents of the University of Michigan</a></p>
+</div>
+<script type="text/javascript" src="/cosign/js/prototype.js"></script>
+<script type="text/javascript" src="/cosign/js/scriptaculous.js"></script>
+<script type="text/javascript" src="/cosign/js/effects.js"></script>
+<script type="text/javascript" src="/cosign/js/cosign-min.js"></script>
+
+<script type="text/javascript">
+	window.onload = function() {
+		var ui = new UImanager();
+		ui.setRequired('');
+		ui.setCompleted('');
+		ui.initUI();
+	}
+</script>
+</body>
+</html>
+
+
+

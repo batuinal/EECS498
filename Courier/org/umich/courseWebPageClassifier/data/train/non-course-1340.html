@@ -1,0 +1,154 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.1//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11.dtd">
+<!-- Minimal Web pages, starting point for Web Designers -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>Princeton University Authentication Service</title>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="Wed, 21 Mar 2007 17:01:00 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link media="only screen and (max-device-width: 480px)" rel="stylesheet" href="/cas/themes/default/small.css" type="text/css">
+<link media="only screen and (min-device-width: 481px)" rel="stylesheet" href="/cas/themes/default/princeton.css" type="text/css">
+<!--[if IE]>
+<link rel="stylesheet" href="/cas/themes/default/princeton.css" type="text/css">
+<![endif]-->
+<script language="javascript" type="text/javascript">
+        <!--
+        function focusLogin() {
+        document.forms[0].username.focus();
+        }
+
+        function focusLogout() {
+        document.forms[0].verify.focus();
+        }
+        function helpPopup() {
+        window.open( "http://kb.princeton.edu/9921/", "Help","title=0, status = 0, height = 400, width = 700, resizable = 1, scrollbars=1" )
+        }
+
+       //  -->
+    </script>
+
+    <!-- transparent mode -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36516510-3']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+</head>
+<body onLoad="if ( window != top ) top.location.href = window.location.href; focusLogin()">
+<form method="post" autocomplete="off" action="login;jsessionid=64EC1B0D5D44CCB18CF4BCDA0DF47BB1?service=http%3A%2F%2Fwww.cs.princeton.edu%2Fcourses%2Farchive%2Fspring15%2Fcos598G%2Finfo.php">
+  <!--Content-->
+  <div id="wrapper">
+     <script language="javascript" type="text/javascript">
+        <!--
+        function helpWindow() {
+           helpWin = window.open( "http://kb.princeton.edu/9921/", "Help","title=0, status = 0, height = 400, width = 700, resizable = 1, scrollbars=1" );
+           if (window.focus) { helpWin.focus() }
+           return false;
+        }
+       //  -->
+    </script>
+    <div id="toolbarcontainer">
+      <div id="toolbar">
+         <a href="http://www.princeton.edu/"><img src="/cas/images/pu_signature_web.jpg" alt="Princeton University"/></a>
+      <!-- img src="/cas/images/help.gif" alt="Help" id="help" onClick="helpWindow()" border="0" style="cursor:help;"/ -->
+        <a href="http://kb.princeton.edu/9921/"  onClick="helpWindow();return false" id="helplink"><img src="/cas/images/help.gif" alt="Help" id="help" border="0"/></a>
+      </div>
+    </div>
+
+
+        <div id="headercontainer">
+      <div id="header">
+          <!-- img src="/cas/images/banner.png" alt="Central Authentication Service" / -->
+          <div id="casTitle">Central Authentication Service </div>
+      </div>
+    </div>
+    <br/>
+    <div id="borderContainer">
+    <div id="contentcontainer">
+      <div id="content">
+        <div class="errorBlock">
+        <!-- Begin error message generating Server-Side tags -->
+        
+        <!-- End error message generating Server-Side tags -->
+        </div>
+        <img src="/cas/images/padlock.jpg" alt="Security" class="right" />
+        <div class="block">
+          <div class="title"><b>NetID</b></div>
+          <input id="username" name="username" size="25" value="" type="text" tabindex="1" accesskey="n">
+        </div>
+        
+        <div class="block">
+          <div class="title"><b>Password</b></div>
+          <input value="" size="25" id="password" name="password" autocomplete="off" type="password" tabindex="2" accesskey="p" >
+        </div>
+        <br/>
+           <div class="login">
+           <p>
+            <input type="image" class="button"  src="/cas/images/login_T.gif" accesskey="l" value="Login" tabindex="4" alt="login" />
+           </p>
+           </div>
+        <div class="block">
+        <p class="wide"><input type="checkbox" id="warn" name="warn" value="false" tabindex="3" />
+          Prompt me before logging into other CAS protected sites.</p>
+        </div>
+          <!-- The following hidden field must be part of the submitted Form -->
+          <input type="hidden" name="lt" value="_cNoOpConversation id_krO0ABXNyAGFvcmcuc3ByaW5nZnJhbWV3b3JrLndlYmZsb3cuZXhlY3V0aW9uLnJlcG9zaXRvcnkuY29udGludWF0aW9uLlNlcmlhbGl6ZWRGbG93RXhlY3V0aW9uQ29udGludWF0aW9uPMZQHZQEyycMAAB4cgBXb3JnLnNwcmluZ2ZyYW1ld29yay53ZWJmbG93LmV4ZWN1dGlvbi5yZXBvc2l0b3J5LmNvbnRpbnVhdGlvbi5GbG93RXhlY3V0aW9uQ29udGludWF0aW9ujvgpwtO1430CAAB4cHoAAAQAAAAK9R-LCAAAAAAAAAClWXuMVFcZPzvLArvswizLm2IJQnnJDK1AgUXqMvtgyCzg7hYq64Oz956dubt37rmce2Z3sBb4B9LEIraCRlNTmgbwDxpr1bahfyC2qLFCtBHTYkj6jya2alKNMdFU_b5zH3Nn5rIzpJPMnXtev-873_Ocby7_lTQ5gmzjIptwbGFY2VFB82ySi_HEJBsZNflkgllZw2IJI2-biV7o6CkyrSANbqWhZ9HWdueDi9dOtxJStCVpMzlM3uAtBeR5Y3SCJmC6mcgY1jjTM4YjW9cOfnHP4SdXNOKiyWmEkAaY-vC9MDHIHMdjIbvi8tv6l9ffVCwcIcdIDPiYMNhkBnnp5SJfE9zfURh6UFJZcEauf27yTy-8tzEG4IJsjELRuGDAXyHvJHCNoWXoCDOZ3gNdV19ue25PZ_btGGnIkGka15kk7RmUSdKkVjY5mONCdgLyQzWQu0YcKagmQ9hP6UN9X_jeS_9C1mzY4hwlaoRNKNhc_8Mdmw7fHgDag6RpgpoFBoTipVl7C_kRJk5dPrds1tn3vqZgSCMAfWYqWSmeNG6aTFMSy3CNml1SCmOkIFk_tdfszH0l_tiR44245RbqjziSzHE3jsaQhImdiuv2koHspk4O-ptm3L72xoLDv20ksV7SYnKq98LGuUiTZpkTzMlxUy_aj3yW4Kd1ciY84_BtkmSGw8SEoTGA7cU9jFHHyCY06iRoQeaYBbqhimncm2bY1EwMokWxg2yky7ZNb3jQRUHbcr5_5sz5_Ie3lf5agbjNLYcNHbVBjzszQCOpaCSBRrKcRjKgkRzwlq0cCK1HpXfXyaSv_Eg2dy688Oy7_0mdi5Hph0gc_C_L9H0F2WUKRvWjqAIhjVFYndYlmRu2PYka7oQZOSntlGkAbUnur9iV0tbuYAJMjxk6etniDJnFhQEuRs1Hhel1NQdcS_JQvQLa77-BSRA0imXlgnGtI-DhlUMv9v3lzfF5MdKYJu0atyzXFoeMPOMFmSazcOtea5jMoZrGbElHTJYCBwRDjA2ngRDpeBK_BYHt_iuHH5h4_-ULrheANcH3lxCXNsI3Ad8N0P6VJD0oqu3J5OQkeILjqohJUBbTC0mNF4TDYJ9CyxkTLOm60IObYcDZvG1rX9KwRnnCzqkgtcI-JsiOOg0g0oKI95mrQtPskl9jcAgPQlyeOdDTnR7oSQ1JMksTTEcq1HRA1LvqZOFR8C0LgsF-6jgQEPRUCeWpTS80LV93-pUYiWXITNub4BnEzIK3ULWLtg3ctGsFIWAxxuZ9I2OgPRxcCxFikgorxfm4wQ5gvArig9rXLs5NRq0by8WJW8_--2_gk4f8uGYTSRYA13oAAAQA40z2CQpsWdkh1UrrdrHoIHxcPTuq4gZki51RAQ-ADd2Vwi7D0nuKaETYqmIeuPzUvSDcd-Odi1cWv7ReBZW2ERiCZaDZggn-l1BOUwGVLEEld4XnYxTpCGneJ_Gbj-7fuaTzvjfdtBWaMZQTfBJd4dbPN6_eNvnaW42kMUOaNApqkmR-KDwEM8Hl2yBvUcPsh8xIs64mh0mLI6k2PgSBCVZ-YrgssvgDPSbLY9RwE_NWG5zNm-klqqqZsd51O3Z8tGKb74jbQbpLp1hAm69_94Etd07GyLQ0ZAs4JLhpLUNm60wzKcoxZYJN-vY4aphsr2-PEPzyTOa4vrdkoeDtbZKsraHRbiopqoIJMNtSI4GsStKcZbJHCC5cup1gZsck2TBVYqVuPkWz6lKvgFtqeLizDctQllcBfhZfuvCxS5KFzHIKgpWm9RRt7jDdn93wx_DsZlB8wVbHJDX-P_hIssopWAnBRjHNJ_qYxQSVTO9XsuqCeOo4XGzaCr483bAm-DgLr10TXtsNx5UsRYcsX4zZVRnFnvDSRSVN-wDusvBUsApNki1TCVNljG7DsanUci5CWvEJ2loS2a8EXE7kJHhjHRrrBz80fJXFQy3fFnTuHplZgPxTSR6sA9nP-z54R3mHhz-DVaA_I6OPkxVn6S7L4hK16sPPq-gJRPL5ALqzBuM-tFrv7hpOosB4WUcE8HdqeEcZMN4hwDtKjQjAL8nooFwBeADuCXhqhxA2O3j3BQuKsyQTAeZVsO06MD28ljBWEytD-l1924VAZzmGFwxKjYjtbpHRl5MKwG6mGf7lBlicW9YOYEdLO8aXHD4MfIyVNoAv6tCXr2AEXzg-7I8LNV7DyauEhNnK29miiF5frWCIE6COIHgukGR1HXTwbgjejD-BpI4GzN6QpKveC-wAOwJnG5kCtQpu4g8rSgyIkEfvOuZxPwtOanDiLtsBeb5GpCrzHk9C8VDrHjQfa8aXx_HxVTBrOAOIEh_X8OUYPo7j41Qw8EP5MWoMcLSr6gs4LtF4XZLNtW_5EH1KYG4agnNPZZcn7OkmLVhaLiDxhCSP1EXCKdg2BD5FytPobmrpJuafhdWdHrn2nGqGxgPKF2Q9JQygnJ_QFFXPgBTFjvIOj9p8l5pHKY3xCQwrHJHv5n0JvGebTCpifk4KE1xY3ekRbSsjGhDbKN2LSC1i7nW9hOrJr0untkTCn5x6gq9WlwmfeuP43bNaQN0_NDAx6PaAVVb1efgtOveHAhqr8eU8Pp5XRwLv9h64VefdA3jAQ6_fG7Awv7LLPyfaguM5q0LODf_El4v4uATOq_M-VgqDBkQfXF0M6OFlV927A3rxUCtwwfkBxA18uYyPF3oAAAL6ywaI42Xj0kUT94WH2cQgHWURwl0S2V9Ns2GFJEmEpjaFiYAt4ZBuUbdQFSqX9BomWEAqRw1IpkujBzzpxQ3PGbq5Oxjs4ya-_AgfP4ZLtV45DGb8aeTFsBybjUsBTOTzkK9xs27tIm2NcrhZMaqrwpm7XpLlU4z6TPnUqjw141GNMp1RF2KfpbH9THjm4FNdHNUdiPjVgMAHpV3j4ydR4ihf8WfvfBOpFEg5lk6FflBQ22YCbvoTkI8WR3VHnMqv1gPt5c1K6HB3BPRxSdbVhN7NHR93QVVfBGhWkvVRoBM430moG9oAw2zhoc6v7IoAzXv-NCWnPSqpeqiLInqrgRtW3YVbr8oGCSbFj3LJgog7t6wd4Z9w11kVRlTTE3TMTnSN2V222O9GKrwmzKvo8Q9sXjALIL_pnSamgJRc4-ZKaKaC8mCQgDvKZwU8_94nMP1SuY1JngdBuJdKC4IQLO6xdJtDmFh5EDwNQeOhTo_vRlGwwpfbUOnddXJ1Qr5TdATZWqt-xKgF_IJbyKNlBaBLT59b-vU1b_1a1ZKmw2Esi8EzXOZ1a1RYKNpRg4iftCMJaS3LfnGld93jbkVpU51QZRDy-pl3Vj9z51aMTANemSpNgFRC_wrgXa4zQ-bl3UKTKtfCWg62CiLeXKs01h-xDOvbXIkgVPSJ4_lMwGym9xrM1Cv-nBhkSl6RN7SITbpFlqGnp59v_3vbWVUFbbEgnjJ9P5U5j-ScUo-qYQX_A7kUsasTK7Uk-CdHmZsaiP933c9ebz61zJV9vDR6QLnku99-YvhE5w8aGt16OBqtIY-mLU2oClmatDK3VpbiBUsOk1leE6tW4A3DEcZi-_XjgvAnuIbrTfjGzceeiztrTb9K12IHH7fa2qj-1iNo29trVdLYKAXriFJe24k__OON06kPXesGjY0aRa9Khz_v42N19Z9IoL8r3SfPfeu1Vze5fzG2Yq3Xq_wShbBW1va58qpvqd6N67cWi3axWPw_VZlFeEAdAAABeA.." />
+          <input type="hidden" name="_eventId" value="submit" />
+
+            <script language="javascript" type="text/javascript">
+        <!--
+        function passwordPopup()
+        {
+          passWin = window.open( "changepassword.html", "Password","title=0, status = 0, height = 400, width = 700, resizable = 1, scrollbars=1" );
+          passWin.focus()
+          return false;
+        }
+
+       //  -->
+    </script>   
+    <p class="box">
+        <a href="changepassword.html" onclick="passwordPopup();return false" id="helplink">Change your Password</a>
+    </p>
+
+
+
+      </div>
+    </div>
+    </div>
+        <div id="footercontainer">
+      <div id="footer">
+            &copy; 2015 The Trustees of <a href="http://www.princeton.edu">Princeton University</a>
+      </div>
+    </div>
+  </div>
+
+
+    <!--
+    <div id="footercontainer">
+      <div id="footer">
+            <ul>
+                <li>&copy; 2015 The Trustees of <a href="http://www.princeton.edu">Princeton University</a></li>
+			</ul>
+      </div>
+    </div>
+  </div>
+  -->
+  <!--<script src="https://siteseal.thawte.com/cgi/server/thawte_seal_generator.exe">-->
+</form>
+</body>
+</html>
+

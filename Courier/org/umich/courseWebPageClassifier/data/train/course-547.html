@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <!-- Below line includes the common website header using SSI -->
+  <head>
+  <title>CS109: Probability and Statistics</title>
+  <meta charset=utf-8 />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://www.stanford.edu/class/cs109/css/bootstrap.min.css" rel="stylesheet">
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49870153-1', 'stanford.edu');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://www.stanford.edu/class/cs109/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body {
+    padding-top: 56px;
+    }
+  </style>
+  
+  <nav class="navbar navbar-default navbar-fixed-top navbar-left navbar-inverse"
+       role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-header">
+  	<span class="sr-only">Toggle navigation</span>
+  	<span class="icon-bar"></span>
+  	<span class="icon-bar"></span>
+  	<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="http://www.stanford.edu/class/cs109/index.html">CS109</a>
+      </div>
+      
+      <div class="collapse navbar-collapse" id="main-header">
+	<ul class="nav navbar-nav">
+	  <li><a href="lectures.html">Lectures+Readings</a></li>
+	  <li><a href="staff.html">Staff Hours</a></li>
+	  <li><a href="assignments.html">Assignments</a></li>
+	  <li><a href="handouts.html">Handouts</a></li>
+	  <li><a href="exams.html">Exams</a></li>
+	</ul>
+      </div>
+    </div>
+  </nav>
+</body>
+
+  <body>
+    <div class="container" id="main">
+      <header id="page-header">
+	<h1>CS109: Probability and Statistics<br>
+	  <small>Winter 2015 | Mon Wed Fri 2:15-3:30pm in 420-040</small>
+	</h1>
+      </header>
+      <div class="row">
+	<div class="col-md-6">
+  	
+    <div><h3>Announcements</h3></div>
+    <ul>
+        <div><h4>Welcome to CS109!</h4></div>
+	<li> Our final exam will be held in HEWLETT200 </li>
+	<li>Clarification on Homework 4: In problem 5, you may assume that humans and bots make requests independently from all other humans and bots.</li>
+	<li> We have graded your midterms and you can pick them up in the bins inside gates. The are sorted alphabetically by last name so please try to keep them that way. The mean was 87/110, the median was 92/110 and the standard deviation was 18. Any regrade requests must be submitted by next Wednesday 2/18 at 2:15pm. To submit a regrade you need to type up an explanation of where you believe there was a mistake and submit it to a TA who graded that problem. The graders were as follows: Q1: Elmer, Ilan. Q2: Laura, Brandon. Q3: Devney, Arjun. Q4: Kevin, Yifei. Q5: Will, Evan. Q6: Lawrence, James. As always we reserve the right to regrade the entire exam. </li>
+	<li> IMPORTANT: Midterm Locations: For the midterm next Tuesday we will be split across four locations so please reference the information below to make sure you end up in the right place! We are dividing up the rooms alphabetically by first name.
+<br/>
+Aashna - Dennis:  HERRINT175  <br/>
+Derin - Haiyin:  380-380F    <br/>
+Hardie - Mary: SHRIRAM104  <br/>
+Matthew - Zoe: 420-041 <br/> </li>
+	<li> The review session for the CS109 midterm will take place this Sunday, Feb. 8, from 4 to 6 pm in Lathrop 282.  A practice midterm and solutions are posted on the course website, under "Exams." </li>
+	<li> Going forward if Scoryst says your assignment is late (i.e. you submitted at or after 2:15pm) we are going to be counting it as a late day. We have been somewhat lenient up until now as everyone got used to Scoryst but we have always had  posted on the site that you need to allow for time to submit so please factor this in. Starting now we won't be making exceptions. Thanks! </li>
+	<li>Clarification on Homework 2: In problem 3, the weather app only
+	makes mistakes on 25% of rainy days. It does not make mistakes on sunny days.</li>
+	<li> SCORYST UPDATE:  We had an outdated link to the scoryst enroll page up on the assignments page. Please make sure you are enrolled in the CS109 Winter 15 course. The correct link is <a href="https://scoryst.com/enroll/yoGwL2ZTcs/"> HERE </a> </li>
+	<li> NOTE: We do not use a Piazza discussion forum for CS109. If you have a question about course content please come to office hours or send an email to the staff email list: cs109@cs.stanford.edu</li>
+	<li>Probability has become one of the most important ways of understanding computer algorithms and systems,
+	as well as the foundation of seemingly every new and exciting application of computers, from curating
+	your Facebook feed to suggesting map directions to selling you stuff. Probability literacy is also a 
+	important skill for everyday life. As if you needed any more reason to be excited about this course, 
+	probability is also simply a lot of fun! I look forward to working with each of you this quarter as we
+	start from first principles and culminate in buliding our own simple machine learning system.
+	<p>
+
+	<li>Please watch this web site for important class announcements or assignment errata.</li>
+	<p>
+
+	<li>Handouts from class will be available on the <a href="handouts.html">handouts</a> page. Any hardcopies
+	remaining after class will be available in the handout bins on the first floor of the Gates building.</li> <p>
+ <li> Note that the class is not being videotaped this quarter. </li> 
+	<p>
+
+	<li>The course staff would like to thank Mehran Sahami for designing the
+	CS109 course.</li>
+	<p>
+
+        <div><h4>Related links:</h4></div>
+
+        <li>The Wall Street Journal published an article entitled
+<a
+        href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CDEQFjAA&url=http%3A%2F%2Fonline.wsj.com%2Farticle%2FSB10001424052702304871704575160553254798886.html&ei=lRHqUKG8MOrjigKV6YGwBA&usg=AFQjCNGpb-tGitTkscErK5zmp_i5eQ6rrA">
+<!--
+http://online.wsj.com/article/SB10001424052702304871704575160553254798886.html-->New Hiring Formula Values Math Pros</a> talking about how employers
+        are seeking computer scientists with training in statistics and
+        probability.  CS109 is specifically mentioned in the article.
+        </li>
+	<p>
+
+	<li>An article from the New York Times discusses the
+	increasing importance of statistics in computing.  The article is
+	entitled 
+	  <a
+	href="http://www.nytimes.com/2009/08/06/technology/06stats.html">
+	    For Today's Graduate, Just One Word: Statistics</a>.
+	<p>
+	  </ul>
+	</div>
+	<div class="col-md-4">
+<iframe src="https://www.google.com/calendar/embed?src=tj75tju9en3utfajth168c0jr4%40group.calendar.google.com&ctz=America/Los_Angeles"
+	style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+
+	  <br/><br/>
+	  <div class="panel panel-default">
+	    <div class="panel-heading"><b>Staff Email</b> (Use this email for fast responses!)</div>
+	    <table class="table">
+	      <tr>
+		<td>
+		  Email: cs109@cs.stanford.edu
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <i>Please see the <a href="staff.html">staff directory</a> page for additional contact information.</i>
+		</td>
+	      </tr>
+	    </table>
+	  </div>
+	</div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

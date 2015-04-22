@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>CS259D: Data Mining for Cyber Security - Autumn 2014</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+  <body>
+
+    <div id="header">
+      <h1 id="coursetitle">
+ 
+    <span class="courseNumber">CS 259D</span>
+  <span class="courseTitle">Data Mining for Cyber Security</span>
+  <span class="courseSemester">Autumn 2014</span>
+      </h1>
+      <br class="clearfloat">
+    </div><!-- end #header -->
+
+    <div class="navbar">
+      <ul>
+	<!-- <li><a href="#announcements">Announcements</a></li> -->
+	<li><a href="#info">Course information</a></li>	
+        <li><a href="#lectures">Lectures</a></li>
+        <li><a href="#hw">Homework</a></li>
+        <li><a href="#readings">Readings</a></li>
+	<li><a href="#topics">Topics</a></li>
+	<li><a href="#reqs">Requirements</a></li>
+
+	</ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <!-- <h2><a name="announcements" id="announcements">Announcements</a></h2> -->
+
+
+    <!-- ====================================================================== -->
+
+    <h2><a name="info">Course information</a></h2>
+
+    <table class="courseinfo">
+      <tbody><tr class="oddRow">
+	<th scope="row">
+	  Time
+	</th>
+	<td>
+	  TTh 4:15pm - 5:30pm
+	</td>
+      </tr>
+      <tr class="evenRow">
+	<th scope="row">
+	  Location
+	</th>
+	<td>
+          <!-- <span class="tbd">TBD</span> -->
+	  <a href="http://campus-map.stanford.edu/?id=07-410&lat=37.4296917188&lng=-122.171585208&zoom=17&srch=Herrin%20Biology%20Hall">Herrin T175</a> (click for map)
+	</td>
+      </tr>
+      <tr class="oddRow">
+     	<th scope="row">
+	  Staff
+	</th>
+	<td>
+	  <table class="staff">
+	    <tbody><tr>
+	      <th scope="row">Instructor</th>
+              <td>Bahman Bahmani</td>
+	      <td>
+          bahman@cs
+         </td> 
+	      <td>Office Hours: 5:45 - 6:45pm outside the classroom</td>
+          </tr>
+	      <th scope="row">TA</th>
+	      <td>Dima Brezhnev</td>
+	      <td>
+          brezhnev@cs
+		    </td>
+	      <td>Office Hours: 1:00 - 3:00pm Fridays @ Huang open area on bottom floor outside of ICME + extra office hours before assignment due dates</td>
+            </tr>
+	    
+            </tr>
+          </tbody></table>
+	</td>
+      </tr>
+  
+      </tr>
+      <tr class="evenRow">
+	<th scope="row">
+	  Piazza
+	</th>
+	<td>
+          <a href=http://www.piazza.com/stanford/autumn2014/cs259d>Link</a>
+        </td>
+      </tr>
+    </tbody></table>
+
+    <!-- Homeworks require access to the linguistic data on AFS.  <a href="klog.html">Instructions to get access. -->
+
+
+    <p><strong style="padding-right: 20px;">Description</strong>
+    The massive increase in the rate of novel cyber attacks has made data-mining-based techniques a critical component in detecting security threats. The course covers various applications of data mining in computer and network security. Topics include: Overview of the state of information security; malware detection; network and host intrusion detection; web, email, and social network security; authentication and authorization anomaly detection; alert correlation; and potential issues such as privacy issues and adversarial machine learning. Prerequisites: Data mining / machine learning at the level of CS 246 or CS 229; familiarity with computer systems and networks at least at the level of CS 110; CS 140 and CS 144 strongly recommended; CS 155 recommended but not required.
+    </p>
+    <!-- ====================================================================== -->
+    <h2><a name="lectures">Lectures</a></h2>
+      <p>
+        <ol>
+          <li> <b>Introduction:</b> Overview of information security, current security landscape, the case for security data mining [<a href="lectures/Session1.pdf">pdf</a>]</li>
+          <li> <b>Botnets:</b> Botnet topologies, botnet detection using NetFlow analysis [<a href="lectures/Session2.pdf">pdf</a>]</li>
+          <li> <b>Botnets Cont'd, Insider Threats:</b> Botnet detection using DNS analysis, introduction to insider threats, masquerader detection strategies [<a href="lectures/Session3.pdf">pdf</a>] <br>Readings:
+               <ul>
+                    <li><a href="readings/Insider_survey.pdf">A Survey of Insider Attack Detection Research</a> Skim before class and use the references for more information.</li>
+                    <li><a href="readings/Infrastructure.pdf">Insider IT Sabotage across US Critical Infrastructure</a> Appendix B</li>
+               </ul>
+          </li>
+          <li> <b>Behavioral Biometrics:</b> Active authentication using behavioral and cognitive biometrics [<a href="lectures/Session4.pdf">pdf</a>] <br>Reading: Ch 4 + Ch 6 of "Behavioral Biometrics, A Remote Access Approach" by Kenneth Revett (2008). </li>
+          <li> <b>Behavioral Biometrics Cont'd:</b> Mouse dynamics analysis for active authentication [<a href="lectures/Session5.pdf">pdf</a>]</li>
+          <li> <b>Security at Wells Fargo:</b> Guest speaker Avi Avivi, VP Enterprise Information Security Architecture at Wells Fargo [<a href="lectures/Session6.pdf">pdf</a>]</li>
+          <li> <b>Behavioral Biometrics Cont'd:</b> Mouse dynamics analysis cont'd, touch and swipe pattern analysis for mobile active authentication [<a href="lectures/Session7.pdf">pdf</a>]</li>
+          <li> <b>Web Security:</b> Web threat detection via web server log analysis [<a href="lectures/Session8.pdf">pdf</a>]</li>
+	  <li> <b>Security at Union Bank:</b> Guest speaker Gary Lorenz, Chief Information Security Officer (CISO) and Managing Director at MUFG Union Bank
+          <li> <b>Multi-Classifier Systems, Adversarial Machine-Learning:</b> Overview of multi-classifier systems (MCS), advantages of MCS in security analytics, security of machine learning [<a href="lectures/Session10.pdf">pdf</a>]</li>
+          <li> <b>Security Data Mining at Google:</b> Guest speaker Massimiliano Poletto, head of Google Security Monitoring Tools group [<a href="lectures/Session11.pdf">pdf</a>]</li>
+          <li> <b>Web Security Cont'd, Deep Packet Inspection:</b> Alert aggregation for web security, packet payload modeling for network intrusion detection [<a href="lectures/Session12.pdf">pdf</a>]</li>
+          <li> <b>Machine Learning for Security:</b> Challenges in applying machine learning (ML) to security, guidelines for applying ML to security [<a href="lectures/Session13.pdf">pdf</a>]</li>
+          <li> <b>Polymorphism:</b> Polymorphic blending attacks, infeasibility of modeling polymorphic attacks [<a href="lectures/Session14.pdf">pdf</a>]</li>
+          <li> <b>Deep Packet Inspection Cont'd:</b> One-class multi-classifier systems, one-class MCS for packet payload modeling and network intrusion detection [<a href="lectures/Session15.pdf">pdf</a>] 
+		</br> Note to students: Please also refer to class notes for mathemtical derivations of one-class MCS fusion rules</li>
+          <li> <b>Phishing Detection:</b> Phishing email detection, phishing website detection [<a href="lectures/Session16.pdf">pdf</a>]</li>
+	  <li> <b> Industry Perspectives:</b> Q&A with guest speaker Michael Fey, EVP and CTO of Intel Security Group (aka McAfee)</li>
+	  <li> <b> Student Presentations:</b> [<a href="lectures/StudentPresentations1.pdf">pdf</a>]</li>
+	  <li> <b> Student Presentations Cont'd:</b> [<a href="lectures/StudentPresentations2.pdf">pdf</a>]</li>
+	  <li> <b> Automatic Alert Correlation, Final Thoughts:</b> Building attack scenarios from individual alerts, course review, current and future trends in security [<a href="lectures/Session20.pdf">pdf</a>]
+        </ol>
+      </p>
+    
+      <h2><a name="hw">Homework</a></h2>
+      <p>
+      First homework: <a href=http://goo.gl/w4d8Ct>Google Doc</a>. It is due on 10/21. Submission instructions will be posted closer to the due date. 
+      </p>
+        <p>
+      Second homework: <a href=https://docs.google.com/document/d/1VF8DCRrmXTFf5-xQBFDO_IQxiUIyo7dPITG0mXZ8D7I>Google Doc</a>. It is due on 11/5 night. 
+        </p>
+        <p>
+        Third homework: <a href="https://docs.google.com/document/d/1DOoC-SHef-Xrdx6UoA03hAezlhJJy-kwFxofVEPXyvk/edit?usp=sharing">Google Doc</a>. It is due on Friday before Thanksgiving break. Note that this assignment requires you to sign up before 10/14 for a presentation.
+        <p>
+        Course Review/Fourth homework: <a href="https://docs.google.com/document/d/11asTJ1tC5x4c5OIKV8wfvKOBIh37TQOtznvZ8QV1uv4/edit?usp=sharing">Google Doc</a>. Due Friday 12/12 noon. Early submissions are appreciated.
+        </p>
+    <h2><a name="readings">Recommended Readings</a></h2>
+    These titles are available for free online through the Stanford library resources.
+    <ul>
+        <li>Applications of Data Mining in Computer Security<br>Daniel Barbara and Sushil Jajodia</li>
+        <li>Machine Learning and Data Mining for Computer Security<br>Marcus A. Maloof</li>
+        <li>Enhancing Computer Security with Smart Technology<br>
+V Rao Vemuri</li>
+        <li>Insider Attack and Cyber Security: Beyond the Hacker<br>S. Stolfo, S. Bellovin, S. Hershkop, A. Keromytis, S. Sinclair, S. Smith</li>
+        <li>Network Anomaly Detection: A Machine Learning Perspective<br>Dhruba K. Bhattacharyya, Jugal K. Kalita</li>
+        <li>Data Warehousing and Data Mining Techniques for Cyber Security<br>Anoop Singhal</li>
+        <li>Crimeware, Understanding New Attacks and Defenses<br>Markus Jakobsson and Zulfikar Ramzan</li>
+        <li>The Art of Computer Virus Research and Defense<br>Peter Szor</li>
+    </ul>
+    
+
+    <!-- ====================================================================== -->
+    <h2><a name="topics">Topics</a></h2>
+        <ul>
+        <li>Introduction: Introduction to Information Security, Introduction to
+        Data Mining for Information Security</li>
+        <li> Malware Detection: Obfuscation, Polymorphism, Payloadbased detection
+        of worms, Botnet detection/takedown </li>
+        <li> Network Intrusion Detection: Signature-based solutions (Snort, etc),
+        Data-mining-based solutions (supervised and unsupervised), Deep packet
+        inspection</li>
+        <li>Host Intrusion Detection: Analysis of shell command sequences,
+        system call sequences, and audit trails,
+        Masquerader/Impersonator/Insider threat detection</li>
+        <li>Web Security: Anomaly detection of web-based attacks using web
+        server logs, Anomaly detection in web proxy logs</li>
+        <li>Email: Spam detection, Phishing detection</li>
+        <li>Social network security: Detecting compromised accounts, detecting
+        social network spam</li>
+        <li>Authentication: Anomaly detection of Single SignOn (Kerberos, Active
+        Directory), Detecting Pass-the-Hash and Pass-the-Ticket attacks</li>
+        <li>Automated correlation: Attack trees, Building attack scenarios from
+        individual alerts</li>
+        <li>Issues: Privacy issues, Adversarial machine learning (use of machine
+        learning by attackers, how to make ML algorithms robust/secure against
+        adversaries)</li>
+        <li>Other potential topics: Fraud detection, IoT/Infrastructure
+        security, Mobile/Wireless security</li>
+            
+          </ul>
+    <!-- ====================================================================== -->
+    <h2><a name="reqs">Requirements</a></h2>
+    <p>
+There will be 4 homework assignments. Students will design  and  implement  data  mining  algorithms  for  various  security  applications  taught  in  class. There  will  be  a  significant  programming  component  in  each  assignment;  assignments will  also have  reading  components  (mostly  research  literature)  to  give  initial   pointers  to  students  about the  problems  in  the  programming  component.  Assignments  will  be  chosen from a subset of the 
+following: 
+</p>
+
+<ol>
+<li>Web attack detection</li>
+<li>User profiling for authentication and authorization </li>
+<li>Network profiling and intrusion detection </li>
+<li>Botnet detection </li>
+<li>Host­-based insider threat detection </li>
+<li> Deep packet inspection </li>
+<li> Web proxy log analysis </li>
+<li> Algorithmic alert correlation </li>
+</ol>
+
+
+
+</body></html>

@@ -1,0 +1,1074 @@
+
+<!DOCTYPE HTML> 
+<html><head><title>EECS Conference Room Schedule</title>
+		<meta charset="utf-8">
+		<meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<script src=/eecs/templates/js/modernizr.js></script>
+		<script src=/eecs/templates/js/jquery.js></script>
+		<link rel="stylesheet" href="/eecs/templates/css/eecs_main.css">
+		<link rel="stylesheet" href="/eecs/templates/css/internal.css">
+		<link rel="stylesheet" href="/eecs/templates/css/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/eecs/templates/css/slicknav.css">
+		<link rel="stylesheet" href="/eecs/templates/css/magnific-popup.css">
+	</head>
+<body>
+	<div class=blue_bar></div>
+	<header>
+		<a href="/" title="EECS"><div id=eecs_logo_full></div></a><!--eecs_logo_full-->
+		<div id=eecs_logo_mobile>
+			<a href="/" title=""><img src="/eecs/images/EECS-Logo-Mobile.png" alt="Electrical Engineering and Computer Science"></a>
+		</div><!-- eecs_logo_mobile-->
+		<div id=header_right>
+			<div id=header_tabs>
+                                <a href="http://www.eecs.umich.edu/cse"><div class="header_tabs cse_tab"></div></a>
+                                <a href="http://www.eecs.umich.edu/ece"><div class="header_tabs ece_tab"></div></a>
+				<a href="http://www.eecs.umich.edu"><div class="header_tabs eecs_tab"></div></a>
+			</div><!-- header_tabs -->
+			<div id=header_search>
+				<form action="http://www.eecs.umich.edu/eecs/search/" id="cse-search-box">
+				<div>
+				<input type="hidden" name="client" value="google-csbe" />
+				<input type="hidden" name="cx" value="004529872488972209334:ccbftyq9b3e" />
+				<input type="hidden" name="cof" value="FORID:11" />
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="text" name="q" id=search_field class=search_button value="Search" />
+				<input type="submit" name="sa" value="Search" style=display:none; />
+				</div>
+				</form>
+				<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+				<div class=social_wrapper>
+					<ul class="social-icons">
+				        <li><a href="https://www.facebook.com/pages/Electrical-Engineering-and-Computer-Science-Department-at-Michigan/65666857760"><em>facebook</em><i class="fa fa-facebook"></i></a></li>
+				        <li><a href="https://www.youtube.com/user/EECSatUM"><em>youtube</em><i class="fa fa-youtube"></i></a></li>
+				        <li><a href="http://www.linkedin.com/groups/Electrical-Engineering-Computer-Science-Michigan-1062957/about"><em>linkedin</em><i class="fa fa-linkedin"></i></a></li>
+				        <li><a href="https://twitter.com/EECSatMI"><em>twitter</em><i class="fa fa-twitter"></i></a></li>
+				    </ul>
+				</div><!-- social_wrapper -->
+			</div><!-- header search -->
+			<div class=clear_fix></div>
+		</div><!-- header_right -->
+	</header>
+	<div id=mobile_hack><div id=mobile_search><form id=search name=search><input type=text name=search_field id=search_field class=search_button value="Search"></form></div><div class=clear_fix></div></div>
+	<div class=blue_bar2>
+		<div id=main_menu_holder>
+			<nav class=main_menu>
+				<ul id="main_menu">
+					<div id=menu_left_wrapper>
+						<li class="first"><a href="/eecs/academics/academics.html" class="parent">Academics+Admissions</a>
+							<ul class="first subs">
+								<li><a href="/eecs/academics/courses.html">Course Information</a></li>
+								<li><a href="/eecs/academics/class_schedule.html">Class Schedules &amp; Books</a></li>
+								<li><a href="/eecs/undergraduate/">Undergraduate Programs</a></li>
+								<li><a href="/eecs/undergraduate/undergraduate_admissions.html">Undergraduate Admissions</a></li>
+								<li><a href="/eecs/graduate/">Graduate Programs</a></li>
+								<li><a href="/eecs/visitors/student-visits.html">Student Visits</a></li>
+								<li><a href="/eecs/students/fin_aid.html">Financial Aid</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">Research</a>
+							<ul class="subs">
+								<li><a href="/eecs/research/areas.html">Research Areas</a></li>
+								<li><a href="/eecs/research/reslabs.html">Labs and Centers</a></li>
+                                                                <li><a href="/eecs/undergraduate/research/undergrad-research.html">Undergrad Research</a></li>
+								<li><a href="/eecs/research/tech_reports.html">Technical Reports</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">People</a>
+							<ul class="subs">
+								<li><a href="/eecs/faculty/eecsfaculty.html">Faculty</a></li>
+                                <li><a href="/eecs/postdocs/eecspostdocs.html">Postdocs</a></li>
+								<li><a href="/eecs/staff/staff.html">Staff</a></li>
+								<li><a href="/eecs/etc/people/byalpha.cgi">All Faculty and Staff</a></li>
+								<li><a href="/eecs/students/students.html">Students</a></li>
+                                <li><a href="/eecs/alumni/">Alumni</a></li>
+								<li><a href="/eecs/jobs/">Faculty Positions</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">Industry</a>
+							<ul class="subs">
+								<li><a href="/eecs/corporate/students.html">Connect with Students</a></li>
+								<li><a href="/eecs/corporate/researchops.html">Partners in Research</a></li>
+								<li><a href="/eecs/corporate/techtransfer.html">Tech Transfer</a></li>
+								<li><a href="http://www.engin.umich.edu/college/info/corporate" target="_blank">CoE Corporate Relations</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">News+Awards</a>
+							<ul class="subs">
+								<li><a href="/eecs/etc/news/eecsnews.html">News</a></li>
+                                <li><a href="/cse/awards/">CSE Awards</a></li>
+                                <li><a href="/ece/awards/">ECE Awards</a></li>
+								<li><a href="/eecs/about/videos.html">Videos</a></li>
+								<li><a href="/eecs/about/publications.html">Publications</a></li>
+							</ul>
+						</li>
+						<li><a href="/eecs/etc/events/eecsevents.html">Events</a></li>
+					</div>
+					<div id=menu_right_wrapper>
+						<li class=menu_right><a href="" class="parent">About</a>
+							<ul class="subs">
+								<li><a href="/eecs/about/welcome.html">Welcome to EECS</a></li>
+								<li><a href="/eecs/about/why-eecs.html">Why EECS at Michigan?</a></li>
+								<li><a href="/eecs/about/eecsdiversity.html">EECS Diversity &amp; Outreach</a></li>
+								<li><a href="/eecs/visitors/area-info.html">Area Information</a></li>
+								<li><a href="/eecs/visitors/travel.html">Travel and Lodging</a></li>
+								<li><a href="/eecs/about/contact.html">Contact Us</a></li>
+							</ul>
+						</li>
+						<li class=menu_right><a href="" class="parent">Resources</a>
+							<ul class="subs">
+								<li><a href="https://www.eecs.umich.edu/eecs/etc/admin/administrative.html">Admin Tools</a></li>
+				                                <li><a href="https://www.eecs.umich.edu/eecs/about/computing.html">Computing Resources</a></li>
+                                				<li><a href="https://www.eecs.umich.edu/eecs/dept-affairs/index.html">Dept Affairs</a></li>
+								<li><a href="https://www.eecs.umich.edu/dept-mailing-lists/index.html">Email Groups</a></li>
+								<li><a href="https://www.eecs.umich.edu/eecs/labsupport/">Lab Support</a></li>
+								<li><a href="https://www.eecs.umich.edu/eecs/resources/logos.html">Logos</a></li>
+								<li><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroom.html">Room Scheduler</a></li>
+                                                                <li><a href="http://caen.engin.umich.edu/classrooms/overview" target="_blank">CoE Classrooms</a></li>
+							</ul>
+						</li>
+						<li class=menu_right><a href="" class="parent">Donate</a>
+                            <ul class="subs">
+                                    <li><a href="/ece/giving/">Give Back to ECE</a></li>
+                                    <li><a href="/cse/giving/">Give Back to CSE</a></li>
+                            </ul>
+                        </li>
+					</div>
+				</ul>
+			</nav>
+		<div class=clear_fix></div>
+		</div><!-- main menu -->
+	</div><!-- blue bar -->
+
+<div id="content_holder" class="columns">
+<div id="content_row">
+
+
+<div id="left_sidebar">
+	<nav id="left_nav">
+		<h3>Resources</h3>
+		<ul id="left_menu">
+                        <li><a href="https://www.eecs.umich.edu/eecs/etc/admin/administrative.html">Admin Tools</a></li>
+                        <li><a href="/eecs/about/computing.html">Computing Resources</a></li>
+                        <li><a href="https://www.eecs.umich.edu/eecs/dept-affairs/index.html">Dept Affairs</a></li>
+                        <li><a href="https://www.eecs.umich.edu/dept-mailing-lists/index.html">Email Groups</a></li>
+                        <li><a href="/eecs/labsupport/">Lab Support</a></li>
+                        <li><a href="/eecs/resources/logos.html">Logos</a></li>
+                        <li><a href="/eecs/etc/rooms/dco-dbroom.html">Room Scheduler</a></li>
+                        <li><a href="http://caen.engin.umich.edu/classrooms/overview" target="_blank">CoE Classrooms</a></li>
+		</ul>
+	</nav>
+</div>
+<!-- left_sidebar -->
+<div id="content_body">
+
+
+
+<div id="content">
+
+<table width="98%" cellpadding="0" cellspacing="0" border="0" height="100%">
+<tr><td width="100%" valign="top" align="left" bgcolor="#ffffff">
+<table width="100%" cellpadding="4" cellspacing="4" bgcolor="#ffffff" height="100%">
+<tr><td valign="top">
+
+
+
+<table border="0" cellspacing="0" width="100%" cellpadding="0">
+
+  <tr><td><h3>Please note that the room scheduler is for EECS activities ONLY!</h3> &nbsp;&nbsp; <td><tr>
+  <tr>
+    <td width="100%" height="35" valign="top"><table border="0" cellspacing="1" width="100%" cellpadding="0">
+<tr><td width="100%" height="25" colspan="3"><b>Today's Schedule</b></td></tr>
+<tr><td width="25%"><b>Time</b></td><td width="25%"><b>Location</b></td><td width="50%"><b>Purpose</b></td></tr>
+<tr><td width="25%" valign="top">8:30a-9:00a</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3725BBB">3725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106438">
+photos with Tara C</a></td></tr>
+<tr><td width="25%" valign="top">9:00a-10:30a</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2246EECS">2246 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?101941">
+Kushner group</a></td></tr>
+<tr><td width="25%" valign="top">9:00a-11:30a</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2725BBB">2725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106410">
+CSE UAO</a></td></tr>
+<tr><td width="25%" valign="top">9:00a-10:30a</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3316EECS">3316 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?97288">
+Lab Admin Mtg</a></td></tr>
+<tr><td width="25%" valign="top">9:00a-12:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3725BBB">3725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106087">
+Tara Coffell</a></td></tr>
+<tr><td width="25%" valign="top">10:00a-12:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2311EECS">2311 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105619">
+Yoon</a></td></tr>
+<tr><td width="25%" valign="top">10:00a-11:00a</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3901BBB">3901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106263">
+Koutra CoE rep appt</a></td></tr>
+<tr><td width="25%" valign="top">10:00a-11:00a</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3941BBB">3941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102660">
+ProbCog/Goeddel</a></td></tr>
+<tr><td width="25%" valign="top">10:30a-12:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4941BBB">4941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?104683">
+Weekly lab mtg &#040Seunghyun/Shin&#041</a></td></tr>
+<tr><td width="25%" valign="top">11:00a-12:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2246EECS">2246 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106235">
+Muhammad Meeting</a></td></tr>
+<tr><td width="25%" valign="top">11:00a-1:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3316EECS">3316 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105887">
+Faculty Candidate</a></td></tr>
+<tr><td width="25%" valign="top">11:00a-12:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4901BBB">4901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106105">
+Jagadish mtg</a></td></tr>
+<tr><td width="25%" valign="top">11:30a-12:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2725BBB">2725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106223">
+Katherine Peery</a></td></tr>
+<tr><td width="25%" valign="top">12:00p-1:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2311EECS">2311 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?100596">
+Reading Group/Deng</a></td></tr>
+<tr><td width="25%" valign="top">12:00p-1:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3901BBB">3901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?97801">
+Blab group meeting</a></td></tr>
+<tr><td width="25%" valign="top">12:00p-1:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3941BBB">3941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?104394">
+388 staff meeting</a></td></tr>
+<tr><td width="25%" valign="top">12:00p-2:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4901BBB">4901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106415">
+Narayan proctor 545 exam re take</a></td></tr>
+<tr><td width="25%" valign="top">12:00p-1:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4941BBB">4941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?98998">
+MIDAS Group Mtg &#040Cafarella&#041</a></td></tr>
+<tr><td width="25%" valign="top">12:30p-2:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2725BBB">2725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?100894">
+281 Office Hours</a></td></tr>
+<tr><td width="25%" valign="top">12:30p-2:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2733BBB">2733 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105299">
+183 Admin</a></td></tr>
+<tr><td width="25%" valign="top">12:30p-1:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3725BBB">3725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?99048">
+Security Reading Group &#040David Adrian&#041</a></td></tr>
+<tr><td width="25%" valign="top">1:00p-3:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4122EECS">4122 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105609">
+Keysight visit</a></td></tr>
+<tr><td width="25%" valign="top">1:00p-3:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4419EECS">4419 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105962">
+Erik Miehling / Mohammad</a></td></tr>
+<tr><td width="25%" valign="top">1:30p-5:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2311EECS">2311 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102514">
+Wentzloff Meeting</a></td></tr>
+<tr><td width="25%" valign="top">1:30p-3:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3901BBB">3901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102818">
+CSE Excom Meeting</a></td></tr>
+<tr><td width="25%" valign="top">2:00p-3:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2733BBB">2733 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102564">
+370 office hours</a></td></tr>
+<tr><td width="25%" valign="top">2:00p-4:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3725BBB">3725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106332">
+Fran Doman</a></td></tr>
+<tr><td width="25%" valign="top">2:00p-3:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4901BBB">4901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?104873">
+Gibson 499</a></td></tr>
+<tr><td width="25%" valign="top">2:30p-3:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2246EECS">2246 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106414">
+Forrest meeting</a></td></tr>
+<tr><td width="25%" valign="top">2:30p-4:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2725BBB">2725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106406">
+EECS 215 Exams</a></td></tr>
+<tr><td width="25%" valign="top">2:30p-3:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2901BBB">2901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106407">
+yunqi</a></td></tr>
+<tr><td width="25%" valign="top">2:30p-3:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3941BBB">3941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106361">
+Koutra & Adar</a></td></tr>
+<tr><td width="25%" valign="top">2:30p-6:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4941BBB">4941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102869">
+tron</a></td></tr>
+<tr><td width="25%" valign="top">3:00p-4:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2246EECS">2246 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105312">
+Hiskens/MathiuMeeting</a></td></tr>
+<tr><td width="25%" valign="top">3:00p-5:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2901BBB">2901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?104704">
+Sandeep</a></td></tr>
+<tr><td width="25%" valign="top">3:00p-6:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3316EECS">3316 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?100077">
+Ambassador&#039s Meeting</a></td></tr>
+<tr><td width="25%" valign="top">3:00p-7:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3901BBB">3901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105980">
+EECS 627_emarsman</a></td></tr>
+<tr><td width="25%" valign="top">3:00p-5:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3941BBB">3941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?104065">
+EECS 203 office hours</a></td></tr>
+<tr><td width="25%" valign="top">3:00p-6:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4419EECS">4419 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102450">
+EECS 452 Milestone Reports</a></td></tr>
+<tr><td width="25%" valign="top">3:00p-4:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4901BBB">4901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?104812">
+CPS Mtg &#040Sunmin/Shin&#041</a></td></tr>
+<tr><td width="25%" valign="top">3:30p-4:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4122EECS">4122 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?101991">
+MDP &#040Reverie&#041</a></td></tr>
+<tr><td width="25%" valign="top">4:00p-9:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2246EECS">2246 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106306">
+EECS 216 Exam Grizzle/Anastasopoulos/Code Hyman</a></td></tr>
+<tr><td width="25%" valign="top">4:00p-5:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3725BBB">3725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?99939">
+Toyota AI Seminar</a></td></tr>
+<tr><td width="25%" valign="top">4:30p-5:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2725BBB">2725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102096">
+DeOrio MDP Meeting</a></td></tr>
+<tr><td width="25%" valign="top">4:30p-6:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2733BBB">2733 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?105514">
+Group seminar Hayes</a></td></tr>
+<tr><td width="25%" valign="top">4:30p-9:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4122EECS">4122 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106178">
+216 Conflict Exam and Extra Time</a></td></tr>
+<tr><td width="25%" valign="top">5:00p-6:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2311EECS">2311 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106239">
+Yagle 451 exam</a></td></tr>
+<tr><td width="25%" valign="top">5:00p-6:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4901BBB">4901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?102911">
+388 staff meeting</a></td></tr>
+<tr><td width="25%" valign="top">5:30p-7:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3725BBB">3725 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?103262">
+Mary Lou Dorf - EECS 183 Staff Meeting</a></td></tr>
+<tr><td width="25%" valign="top">5:30p-6:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3941BBB">3941 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106435">
+T Mobile meeting</a></td></tr>
+<tr><td width="25%" valign="top">6:00p-7:00p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4901BBB">4901 BBB</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?103052">
+482 staff meeting</a></td></tr>
+<tr><td width="25%" valign="top">6:30p-9:30p</td>
+<td width="25%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4419EECS">4419 EECS</a>
+</td>
+<td width="50%" valign="top"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroomshow.cgi?106179">
+216 Conflict Exam and Extra Time</a></td></tr>
+<tr><td width="100%" colspan="3">&nbsp;</td></tr></table>
+</td>
+  </tr>
+  <tr>
+    <td width="100%" height="35">
+    <p><a href="https://www.eecs.umich.edu/eecs/etc/rooms/change/dco-dbroomform.cgi">Reserve a Room</a>  -
+       <a href="https://www.eecs.umich.edu/eecs/etc/rooms/instructions.html">Instructions</a></p>
+    <p><a href="https://www.eecs.umich.edu/eecs/etc/rooms/change/dco-dbroomperiodform.cgi">Periodic Reservations</a></p>
+    <p><a href="https://www.eecs.umich.edu/eecs/etc/rooms/change/dco-dbroomsearchedit.cgi">Edit or Cancel a Reservation</a></p>
+    <p><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbsearchrooms.cgi?week">This Week's Schedule</a>  -
+       <a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbsearchrooms.cgi?month">This Month's Schedule</a></p><br></td>
+  </tr>
+</table>
+
+<table border="0" width="100%" cellpadding="0" cellspacing="3">
+        <tr><td width="100%" colspan="3" bgcolor="#FFFFFF" height="25"><b>Search Upcoming Schedule:</b></td></tr>
+        <form name="dateform" METHOD="POST" ACTION="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbsearchrooms.cgi">
+        <input type="hidden" name="f_type" value="request_date">
+        <tr>
+          <td width="148" height="25"><b>
+          Start Date:</b></td>
+          <td width="265" height="25" colspan="2"><select name="f_montha" size="1" tabindex="1">
+            <option value="01">Jan</option>
+            <option value="02">Feb</option>
+            <option value="03">Mar</option>
+            <option value="04">Apr</option>
+            <option value="05">May</option>
+            <option value="06">Jun</option>
+            <option value="07">Jul</option>
+            <option value="08">Aug</option>
+            <option value="09">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+          </select>&nbsp;&nbsp;<select name="f_daya" size="1" tabindex="2">
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>&nbsp;&nbsp;<select name="f_yeara" size="1" tabindex="3">
+
+          <option selected value="2015">2015</option>
+<option value="2016">2016</option>
+
+          </select></td>
+        </tr>
+        <tr>
+          <td width="148" height="25"><b>
+          Finish Date:</b></td>
+          <td width="265" height="25" colspan="2"><select name="f_monthb" size="1" tabindex="1">
+            <option value="01">Jan</option>
+            <option value="02">Feb</option>
+            <option value="03">Mar</option>
+            <option value="04">Apr</option>
+            <option value="05">May</option>
+            <option value="06">Jun</option>
+            <option value="07">Jul</option>
+            <option value="08">Aug</option>
+            <option value="09">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+          </select>&nbsp;&nbsp;<select name="f_dayb" size="1" tabindex="2">
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>&nbsp;&nbsp;<select name="f_yearb" size="1" tabindex="3">
+
+          <option selected value="2015">2015</option>
+<option value="2016">2016</option>
+
+          </select></td>
+        </tr>
+        <tr>
+          <td width="148" height="25"><b>Time Range:</b></td>
+          <td width="265" height="25" colspan="2"><select name="f_time_start"
+          tabindex="8" size="1">
+            <option selected value="0800">8:00 a</option>
+            <option value="0830">8:30 a</option>
+            <option value="0900">9:00 a</option>
+            <option value="0930">9:30 a</option>
+            <option value="1000">10:00 a</option>
+            <option value="1030">10:30 a</option>
+            <option value="1100">11:00 a</option>
+            <option value="1130">11:30 a</option>
+            <option value="1200">Noon</option>
+            <option value="1230">12:30 p</option>
+            <option value="1300">1:00 p</option>
+            <option value="1330">1:30 p</option>
+            <option value="1400">2:00 p</option>
+            <option value="1430">2:30 p</option>
+            <option value="1500">3:00 p</option>
+            <option value="1530">3:30 p</option>
+            <option value="1600">4:00 p</option>
+            <option value="1630">4:30 p</option>
+            <option value="1700">5:00 p</option>
+            <option value="1730">5:30 p</option>
+            <option value="1800">6:00 p</option>
+            <option value="1830">6:30 p</option>
+            <option value="1900">7:00 p</option>
+            <option value="1930">7:30 p</option>
+            <option value="2000">8:00 p</option>
+            <option value="2030">8:30 p</option>
+            <option value="2100">9:00 p</option>
+          </select>&nbsp;&nbsp; <select name="f_time_end"
+          tabindex="9" size="1">
+            <option value="0800">8:00 a</option>
+            <option value="0830">8:30 a</option>
+            <option value="0900">9:00 a</option>
+            <option value="0930">9:30 a</option>
+            <option value="1000">10:00 a</option>
+            <option value="1030">10:30 a</option>
+            <option value="1100">11:00 a</option>
+            <option value="1130">11:30 a</option>
+            <option value="1200">Noon</option>
+            <option value="1230">12:30 p</option>
+            <option value="1300">1:00 p</option>
+            <option value="1330">1:30 p</option>
+            <option value="1400">2:00 p</option>
+            <option value="1430">2:30 p</option>
+            <option value="1500">3:00 p</option>
+            <option value="1530">3:30 p</option>
+            <option value="1600">4:00 p</option>
+            <option value="1630">4:30 p</option>
+            <option value="1700">5:00 p</option>
+            <option value="1730">5:30 p</option>
+            <option value="1800">6:00 p</option>
+            <option value="1830">6:30 p</option>
+            <option value="1900">7:00 p</option>
+            <option value="1930">7:30 p</option>
+            <option value="2000">8:00 p</option>
+            <option value="2030">8:30 p</option>
+            <option value="2100">9:00 p</option>
+            <option value="2130">9:30 p</option>
+            <option selected value="2200">10:00 p</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td width="148" height="25"><b>Room:</b></td>
+          <td width="265" height="25" colspan="2"><select name="f_room" size="1">
+            <option value="2246 EECS">2246 EECS</option>
+            <option value="2311 EECS">2311 EECS</option>
+            <option value="3316 EECS">3316 EECS</option>
+            <option value="3400 EECS">3400 EECS</option>
+            <option value="4122 EECS">4122 EECS</option>
+            <option value="4419 EECS">4419 EECS</option>
+            <option value="2725 BBB">2725 BBB</option>
+            <option value="2733 BBB">2733 BBB</option>
+            <option value="2901 BBB">2901 BBB</option>
+            <option value="3725 BBB">3725 BBB</option>
+            <option value="3901 BBB">3901 BBB</option>
+            <option value="3941 BBB">3941 BBB</option>
+            <option value="4901 BBB">4901 BBB</option>
+            <option value="4941 BBB">4941 BBB</option>
+            <option selected value="All Rooms">All Rooms</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td width="148" height="25"><b>Search For:</b></td>
+          <td width="265" height="25" colspan="2"><input type="text" name="f_choicevalue" size="20"></td>
+        </tr>
+        <tr>
+          <td width="148" height="25"><b>Search Field:</b></td>
+          <td width="265" height="25" colspan="2"><select name="f_choice" size="1">
+            <option selected value=""></option>
+            <option value="uniqname">Uniqname</option>
+            <option value="location">Location</option>
+            <option value="purpose">Purpose</option>
+          </select>&nbsp;&nbsp;<input type="submit" value="Get Reservations" name="B1"></td>
+        </tr>
+        <tr>
+          <td width="148" height="25">&nbsp;</td>
+          <td width="265" height="25" colspan="2">&nbsp;</td>
+        </tr>        
+        
+        <tr>
+          <td width="148" height="25"><b>Room Info:</b></td>
+          <td width="133" height="25"><b>BBB Bldg.</b></td>
+          <td width="132" height="25"><b>EECS Bldg.</b></td>
+        </tr>        
+
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2725BBB">2725 BBB</a></td>
+          <td width="215" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2246EECS">2246 EECS</a></td>
+        </tr>
+
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2733BBB">2733 BBB</a></td>
+          <td width="215" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2311EECS">2311 EECS</a></td>
+        </tr> 
+ 
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?2901BBB">2901 BBB</a></td>
+          <td width="215" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3316EECS">3316 EECS</a></td>
+        </tr> 
+ 
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3725BBB">3725 BBB</a></td>
+          <td width="215" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3400EECS">3400 EECS</a></td>
+        </tr> 
+
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3901BBB">3901 BBB</a></td>
+          <td width="215" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4122EECS">4122 EECS</a></td>
+        </tr>
+  
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?3941BBB">3941 BBB</a></td>
+          <td width="215" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4419EECS">4419 EECS</a></td>
+        </tr> 
+
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4901BBB">4901 BBB</a></td>
+          <td width="215" height="25">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td width="147" height="25">&nbsp;</td>
+          <td width="216" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/rooms/room_info.cgi?4941BBB">4941 BBB</a></td>
+          <td width="215" height="25">&nbsp;</td>
+        </tr>
+
+      </table>
+    </form>
+
+
+<table border="0" width="100%" cellpadding="0" cellspacing="3">
+      <tr><td width="215" height="25">&nbsp;</td></tr>
+      <tr><td width="100%" height="25"><a href="https://www.eecs.umich.edu/eecs/etc/tish/index.html">Tishman Hall Schedule</a></td></tr>
+      <tr><td width="215" height="25">&nbsp;</td></tr>
+      </tr>
+</table>
+
+<script language="javascript"><!--
+var now = new Date()
+var current_mth = now.getMonth()
+var current_day = now.getDate() - 1
+var x = document.referrer
+
+function fixdate()
+  {
+    document.dateform.f_montha.selectedIndex = current_mth;
+    document.dateform.f_daya.selectedIndex = current_day;
+    document.dateform.f_monthb.selectedIndex = current_mth;
+    document.dateform.f_dayb.selectedIndex = current_day;
+  }
+
+fixdate();
+//--></script>
+ 
+</td></tr>
+</table>
+</td>
+<td width="172" valign="top" cellpadding="4" cellspacing="4" bgcolor="#FFFFFF">
+
+<br><br>
+
+<table width="172" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF" border="1" bordercolor="#002D62" >
+<tr><td valign="top">
+
+
+<p><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR align='center'><TH COLSPAN=7 bgcolor='#FFFFFF'>March 2015</TH></TR>
+<TR align='center'><TH WIDTH='14%'><font size=1 color=#000000>Sun</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Mon</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Tue</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Wed</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Thu</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Fri</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Sat</font></TH></TR>
+<TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150301">01</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150302">02</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150303">03</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150304">04</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150305">05</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150306">06</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150307">07</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150308">08</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150309">09</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150310">10</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150311">11</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150312">12</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150313">13</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150314">14</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150315">15</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150316">16</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150317">17</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150318">18</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150319">19</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150320">20</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150321">21</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150322">22</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150323">23</a></font></TD><TD bgcolor='silver'><FONT COLOR='white'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150324">24</a></font></FONT></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150325">25</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150326">26</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150327">27</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150328">28</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150329">29</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150330">30</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150331">31</a></font></TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD></TR></TABLE></P></form>
+</p>
+
+
+<p>&nbsp;</p>
+
+
+<p><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR align='center'><TH COLSPAN=7 bgcolor='#FFFFFF'>April 2015</TH></TR>
+<TR align='center'><TH WIDTH='14%'><font size=1 color=#000000>Sun</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Mon</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Tue</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Wed</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Thu</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Fri</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Sat</font></TH></TR>
+<TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150401">01</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150402">02</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150403">03</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150404">04</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150405">05</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150406">06</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150407">07</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150408">08</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150409">09</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150410">10</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150411">11</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150412">12</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150413">13</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150414">14</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150415">15</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150416">16</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150417">17</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150418">18</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150419">19</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150420">20</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150421">21</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150422">22</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150423">23</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150424">24</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150425">25</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150426">26</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150427">27</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150428">28</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150429">29</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150430">30</a></font></TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD></TR></TABLE></P></form>
+</p>
+
+
+<p>&nbsp;</p>
+
+
+<p><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR align='center'><TH COLSPAN=7 bgcolor='#FFFFFF'>May 2015</TH></TR>
+<TR align='center'><TH WIDTH='14%'><font size=1 color=#000000>Sun</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Mon</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Tue</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Wed</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Thu</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Fri</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Sat</font></TH></TR>
+<TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150501">01</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150502">02</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150503">03</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150504">04</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150505">05</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150506">06</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150507">07</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150508">08</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150509">09</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150510">10</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150511">11</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150512">12</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150513">13</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150514">14</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150515">15</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150516">16</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150517">17</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150518">18</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150519">19</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150520">20</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150521">21</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150522">22</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150523">23</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150524">24</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150525">25</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150526">26</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150527">27</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150528">28</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150529">29</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150530">30</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150531">31</a></font></TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD></TR></TABLE></P></form>
+</p>
+
+
+<p>&nbsp;</p>
+
+
+<p><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR align='center'><TH COLSPAN=7 bgcolor='#FFFFFF'>June 2015</TH></TR>
+<TR align='center'><TH WIDTH='14%'><font size=1 color=#000000>Sun</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Mon</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Tue</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Wed</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Thu</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Fri</font></TH><TH WIDTH='14%'><font size=1 color=#000000>Sat</font></TH></TR>
+<TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150601">01</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150602">02</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150603">03</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150604">04</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150605">05</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150606">06</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150607">07</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150608">08</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150609">09</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150610">10</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150611">11</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150612">12</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150613">13</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150614">14</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150615">15</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150616">16</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150617">17</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150618">18</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150619">19</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150620">20</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150621">21</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150622">22</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150623">23</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150624">24</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150625">25</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150626">26</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150627">27</a></font></TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150628">28</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150629">29</a></font></TD><TD bgcolor='#FFFFFF'>
+<FONT COLOR='blue'><a href="https://www.eecs.umich.edu/eecs/etc/rooms/public/dco-dbroomlongform.cgi?20150630">30</a></font></TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD></TR><TR ALIGN=CENTER>
+<TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD><TD bgcolor='#FFFFFF'>
+</TD></TR></TABLE></P></form>
+</p>
+
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</div>
+
+
+
+
+</div><!-- closes right sidebar on files that use it; closes content_body on others -->
+
+</div><!-- content row -->
+</div><!-- content columns -->
+
+	<div class=footer_bar>
+		<div id=footer>
+			<div id=footer_left>
+				<a href="/"><div id=footer_logo></div></a>
+				<nav class=footer>
+					<ul><li class=first><a href="http://www.engin.umich.edu/college/" target="_blank">College of Engineering</a></li><li class=last><a href="http://umich.edu" target="_blank">University of Michigan</a></li></ul>
+				</nav>
+			</div>
+			<div id=footer_right>
+				<div class=footer_social_wrapper>
+					<ul class="social-icons">
+				        <li><a href="https://www.facebook.com/pages/Electrical-Engineering-and-Computer-Science-Department-at-Michigan/65666857760" target="_blank"><em>facebook</em><i class="fa fa-facebook"></i></a></li>
+				        <li><a href="https://www.youtube.com/user/EECSatUM" target="_blank"><em>youtube</em><i class="fa fa-youtube"></i></a></li>
+				        <li><a href="http://www.linkedin.com/groups/Electrical-Engineering-Computer-Science-Michigan-1062957/about" target="_blank"><em>linkedin</em><i class="fa fa-linkedin"></i></a></li>
+				        <li><a href="https://twitter.com/EECSatMI" target="_blank"><em>twitter</em><i class="fa fa-twitter"></i></a></li>
+				    </ul>
+				</div><!-- social_wrapper -->
+				<nav class=footer2>
+					<ul><li><a href="/eecs/about/contact.html">Contact Us</a></li></ul>
+				</nav>
+				<div id=copyright><ul><li>&copy; <script>var d = new Date();var n = d.getFullYear();document.write(n);</script> <a href="http://regents.umich.edu/" target="_blank">The Regents of the University of Michigan</a></li></ul></div>
+			</div><!-- footer_right -->
+			<div class=clear_fix></div>
+		</div><!-- footer-->
+	</div>
+
+<script src="/eecs/templates/js/scripts.js"></script>
+<!-- SlidesJS Required: Link to jquery.slides.js -->
+<script src="/eecs/templates/js/jquery.slides.min.js"></script>
+<!-- End SlidesJS Required -->
+<script src="/eecs/templates/js/jquery.slicknav.js"></script>
+<script src="/eecs/templates/js/jquery.magnific-popup.min.js"></script>
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+  if ($('#slides').length) {
+  slide_no = Math.floor((Math.random() * 10) + 1);
+    $(function() {
+      $('#slides').slidesjs({
+      	start : slide_no,
+        width: 1024,
+        height: 381,
+        navigation: false,
+        pagination: {
+          effect: "fade"
+        },
+        effect: {
+          fade: {
+            speed: 400
+          }
+        },
+        play: {
+          active: false,
+          auto: true,
+          interval: 10000,
+          swap: true,
+          effect: "fade",
+          pauseOnHover: true
+        }
+      });
+    });
+    };
+  </script>
+  <!-- End SlidesJS Required -->
+</body>
+</html>
+

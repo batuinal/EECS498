@@ -1,0 +1,479 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>CS195-5 Intro. to Machine Learning</title>
+</head>
+
+<body>
+
+
+<center><h2>CS195-5: Introduction to Machine Learning</h2>
+<h3><font color=red>Fall 2006</font></h3>
+</center>
+
+<table>
+<tr>
+<td align="center" valign="top" width=100>
+<br><br><br>
+<a href="main.html">General info</a> <br><br>
+<a href="syllabus.html">Syllabus</a><br><br>
+Calendar <br><br>
+<a href="projects.html">Projects</a> <br><br>
+<a href="matlab.html">Matlab</a> <br><br>
+<a href="latex.html">LaTeX</a> <br><br>
+<a href="mailist.html">Mailing List</a> <br><br>
+</td>
+<td>
+
+<center><h3>Syllabus, lecture slides, homework assignments and solutions, etc.</h3></center>
+
+<p>
+Note: All handouts and lecture slides are in PDF format. Any
+scheduling information posted for future dates should be treated as
+tentative.
+</p>
+<p>Abbreviation: DHS - Duda et al.; PRML - Bishop's new book; HTF -
+Hastie et al.; NNPR - Bishop's older book; MK - MacKay.
+</p>
+
+<ul>
+
+<p><li>Wed 9/6/06
+<ul>
+<li>General introduction: goals of machine learning, examples,
+administrivia.
+<li><a href="lectures/lecture1.pdf">Lecture 1</a>
+</ul>
+</li></p>
+
+
+<p><li>Fri 9/8/06 <font color=red>Note: change of location to CIT 368</font>
+<ul>
+<li>loss, empirical/expected risk.
+<li>Linear regression; least squares.
+<li><a href="lectures/lecture2.pdf">Lecture 2</a>
+<li>Regression demo shown in class: <a
+href="extras/linRegSim1D.m"><tt>linRegSim1D.m</tt></a> (<a
+href="extras/XY_Lecture2.mat">data</a> to reproduce the figures)
+<li>A <a href="http://www.cs.toronto.edu/~roweis/notes/matrixid.pdf">note
+summarizing some useful facts about matrices</a> by Sam Roweis.
+<li>Recommended reading: PRML Sections 1.1, 3.1; HTF Chapter 3.
+</ul>
+</li></p>
+
+
+<li><p>Mon 9/11/06 <font color=red>Note: change of location to CIT 368</font>
+<ul>
+<li> Optimal regression function
+<li> statistical regression models, likelihood and log-likelihood
+<li> Maximum likelihood estimation
+<li><a href="lectures/lecture3.pdf">Lecture 3</a>
+<li><a href="extras/notes_lecture3.pdf">Notes (derivations etc.)</a>
+<li>Recommended reading: DHS A.2 (appendix), HTF 3.1-3.3, PRML 3.1.
+</ul>
+</p></li>
+
+<li><p>Wed 9/13/06
+<ul>
+<li>Review of multivariate Gaussians
+<li>Uncertainty in ML estimate
+<li>Extensions of simple linear regression
+<li><a href="lectures/lecture4.pdf">Lecture 4</a>
+<li><a href="extras/notes_lecture4.pdf">Notes (derivations etc.)</a>
+<li>Matlab code to produce polynomial regression figures in the
+lecture:
+<a href="extras/tryPolyFit.m"><tt>tryPolyFit.m</tt></a>,
+<a href="extras/degexpand.m"><tt>degexpand.m</tt></a> (and 
+data in <a href="extras/polyfitdata.mat"><tt>polyfitdata.mat</tt></a>)
+<li><a href="psets/psetApple.pdf">Problem Set 1 out</a>; you will also 
+need <a href="psets/meteodata.mat"><tt>meteodata.mat</tt></a>, <a 
+href="psets/apple_lda.mat"><tt>apple_lda.mat</tt></a>, <a 
+href="psets/testWs.m"><tt>testWs.m</tt></a>.
+<li> Recommended reading: DHS A.4, A.5; PRML 3.1, Appendices B,C.
+</ul>
+</p></li>
+
+<li><p>Fri 9/15/06 <font color=red>In Lubrano, our new home</font>
+<ul>
+<li> Introduction to classfication
+<li> A more detailed look at multivariate Gaussians
+<li> Linear Discriminant Analysis
+<li><a href="lectures/lecture5.pdf">Lecture 5</a>
+<li> Another useful short summary by <a href="http://www.cs.toronto.edu/~roweis">Sam Roweis</a>, on <a
+href="http://www.cs.toronto.edu/~roweis/notes/gaussid.pdf">Gaussian identities</a>.
+<li>Recommended reading: NNPR 3.6; DHS A.4, A.5; HTF 4.1-4.3; PRML
+2.3, 4.1,
+Appendices B,C.
+</ul>
+</p></li>
+
+<li><p>Mon 9/18/06
+<ul>
+<li> Fisher's LDA criterion
+<li> Decision theory; optimal classification
+<li><a href="lectures/lecture6.pdf">Lecture 6</a> (known typos fixed)
+<li><a href="extras/notes_lecture5and6.pdf">Notes (derivations etc.)</a>
+<li> Recommended reading: PRML 1.5.1, 4.1, HTF 2.4, 4.1-4.3, NNPR 3.6,
+DHS 3.8.2.
+<li> Matlab code to play with Gaussian 1D marginals: <a
+href="extras/margGausDemo.m"><tt>margGausDemo.m</tt></a>, <a
+href="extras/makeRandomSigma2d.m"><tt>makeRandomSigma2d.m</tt></a>
+</ul>
+</p></li>
+
+<li><p>Wed 9/20/06
+<ul>
+<li> Decision theory: Bayes rule, optimal classification.
+<li> Generative models for classification
+<li> Discriminant functions
+<li><a href="lectures/lecture7.pdf">Lecture 7</a>
+<li> Recommended reading: PRML 1.5.1, HTF 2.4, DHS 2.1-2.7.
+</ul>
+</p></li>
+
+<li><p>Fri 9/22/06
+<ul>
+<li> Estimation theory
+<li> Bias-variance tradeoff
+<li><a href="lectures/lecture8.pdf">Lecture 8</a>
+</ul>
+</p></li>
+
+<li><p>Mon 9/25/06
+<ul>
+<li> Bias-variance tradeoff and model complexity
+<li> Naive Bayes classifier
+<li> Applications in document classification
+<li> Bayesian estimation, MAP
+<li><a href="lectures/lecture9.pdf">Lecture 9</a>
+<li> Recommended reading: PRML 2.2.2, 3.2; HTF 7.2-7.3; DHS 9.3; NNPR 9.1.
+</ul>
+</p></li>
+
+
+<li><p>Wed 9/27/06
+<ul>
+<li> Bayesian estimation, MAP
+<li> Priors for Gaussian distribution
+<li> Discriminative models; logistic function
+<li> Problem Set 1 due.
+<li> <a href="psets/psetNectarine.pdf">Problem Set 2</a>
+Code: <a href="psets/parseEmail.m">parseEmail.m</a>, <a
+href="psets/parseDirectory.m">parseDirectory.m</a>, <a
+href="psets/logisticRegression.m">logisticRegression.m</a>
+ <br>
+Data: <a href="psets/LogRegToy.mat">LogRegToy.mat</a>, <a
+href="psets/digitData.mat">digitData.mat</a>, <a href="psets/dictionary.mat">dictionary.mat</a>
+<li><a href="lectures/lecture10.pdf">Lecture 10</a>
+<li> Recommended reading: PRML 4.3.2, 4.3.4, ...
+</ul>
+</p></li>
+
+<li><p>Fri 9/29/06
+<ul>
+<li> Logistic regression
+<li><a href="lectures/lecture11.pdf">Lecture 11</a>
+<li> Recommended reading: NNPR 3.1.3, PRML 4.3.2-4.3.4.
+</ul>
+</p></li>
+
+<li><p>Mon 10/2/06
+<ul>
+<li> Logistic regression: gradient ascent algorithms.
+<li> Computational issues, convergence.
+<li> Overfitting and regularization.
+<li><a href="lectures/lecture12.pdf">Lecture 12</a>
+<li> Recommended reading: TBD.
+</ul>
+</p></li>
+
+
+<li><p>Wed 10/4/06
+<ul>
+<li> Regularization.
+<li><a href="lectures/lecture13.pdf">Lecture 13</a>
+</ul>
+</p></li>
+
+
+<li><p>Fri 10/6/06
+<ul>
+<li> Regularized regression: ridge regression and lasso.
+<li> Survey of what we have learned so far.
+<li> Large margin discriminative classifiers.
+<li><a href="lectures/lecture14.pdf">Lecture 14</a>
+<li> Recommended reading: PRML 3.1.4, NNPR 9.2, HTF 3.4.
+</ul>
+</p></li>
+
+
+<li><p>Mon 10/9/06
+<ul>
+<li><font color=red>No class</font> - Columbus Day
+</ul>
+</p></li>
+
+<li><p>Wed 10/11/06
+<ul>
+<li> Support Vector Machines.
+<li>Problem Set 2 due.
+<li><a href="lectures/lecture15.pdf">Lecture 15</a>
+<li> Recommended reading: PRML 7.1; HTF 12.2-12.3; DHS 5.11.
+<li> C. Burges, <a href="extras/Burges98.pdf">SVM tutorial</a>.
+</ul>
+</p></li>
+
+<li><p>Fri 10/13/06
+<ul>
+<li> Guest lecture: optimization.
+</ul>
+</p></li>
+
+<li><p>Mon 10/16/06
+<ul>
+<li><font color=red>No class</font>
+<li> <a href="psets/psetApricot.pdf">Problem Set 3</a>
+Code: <a href="psets/genData.m">genData.m</a>, <a
+href="psets/regularizationCode.m">regularizationCode.m</a>, <a 
+href="psets/plotLRcont.m">plotLRcont.m</a>
+ <br>
+Code from previous PSets: <a 
+href="extras/logisticRegression.m">logisticRegression.m</a>, <a 
+href="extras/degexpandScale.m">degexpandScale.m</a><br>
+Data: <a href="psets/lrDataApricot.mat">lrDataApricot.mat</a>
+</ul>
+</p></li>
+
+<li><p>Wed 10/18/06
+<ul>
+<li> Guest lecture: unsupervised and reinforcement learning in robotics.
+</ul>
+</p></li>
+
+<li><p>Fri 10/20/06
+<ul>
+<li> Support Vector Machines: non-separable case, the kernel trick.
+<li><a href="lectures/lecture16.pdf">Lecture 16</a>
+<li> Recommended reading: PRML 7.1; HTF 12.2-12.3; DHS 5.11.
+</ul>
+</p></li>
+
+<li><p>Mon 10/23/06
+<ul>
+<li> Non-parametric methods; nearest-neighbor methods.
+<li> <a href="lectures/lecture17.pdf">Lecture 17</a>
+</ul>
+</p></li>
+
+
+<li><p>Wed 10/25/06
+<ul>
+<li> Problem Set 3 due; 
+<li> Midterm review.
+<li> <a href="lectures/lecture18.pdf">Lecture 18</a>
+</ul> 
+</p></li>
+
+<li><p>Fri 10/27/06 <font color=red>CIT 367</font>
+<ul>
+<li> </i>Midterm (in class)</i>
+<li> <a href="psets/psetGrape.pdf">Problem Set 4</a><br>
+Code: <a href="psets/grapeCodeData.tar.gz">Code and data</a> in a single 
+.tar.gz
+</ul> 
+</p></li>
+
+<li><p>Mon 10/30/06
+<ul>
+<li> Locally weighted regression.
+<li> Recommended reading: <a href="extras/AMS.pdf">Atkeson et al.,
+tutorial on LWR</a>.
+<li> Mixture models; the EM algorithm.
+<li> Recommended reading: PRML Chapter 9; HTF 8.5; DHS 3.9; NNPR 2.6. 
+<li> <a href="lectures/lecture19.pdf">Lecture 19</a>
+</ul>
+</p></li>
+
+<li><p>Wed 11/1/06
+<ul>
+<li> The EM algorithm for Gaussian mixtures.
+<li> Recommended reading: PRML Chapter 9; HTF 8.5; DHS 3.9; NNPR 2.6. 
+<li> <a href="lectures/lecture20.pdf">Lecture 20</a>
+</ul>
+</p></li>
+
+<li><p>Fri 11/3/06
+<ul>
+<li> General view of EM; model selection.
+<li> Recommended reading: PRML Chapter 9; HTF 8.5; DHS 3.9; NNPR 2.6. 
+<li> <a href="lectures/lecture21.pdf">Lecture 21</a>
+</ul>
+</p></li>
+
+<li><p>Mon 11/6/06
+<ul>
+<li> Model selection, minimum description length.
+<li> Recommended reading: <a href="extras/hansen98model.pdf">Hansen
+and Yu</a>
+<li> <a href="lectures/lecture22.pdf">Lecture 22</a>
+</ul>
+</p></li>
+
+<li><p>Wed 11/8/06
+<ul>
+<li> Unsupervised learning, clustering, K-means.
+<li> Recommended reading: PRML 9.1, HTF 14.3
+<li> <a href="lectures/lecture23.pdf">Lecture 23</a>
+</ul>
+</p></li>
+
+<li><p>Fri 11/10/06
+<ul>
+<li> Clustering: hierarchical, spectral.
+<li> Recommended reading: HTF 14.3, DHS 10.9, 10.12
+<li> <a href="lectures/lecture24.pdf">Lecture 24</a>
+<li>Problem Set 4 due
+<li> <a href="psets/psetRambutan.pdf"><h3>Problem Set 5</h3></a><br>
+Code: <a href="psets/rambutanCodeData.tar.gz">Code and data</a> in a 
+single .tar.gz
+</ul>
+</p></li>
+
+<li><p>Mon 11/13/06
+<ul>
+<li> Spectral clustering.
+<li> <a href="lectures/lecture25.pdf">Lecture 25</a>
+</ul>
+</p></li>
+
+
+<li><p>Wed 11/15/06
+<ul>
+<li> Dimensionality reduction; Principal Component Analysis
+<li> Recommended reading: HTF 14.5, NNPR 8.6, PRML 12.1
+<li> <a href="lectures/lecture26.pdf">Lecture 26</a>
+</ul>
+</p></li>
+
+<li><p>Fri 11/17/06
+<ul>
+<li> Feature selection.
+<li> <a href="lectures/lecture27.pdf">Lecture 27</a>
+</ul>
+</p></li>
+
+
+<li><p>Mon 11/20/06
+<ul>
+<li> Stepwise regression; boosting.
+<li> <a href="lectures/lecture28.pdf">Lecture 28</a>
+</ul>
+</p></li>
+
+<li><p>Wed 11/22/06
+<ul>
+<li> AdaBoost
+<li> Recommended reading: PRML 14.3, HTF 10.1-10.6
+<li> <a href="lectures/lecture29.pdf">Lecture 29</a>
+<li> Problem Set 5 due
+<li> <a href="projects.html">Project</a> proposals due (200-level)
+</ul>
+</p></li>
+
+<li><p>Fri 11/24/06
+<ul>
+<li>No class - Thanksgiving recess
+</ul>
+</p></li>
+
+<li><p>Mon 11/27/06
+<ul>
+<li> Mixtures of experts.
+<li> Markov Models.
+<li> Recommended reading: PRML 14.5, 13, HTF 9.5
+<li> Recommended reading: <a href="extras/rabiner.pdf">Rabiner's
+tutorial</a> on HMMs for speech recognition.
+<li> Recommended reading: <a href="extras/shannon-1951.pdf">Shannon's paper
+</a> on prediction and entropy of English, 1951.
+<li> <a href="lectures/lecture30.pdf">Lecture 30</a>
+</ul>
+</p></li>
+
+<li><p>Wed 11/29/06
+<ul>
+<li> Hidden Markov models; forward-backward algorithm.
+<li> Recommended reading: PRML 13.1-13.2, DHS 3.10
+<li> <a href="lectures/lecture31.pdf">Lecture 31</a>
+</ul>
+</p></li>
+
+<li><p>Fri 12/1/06
+<ul>
+<li> Hidden Markov models: estimation, Baum-Welch algorithm.
+<li> Recommended reading: PRML 13.1-13.2, DHS 3.10
+<li> <a href="lectures/lecture32.pdf">Lecture 32</a>
+<li> <a href="psets/psetAvocado.pdf"><h3>Problem Set 6</h3></a><br>
+Code: <a href="psets/avocadoCodeData.tar.gz">Code and data</a> in a
+single .tar.gz
+</ul>
+</p></li>
+
+<li><p>Mon 12/4/06
+<ul>
+<li> Hidden Markov models: decoding (Viterbi).
+<li> <a href="lectures/lecture33.pdf">Lecture 33</a>
+<li> Graphical models.
+</ul>
+</p></li>
+
+<li><p>Wed 12/6/06
+<ul>
+<li> Graphical models, inference.
+<li> <a href="lectures/lecture34.pdf">Lecture 34</a>
+<li> <a href="psets/psetKangaroo.pdf"><h3>Problem Set 7</h3></a><br>
+(not graded; do not hand it in)
+</ul>
+</p></li>
+
+<li><p>Fri 12/8/06
+<ul>
+<li> Advanced topics (beyond cs195-5).
+<li> <a href="lectures/lecture35.pdf">Lecture 35</a>
+<li> Reading Period begins
+</ul>
+</p></li>
+
+
+<li><p>Mon 12/11/06
+<ul>
+<li> Advanced topics
+<li> <a href="lectures/lecture36.pdf">Lecture 36</a>
+</ul>
+</p></li>
+
+<li><p>Wed 12/13/06
+<ul>
+<li> Pre-final review
+<li> <a href="lectures/lecture37.pdf">Lecture 37</a>
+<li> Problem Set 6 due
+</ul>
+</p></li>
+
+<li><p>Fri 12/15/06
+<ul>
+<li> No class.
+</ul>
+</p></li>
+
+
+<li><p>Mon 12/18/06
+<ul>
+<li>Final <font color=red>at 9:00am, Wilson 101</font>
+</ul>
+</p></li>
+
+</ul>
+</td>
+</tr>
+</table>
+
+</body>

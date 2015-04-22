@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Language" content="en-us" /> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+	<link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css" />	
+ 	
+	<title>CS106A: Programming Methodology</title> 
+</head> 
+<body> 
+<div id = "data" align="center"> 
+	<div id = "header_bar"></div>
+	<div>
+		<i>To visit the website for fall quarter's CS106A offering, <a href="//web.stanford.edu/class/archive/cs/cs106a/cs106a.1152/">click here</a>.</i>
+	</div> 
+	<div id = "announcement_bar">
+	<h2>Announcements</h2>
+	
+		<div class="header">Assignment 8 Out</div> 
+		<div class="date"  >March 9, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				The final programming assignment of the quarter, Assignment 8
+				(<a href="handouts/260 Assignment 8.pdf">FacePamphlet</a>) goes out today. It's due on
+				<b>Tuesday, March 17 at 8:30AM</b> (note the unusual due time of 8:30AM). This assignment asks you to
+				design a program for maintaining a social network. You can create profiles, set status messages, and
+				create friendships. Conceptually, there's not much new in this assignment from NameSurfer, and we hope
+				that this assignment helps solidify your understanding of the course content and serves as a fitting
+				capstone to your CS106A experience. After all - you'll have gone from zero to building your own
+				social network in ten weeks!
+			</p>
+		</div> 
+	
+		<div class="header">Second Midterm Room Assignments</div> 
+		<div class="date"  >March 2, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				The second midterm exam locations are the same as the first! Rooms are assigned by last (family) names
+				as follows:
+			</p>
+			<ul>
+				<li><tt>Abb  - Jon:  </tt>Go to Hewlett 200</li>
+				<li><tt>Jun  - Mari: </tt>Go to Hewlett 201</li>
+				<li><tt>Marq - Mik:  </tt>Go to Hewlett 101</li>
+				<li><tt>Mil  - Ogr:  </tt>Go to Hewlett 102</li>
+				<li><tt>Oke  - Pat:  </tt>Go to Hewlett 103</li>
+				<li><tt>Pau  - Tan:  </tt>Go to Braun Auditorium</li>
+				<li><tt>Tao  - Zuc:  </tt>Go to 320-105</li>
+			</ul>
+			<p>
+				Good luck!
+			</p>
+		</div> 
+	
+		<div class="header">Assignment 7 Out</div> 
+		<div class="date"  >February 27, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				Assignment 7 (<a href="handouts/230 Assignment 7.pdf">NameSurfer</a>) goes out today. It's due on Monday,
+				March 9 at 3:15PM. This assignment will give you a chance to play around with classes, interactors,
+				<tt>HashMap</tt>s, inheritance, and the graphics system. We hope that you enjoy it!
+			</p>
+		</div> 
+	
+		<div class="header">Practice Midterm Released</div> 
+		<div class="date"  >February 26, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				In case you missed the practice exam tonight, we've released electronic copies of
+				<a href="handouts/220 Practice Midterm 2.pdf">the practice second midterm</a> and
+				<a href="handouts/220S Practice Midterm 2 Solutions.pdf">solutions</a>.
+			</p>
+			<p>
+				We recommend that you write out your answers on paper and then check them electronically.
+				We've released <a href="materials/Practice Midterm Questions.zip">a Java project with
+				starter code for trying out the coding problems</a> that you can use to help test out
+				your answers. Hope this helps!
+			</p>
+		</div> 
+	
+		<div class="header">Second Midterm Logistics</div> 
+		<div class="date"  >February 24, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				The first midterm exam is coming up next Tuesday, March 3, from 7PM - 10PM. The
+				exam is closed-book and closed-computer. You may, however, have one double-sided sheet
+				of 8.5" &times; 11" paper with you when you take the exam. We'll be providing
+				<a href="materials/midterm-2-reference.pdf">this Java and library reference</a> handout during
+				the exam.
+			</p>
+			<p>
+				The exam covers material up through and including Wednesday's lecture on graphs and networks. The exam
+				will primarily focus on the topics tested on Assignments 5 and 6 but will include at least one question
+				on <tt>HashMap</tt>s. Interactors will not be tested. Due to the nature of the material in this course,
+				the exam may indirectly test topics from earlier in the quarter (loops, methods, etc).
+			</p>
+			<p>
+				We will be holding a practice exam on Thursday from 7PM - 10PM in Cubberly Auditorium. It's purely optional,
+				but highly recommended as a way to get practice writing code on paper under exam conditions. We'll
+				release the exam and solutions electronically this evening in case you're unable to make it.
+			</p>
+			<p>
+				We are currently finalizing the exam locations, and we'll post room assignments later this week.
+			</p>
+		</div> 
+	
+		<div class="header">Assignment 6 Sources Released</div> 
+		<div class="date"  >February 19, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				If you are interested in adding extensions to Assignment 6 and would like to access the full source for the
+				assignment starter code, you can <a href="assignments/Assignment6-Source.zip">download the full source using
+				this link.</a> For simplicity, we recommend only downloading these projects if you're adding in extensions;
+				the default starter code is all you need for the base assignment.
+			</p>
+		</div> 
+	
+		<div class="header">Midterms Graded</div> 
+		<div class="date"  >February 18, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				The first midterm exam has been graded! If you haven't already picked up your exam, they're available for pickup
+				right outside of Keith's office (Gates 178). You're welcome to stop by at your convenience.
+			</p>
+			<p>
+				 We've released a
+				<a href="handouts/180S CS106A Midterm Solutions.pdf">handout with statistics, solutions,
+				and common mistakes</a> that we hope will give you a better sense for your performance on the exam
+				and how to improve going forward.
+			</p>
+			<p>
+				If you believe that we've made any grading errors on your exam, you are welcome to submit a regrade
+				request. To do so, please print out a copy of <a href="handouts/180R CS106A Midterm Regrade Request.pdf">the
+				regrade request form</a>, fill it out, and staple it to the front of your exam. You can then hand it to either
+				Keith or Alisha at their office hours or at lecture. All regrade requests must be received by 4:15PM on
+				Wednesday, February 26.
+			</p>
+		</div> 
+	
+		<div class="header">Assignment 6 Out</div> 
+		<div class="date"  >February 18, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				Assignment 6 (Array Algorithms) goes out today and is due on Friday, February 27. In this assignment,
+				you'll get to play around with arrays, image processing, and sound processing and will build up a much
+				stronger intuition for how, when, where, and why to use arrays. We hope you have fun with this one!
+			</p>
+		</div> 
+	
+		<div class="header">Midterm Room Assignments</div> 
+		<div class="date"  >February 5, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				The first midterm will be spread across seven different testing locations, which are assigned
+				by last (family) name as follows:
+			</p>
+			<ul>
+				<li><tt>Abb  - Jon:  </tt>Go to Hewlett 200</li>
+				<li><tt>Jun  - Mari: </tt>Go to Hewlett 201</li>
+				<li><tt>Marq - Mik:  </tt>Go to Hewlett 101</li>
+				<li><tt>Mil  - Ogr:  </tt>Go to Hewlett 102</li>
+				<li><tt>Oke  - Pat:  </tt>Go to Hewlett 103</li>
+				<li><tt>Pau  - Tan:  </tt>Go to Braun Auditorium</li>
+				<li><tt>Tao  - Zuc:  </tt>Go to 320-105</li>
+			</ul>
+			<p>
+				Good luck!
+			</p>
+		</div> 
+	
+		<div class="header">Midterm Logistics</div> 
+		<div class="date"  >February 4, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				The first midterm exam is coming up next Tuesday, February 10, from 7PM - 10PM. The
+				exam is closed-book and closed-computer. You may, however, have one double-sided sheet
+				of 8.5" &times; 11" paper with you when you take the exam. We'll be providing
+				<a href="materials/midterm-1-reference.pdf">this Karel and library documentation</a> handout during
+				the exam as a reference.
+			</p>
+			<p>
+				The exam covers material up through and including today's (Wednesday's) lecture on strings and
+				string processing. The focus of the exam will primarily be on the material explored on the first
+				four programming assignments.
+			</p>
+			<p>
+				We will be holding a practice exam tonight from 7PM - 10PM in Cemex Auditorium. It's purely optional,
+				but highly recommended as a way to get practice writing code on paper under exam conditions. We'll
+				release the exam and solutions electronically this evening in case you're unable to make it.
+			</p>
+			<p>
+				We are currently finalizing the exam locations, and we'll post room assignments later this week.
+			</p>
+		</div> 
+	
+		<div class="header">Assignment 4 Out</div> 
+		<div class="date"  >February 2, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				Assignment 4 (Breakout!) goes out today and is due next Monday, February 9, at 3:15PM. In this classic
+				CS106A assignment, you'll get a chance to combine the skills you developed in Assignments 2 and 3 with
+				event processing to build your owen version of the classic arcade game. We hope that you have a lot of
+				fun with this assignment!
+			</p>
+			<p>
+				Good luck!
+			</p>
+		</div> 
+
+		<div class="header">Assignment 3 Out</div> 
+		<div class="date"  >January 26, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				Assignment 3 (Problem-Solving in Java) goes out today and is due in one week (Monday, February 2). This
+				assignment picks up where Assignment 2 leaves off and asks you to design a collection of smaller Java
+				programs, some graphical, some text-based. We hope that you find these problems interesting and come
+				away from this assignment with a firm grasp of loops, methods, variables, parameters, and return statements.
+			</p>
+			<p>
+				Good luck!
+			</p>
+		</div> 
+	
+		<div class="header">Assignment 2 Out</div> 
+		<div class="date"  >January 16, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				Assignment 2 goes out today and is due on Monday, January 26 at 3:15PM. In this assignment, you'll explore
+				new features of Java that weren't covered in Karel (graphics, variables, parameters, and constants) and will
+				get a better command of how these tools work. As always, feel free to email your section leader, stop by
+				office hours, or visit Alisha's and Keith's office hours if you have any questions.
+			</p>
+			<p>
+				Good luck!
+			</p>
+		</div> 
+	
+		<div class="header">Assignment 1 Out</div> 
+		<div class="date"  >January 7, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				The first programming assignment of the quarter goes out today. It's due on Friday, January 16 at 3:15PM.
+				In this assignment, you'll get your first practice programming Karel the Robot and will write your very
+				first programs!
+			</p>
+			<p>
+				We recommend that you try to complete the Collect Newspaper Karel problem as soon as possible so that you
+				have time to iron out any Eclipse installation issues that might come up. From there, you'll then have a
+				full week to complete the remaining three programming problems.
+			</p>
+			<p>
+				Good luck!
+			</p>
+		</div> 
+	
+		<div class="header">Welcome to CS106A!</div> 
+		<div class="date"  >January 5, 2015</div> 
+		<div class="announcement"> 
+			<p> 
+				Welcome to CS106A!  We've got an exciting quarter ahead of us and you're in for a real programming treat.  Over the next ten weeks, we'll explore programming methodology, standard programming idioms and techniques, and applications of computer science across a variety of disciplines.  It's going to be a lot of fun, and I hope that you're able to join us!
+			</p> 
+			<p> 
+				In the meantime, feel free to check out the <a href="handouts/000 Course Information.pdf">course information handout</a> and <a href="handouts/010 Syllabus.pdf">syllabus</a>
+				to learn more about what this class is all about, the prerequisites, and the course policies.  If you have any questions in
+				the meantime, feel free to email me at <a href="mailto:htiek@cs.stanford.edu">htiek@cs.stanford.edu</a> with questions.
+			</p>
+			<p>
+				See you soon!
+			</p>
+		</div> 
+	</div> 
+	<div id = "non_code_bar"> 
+		<h2>Handouts</h2> 
+		<p> 
+			<a href="handouts/270 JAR Files.pdf">27: JAR Files</a><br />
+			<a href="handouts/250S CS106A Midterm 2 Solutions.pdf">25S: Midterm 2 Solutions</a><br />
+			<a href="handouts/250R Second Midterm Regrade Request.pdf">25R: Midterm 2 Regrade Request Form</a><br />  
+			<a href="handouts/220 Practice Midterm 2.pdf">22: Practice Midterm 2</a><br /> 
+			<a href="handouts/220S Practice Midterm 2 Solutions.pdf">22S: Practice Midterm 2 Solns</a><br /> 
+			<a href="handouts/180S CS106A Midterm Solutions.pdf">18S: Midterm Solutions</a><br />
+			<a href="handouts/180R CS106A Midterm Regrade Request.pdf">18R: Regrade Request Form</a><br />  
+			<a href="handouts/150 Practice Midterm.pdf">15: Practice Midterm</a><br /> 
+			<a href="handouts/150S Practice Midterm Solutions.pdf">15S: Practice Midterm Solutions</a><br /> 
+			<a href="handouts/070 Submitting Work.pdf">07: Submission Instructions</a><br /> 
+			<a href="handouts/050 Using Karel in Eclipse.pdf">05: Using Karel in Eclipse</a><br /> 
+			<a href="handouts/040 Downloading Eclipse.pdf">04: Downloading Eclipse</a><br /> 
+			<a href="handouts/030 Honor Code.pdf">03: Honor Code Policies</a><br /> 
+			<a href="handouts/020 Course Placement.pdf">02: Course Placement</a><br /> 
+			<a href="handouts/010 Syllabus.pdf">01: Syllabus</a><br /> 
+			<a href="handouts/000 Course Information.pdf">00: Course Information</a><br /> 
+		</p> 
+		<h2>Section Handouts</h2> 
+		<p>
+			<a href="handouts/240 Section Handout 8.pdf">Section Handout 8</a><br/>
+			<a class="solutions" href="handouts/240S Section Solutions 8.pdf">(solutions)</a><br/>
+			<a href="handouts/210 Section Handout 7.pdf">Section Handout 7</a><br/>
+			<a class="solutions" href="handouts/210S Section Solutions 7.pdf">(solutions)</a><br/>
+			<a href="handouts/190 Section Handout 6.pdf">Section Handout 6</a><br/>
+			<a class="solutions" href="handouts/190S Section Solutions 6.pdf">(solutions)</a><br/>
+			<a href="handouts/170 Section Handout 5.pdf">Section Handout 5</a><br/>
+			<a class="solutions" href="handouts/170S Section Solutions 5.pdf">(solutions)</a><br/>
+			<a href="handouts/130 Section Handout 4.pdf">Section Handout 4</a><br/>
+			<a class="solutions" href="handouts/130S Section Solutions 4.pdf">(solutions)</a><br/>
+			<a href="handouts/120 Section Handout 3.pdf">Section Handout 3</a><br/>
+			<a class="solutions" href="handouts/120S Section Solutions 3.pdf">(solutions)</a><br/>
+			<a href="handouts/100 Section Handout 2.pdf">Section Handout 2</a><br/>
+			<a class="solutions" href="handouts/100S Section Solutions 2.pdf">(solutions)</a><br/>
+			<a href="handouts/080 Section Handout 1.pdf">Section Handout 1</a><br/>
+			<a class="solutions" href="handouts/080S Section Solutions 1.pdf">(solutions)</a><br/>
+		</p>
+		<h2>Assignments</h2> 
+		<p>
+			<b>Assignment 8: FacePamphlet</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/260 Assignment 8.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment8.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+		<p>
+			<b>Assignment 7: NameSurfer</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/230 Assignment 7.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment7.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+		<p>
+			<b>Assignment 6: Array Algorithms</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/200 Assignment 6.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment6.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+		<p>
+			<b>Assignment 5: The Java String Quartet</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/160 Assignment 5.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment5.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+		<p>
+			<b>Assignment 4: Breakout!</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/140 Assignment 4.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment4.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+		<p>
+			<b>Assignment 3: Problem-Solving in Java</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/110 Assignment 3.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment3.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+		<p>
+			<b>Assignment 2: Welcome to Java!</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/090 Assignment 2.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment2.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+		<p>
+			<b>Assignment 1: Karel the Robot</b><br/>
+			&nbsp;&nbsp;&nbsp;<a href="handouts/060 Assignment 1.pdf" style="font-size:75%">Handout</a> | 
+      <a href="assignments/Assignment1.zip" style="font-size:75%">Starter Files</a><br/>
+		</p>
+      
+		<h2>Office Hours</h2>
+    <p>
+    	Keith (Gates 178)<br/>
+    	&nbsp;&nbsp;Thursday 1:00PM - 4:00PM
+    </p>
+    <p>
+    	Alisha (Gates 160)<br/>
+    	&nbsp;&nbsp;Tuesday 1:00PM - 4:00PM<br/>
+    	&nbsp;&nbsp;Wednesday 4:15PM - 5:15PM
+    </p>
+		
+	</div> 
+	<div id = "code_bar">
+		<h2> Resources </h2>
+		<p>
+			<a href="https://myvideosu.stanford.edu/oce/currentquarter.aspx">Lecture Videos</a><br/>
+			
+			<a href="software/">Download Eclipse</a><br/>
+			
+			<a href="materials/karel-the-robot-learns-java.pdf">Karel Reader</a><br/>
+			
+			<a href="http://cs198.stanford.edu/section">Section Sign-Ups</a><br/>
+			
+			<a href="projects/BlankKarel.zip">Blank Karel Project</a><br/>
+			
+      <a href="projects/BlankProject.zip">Blank Java Project</a><br/>
+      
+      <a href="//cs.stanford.edu/people/eroberts//jtf/javadoc/student/index.html">ACM Docs</a><br/>
+		</p>
+
+		<h2>Lectures</h2> 
+		<p>
+			<b>27: Where to Go from Here</b><br/>
+			&nbsp;&nbsp;<a href="lectures/27/Slides27.pdf" style="font-size:75%">Slides</a><br/>
+			<b>26: Your Questions</b><br/>
+			&nbsp;&nbsp;<a href="lectures/26/Slides26.pdf" style="font-size:75%">Slides</a><br/>
+			<b>25: Programming in the Real World</b><br/>
+			&nbsp;&nbsp;<a href="lectures/25/Slides25.pdf" style="font-size:75%">Slides</a> | <a href="lectures/25/Code25.zip" style="font-size:75%">Code</a><br/>
+			<b>24: Passwords</b><br/>
+			&nbsp;&nbsp;<a href="lectures/24/Slides24.pdf" style="font-size:75%">Slides</a><br/>
+			<b>23: Networking</b><br/>
+			&nbsp;&nbsp;<a href="lectures/23/Slides23.pdf" style="font-size:75%">Slides</a> | <a href="lectures/23/Code23.zip" style="font-size:75%">Code</a><br/>
+			<b>22: Machine Learning</b><br/>
+			&nbsp;&nbsp;<a href="lectures/22/Slides22.pdf" style="font-size:75%">Slides</a> | <a href="lectures/22/Code22.zip" style="font-size:75%">Code</a><br/>
+			<b>21: Classes</b><br/>
+			&nbsp;&nbsp;<a href="lectures/21/Slides21.pdf" style="font-size:75%">Slides</a> | <a href="lectures/21/Code21.zip" style="font-size:75%">Code</a><br/> 
+			<b>20: Graphs and Networks</b><br/>
+			&nbsp;&nbsp;<a href="lectures/20/Slides20.pdf" style="font-size:75%">Slides</a> | <a href="lectures/20/Code20.zip" style="font-size:75%">Code</a> | <a href="lectures/20/Data20.zip" style="font-size:75%">Data</a><br/>
+			<b>19: <tt>HashMap</tt></b><br/>
+			&nbsp;&nbsp;<a href="lectures/19/Slides19.pdf" style="font-size:75%">Slides</a> | <a href="lectures/19/Code19.zip" style="font-size:75%">Code</a><br/>
+			<b>18: Interactors</b><br/>
+			&nbsp;&nbsp;<a href="lectures/18/Slides18.pdf" style="font-size:75%">Slides</a> | <a href="lectures/18/Code18.zip" style="font-size:75%">Code</a><br/>
+			<b>17: Testing and Debugging</b><br/>
+			&nbsp;&nbsp;<a href="lectures/17/Slides17.pdf" style="font-size:75%">Slides</a> | <a href="lectures/17/Code17.zip" style="font-size:75%">Code</a><br/>
+			<b>16: Multidimensional Arrays</b><br/>
+			&nbsp;&nbsp;<a href="lectures/16/Slides16.pdf" style="font-size:75%">Slides</a> | <a href="lectures/16/Code16.zip" style="font-size:75%">Code</a><br/>
+			<b>15: Arrays</b><br/>
+			&nbsp;&nbsp;<a href="lectures/15/Slides15.pdf" style="font-size:75%">Slides</a> | <a href="lectures/15/Code15.zip" style="font-size:75%">Code</a><br/>
+			<b>14: <tt>ArrayList</tt>s</b><br/>
+			&nbsp;&nbsp;<a href="lectures/14/Slides14.pdf" style="font-size:75%">Slides</a> | <a href="lectures/14/Code14.zip" style="font-size:75%">Code</a><br/>
+			<b>13: File Processing</b><br/>
+			&nbsp;&nbsp;<a href="lectures/13/Slides13.pdf" style="font-size:75%">Slides</a> | <a href="lectures/13/Code13.zip" style="font-size:75%">Code</a><br/>
+			<b>12: Strings</b><br/>
+			&nbsp;&nbsp;<a href="lectures/12/Slides12.pdf" style="font-size:75%">Slides</a> | <a href="lectures/12/Code12.zip" style="font-size:75%">Code</a><br/>
+			<b>11: Objects and Parameters</b><br/>
+			&nbsp;&nbsp;<a href="lectures/11/Slides11.pdf" style="font-size:75%">Slides</a> | <a href="lectures/11/Code11.zip" style="font-size:75%">Code</a><br/>
+			<b>10: Events</b><br/>
+			&nbsp;&nbsp;<a href="lectures/10/Slides10.pdf" style="font-size:75%">Slides</a> | <a href="lectures/10/Code10.zip" style="font-size:75%">Code</a><br/>
+			<b>09: Animation</b><br/>
+			&nbsp;&nbsp;<a href="lectures/09/Slides09.pdf" style="font-size:75%">Slides</a> | <a href="lectures/09/Code09.zip" style="font-size:75%">Code</a><br/>
+			<b>08: Randomness and Returns</b><br/>
+			&nbsp;&nbsp;<a href="lectures/08/Slides08.pdf" style="font-size:75%">Slides</a> | <a href="lectures/08/Code08.zip" style="font-size:75%">Code</a><br/>
+			<b>07: Control Structures Revisited</b><br/>
+			&nbsp;&nbsp;<a href="lectures/07/Slides07.pdf" style="font-size:75%">Slides</a> | <a href="lectures/07/Code07.zip" style="font-size:75%">Code</a><br/>
+			<b>06: Methods and Parameters</b><br/>
+			&nbsp;&nbsp;<a href="lectures/06/Slides06.pdf" style="font-size:75%">Slides</a> | <a href="lectures/06/Code06.zip" style="font-size:75%">Code</a><br/>
+			<b>05: Control Structures</b><br/>
+			&nbsp;&nbsp;<a href="lectures/05/Slides05.pdf" style="font-size:75%">Slides</a> | <a href="lectures/05/Code05.zip" style="font-size:75%">Code</a><br/>
+			<b>04: Graphics in Java</b><br/>
+			&nbsp;&nbsp;<a href="lectures/04/Slides04.pdf" style="font-size:75%">Slides</a> | <a href="lectures/04/Code04.zip" style="font-size:75%">Code</a><br/>
+			<b>03: Intro to Java</b><br/>
+			&nbsp;&nbsp;<a href="lectures/03/Slides03.pdf" style="font-size:75%">Slides</a> | <a href="lectures/03/Code03.zip" style="font-size:75%">Code</a><br/>
+			<b>02: Problem-Solving with Karel</b><br/>
+			&nbsp;&nbsp;<a href="lectures/02/Slides02.pdf" style="font-size:75%">Slides</a> | <a href="lectures/02/Code02.zip" style="font-size:75%">Code</a><br/>
+			<b>01: Programming Karel</b><br/>
+			&nbsp;&nbsp;<a href="lectures/01/Slides01.pdf" style="font-size:75%">Slides</a> | <a href="lectures/01/Code01.zip" style="font-size:75%">Code</a><br/>
+			<b>00: Introduction</b><br/>
+			&nbsp;&nbsp;<a href="lectures/00/Slides00.pdf" style="font-size:75%">Slides</a> | <a href="lectures/00/Code00.zip" style="font-size:75%">Code</a><br/>
+		</p> 
+	</div> 
+</div> 
+</body> 
+</html> 
+

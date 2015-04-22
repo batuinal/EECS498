@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Stanford CS224W: Social and Information Network Analysis (Autumn 2014)</title>
+
+<!-- Standard reset, fonts and grids -->
+<link rel="stylesheet" type="text/css" href="http://snap.stanford.edu/styles/reset-fonts-grids.css">
+<!-- styles for the whole website -->
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="yui-skin-sam" id="yahoo-com">
+
+<div id="doc" class="yui-t1">
+
+<div id="hd">
+<!-- START: header -->
+<div id="header"><a href="http://cs.stanford.edu/~jure/"><img id="by-jure" src="http://snap.stanford.edu/images/by_jure.gif" alt="By Jure Leskovec" /></a><img id="mld-logo" src="http://snap.stanford.edu/images/empty_logo.png" alt="" /><a href="http://www.stanford.edu/"><img id="cmu-logo" src="http://snap.stanford.edu/images/stanford.png" alt="Stanford University" /></a></div>
+<!-- END: header -->
+</div>
+
+<!-- START: left column -->
+<div id="left-column" align="left">
+<br><br>
+  <!--BEGIN left_column.html -->
+  <center><a href="index.html"><img id="snap-logo"
+  src="http://snap.stanford.edu/images/seal.gif"
+  alt="Stanford"/></a></center>
+  <ul id="links-under-menu">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="handouts.html">Handouts</a></li>
+  <li><a href="info.html">Course info</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+	<!--<li><a href="studentcenter.html">Student center</a></li>-->
+  <li><a href="projects.html">Project reports</a></li>
+  <li><a href="resources.html">Resources</a></li>
+  </ul>
+  <!--END left_column.html -->
+</div>
+<!-- END: left column -->
+
+<!-- START: right column -->
+<div id="right-column">
+
+<br><br>
+<div style="color:#ff8b00; font-size:28px; font-weight:bold;">CS224W:</div>
+<div style="color:#ff8b00; font-size:36px; font-weight:bold;">Social and Information Network Analysis</div>
+<div style="color:#ff8b00; font-size:28px; font-weight:bold;">Autumn 2014</div>
+
+<div class="call-out-green">
+  World Wide Web, blogging platforms, instant messaging and Facebook can be
+  characterized by the interplay between rich information content, the
+  millions of individuals and organizations who create and use it, and the
+  technology that supports it.
+  <br>
+  The course will cover recent research on
+  the structure and analysis of such <em>large social and information networks</em>
+  and on models and algorithms that abstract their basic properties.
+  Class will explore how to practically analyze large scale network data and how to
+  reason about it through models for network structure and evolution.
+	<br>
+  Topics include methods for link analysis and network community detection,
+  diffusion and information propagation on the web, virus
+  outbreak detection in networks, and connections with work in the social
+  sciences and economics.
+</div>
+
+
+<h2>Announcements:</h2>
+<p>Important course information will be posted on this web page and announced in class. You are responsible for all material that appears here and should check this page for updates frequently.</p>
+
+<ul>
+  <li> <b>9/23</b>: The first class will be held at 9:30am on Tuesday 9/23, in <a href="http://campus-map.stanford.edu/?id=07-450&lat=37.4301101437&lng=-122.173416156&zoom=17&srch=Gatesb01">Gates B1</a>. We look forward to seeing you there!
+  <br> The info sheet for the course is available: [<a href="./intro_handout/intro_handout.pdf">Info Sheet</a>] </li>
+  <li> <b>9/23</b>: We will have 3 recitation sessions. Sessions will be video recorded and slides posted here:
+    <ol>
+       <li> SNAP.PY: Thursday, 9/25 (6:00pm-7:30pm) in Nvidia Auditorium<br>
+       <a href="http://snap.stanford.edu/snappy/">Main page</a>, <a href="recitation/snappy/CS224w-2014.pdf" target="_blank">Recitation Session</a>, <a href="http://snap.stanford.edu/snappy/index.html#docs">Documentation and tutorial</a></li>
+       <!--<li> SNAP C++: Thursday, 10/3, from 2:15-3:30pm in Gates B03<br>
+       <a href="http://snap.stanford.edu/snap/">Main page<a/>, <a href="http://snap.stanford.edu/snap/quick.html">Tutorial</a>, <a href="http://snap.stanford.edu/snap/doc/snapuser-ref/">Reference guide</a>, <a href="http://snap.stanford.edu/snap/doc/snapdev-guide/">Programming guide</a>, <a href="recitation/snap/tutorial code.zip">Recitation tutorial code</a>, <a href="recitation/snap/SNAP_slides.pptx">Recitation slides</a></li>-->
+       <li> Review of Probability: Friday, 9/26 (4:15-5:45pm) in Gates B01<br>
+       <a href="recitation/probability/prob_tutorial.pdf" target="_blank">Recitation slides</a></li>
+       <li> Review of Linear Algebra: Friday, 10/3 (4:15-5:45pm) in Gates B01<br>
+       <a href="recitation/linear_algebra/LA_Slides.pdf">Recitation slides</a></li>
+     </ol>
+  </li>
+
+  <li><b>9/23</b>: Homework 0 is out (due Oct. 2). [<a href="homeworks/hw0/hw0.pdf">Homework 0</a>]. Submission Template for HW0 [<a href="homeworks/hw0/submission_template_hw0.pdf">pdf</a> | <a href="homeworks/hw0/submission_template_hw0.tex">tex</a> | <a href="homeworks/hw0/submission_template_hw0.docx">docx</a>]. Solutions [<a href="homeworks/hw0/hw0_sol.pdf">PDF</a>][<a href="homeworks/hw0/hw0_sol_code.zip">Code</a>].</li>
+
+  <li><b>9/25</b>: Homework 1 is out (due Oct. 9). [<a href="homeworks/hw1/hw1.pdf">Homework 1</a>]. Submission Template for HW1 [<a href="homeworks/hw1/submission_template_hw1.pdf">pdf</a> | <a href="homeworks/hw1/submission_template_hw1.tex">tex</a> | <a href="homeworks/hw1/submission_template_hw1.docx">docx</a>]. Solutions [<a href="homeworks/hw1/hw1_sol.pdf">PDF</a>][<a href="homeworks/hw1/hw1_sol_code.zip">Code</a>].</li>
+  <li><b>10/9</b>: Solutions for Homework 0 have been posted: [<a href="homeworks/hw0/hw0_sol.pdf">PDF</a>][<a href="homeworks/hw0/hw0_sol_code.zip">Code</a>] </li>
+  <li><b>10/9</b>: Homework 2 is out (due Oct. 23). [<a href="homeworks/hw2/hw2.pdf">Homework 2</a>]. Submission Template for HW2 [<a href="homeworks/hw2/submission_template_hw2.pdf">pdf</a> | <a href="homeworks/hw2/submission_template_hw2.tex">tex</a> | <a href="homeworks/hw2/submission_template_hw2.docx">docx</a>]. Solutions [<a href="homeworks/hw2/hw2_sol.pdf">PDF</a>][<a href="homeworks/hw2/hw2_sol_code.zip">Code</a>].</li>
+	<li><b>10/14</b>: Make sure you have <a href="http://bit.ly/1BNiHae ">entered your project teams here</a></li>
+	<li><b>10/14</b>: Project proposals are due on Oct. 16 at 9:30am</a></li>
+  <li><b>10/16</b>: Solutions for Homework 1 have been posted: [<a href="homeworks/hw1/hw1_sol.pdf">PDF</a>][<a href="homeworks/hw1/hw1_sol_code.zip">Code</a>] </li>
+  <li><b>10/23</b>: Homework 3 is out (due Nov. 6). [<a href="homeworks/hw3/hw3.pdf">Homework 3</a>]. Submission Template for HW3 [<a href="homeworks/hw3/submission_template_hw3.pdf">pdf</a> | <a href="homeworks/hw3/submission_template_hw3.tex">tex</a> | <a href="homeworks/hw3/submission_template_hw3.docx">docx</a>]. Solutions:  [<a href="homeworks/hw3/hw3_sol.pdf">PDF</a>][<a href="homeworks/hw3/hw3_sol_code.zip">Code</a>] </li>
+  <li><b>10/29</b>: Solutions for Homework 2 have been posted: [<a href="homeworks/hw2/hw2_sol.pdf">PDF</a>][<a href="homeworks/hw2/hw2_sol_code.zip">Code</a>] </li>
+  <li><b>11/6</b>: Homework 4 is out (due Nov. 20). [<a href="homeworks/hw4/hw4.pdf">Homework 4</a>]. Submission Template for HW4 [<a href="homeworks/hw4/submission_template_hw4.pdf">pdf</a> | <a href="homeworks/hw4/submission_template_hw4.tex">tex</a> | <a href="homeworks/hw4/submission_template_hw4.docx">docx</a>].</li>
+  <li><b>11/13</b>: Solutions for Homework 3 have been posted: [<a href="homeworks/hw3/hw3_sol.pdf">PDF</a>][<a href="homeworks/hw3/hw3_sol_code.zip">Code</a>] </li>
+  <li><b>12/4</b>: Solutions for Homework 4 have been posted: [<a href="homeworks/hw4/hw4_sol.pdf">PDF</a>][<a href="homeworks/hw4/hw4_sol_code.zip">Code</a>] </li>
+
+  <!--<li><b>9/25</b>: Homework 1 is out (due Oct. 10). [<a href="homeworks/hw1/hw1.pdf">Homework 1</a>]</li>
+
+  <li><b>10/1</b>: Homework 1 has been updated with submission instructions for question 2. [<a href="homeworks/hw1/hw1.pdf">Homework 1</a>]</li>
+
+  <li><b>10/6</b>: Added Bitcoin dataset to <a href="resources.html">Resources page</a>.</li>
+
+  <li><b>10/8</b>: We compiled your submissions and prepared the SNAP.PY documentation. It is available at: <a href="http://snap.stanford.edu/snappy/doc/index.html">http://snap.stanford.edu/snappy/doc/index.html</a>. Thanks everyone for contributing! You did great!</li>
+
+  <li><b>10/9</b>: <a href="https://docs.google.com/spreadsheet/ccc?key=0AjV7-Hxx__fZdFQ5VV9TakhYSS1tTEo2SEphQnlEbnc&usp=sharing">Project group registration is now available</a>! More info in <a href="http://www.stanford.edu/class/cs224w/slides/05-evals.pdf">these slides (32-34)</a>.</li>
+
+  <li><b>10/10</b>: Homework 2 is out (due Oct. 24). [<a href="homeworks/hw2/hw2.pdf">Homework 2</a>]</li>
+
+  <li><b>10/13</b>: There have been changes to questions 1.3 and 1.4(iii) in <a href="homeworks/hw2/hw2.pdf">Homework 2</a>.</li>
+
+  <li><b>10/13</b>: Justin will cover Christie's office hours this Wednesday (Oct. 16).</li>
+
+  <li><b>10/14</b>: Several project proposal / reaction paper examples
+  are now available on the <a href="info.html">course info</a> page.</li>
+
+  <li><b>10/16</b>: Solutions for homework 1 have been
+  posted: <a href="homeworks/hw1/hw1_solutions.pdf">Solution</a> and <a href="homeworks/hw1/hw1_solutions_code.zip">Code</a>.</li>
+
+  <li><b>10/16</b>: Please fill the <a href="https://docs.google.com/forms/d/15V69ZQcpq32yjZCQI7zxnihThKCabEsTijxwH3XIgsg/viewform">mid-quarter feedback form</a> and help us improve the class!</li>
+
+  <li><b>10/18</b>: Grades for homework 0 and homework 1 are now available on the <a href="http://www.stanford.edu/class/cs224w/studentcenter.html">Student Center</a>. See the post on Piazza for more details about homework return, regrade requests, and free beverages.</li>
+
+  <li><b>10/24</b>: Homework 3 is out (due Nov. 7). [<a href="homeworks/hw3/hw3.pdf">Homework 3</a>].  [<a href="homeworks/hw3/hw3_sol.pdf">PDF</a>][<a href="homeworks/hw3/hw3_sol_code.zip">Code</a>] </li>
+
+  <li><b>10/29</b>: Solutions for homework 2 have been
+  posted: <a href="homeworks/hw2/hw2_solutions.pdf">Solution</a> and <a href="homeworks/hw2/hw2_solutions_code.zip">Code</a>.</li>
+
+  <li><b>10/29</b>: There have been changes to question 3 in <a href="homeworks/hw3/hw3.pdf">Homework 3</a>.</li>
+
+  <li><b>11/7</b>: Homework 4 is out (due Nov. 21). [<a href="homeworks/hw4/hw4.pdf">Homework 4</a>]</li>
+
+  <li><b>11/11</b>: There have been changes to question 4 in <a href="homeworks/hw4/hw4.pdf">Homework 4</a>.</li>
+
+  <li><b>11/12</b>: Solutions for homework 3 have been
+  posted: <a href="homeworks/hw3/hw3_solutions.pdf">Solution</a> and <a href="homeworks/hw3/hw3_solutions_code.zip">Code</a>.</li>
+
+  <li><b>11/19</b>: Because of the final project and HW4 late day, we will be having <b>HANGOUT ONLY</b> office hours on <b>Monday (25-Nov), Tuesday (26-Nov) and Wednesday (27-Nov)</b> of Thanksgiving week. They will be at the same times as usual. Additionally, Ashley (yay 3rd person!) will host extra office hours from <b>12-2pm</b> on <b>Monday of 10th week (2-Dec)</b> in Gates B24B (same place as usual).</li>
+
+  <li><b>12/3</b>: Solutions for homework 4 have been
+  posted: <a href="homeworks/hw4/hw4_solutions.pdf">Solution</a> and <a href="homeworks/hw4/hw4_solutions_code.zip">Code</a>.</li>
+
+  <li><b>12/16</b>: Final project reports have been posted! Find them <a href="projects.html">here</a>.
+
+  <li><b>10/4</b>: Homework 0 Solutions Posted [<a href="homeworks/hw0/hw0_solutions.pdf">Solutions</a>] [<a href="homeworks/hw0/hw0.py">Python</a>] [<a href="homeworks/hw0/hw0.cpp">C++</a>] </li>
+  <li><b>10/11</b>: Homework 2 is out (due Oct. 25) [<a href="homeworks/hw2/hw2.pdf">Homework 2</a>] [<a href="homeworks/hw2/hw2_solutions.pdf">Solutions</a>] [<a href="homeworks/hw2/hw2_codes.zip">Codes</a>] [<a href="./cover.pdf">Cover sheet</a>] </li>
+  <li><b>10/25</b>: Homework 3 is out (due Nov. 8) [<a href="homeworks/hw3/hw3.pdf">Homework 3</a>] [<a href="homeworks/hw3/hw3_solutions.pdf">Solutions</a>] [<a href="./cover.pdf">Cover sheet</a>] </li>
+  <li><b>11/10</b>: Homework 4 is out (due Nov. 29) [<a href="homeworks/hw4/hw4.pdf">Homework 4</a>] [<a href="./cover.pdf">Cover sheet</a>] </li>
+  <li><b>12/03</b>: Details about the <a href="http://www.stanford.edu/class/cs224w/info.html#projectPoster">Poster session</a> </li>
+  <li><b>12/10</b>: <a href="projects.html"><b>Course Project Reports!</b></a></li>
+  <!-- <div style="background:#ff8b00; color:#ffffff; font-weight:bold; padding:3px 3px;"></div> 
+-->
+</ul>
+
+<br>
+
+<h2>Course information:</h2>
+
+<h3>Instructor:</h3>
+<p><a href="http://cs.stanford.edu/~jure/">Jure Leskovec</a><br>
+Office Hours: Wednesdays 9-10am, Gates 418<br>
+SCPD students please send email beforehand if you want to talk to Jure</p>
+
+<h3>Lectures:</h3>
+<p>Tuesday &amp; Thursday 9:30AM - 10:45AM in <a href="http://campus-map.stanford.edu/?id=07-450&lat=37.4301101437&lng=-122.173416156&zoom=17&srch=Gatesb01">Gates B1</a></p>
+<p>Watch video lectures on <a href="http://scpd.stanford.edu/search/publicCourseSearchDetails.do?method=load&courseId=7932016#enrollment-options">SCPD</a> (any Stanford student can see them <a href="https://mvideox.stanford.edu/Graduate#/CourseDetail/Autumn/2014/CS/224W">here</a>).</p>
+
+<h3>Email address:</h3>
+<p>You can reach us at <a href="mailto:cs224w-aut1415-staff@lists.stanford.edu">cs224w-aut1415-staff@lists.stanford.edu</a><br>
+Use <b>Piazza</b> to post class related questions: <a href="http://piazza.com/stanford/fall2014/cs224w">http://piazza.com/stanford/fall2014/cs224w</a> (use access code "snap" to register)<br>
+<!--Piazza requires @stanford.edu emaill address to register. If you do not have @stanford.edu address, send  <a href="mailto:cs224w-aut1314-staff@lists.stanford.edu">us</a> your email address and we will register you.)-->
+</p>
+
+<h3>TAs and Office hours:</h3>
+<p>Alex Zamoshchin
+  <br>Office Hours: Monday 3:45-5:45pm, Location: Gates B24A</p>
+<p>Alexander Hsu 
+  <br>Office Hours: Tuesday 3:00-5:00pm, Location: Gates B24B</p>
+<p>Clifford Huang
+  <br>Office Hours: Tuesday 5:00-7:00pm, Location: Gates B24B</p>
+<p>Paris Syminelakis
+  <br>Office Hours: Wednesday 11:00-1:00pm, Location: Gates B28</p>
+<p>David Hallac 
+  <br>Office Hours: Wednesday 1:00-3:00pm, Location: Gates 414</p>
+<p>Vikesh Khanna 
+  <br>Office Hours: Thursday 2:30-4:30pm, Location: Gates B24B</p>
+<p>Hima Lakkaraju 
+  <br>Office Hours: Friday 3:00-5:00pm, Location: Gates 448</p>
+
+<p>Additionally, we have office hours every Saturday. The upcoming Saturday office hours are given below. We'll post the subsequent schedule later.
+    <ul>
+      <li>11/22, Paris Syminelakis, 10:00 AM to 12:00 PM</li>
+      <li>11/29, Alexander Zamoshchin, 10:00 AM to 12:00 PM</li>
+      <li>12/06, Hima Lakkaraju, 10:30 AM to 12:30 PM</li>
+    </ul>
+  </p>
+<p>Students can also participate in office hours via Google Hangout at <a href="https://plus.google.com/u/0/115571600543254828770">stanford.cs224w@gmail.com</a>.</p>
+
+<h3>Previous versions of the course</h3>
+<p><a href="http://snap.stanford.edu/class/cs224w-2013">CS224W: Fall 2013</a><br>
+<a href="http://snap.stanford.edu/class/cs224w-2013/projects.html">2013 student project reports<p><a href="http://snap.stanford.edu/class/cs224w-2012">CS224W: Fall 2012</a><br>
+<a href="http://snap.stanford.edu/class/cs224w-2012/projects.html">2012 student project reports</a></p>
+<p><a href="http://snap.stanford.edu/class/cs224w-2011">CS224W: Fall 2011</a><br>
+<a href="http://snap.stanford.edu/class/cs224w-2011/proj/index.html">2011 student project reports</a></p>
+<p><a href="http://snap.stanford.edu/class/cs224w-2010">CS224W: Fall 2010</a><br>
+<a href="http://snap.stanford.edu/class/cs224w-2010/proj2010/">2010 student project reports</a></p>
+<p><a href="http://snap.stanford.edu/class/cs322-2009/">CS322: Fall 2009</a><br>
+<a href="http://snap.stanford.edu/class/cs224w-2010/proj2009/">2009 student project reports</a></p>
+
+</div>
+<!-- END: right column -->
+
+<div id="footer">
+<!-- you can put something here -->
+</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-342639-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

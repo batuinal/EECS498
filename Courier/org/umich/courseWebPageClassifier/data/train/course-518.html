@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COS 461: Computer Networks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://gtnoise.net/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://gtnoise.net/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://gtnoise.net/bootstrap/js/bootstrap.min.js"></script>
+
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Computer Networks</h1>
+    <p class="lead">COS 461, Princeton University Spring 2015</p>
+  </div>
+</header>
+
+<div class="row">
+<div class="span2">
+</div>
+<div class="span9">
+
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Home</a></li>
+    <li><a href="#tab2" data-toggle="tab">Syllabus</a></li>
+    <li><a href="#tab3" data-toggle="tab">Schedule</a></li>
+    <li><a href="#tab4" data-toggle="tab">Resources</a></li>
+    <li><a href="#tab5" data-toggle="tab">Assignments</a></li>
+
+
+  </ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <div class="page-header">       
+	<h3>Overview</h3>
+      </div>
+          <p class="lead">
+
+      This course studies computer networks and the services built on
+      top of them. Topics include packet switching, routing and flow
+      control, congestion control and quality-of-service, Internet
+      protocols (IP, TCP, BGP), network security, network management,
+      software defined networking, and the design of network services
+      (multimedia, file and web servers).  </p>
+
+<h3>Logistics</h3>
+      
+<p>
+  <address><strong>Contact:</strong><br>
+    Prof. <a href="http://www.cs.princeton.edu/~feamster/">
+      Nick Feamster</a><br>
+    310 Sherrerd Hall <br>
+    &lt;my last name&gt;@cs.princeton.edu<br>
+    </address>
+<p />
+
+      
+      <p>
+    <strong>Lead Instructor:</strong><br />
+    <a href="http://www.cs.princeton.edu/~sbatista/">Sandra Batista</a>
+      </p>
+      
+      <p>
+    <strong>TAs:</strong><br />
+<a href="http://www.cs.princeton.edu/~mshahbaz/">Muhammad
+	Shahbaz</a> (Head TA)<br />
+      </p>
+      
+      <p>
+    <strong>Lab TAs:</strong><br />
+      Aaron Doll <br />
+      Shaheed Chagani <br />
+      Cody Wilson <br />
+      </p>
+
+      <p>
+      <strong>Class Location and Time:</strong><br /> Mondays and
+      Wednesdays, 10:00 am-10:50 am, CS 104<br />
+      Friday Precepts: 10:00a (Friend 008), 11:00a (Friend 006), 1:30p
+      (Friend 008)
+      </p>
+
+      <p>
+    <strong>Office Hours (subject to change; check Piazza for updates):</strong><br />
+      Nick: After each lecture in 310 Sherrerd.<br />
+      Sandra: Wednesdays, 9-9:50 a.m., 12-1 p.m.; Thursdays 11-1 p.m. in Friend 010. <br />
+      Shahbaz: Fridays, 5-6 p.m. in Sherrerd Hall (3rd Floor Lounge). <br />
+      Aaron: Wednesday 2/11 6-8 pm in Friend 010. <br />
+      Shaheed: Thursday 2/12 6-8 pm in Friend 010. <br />
+     Cody: Tuesday 2/10 4:30-6:30 pm in Friend 010. <br />
+<p />
+      </div>
+
+
+<div class="tab-pane" id="tab2">
+<h3>
+Course Format
+</h3>
+
+<p> The course will meet twice a week for 50-minute lectures.
+Additionally, there will be one precept per week.  </p>
+
+<p>
+Assignments for the course will be lab-based programming assignments.
+</p>
+
+
+<h3>Recommended Background</h3>
+
+  <p>
+Prerequisite: COS
+      217. Although not required, taking either COS 318 or 333 before
+      COS 461 is helpful for the programming assignments.
+  <p>
+  
+<h3>Grading</h3>
+
+<p>
+  Grading is based on:
+  <ul>
+    <li>a midterm (20%)</li>
+    <li>a final exam (25%)</li>
+    <li>four programming assignments (12% each)</li>
+    <li>preparation for precepts (7%)</li>
+    </ul>
+  </p>
+
+<h3>Late Policy</h3>
+
+    <p>
+    We understand that sometimes life events occur and that it's not
+    always possible to meet every deadline. As such, we are willing to
+    accept late assignments according to the following policy:
+
+    <ul>
+
+      <li> You start the term with a grace period "balance" of 96
+      hours.</li>
+
+      <li> Each assignment will be due at 11:59 p.m. (Princeton Local Time) on
+      the due date. </li> 
+
+      <li> For each assignment, every hour late (or fraction thereof)
+      that you turn in the assignment will subtract one hour from your
+      grace-period balance.  For example, if you turn in your assignment
+      at 1:02 a.m. on the date after the due date, we will count this as
+      two hours against your grace period.</li>
+      
+      <li> As long as your grace period balance is positive, you can
+      turn in any assignment late without penalty.</li>
+
+      <li> Once your grace period balance reaches zero, you will receive
+      half credit for any assignment that you turn in, as long as you
+      turn it in within one week of the due date.  If your grace period
+      balance is zero and you turn in an assignment more than one week
+      late, you will receive no credit for the
+      assignment. <b>Important:</b> You must still turn in all
+      assignments to pass the course, even if you receive zero points on
+      an assignment.  Turning in all assignments is a necessary
+      condition for passing.</li>
+      
+      </ul>
+      Excuses with medical documentation are a legitimate exception and
+      will not count against your late period.  Any other reasons for
+      lateness---including but not limited to interviews, conferences,
+      etc.---are <i>not</i> legitimate excuses and any resulting
+      lateness will count against your grace period.
+    
+<h3>Honor Code</h3>
+
+	  <p>
+	  Students are expected to abide by the Princeton University Honor
+	  Code. Honest and ethical behavior is expected at all
+	  times. All incidents of suspected dishonesty will be reported
+	  to and handled by the office of student affairs. You are to do
+	  all assignments yourself, unless explicitly told
+	  otherwise. You may discuss the assignments with your
+	  classmates, but you may not copy any solution (or part of a
+	  solution) from a classmate.</p>
+
+<h3>Reading and Videos</h3>
+
+<p>
+<strong>Required videos: </strong>
+    <a href="http://goo.gl/4Kjrro">Prof. Feamster's Networking
+    Videos</a>.  These videos are organized in a playlist that matches
+    the syllabus topic schedule.  Please watch the appropriate videos
+    <i>before</i> lecture.
+    </p>
+    
+  <p>
+<strong>Required textbook: </strong> <a
+	  href="http://www.pdfiles.com/pdf/files/English/Networking/Computer_Networks_A_Systems_Approach.pdf">Computer
+	  Networks: A Systems Approach (5th edition)</a>, 
+	  by Larry Peterson and Bruce Davie
+      </p>
+
+<p>
+      <strong>Recommended Books: </strong>Other recommended textbooks for reference
+      include:
+<ul>
+<li>      <a
+      href="http://www.pdfiles.com/pdf/files/English/Networking/Computer_Networking_A_Top-Down_Approach.pdf">
+      Computer Networking: A Top-Down Approach Featuring the
+      Internet (6th edition)</a></li>
+      <li><a href="http://goo.gl/FcLq1j">Computer Networks (5th edition)</a></li>
+<li>
+<a href="http://goo.gl/Bqdj90">TCP/IP Illustrated, Volume
+      1: The Protocols and Unix Network Programming, Volume 1: The
+      Sockets Networking API (3rd Edition)</a>
+</li>
+</ul>
+Purchasing these books is not necessary; they will be
+      on reserve in the engineering library, and online resources will
+      be made available.
+</p>
+
+  
+</div>
+
+
+<div class="tab-pane" id="tab3">
+
+      <p>This schedule and syllabus is preliminary and subject to
+      change. Reading assignments refer to the Peterson/Davie book (5th
+      edition), unless otherwise specified.</p>
+
+  <p><strong>Videos:</strong> In addition to the readings, you should
+  watch the corresponding videos from the <a href="http://goo.gl/4Kjrro">YouTube
+  Playlist</a>, before lecture.  (Note: Some of the videos in the
+  playlist will <i>not</i> be covered in the course.  You are only
+  responsible for the videos that are explicitly listed in the
+  schedule.  If you have a question about whether something is required,
+  ask on Piazza, and we will clarify/update the syllabus below if there
+  are mistakes.)
+
+      <p>Where applicable, please watch all videos and read book sections <b>before</b>
+      class. </p>
+
+  <p><strong>Slides:</strong> All slides will be posted <a
+  href="https://www.dropbox.com/sh/7ouuo92lzzq73q3/AAA5rpZMcf7ARTlvU6QuOwwCa?dl=0">in
+  this directory</a> before lecture.</p> 
+
+<table class="table table-striped">
+  <tr class=success>
+    <td>
+      <strong>Date</strong>
+      </td>
+    <td>
+      <strong>Modules</strong>
+      </td>
+    <td>
+      <strong>Readings</strong>
+      </td>
+    <td>
+      <strong>Assignment</strong>
+      </td>
+    </tr>
+
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 2</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Course Overview</li>
+<li>History of the Internet</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>1.3</li>
+<li>Videos: 1</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 4</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Architectural Principles</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Packet Switching</li>
+<li>End-to-End Principle</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Videos: 2-19</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 6</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Socket Programming</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>1.4</li>
+<li><a href="http://beej.us/guide/bgnet/">Beej’s Guide</a></li>
+</ul>
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><span style="color: rgb(231, 47, 26);"><b>Programming Assignment 0 (Sockets)</b></span><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 9</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Link Layer</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Switching and Bridging</li>
+<li>ARP, Hubs, Switches</li>
+<li>Spanning Trees</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>3.1.1, 3.1.4, 3.2.6</li>
+<li>Videos: 20-28</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 11</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>IP Addressing</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Classful Addressing</li>
+<li>Allocation</li>
+<li>CIDR</li>
+<li>Longest Prefix Match<br/></li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>3.2.1-3.2.5</li>
+<li>Videos: 39-46<br/>
+(Optional: 47-56, 58)</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 13</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>HTTP<br/></li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>9.1.2</li>
+<li>Videos: 168-173</li>
+</ul>
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><span style="color: rgb(231, 46, 27);"><b>Programming Assignment 1 (HTTP Proxy)</b></span></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 16</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Internet Routing Oveview</li>
+<li>Intradomain Routing</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Topology</li>
+<li>Distance Vector</li>
+<li>Link State</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>3.3, 4.1</li>
+<li>Videos: 64-71</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 18</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Interdomain Routing</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Route Attributes</li>
+<li>Route Selection</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>4.1.2</li>
+<li>Videos: 72-77, 79<br/>
+(Optional: 78, 80)</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 20</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Mininet and PoX</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>Mininet/POX Setup</div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 23</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Catch Up</li>
+<li><s>Router design</s></li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li><s>Router architectures</s></li>
+<li><s>Crossbar switching</s></li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>3.4</li>
+</ul>
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 25</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Queuing and Scheduling</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>FIFO</li>
+<li>Fair Queueing</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>6.2, 6.5</li>
+<li>Videos: 88-92</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>February 27</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Queuing and Scheduling</li>
+<li>Bufferbloat</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Videos: 208-210</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>Review of Routing</div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 2</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>TCP and UDP</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Reliable delivery</li>
+<li>Connections</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>5.1, 5.2</li>
+</ul>
+<div><br/></div>
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 4</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Congestion Control</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Congestion Collapse</li>
+<li>TCP Congestion Control</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>6.3, 6.4</li>
+<li>Videos: 34-38</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 6</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Congestion Control</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>TCP Review</div>
+<div><span style="color: rgb(231, 45, 52);"><b>Programming Assignment 2 (Router)</b></span></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 9</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>DNS</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Resolution</li>
+<li>Nameserver hierarchy</li>
+<li>Record types</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>9.3.1</li>
+<li>Videos: 59-63</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 11</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Scaling Techniques</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>NAT</li>
+<li>IPv6</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>4.1.3</li>
+<li>Videos: 43-44</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 13</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div style="text-align: center"><b><span style="color: rgb(231, 46, 27);">Midterm</span></b></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div style="text-align: center"><span style="color: rgb(227, 32, 0);"><b>Midterm</b></span></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 23</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Network Management Overview</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Traffic Engineering</li>
+<li>(Security)</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Videos: 93-99, 57</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 25</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Traffic Management</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Classification</li>
+<li>Shaping</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+<ul>
+<li><a href="http://goo.gl/y5Zrsy">Kurose &amp; Ross</a> pp 645-648</li>
+<li>Videos: 100-107</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 27</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Traffic Shaping Mechanisms</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Token Bucket</li>
+<li>Leaky Bucket</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>Bufferbloat and Congestion Activities</div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>March 30</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Software Defined Networking</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Control-Data Separation</li>
+<li>History of SDN</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li><a href="http://queue.acm.org/detail.cfm?id=2560327">The Road to SDN</a></li>
+<li>Videos: 113-115</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 1</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>SDN Continued</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>OpenFlow</li>
+<li>Match-Action Tables</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li><a href="http://opennetsummit.org/archives/oct11/shenker-tue.pdf">The Future of Networking, and the Past of Protocols</a></li>
+<li>Video: <a href="http://www.youtube.com/watch?v=YHeyuD89n1Y">Shenker</a> <br/>
+(Optional: 118-137)</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 3</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>SDN Controllers<br/></li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Videos: 116-117</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>Scheduling and Shaping</div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 6</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Denial of Service Attacks</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Overview</li>
+<li>DDoS</li>
+<li>Defenses</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>8.5</li>
+<li><a href="https://blog.cloudflare.com/deep-inside-a-dns-amplification-ddos-attack/">DNS Amplification</a> (<a href="http://www.nytimes.com/2013/03/28/technology/attacks-on-spamhaus-used-internet-against-itself.html?pagewanted=all">NYT</a>)</li>
+<li>Videos: 140-144</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><span style="color: rgb(231, 45, 52);"><b>Programming Assignment 3 (Router)</b></span></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 8</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>DNS and Naming Security</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Cache Poisoning</li>
+<li>Amplification Attacks</li>
+<li>DNSSEC</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li><a href="http://unixwiz.net/techtips/iguide-kaminsky-dns-vuln.html">Kaminsky DNS Attack<br/>
+(</a><a href="http://spectrum.ieee.org/images/oct08/images/phish03.pdf">Figure</a>)</li>
+<li><a href="http://ws.edu.isoc.org/workshops/2004/ccTLD-Amsterdam/dnssec/ISOC_tld_2004.pdf">DNSSEC Overview</a><br/>
+(Slides 1-5)</li>
+<li>Videos: 145-151</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 10</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>DoS and DNS Security</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>SDN Firewall Activity</div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 13</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Routing Security</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Route Hijacks</li>
+<li>BGPSEC</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li><a href="http://queue.acm.org/detail.cfm?id=2668966">Routing Security</a></li>
+<li><a href="https://www.defcon.org/images/defcon-16/dc16-presentations/defcon-16-pilosov-kapela.pdf">Kapela Route Hijack</a></li>
+<li>Videos: 152-157</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 15</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Botnets and Application-Layer Attacks</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Viruses and Worms</li>
+<li>Spam, Phishing</li>
+<li>Botnets</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li><a href="http://goo.gl/qZpv2K">Cole</a>: Chapter 19</li>
+<li>Videos: 158-164</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 17</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Routing Security </li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+<div>
+<div>Router Design</div>
+<div>(Makeup of Feb 23)</div>
+</div>
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 20</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Network Virtualization<br/></li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Videos: 123-127</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 22</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Data Center Networking</li>
+<li style="display:inline;list-style:none;">
+<ul>
+<li>Topologies</li>
+<li>Routing</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li><a href="http://www.morganclaypool.com/doi/pdf/10.2200/S00516ED2V01Y201306CAC024">Barroso</a>: Chapter 1, 3.3</li>
+<li>Videos: 182-185, 189-190(Optional: 186-188)</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 24</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Overlay Networks</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>9.4.1</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><br/></div>
+<div>Measurement</div>
+<ul>
+<li>Videos: 108-112</li>
+</ul>
+<div><br/></div>
+<div>DoS Mitigation Activity</div>
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 27</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Peer-to-Peer Networking</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>9.4.2</li>
+<li>Videos: 104-112</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div><span style="color: rgb(231, 45, 52);"><b>Programming Assignment 4 (Measurement)</b></span></div>
+</td>
+</tr>
+<tr>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>April 29</div>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>Content Distribution Networks</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<ul>
+<li>9.4.3</li>
+<li>Videos: 174-181</li>
+</ul>
+</td>
+<td style="border-style:solid;border-width:1px;border-color:rgb(219,219,219);padding:10px;margin:0px;width:25%;">
+<div>Course Review Session</div>
+</td>
+</tr>
+
+
+</table>
+</div>
+
+    <div class="tab-pane" id="tab4">
+
+      <h3>Course Resources</h3>
+      <ul>
+	<li><a href="https://www.dropbox.com/sh/vjrqwkdv9xp4gvt/AADPBKJjoD1vq6nSMuaBlYAda?dl=0">Course Dropbox</a> (Lecture and Precept Slides,
+      Solutions, etc.)</li>
+	<li><a href="https://www.evernote.com/l/AAT3ku3HMHFOWaCU0MQllLaFRF6MoPZANdc">Topics Covered in Lecture</a></li>
+	<li><a
+      href="https://blackboard.princeton.edu/webapps/blackboard/execute/courseMain?course_id=_228813_1">Course
+      Blackboard Page</a></li>
+	<li><a href="https://piazza.com/class/i4tzqedz97w1e9">Piazza
+	Online Discussion Forum</a></li>
+	</ul>
+	
+
+
+      <h3>Software Resources</h3>
+
+      <ul>
+	<li> <a href="http://virtualbox.org/">VirtualBox</a>
+	Environment</li>
+	<ul>
+	  <li> <a href="http://dowdberry.blogspot.com/2013/07/virtualbox-host-only-networking.html">Hints
+	  on VM Setup</a>
+	<li><a href="files/SPR15-COS461-VM.ova"> Official virtual machine image</a></li></ul>
+	<li> <a href="http://mininet.org/">Mininet</a>: Virtual network emulation environment
+	  <ul>
+	    <li> <a href="http://mininet.org/walkthrough/">Mininet
+	    Walkthrough</a> </li> 
+      </ul>
+</ul>
+	
+<h3>Going Further (Optional)</h3>
+
+	<ul>
+	<li>Various Online Reading from Professor Feamster</li>
+	  <ul>
+	    <li><a href="http://connectionmanagement.org/">Connection
+		Management Blog</a>: Blog where various topics will be discussed during the
+	      course.</li>
+	    <li><a href="http://greatresearch.org/">A Research "How To"
+	    Blog</a></li>
+	    <li><a href="http://twitter.com/feamster/">Prof. Feamster's
+	    Twitter Feed</a>
+	  </ul>
+
+	  <li>Udacity Course Modules (some may be useful for additional explanation)</li>
+	  <ul>
+	    <li><a href="https://www.udacity.com/course/ud819">Module 1</a></li>
+	    <li><a href="https://www.udacity.com/course/ud399">Module 2</a></li>
+	    <li><a href="https://www.udacity.com/course/ud432">Module 3</a></li>
+	  </ul>
+</ul>
+    </div>
+
+    <div class="tab-pane" id="tab5">
+      <h3>Assignments</h3>
+
+	  <ul>
+	    <li><a href="assignments/0-sockets.html">Assignment 0:
+	    Socket Programming</a></li>
+	    	    <li><a href="assignments/1-http.html">Assignment
+	    1: HTTP Proxy</a></li>
+	    	    <li><a href="assignments/2-router.html">Assignment
+	    2: Internet Router</a></li>
+
+	    
+	  </ul>
+
+      
+    </div>
+      
+    
+
+  </div>
+</div>
+
+</div>
+</div>
+
+  </body>
+</html>

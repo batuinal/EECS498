@@ -1,0 +1,1286 @@
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="style.css" rel='stylesheet' type='text/css'>
+    
+    <title>CS110: Principles of Computer Systems</title>
+    
+    <script>
+      function showLectureBlock(lectureGroup) {
+      $('.hidden-lectures-' + lectureGroup).show(); $('.for-lectures-' + lectureGroup).hide()
+      }
+    </script>
+    
+  </head>
+  <body>    
+    <div class="page-container">
+      <div class="header-bar">
+        <div class="page-header-wrapper">
+          <div class="page-title">
+            <span class="course-num">CS110</span>
+            <span class="course-name">Principles of Computer Systems</span>
+          </div>
+          
+          <div class="quarter">
+            Winter 2015, Mon, Wed, Fri: 10:00am - 10:50am in Building 420, Room 040. Jerry Cain (Gates 192).
+          </div>
+          
+          <div class="class-links">
+            <a href="office-hours.html">Office Hours</a> |
+            <a href="https://piazza.com/class/i4imyuyslro652" target="_blank">Piazza Forum</a>  |
+            <a href="slides-handouts.html">Slides &amp; Handouts</a> |
+            <a href="http://cs110.stanford.edu/cgi-bin/gradebook">Gradebook</a>
+          </div>
+        </div>
+        <!-- Since the site is raw HTML, changing things above this line might need to be changed in all HTML files for consistency -->
+        <div class="lecture-bar column-bar">
+          <div class="lecture-container">
+            <h2>Content</h2>
+
+            <div class="lecture">
+              <h4>Lecture 27: Nonblocking I/O</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Mar 11<sup>th</sup></span>
+                    Slides:
+                    <span class="lecture-slides">
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/27-non-blocking-io.html">
+                        [live]</a>
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/27-non-blocking-io.md">
+                        [markdown]</a>
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/27-non-blocking-io.pdf">
+                        [pdf]</a>
+                    </span>
+                </div>
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 12: <a href="https://quip.com/jWF3AksHl1YU">
+                      CS110 Final Exam Coverage and Practice</a>
+                  </div>
+                </div>
+                <p class="description">
+                  Two bigs things: I want to quickly implement just enough of the <tt><b>OutboundFile</b></tt>
+                  class so that you understand how to works.  I also want to introduce you to a collection
+                  of functions that can be used to halt an otherwise nonblocking server until it perceives
+                  that something interesting happened with one or more file descriptors being monitored.
+                </p>
+                <p class="description">
+                  Recall that all of the nonblocking I/O material is optional in the sense that
+                  it won't be tested on the final exam.  It's just good, systemy fun to help fill
+                  dead week with cool content for those who are interested.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 26: Nonblocking I/O</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Mar 9<sup>th</sup></span>
+                    Slides:
+                    <span class="lecture-slides">
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/26-non-blocking-io.html">
+                        [live]</a>
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/26-non-blocking-io.md">
+                        [markdown]</a>
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/26-non-blocking-io.pdf">
+                        [pdf]</a>
+                    </span>
+                </div>
+                <p class="description">
+                  I want to spend some time today and Wednesday (and possibly Friday) 
+                  talking about nonblocking I/0, which can be used to minimize the number
+                  of <b>blocking</b> system calls (e.g. slow system calls like <tt><b>accept</b></tt>
+                  and <tt><b>read</b></tt> are transformed into ones that return immediately, even when
+                  no data is available).  By doing so, we'll be able to implement robust servers
+                  that can manage tens of thousands of open connections and serving them all in
+                  a single thread of execution!
+                </p>
+                <p class="description">
+                  Note that this material is optional, in the sense that it doesn't contribute to any 
+                  assignment solution, and it won't be tested on the final exam.  It is, however, awesome
+                  material that many system engineers working out in industry told me was a programming
+                  model they use more often than multithreading and/or multiprocessing when it comes to
+                  managing I/O.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 25: MapReduce Overview</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Mar 6<sup>th</sup></span>
+                    Slides:
+                    <span class="lecture-slides">
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/25-map-reduce-overview.html">
+                        [live]</a>
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/25-map-reduce-overview.md">
+                        [markdown]</a>
+                      <a href="http://www.stanford.edu/class/cs110/winter-2015/lectures/25-map-reduce-overview.pdf">
+                        [pdf]</a>
+                    </span>
+                </div>
+                <div class="readings-wrapper">
+                  <div>
+                    Skim the <a href="http://static.googleusercontent.com/media/research.google.com/en/us/archive/mapreduce-osdi04.pdf">MapReduce white paper</a>.
+                  </div>
+                  <div>
+                    Skim <a href="http://i.stanford.edu/~ullman/mmds/ch2a.pdf">Chapter 2</a> of the CS246 textbook as well. Good stuff.
+                  </div>
+                </div>
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 11: <a href="https://quip.com/HpdYACaaqjh4">
+                      Assignment 7: MapReduce</a>
+                  </div>
+                </div>
+                <p class="description">
+                  I want to discuss the basics of MapReduce, and then very carefully sketch out
+                  increasingly more sophisticated architecture that bring it from fully sequential on
+                  a single core to one that employs many, many networked machines that where each
+                  processes a small fraction of the overall data set to be processed.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 24: Principles of System Design</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Mar 4<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/24-principles-of-system-design.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/24-principles-of-system-design.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/24-principles-of-system-design.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <p class="description">
+                  Today, I'll take a step back and highlight all of the general systems design principles
+                  we've been exposed to over the course of the quarter and try to make it clear
+                  that a system's design is often more intellectually captivating than its 
+                  implementation.  Execution is important, but ideas are important too.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 23: Threadsafe Servers, Server Socket Configuration</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Mar 2<sup>nd</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/23-networking-wrap-up.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/23-networking-wrap-up.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/23-networking-wrap-up.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Finish Reading: Bryant &amp; O'Hallaron, Chapter 3. 
+                    Chapter 3 of the reader corresponds to Chapter 11 of the full textbook.
+                  </div>
+                </div>
+                
+                <p class="description">
+                  We need to finish up the implementation of the concurrent <tt><b>time-server</b></tt>
+                  example, speak about reentrant functions, and then collectively implement
+                  <tt><b>createServerSocket</b></tt> so we understand how that works.  We'll
+                  then advance on to one final example that demonstrates how servers can leverage
+                  existing executables and use <tt><b>popen</b></tt> and <tt><b>pclose</b></tt> to
+                  launch and interact with them.
+                </p>
+                <p class="description">
+                  Time permitting, we'll take a step back and we'll start to review all of the
+                  high-level topics we've covered this quarter.  (We'll certainly spend Wednesday
+                  doing this as well.)
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 22: Client Socket Configuration, Servers, Multithreading</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Feb 27<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/22-networking-and-servers.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/22-networking-and-servers.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/22-networking-and-servers.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapter 3. 
+                    Chapter 3 of the reader corresponds to Chapter 11 of the full textbook.
+                  </div>
+                </div>
+
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 10: <a href="https://quip.com/AAWtAZkiWAgG">
+                      Assignment 6: HTTP Web Proxy and Cache</a>
+                  </div>
+                </div>
+                
+                <p class="description">
+                  We need to implement the <tt><b>createClientSocket</b></tt> routine, and in the
+                  process learn how C, C++, and UNIX model the notion of an IP address/port pair.
+                  We'll gain a better understanding of what sockets are in the sense that we'll
+                  see how the file descriptor abstraction is leveraged to provide a reliable, two-way
+                  communication mechanism between two applications running on different machines.
+                </p>
+                <p class="description">
+                  Once we do that, we'll implement our very first server (the <b><tt>time-server</tt></b>,
+                  that we've been relying on in prior lectures, actually) and then discuss how
+                  server-side sockets are configured and how multithreading can be used to
+                  dramatically improve server-side performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 21: Network Clients, Sockets, HTTP</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Feb 25<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/21-networking-and-servers.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/21-networking-and-servers.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/21-networking-and-servers.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapter 3.  Chapter 3 of the reader corresponds to 
+                    Chapter 11 of the full textbook.
+                  </div>
+                </div>
+                
+                <p class="description">
+                  We'll review the <tt><b>time-client</b></tt> implementation, first using system-level I/O, but then
+                  relying on a third-party open source project called <tt><b>socket++</b></tt> to layer C++ streams
+                  over file descriptors and make the string parsing much, much easier to manage.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 20: Introduction to Networking, Client/Server Model, Sockets</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Feb 23<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/20-networking-and-servers.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/20-networking-and-servers.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/20-networking-and-servers.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Start Reading: Bryant &amp; O'Hallaron, Chapter 3.  Chapter 3 of the reader corresponds to 
+                    Chapter 11 of the full textbook.
+                  </div>
+                </div>
+                
+                <p class="description">
+                  Today we'll formally begin networking.  I need to talk about clients, servers, IP addresses,
+                  ports, sockets, and how sockets are used to behave like pipes that not only bridge processes,
+                  but bridge hosts over the Internet.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 19: Threading Wrapup, Introduction to Networking</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Feb 20<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/19-networking-intro.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/19-networking-intro.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/19-networking-intro.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Start Reading: Bryant &amp; O'Hallaron, Chapter 3.  Chapter 4 of the reader corresponds to 
+                    Chapter 11 of the full textbook.
+                  </div>
+                </div>
+
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 09: <a href="https://quip.com/ab3tAcHqqp8C">
+                      Assignment 5: RSS News Aggregator, v2</a>
+                  </div>
+                </div>
+                
+                <p class="description">
+                  Threading Wrapup, Ice Cream Store Simulation, Introduction to Networking
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 18: Threads and Networking, Threading Wrap-Up</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Feb 18<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/18-threading-wrap-up.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/18-threading-wrap-up.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/18-threading-wrap-up.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Start Reading: Bryant &amp; O'Hallaron, Chapter 3.  Chapter 4 of the reader corresponds to 
+                    Chapter 11 of the full textbook.
+                  </div>
+                </div>
+                
+                <p class="description">
+                  Threads and Networking, Ice Cream Store Simulation
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 17: Producer/Consumer Pattern, Threads and Networking</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Feb 13<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/17-threading-and-networking.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/17-threading-and-networking.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/17-threading-and-networking.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Finish Reading: Bryant &amp; O'Hallaron, Chapter 4 (skipping Section 4.2).  Chapter 4 of the reader
+                    corresponds to Chapter 12 of the full textbook.
+                  </div>
+                </div>
+
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 07: <a href="https://quip.com/NymzA4iKEpW3">
+                      Multithreading and Synchronization Redux
+                    </a>
+                  </div>
+                  <div class="handout">
+                    Handout 08: <a href="https://quip.com/VsarAUMi5LYT">
+                      Assignment 4: RSS News Aggregator</a>
+                  </div>
+                </div>
+                
+                <p class="description">
+                  I have one more canonical example to cover to illustrate another use of the <tt><b>semaphore</b></tt>
+                  we built on Wednesday.  I'll then advance on to an example that illustrates how now multithreading
+                  can be used to dramatically speed up networked applications.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 16: Condition Variables Revisited, Semaphores, Dining Philosophers One Last Time</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Feb 11<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/16-threading-and-semaphores.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/16-threading-and-semaphores.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/16-threading-and-semaphores.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Finish Reading: Bryant &amp; O'Hallaron, Chapter 4 (skipping Section 4.2).  Chapter 4 of the reader
+                    corresponds to Chapter 12 of the full textbook.
+                  </div>
+                </div>
+                
+                <p class="description">
+                  We'll introduce the <b><tt>semaphore</tt></b> class as a generalization of the <tt><b>condition_variable_any</b></tt> work we used
+                  to provide atomic increment and decrement on an arbitrary nonnegative integer.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 15: Dining Philosophers, Deadlock, Busy Waiting, and Condition Variables</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Feb 9<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/15-threading-and-semaphores.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/15-threading-and-semaphores.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/15-threading-and-semaphores.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapter 4 (skipping Section 4.2).  Chapter 4 of the reader
+                    corresponds to Chapter 12 of the full textbook.
+                  </div>
+                </div>
+                
+                <p class="description">
+                  We'll review the Dining Philosophers problem from Friday, point out the deadlock threat,
+                  demonstrate that it can really happen, and then take measures to fix it.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 14: Shared Data, Race Conditions, Critical Regions, and the <tt><b>mutex</b></tt></h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Feb 6<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/14-threading-and-semaphores.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/14-threading-and-semaphores.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/14-threading-and-semaphores.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapter 4 (skipping Section 4.2).  Chapter 4 of the reader
+                    corresponds to Chapter 12 of the full textbook.
+                  </div>
+                </div>
+
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 06: <a href="https://quip.com/OZkIAga99geY">
+                      CS110 Midterm Coverage and Practice
+                    </a>
+                  </div>
+                </div>
+
+                <p class="description">
+                  All of the C++ thread examples have been fairly straightforward so far.  Today we need to
+                  begin writing more complex programs where many threads try to do surgery on the same pieces
+                  of shared data (usually global variables).  We'll introduce the concept of a critical region
+                  and how to guard against race conditions using a conncurrency directive called a <tt><b>mutex</b></tt>.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 13: Introduction to Threading, <tt><b>pthreads</b></tt>, Race Conditions, and C++ threads</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Feb 4<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/13-threading-mutex-and-condition-variables.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/13-threading-mutex-and-condition-variables.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/13-threading-mutex-and-condition-variables.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapter 4 (skipping Section 4.2).  Chapter 4 of the reader
+                    corresponds to Chapter 12 of the full textbook.
+                  </div>
+                </div>
+
+                <p class="description">
+                  We need to work through a few more threading examples, covering basic terminology and
+                  concepts, using <tt><b>pthreads</b></tt>.  We'll then discuss the pros and cons of
+                  the C threads package, and I'll provide motivation from transitioning from
+                  C to C++ for its (in my opinion, superior) thread support.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 12: Virtual Memory, Schedulers, Introduction to Threading</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Feb 2<sup>nd</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/12-threading-c-to-c++.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/12-threading-c-to-c++.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/12-threading-c-to-c++.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapter 4 (skipping Section 4.2).  Chapter 4 of the reader
+                    corresponds to Chapter 12 of the full textbook.
+                  </div>
+                </div>
+
+                <p class="description">
+                  We'll spend the morning talking some more about virtual memory, talk about
+                  how to scheduler works, and then transition from the topic of (heavyweight)
+                  processes to the topic of lightweight processes, otherwise known as threads.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 11: Signal Handlers, <tt><b>kill</b></tt>, and Schedulers</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Jan 30<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/11-threading-intro.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/11-threading-intro.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/11-threading-intro.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Read: Bryant &amp; O'Hallaron, Chapter 4 (skipping Section 4.2).  Chapter 4 of the reader
+                    corresponds to Chapter 12 of the full textbook.
+                  </div>
+                </div>
+
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 05: <a href="https://quip.com/fv0XAIaaaHZ1">
+                      Assignment 3: <tt><b>tsh</b></tt> &mdash; tiny shell</a>
+                  </div>
+                </div>
+
+                <p class="description">
+                  I have a few more multiprocessing directives to cover, and then I want
+                  to provide a high-level understanding of how virtual memory works
+                  and how multiple processes can run (or seem to run) simultaneously
+                  on a single-processor machine.
+                </p>
+                <p class="description">
+                  Expect to start a new topic on Monday: multithreading!
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 10: Signals, Signal Handlers, and <tt><b>SIGCHLD</b></tt></h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Jan 28<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/10-ecf-wrap-up.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/10-ecf-wrap-up.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/10-ecf-wrap-up.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Finish Reading: Bryant &amp; O'Hallaron, Chapters 2 and 1, in that order. Chapters 1 and 2 correspond
+                    to Chapters 8 and 10 of the full textbook.
+                  </div>
+                </div>
+
+                <p class="description">
+                  We'll discuss signals and signal handlers so as to better understand what segmentation
+                  faults and floating point errors really are at the OS level.  We'll then focus on
+                  a particular signal type&mdash;the <tt><b>SIGCHLD</b></tt>&mdash;that can be used to communicate
+                  the fact that one of a process's children has exited.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 09: Pipes, subprocesses, signals</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Jan 26<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/09-ecf-wrap-up.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/09-ecf-wrap-up.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/09-ecf-wrap-up.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Finish Reading: Bryant &amp; O'Hallaron, Chapters 2 and 1, in that order. Chapters 1 and 2 correspond
+                    to Chapters 8 and 10 of the full textbook.
+                  </div>
+                </div>
+
+                <p class="description">
+                  Still riding this ECF train. Today we'll learn how to foster communication between parent
+                  and child processes via pipes. You. Will. Be. Amazed.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 08: <tt><b>execvp</b></tt>, <tt><b>simplesh</b></tt>, pipes, and <tt><b>subprocesses</b></tt></h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Jan 23<sup>st</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/08-signals-and-signal-handling.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/08-signals-and-signal-handling.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/08-signals-and-signal-handling.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapters 2 and 1, in that order. Chapters 1 and 2 correspond
+                    to Chapters 8 and 10 of the full textbook.
+                  </div>
+                </div>
+
+                <p class="description">
+                  We're still immersed in this <tt><b>execvp</b></tt> system call.  We're finall in a position
+                  where we get to write interesting, increasingly meaningful examples leveraging all of these
+                  new process-oriented system calls.  And I'm sure we'll get to pipes today, which are coupled
+                  file descriptors that, among other things, can be used to foster communication and text exchange
+                  between two processes.  Neat stuff, those pipes.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 07: <tt><b>execvp</b></tt>, Implementing <tt><b>system</b></tt> and <tt><b>simplesh</b></tt></h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Jan 21<sup>st</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/07-signals-and-signal-handling.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/07-signals-and-signal-handling.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/07-signals-and-signal-handling.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Continue Reading: Bryant &amp; O'Hallaron, Chapters 2 and 1, in that order. Chapters 1 and 2 correspond
+                    to Chapters 8 and 10 of the full textbook.
+                  </div>
+                </div>
+
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 04: <a href="https://quip.com/f42UAHUjnlaJ">
+                      Assignment 2: Unix v6 Filesystems, Optimized</a>
+                  </div>
+                </div>
+
+                <p class="description">
+                  We still have one or two more examples from previous slide
+                  decks to work through, and those examples provide more and
+                  more sophisticated insights into how <tt><b>fork</b></tt> and
+                  <tt><b>waitpid</b></tt> work.
+                </p>
+                <p class="description">
+                  If we make enough progress, we'll start discussing the
+                  <tt><b>execvp</b></tt> system call, which knows how to
+                  reset the process it's called from and invoke a new executable
+                  to run within it (with completely new heap, stack, and data segments,
+                  and a text segment that contains the x86 of the new program.)
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 06: Exceptional Control Flow</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Jan 16<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/06-exceptional-control-flow.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/06-exceptional-control-flow.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/06-exceptional-control-flow.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Read: Bryant &amp; O'Hallaron, Chapters 2 and 1, in that order. Chapters 1 and 2 correspond
+                    to Chapters 8 and 10 of the full textbook.
+                  </div>
+                </div>
+                
+                <p class="description">
+                  Continue discussion of <tt><b>fork</b></tt>, introduce <tt><b>waitpid</b></tt>, and gain an understanding
+                  of simple interprocess synchronization techniques.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 05: Exceptional Control Flow</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Jan 14<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/05-exceptional-control-flow.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/05-exceptional-control-flow.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/05-exceptional-control-flow.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                
+                <div class="readings-wrapper">
+                  <div>
+                    Read: Bryant &amp; O'Hallaron, Chapters 2 and 1 (in that order).
+                  </div>
+                </div>
+                
+                <p class="description">
+                  Finish discussion of file descriptors, relevant system calls that manipulate them, and the data
+                  structures used by the OS that help it interface to filesystem devices.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 04: Finish Up Filesystems, Naming, Layering, Begin Exceptional Control Flow</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Jan 12<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/04-exceptional-control-flow.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/04-exceptional-control-flow.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/04-exceptional-control-flow.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+
+                <div class="readings-wrapper">
+                  <div>
+                    Read: S &amp; K <a href="http://www.sciencedirect.com/science/article/pii/B9780123749574000116">Chapter 2</a> 
+                  </div>
+                  <div>
+                    Read: Bryant &amp; O'Hallaron, Chapters 2 and 1 (in that order).
+                  </div>
+                </div>
+                
+                <p class="description">
+                  Finish up filesystems, speak of layering and naming as basic principles of
+                  system design, move on to exceptional control flow.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 03: More Filesystem Work, Design and Implementation of Filesystems</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Fri, Jan 9<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/03-naming-in-systems.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/03-naming-in-systems.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/03-naming-in-systems.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+
+                <div class="readings-wrapper">
+                  <div>
+                    Read: S &amp; K <a href="http://www.sciencedirect.com/science/article/pii/B9780123749574000116">Chapter 2</a> 
+                    <span class="note">(we&apos;ll discuss naming and layering as general principles on Friday and Monday)</span>
+                  </div>
+                </div>
+
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 03: <a href="https://quip.com/jDm4AQRMTiK0">
+                      Assignment 1: Unix v6 Filesystems</a>
+                  </div>
+                </div>
+                
+                <p class="description">
+                  More fun with filesystem system calls, file system design and implementation
+                  ideas, layering, modularity, naming, and DNS.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 02: System Calls, C and Linux Support for Filesystem Access</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Wed, Jan 7<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/02-filesystems.html">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/02-filesystems.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/02-filesystems.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+
+                <div class="readings-wrapper">
+                  <div>
+                    Read: S &amp; K <a href="http://www.sciencedirect.com/science/article/pii/B9780123749574000116">Chapter 2</a> 
+                    <span class="note">(we&apos;ll discuss naming and layering as general principles on Friday and Monday)</span>
+                  </div>
+                </div>
+                
+                <p class="description">
+                  We need to invest some time learning about some C and some UNIX/Linux 
+                  libraries that offer us programmatic access to the file system.
+                  There are a few data structures and a collection of Linux library
+                  functions that allow us to crawl over the tree of files and directories,
+                  and there are even more functions that grant us raw, low-levelaccess
+                  to the file contents.  We'll invest some time discussing these functions
+                  and data structures -- enough that we can implement a collection of
+                  obvious and not-so-obvious programs that emulate some of the terminal/shell
+                  builtins you've been using your entire UNIX lives.
+                </p>
+              </div>
+            </div>
+
+            <div class="lecture">
+              <h4>Lecture 01: Introductions, Course Syllabus</h4>
+              <div class="lecture-content">
+                <div class="slides-wrapper">
+                  <span class="date">Mon, Jan 5<sup>th</sup></span>
+                  Slides:
+                  <span class="lecture-slides">
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/01-intro.html#(1)">
+                      [live]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/01-intro.md">
+                      [markdown]</a>
+                    <a href="http://cs110.stanford.edu/winter-2015/lectures/01-intro.pdf">
+                      [pdf]</a>
+                  </span>
+                </div>
+                <div class="handouts-wrapper">
+                  <div class="handout">
+                    Handout 01: <a href="https://quip.com/Yd5lAd5Ka3Md">
+                      CS110 Course Information</a>
+                  </div>
+                  
+                  <div class="handout">
+                    Handout 02: <a href="https://quip.com/1nJIAuayVwzY">
+                      CS110 Course Syllabus</a>
+                  </div>
+                </div>
+                <p class="description">
+                  Introductions, course administration and expectations, and so forth.
+                </p>
+              </div>
+            </div>  
+
+          </div>
+        </div>
+        
+        <div class="announcements-bar column-bar">
+          <div class="announcements-wrapper">
+            <h2>Announcements</h2>
+            <ul class="announcement-list">
+
+              <li>
+                <h4>Assignment 7 Grades Posted</h4>
+                <span class="date">Saturday, March 21<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Median was a 62 out of 62.  Median style score was an 'ok'.  Nice finish!
+                  </p>
+                  <p>
+                    Final grades should be posted in the next 24 hours or so.  
+                  </p>
+                </div>
+              </li>
+              
+              <li>
+                <h4>Final Exam Scores Posted Online</h4>
+                <span class="date">Saturday, March 21<sup>th</sup></span>                
+                <div class="announcement-content">
+                  <p>
+                    Final exams have been graded, and you can view your score by visiting
+                    your <a href="http://cs110.stanford.edu/cgi-bin/gradebook">gradebook</a>.  The median
+                    was a 41, the average was a 40.25, and the high score was a 56.  I'll post solutions
+                    as soon as I post final grades.  You can pick your final up during the first week
+                    of spring quarter by visiting my Gates 192 office.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Required Reading over Spring Break</h4>
+                <span class="date">Thursday, March 19<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    <a href="http://jvns.ca/blog/2015/03/15/nancy-drew-and-the-case-of-the-slow-program/">fun!</a>
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Assignment 6 Grade Reports Available</h4>
+                <span class="date">Wednesday, March 18<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Median score was a 125 out of 125 (woo!), and average bucket score
+                    was closer to 'ok' than it was to '-'.  Great job, all!
+                    (Not sending out emails about it, because I don't want to push
+                    anything in front of you that might distract you from studying.
+                    You can just visit your gradebook to see your score and code review.)
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Alternative to Piazza</h4>
+                <span class="date">Saturday, March 14<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Low priority, but potentially cool.
+                  </p>
+                  <p>
+                    If you're interested in helping me research an alternative to Piazza
+                    for next quarter, head over to <a href="http://cs110.slack.com/signup">http://cs110.slack.com/signup</a>
+                    and join the forum there.  Slack is a product I recently learned of that combines real-time messaging, Twitter-like
+                    mentions, and search, and I think it might be a really effective way for all of the students in a class to communicate
+                    and help each other out.
+                  </p>
+                  <p>
+                    I'll monitor both Piazza and Slack for the coming week.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Assignment 5 Grade Reports Available</h4>
+                <span class="date">Tuesday, March 10<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Median score was a 107 out of 112, and average bucket score
+                    was closer to 'ok' than it was to '-'.  This was one of the
+                    more difficult assignments, so I'm very happy to see that the
+                    median grade was still above a 95%.  Woot.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4><a href="http://wics.stanford.edu">WICS</a> <a href="http://web.stanford.edu/group/wics/hackoverflow/spr2015/">HackOverflow</a></h4>
+                <span class="date">Saturday, March 7<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    <a href="http://wics.stanford.edu">WICS</a> is hosting <a href="http://web.stanford.edu/group/wics/hackoverflow/spr2015/">HackOverflow</a>
+                    on Saturday, April 25<sup>th</sup> from 10am - 10pm.  HackOverflow will focus on the use of hardware to build interesting products.
+                    This particular hackathon is specifically set up to be accessible to those who've only taken CS106A, which means everyone here
+                    is more than qualified take part.
+                  </p>
+                  <p>
+                    If you're interested, then you should sign up <a href="https://hackoverflow.typeform.com/to/zNSIMK">right here</a>.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4><a href="http://wics.stanford.edu">WICS</a> Dinner Tonight</h4>
+                <span class="date">Wednesday, March 4<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    I just got word that <a href="http://wics.stanford.edu">WICS</a> is holding
+                    an informal dinner tonight at 6:00 p.m on the 5<sup>th</sup> floor of Gates.
+                    Those planning the dinner invite students, alumns, faculty, and industry professionals
+                    to attend, so it's a great opportunity to meet and talk with others interested in CS
+                    and technology.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Assignment 4 Grade Reports Available</h4>
+                <span class="date">Monday, March 2<sup>nd</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Median score was a 77 out of 77, and the median style grade hit the
+                    'ok' mark.  Very nice work, everyone!
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Assignment 3 Grade Reports Available</h4>
+                <span class="date">Sunday, February 22<sup>nd</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Median grade was a perfect score, and the average style grade was, once again,
+                    just shy of an 'ok'.  Well done!
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Exam Location Change!!</h4>
+                <span class="date">Thursday, February 12<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    The auditorium where we were to hold tonight's midterm was double
+                    scheduled, and the other event isn't as easily moved.
+                  </p>
+                  <p>
+                    We've been assigned two rooms for tonight's midterm.  
+                    Each fits about half of the class.  Where you report depends on your last name. :)
+                    <ul>
+                      <li>Last names beginning with A - Ko: Report to Building 200, Room 002 (this is History Corner basement)</li>
+                      <li>Last names beginning with Ku - Z: Report to Building 420, Room 041 (same building as lecture, but in the neighboring room)</li>
+                    </ul>
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Assignment 2 Grade Reports Available</h4>
+                <span class="date">Sunday, February 8<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Median was a 77 out of 82, and the average style bucket was just
+                    shy of an 'ok'.  Great, great work all around.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>New Stanford Course Discovery Tool</h4>
+                <span class="date">Saturday, February 7<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    One of your fellow CS110 students built a web application to
+                    help Stanford students search for and discover new courses.  I've
+                    been playing with it for a few minutes, and I think it's really
+                    nicely done.  Check it out at <a href="http://edusalsa.com/">http://edusalsa.com/</a>.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Jerry's Office Hours Cancelled, Programming Competition</h4>
+                <span class="date">Tuesday, February 3<sup>rd</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    I need to cancel today's office hours, as I need to be up in San Francisco this afternoon.
+                    My office hours will resume on Thursday.
+                  </p>
+                  <p>
+                    I received word that Google and IEEE are sponsoring a programming competition
+                    on Saturday, February 14<sup>th</sup>.  More information about the contest
+                    can be found right <a href="https://docs.google.com/forms/d/19KA2mhNOsSv73PRuo_bWuaiamXdqFNNQ3SE8mwZFRRM/viewform">here</a>.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Assignment 1 Feedback Out</h4>
+                <span class="date">Monday, January 26<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    I'm within five minutes of emailing back Assignment 1 grade reports.  The median
+                    grade was a perfect 66 out of 66 (about 130 of the 173 submissions received
+                    perfect scores, actually), and the average style grade was about halfway between
+                    an 'ok' and a '-'.  Grade reports will be emailed from cs110@cs.stanford.edu,
+                    and occasionally these emails route themselves into your SPAM folders, so check
+                    there.
+                  </p>
+                  <p>
+                    You can skip the email and just
+                    <a href="https://web.stanford.edu/class/cs110/cgi-bin/assign1">click here</a> to
+                    view your Assignment 1 grade report, and you can always
+                    <a href="https://web.stanford.edu/class/cs110/cgi-bin/gradebook">check here</a> to
+                    see a summary of all programming assignment grades and late days used.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Wednesday's Slides, Assignment 2 Posted</h4>
+                <span class="date">Monday, January 19<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    I've gone ahead and posted Wednesday's slide deck 
+                    <a href ="http://web.stanford.edu/class/cs110/winter-2015/lectures/07-signals-and-signal-handling.html">here</a>, and I've even gone ahead and posted the Assignment 2 handout right
+                    <a href="https://quip.com/f42UAHUjnlaJ">here</a>.  The repos were just created
+                    a few minutes ago, so you can launch right into Assignment 2 after you've finished
+                    Assignment 1.
+                  </p>
+                  <p>
+                    Recall, of course, that Assignment 1 is due this coming Tuesday night, and that
+                    you can't use any late days on this one.  We're planning on providing feedback
+                    very, very quickly so that you can move on to Assignment 2 (which relies on your
+                    Assignment 1 implementation) knowing what our style expectations are.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Assignment 1 Hints, MLK Holiday</h4>
+                <span class="date">Friday, January 16<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    If you're looking for some guidance on how to implement a more beautiful
+                    Assignment 1 solution, read what I've written right
+                    <a href="https://quip.com/q3SxAtJFm0KO">here</a>.  If you didn't get an email
+                    with information about this, then you're not receiving class emails
+                    for some reason.  Contact me so I can look into it for you.
+                  </p>
+                  <p>
+                    Stanford is observing the Martin Luther King holiday on Monday, so all lectures
+                    are canceled.  However, as he has every MLK holiday for decades, Eric Roberts
+                    is showing Dr. King's &quot;I Have a Dream&quot; speech during what would normally
+                    be his CS106B lecture hour: 2:15pm - 3:05pm.  Eric has invited all interested students
+                    to attend, so if you'd like to watch, head over to the Gates Building, Room B-12.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>CS Study Groups</h4>
+                <span class="date">Monday, January 12<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    A few current and past CS110 students asked that I advertise <a href="http://cs110.stanford.edu/winter-2015/handouts/lean-in-flyer.pdf">this</a>,
+                    which is an effort to help students find study groups for classes like CS110.  If you have any questions, email Jerry, and I'll
+                    pull you in touch with the students orgnazing it.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <h4>Welcome!</h4>
+                <span class="date">Sunday, Jan 4<sup>th</sup></span>
+                <div class="announcement-content">
+                  <p>
+                    Welcome to CS110!  If you're here, I assume you're taking (or at least considering)
+                    CS110 this quarter.  I'm more or less set to fire up tomorrow at 10:00am, and look
+                    forward to meeting all of you and having a great ten weeks together.
+                  </p>
+                  <p>
+                    The only thing you need to confirm before you commit to CS110: your ability to make
+                    my final exam, which is scheduled for Thursday, March 19<sup>th</sup> at 8:30am. 
+                    I haven't decided if I'm giving a midterm just yet, but even if I do I'll be somewhat
+                    flexible about that, since I'll be scheduling it outside of class.  The final exam, however,
+                    is scheduled during the slot dedicated to all classes taught MWF at 10:00am., so you
+                    should be able to take the final exam without conflict.  If you're taking another MWF 10:00am.
+                    class, then you need to confirm there's no final exam conflict.
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</html>
+
+
+
+
+
+
+
+

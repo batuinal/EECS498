@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS033 | Home</title>
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <script src="js/cs33.js"></script>
+    <link rel="stylesheet" type="text/css" href="main_style_sheet.css" />
+  </head>
+
+  <body>
+
+    <div class="dropdown menu hidden">
+        <a class="menu close">&#62;</a>
+        <a class="menu red selected" href="index.html">Home</a>
+        <a class="menu yellow" href="piazza.html">Piazza</a>
+        <a class="menu green" href="guides.html">Guides</a>
+        <a class="menu aqua" href="projects.html">Projects</a>
+        <a class="menu cyan" href="labs.html">Labs</a>
+        <a class="menu blue" href="lectures.html">Lectures</a>
+        <a class="menu purple" href="staff.html">Staff</a>
+        <a class="menu pink" href="hours.html">TA Hours</a>
+    </div>
+
+    <div class="header">
+       <div class="bar menu">
+            <a class="menu red selected" href="index.html">Home</a>
+            <a class="menu yellow" href="piazza.html">Piazza</a>
+            <a class="menu green" href="guides.html">Guides</a>
+            <a class="menu aqua" href="projects.html">Projects</a>
+            <a class="menu cyan" href="labs.html">Labs</a>
+            <a class="menu blue" href="lectures.html">Lectures</a>
+            <a class="menu purple" href="staff.html">Staff</a>
+            <a class="menu pink" href="hours.html">TA Hours</a>
+        </div>
+        <div class="icon hidden" style="text-align:center">
+            &#9776;<span class="menu-text">menu</span>
+        </div>
+        <span id="coursenum">CS033</span>
+
+    </div>
+
+    <div class="crop">
+        <img src="images/main-babies.jpg">
+   </div>
+
+    <div class="content">
+
+      <!--
+      <h3>Announcements</h3>
+      <div class="links">
+        <p><a href="announce/shell_malloc_grades.txt">Shell and Malloc grades distributed</a></p>
+        <p><a href="announce/snowcast_output.txt">Snowcast output</a></p>
+        <p><a href="announce/final_deadline.txt">Final deadline</a></p>
+        <p><a href="announce/snowcast_update.txt">Snowcast Handout Update</a></p>
+        <p><a href="announce/hours_snowcast_labs.txt">Hours for Snowcast and Labs</a></p>
+        <p><a href="announce/db_help_policy.txt">Extra hours tomorrow + DB help policy</a></p>
+        <p><a href="announce/snowcast_clarification.txt">Snowcast clarification</a></p>
+        <p><a href="announce/database_clarification.txt">Database handout update</a></p>
+        <p><a href="announce/window_new.txt">Use of window_new()</a></p>
+        <p><a href="announce/database_update.txt">Database update</a></p>
+        <p><a href="announce/bomb_grades.txt">Bomb Grade Report</a></p>
+        <p><a href="announce/remaining_classes.txt">Remaining class schedule</a></p>
+        <p><a href="announce/database_released.txt">Database Released</a></p>
+        <p><a href="announce/malloc_debugging.txt">malloc debugging tips</a></p>
+        <p><a href="announce/buffer_grades.txt">Buffer Grades Released</a></p>
+        <p><a href="announce/assignment_changes.txt">Assignment Changes</a></p>
+        <p><a href="announce/malloc_extension.txt">General extension for Malloc</a></p>
+        <p><a href="announce/snowcast_released.txt">Snowcast Released</a></p>
+        <p><a href="announce/malloc_structs.txt">Malloc: A Clarification About Structs</a></p>
+        <p><a href="announce/malloc_perf_index.txt">Malloc Performance Index</a></p>
+        <p><a href="announce/malloc_update.txt">Malloc mdriver update, performance index clarification</a></p>
+        <p><a href="announce/malloc_released.txt">Malloc Released</a></p>
+        <p><a href="announce/shell_assignment.txt">shell assignment</a></p>
+        <p><a href="announce/shell2_clarification2.txt">Shell 2 Clarification</a></p>
+        <p><a href="announce/shell1_late_days.txt">Late days on Shell 1</a></p>
+        <p><a href="announce/shell1_autotester.txt">Shell 1 Autotester</a></p>
+        <p><a href="announce/shell.txt">Shell</a></p>
+        <p><a href="announce/shell2_extension.txt">Shell 2 extension; malloc delay</a></p>
+        <p><a href="announce/vm_canceled.txt">VM Lab (week of 11/12) Canceled</a></p>
+        <p><a href="announce/shell2_clarification.txt">Shell 2 Clarification</a></p>
+        <p><a href="announce/midterm_ranges.txt">Midterm grade ranges</a></p>
+        <p><a href="announce/shell2_released.txt">Shell 2 Released</a></p>
+        <p><a href="announce/hurricane_sandy.txt">Hurricane Sandy Changes</a></p>
+        <p><a href="announce/tomorrow.txt">Tomorrow doesn't exist either</a></p>
+        <p><a href="announce/labs_tomorrow.txt">Labs tomorrow</a></p>
+        <p><a href="announce/class_tomorrow.txt">CS 33 tomorrow</a></p>
+        <p><a href="BrownOnly/midterm_ans.pdf">Midterm Solutions</a></p>
+        <p><a href="announce/shell1released.txt">Shell Part 1 released</a></p>
+        <p><a href="announce/midterm2.txt">Midterm</a></p>
+        <p><a href="announce/maze_grades.txt">Maze grades released; letter grade cutoffs</a></p>
+        <p><a href="announce/midterm.txt">Studying for the midterm</a></p>
+        <p><a href="announce/bomb2.txt">Another Bomb Announcement</a></p>
+        <p><a href="announce/bomb.txt">Bomb</a></p>
+        <p><a href="announce/course_feedback.txt">CS33 Course Feedback</a></p>
+        <p><a href="announce/new_staff_member.txt">New Staff Member</a></p>
+        <p><a href="announce/data_grades.txt">Letter Grades for data</a></p>
+        <p><a href="announce/buffer_late_day.txt">Buffer Late Day Extension due to Sunlab Downtime</a></p>
+        <p><a href="announce/data_grades.txt">Data Grades and Grade Distributions</a></p>
+        <p><a href="announce/midterm_reminder.txt">Midterm Date Reminder and Information</a></p>
+        <p><a href="announce/bomb_error.txt">Bomb error</a></p>
+        <p><a href="announce/bomb_clarification.txt">Bomb clarification</a></p>
+        <p><a href="announce/bomb_released.txt">Bomb released and Grading announcement</a></p>
+        <p><a href="announce/buffer_tips.txt">Buffer tips</a></p>
+        <p><a href="docs/How2Buffer.pdf">How to: Buffer</a></p>
+        <p><a href="announce/buffer_clarification.txt">Buffer Clarification</a></p>
+        <p><a href="announce/midterm_date_change.txt">Midterm Date Change</a></p>
+        <p><a href="announce/hackcode.s">Sample buffer overflow from 10/1 lecture</a></p>
+        <p><a href="announce/buffer_released.txt">Buffer released</a></p>
+        <p><a href="announce/x86_optional_exercise.txt">x86 Optional Exercise</a></p>
+        <p><a href="docs/itoa_exercise.pdf">x86 exercise: itoa()</a></p>
+        <p><a href="announce/ta_hours_policies.txt">TA Hours Policies</a></p>
+        <p><a href="announce/data_shifting_clarification.txt">Data Logical Shifting and Unsigned Ints - Clarification from TA Hours</a></p>
+        <p><a href="announce/data_project_released.txt">Data project released</a></p>
+        <p><a href="announce/change_to_lab02.txt">Change to Lab 02</a></p>
+        <p><a href="announce/maze_and_header_files.txt">Maze and header files</a></p>
+        <p><b><a href="docs/helpsession/pointers_helpsession.pdf">C Pointers</a> / <a href="docs/helpsession/maze_helpsession.pdf">Maze Help Session</a></b> will be held this Friday 9/14 at 5:30 pm in MacMillan 117.</p>
+        <p><a href="lab_signups.html">Sign up for Labs!</a></p>
+        <p><a href="announce/welcome_message.txt">Welcome Message</a></p>
+      </div>
+      <h3>Important Documents</h3>
+      <div class="links">
+        <p><a href="docs/missive.pdf">Course Missive</a></p>
+        <p><a href="docs/33syllabus.pdf">Course Syllabus</a></p>
+        <p><a href="docs/collab.pdf">Collaboration Policy</a></p>
+        <p><a href="docs/cprimer.pdf">C Primer</a></p>
+      </div>
+      -->
+
+      <h3>Course Information</h3>
+      <div class="info">
+        <p class="left">Lectures are held every Monday, Wednesday, and Friday, from 2 to 2:50 PM in Macmillan Hall 117.</p>
+        <p class="left">CS 33 is taught by Professor Tom Doeppner <a href="http://www.cs.brown.edu/~twd/">(twd)</a>.</p>
+        <p class="left">The course is intended primarily for computer science students and computer engineers, though it is open to anyone with adequate preparation interested in learning the topics covered in the course announcement below..
+        It fulfills a core requirement for the A.B. and Sc.B. tracks in computer science, and is required for the
+        Computer Engineering concentration. </p>
+        <p class="left">
+        In order to take CS 33, you should have taken CS 15, CS 18 or CS 19 (or have Tom's permission).
+        Familiarity with a C-like language (such as C++ or Java) will help you with this course. However,
+        knowing C is not a prerequisite for the course.</p>
+        <h3>Important Documents</h3>
+        <p class="left"><a href="docs/missive.pdf">Course Missive</a></p>
+        <p class="left"><a href="docs/syllabus.pdf">Course Syllabus</a></p>
+        <p class="left"><a href="docs/collab.pdf">Collaboration Policy & Quiz</a></p> 
+        <p class="left"><a href="https://www.google.com/calendar/embed?src=brown.edu_ems9sghn4kaul3gbnuuppsnifo%40group.calendar.google.com&ctz=America/New_York">Google Calendar</a> (To add this calendar to your personal calendar, follow the link and click the button in the bottom-right corner.)</p>
+	<p class="left"><a
+		href="https://docs.google.com/a/brown.edu/forms/d/16nNWKdF_pPEYSIV9F_ZTyRLTm02oz4FxhCOlFOso6L8/viewform?usp=send_form">Need
+		an Account? Fill out this form!</a></p>
+	<p class="left"><a
+		href="https://docs.google.com/a/brown.edu/forms/d/11g4eWIIE60StbZGfO7h1I2o1KfdzrqXNYVYS-wmuUrI/viewform?usp=send_form">Have
+		feedback for us? Leave some anonymous feedback</a>
+
+
+        <p class="left box"><b>From the Course Announcement:</b> High-level computer architecture
+        and systems programming. The course covers the organization of computer systems (in terms of storage units, caches, processors, and I/O
+        controllers) and teaches students assembly-language programming and C language programming. Extensive programming exercises introduce students to systems-level programming on Linux systems, as well as to multithreaded programming with POSIX threads. Students will learn the basics
+        of how compilers work and will be introduced to the functions of operating
+        systems.</p>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,407 @@
+<html>
+<head>
+<h1>CSCI 2950-w - Online Algorithms - Fall 2009</h1> 
+<title> CSCI 2950-w - Online Algorithms</title>
+</head>
+
+<body bgcolor="#FDF5E6">
+
+<h2> Announcement </h2>
+Lectures will be in 367. That room holds 34 people in theory, and this is a Theory course.<br>
+9/9: Looking for pair of volunteers for completing the wikipedia page on page replacement algorithms.
+
+<h2>When, where, who</h2>
+<b>Instructor:&nbsp</b> <a href="/people/claire">Claire Mathieu</a>
+
+(claire at cs.brown.edu), CIT 555, x36066<br>
+<b>Lecture Location and Time:&nbsp</b>
+CIT 367, WF 10:30 - 11:50 am<br>
+<b>Office hours:&nbsp</b> W 1-2pm and by appointment. <br>
+
+<b>Prerequisites:&nbsp</b> CS157 or equivalent. This is a good course for senior undergraduates who have enjoyed CS 157 and want to go beyond that, and for graduate students who want a Theory course.<br> 
+<b>Bibliography:&nbsp</b> <br>
+Online Algorithms and Competitive Analysis, Alan Borodin and Ran El-Yaniv, Cambridge University Press; Online Computation, Sandy Irani and Anna Karlin, chapter 13 of the book "Approximation Algorithms for NP-hard Problems" edited by Dorit S. Hochbaum; Data Streams: Algorithms and Applications, Muthu Muthukrishnan's lecture notes.
+<a href="http://www.informatik.uni-freiburg.de/~salbers/inter.ps.gz">Online Algorithms </a> chapter by Suzanne Albers
+  <br>
+
+
+<h2>What</h2>
+
+<p>
+Decisions must often be made before the entire data is available. Online algorithms solve problems in which commitments must be made as the data is arriving. Choosing which items to evict from a cache before knowing future requests, which advertisers to consider for displaying ads alongside the result of a search, or which most representative data to store when computing statistics about a huge stream of information. We will discuss worst-case model, which hinges against the worst possible future data, and some stochastic and game-theoretic models.
+
+<p>
+This graduate course focuses on the design and analysis 
+of  algorithms when the data is not all available at first. 
+The course will be structured partly around reading a few selected chapters of the Borodin-El Yaniv textbook, the Irani-Karlin survey, and Muthukrishnan's lecture notes, and partly (towards the end of the semester) around reading and presenting papers on recent research. Each paper is read by a pair of students.
+
+
+<h2>Evaluation</h2> 
+
+
+
+As they come up, solve a few exercises/problems and present them in class. Towards the end of the semester, read and present a paper. Help create some wikipedia pages on online algorithms.
+
+
+<h2>Schedule</h2>
+
+<center>
+<table
+ style="width: 80%; text-align: left; font-family: helvetica,arial,sans-serif; color: rgb(51, 0, 51);"
+ border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><b>Date</b></td>
+      <td style="vertical-align: top;"><b>Topic</b><br>
+      </td>
+      <td style="vertical-align: top;"><b>Notes</b><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Sept 9<br>
+      </td>
+      <td style="vertical-align: top;"><a href="deterministicpaging.pdf">Deterministic Paging</a><br>
+      </td>
+      <td style="vertical-align: top;">Due 9/11: LRU no better than k-competitive; LIFO and LFU not competitive <br>
+     </td>
+      </td>
+   </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Sept 11<br>
+
+      </td>
+      <td style="vertical-align: top;"><a href="ranpagingNotes.pdf">Randomized Paging</a><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Sept 16<br>
+
+      </td>
+      <td style="vertical-align: top;"><a href="LPpagingNotes.pdf">Lower bounds</a><br>
+      </td>
+ 
+     <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Sept 18<br>
+
+      </td>
+      <td style="vertical-align: top;"><a href="http://www.cs.technion.ac.il/~nivb/papers/weighted-paging.pdf">Primal-dual weighted paging</a><br>
+      </td>
+      <td style="vertical-align: top;">Due 9/25: Marking is not Hk competitive;  Marking is Hk competitive when the universe has size k+1.<br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Sept 23<br>
+
+      </td>
+      <td style="vertical-align: top;">Weighted paging<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Sept 25<br>
+
+      </td>
+      <td style="vertical-align: top;"><a href="weightedpaging.pdf">Weighted paging</a> (cont'd), ski rental, ad auctions algorithm<br>
+      </td>
+      <td style="vertical-align: top;"><a href="http://research.microsoft.com/en-us/um/people/nivbuchb/papers/pd-survey.pdf">
+Survey</a> Buchbinder-Naor<br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;"><b>Monday, Sept 28</b><br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Sept 30<br>
+
+      </td>
+      <td style="vertical-align: top;">Optimality of LRU in tree access graphs<br>
+      </td>
+      <td style="vertical-align: top;"><a href="LRUopt2.pdf">notes</a><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 2<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><b>No class, replaced by Sept 28</b><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 7<br>
+
+      </td>
+      <td style="vertical-align: top;">Dynamic optimality conjecture; online bribery<br>
+      </td>
+      <td style="vertical-align: top;"><a href="onlinebribery.pdf">online bribery</a><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 9<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 14<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 16<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 21<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oc 23<br>
+
+      </td>
+      <td style="vertical-align: top;">k server<br>
+      </td>
+      <td style="vertical-align: top;"><a href="kserver.pdf">notes</a><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 28<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Oct 30<br>
+
+      </td>
+      <td style="vertical-align: top;">streaming, test<br>
+      </td>
+      <td style="vertical-align: top;"><a href="onlinemetricmatching.pdf">solution</a><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 4<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 6<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 11<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 13<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 18<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 20<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;">Olya and Foteini, Matteo and Andrew, David E and Sunil<br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;"><b>Monday, Nov 23</b><br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;">Adrian and Sid, Aaron and Sasha, Rebecca and Erik<br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 25<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><b>No class, replaced by Nov 23</b><br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Nov 27<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;">No class, Thanksgiving weekend<br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Dec 2<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;">David Li and Steven<br>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;">Dec 4<br>
+
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+
+
+
+ </tbody>
+</table>
+
+</center>
+<h2>Papers</h2> 
+
+<li><a href="http://www.cs.brown.edu/people/claire/Publis/sigactnews08.pdf">Online bipartite matching made simple</a>
+(David E., Sunil)
+
+<li>
+<a href="http://arxiv.org/pdf/0905.4100v1">Online Stochastic Matching: Beating 1-1/e</a>,
+Jon Feldman, Aranyak Mehta, Vahab Mirrokni and S. Muthukrishnan. IEEE FOCS 2009. 
+
+<li>
+<a href="http://delivery.acm.org/10.1145/1080000/1070506/p545-fiat.pdf?key1=1070506&key2=3543052521&coll=GUIDE&dl=GUIDE&CFID=52076579&CFTOKEN=28596544">Online conflict-free coloring for intervals</a>
+	Amos Fiat,Meital Levy,Jirí Matou?ek,Elchanan Mossel,Janos Pach,Micha Sharir,Shakhar Smorodinsky,Uli Wagner,Emo Welzl, ACM SIAM SODA 2005 (Aaron, Sasha)
+
+<li><a href="http://scitation.aip.org/getpdf/servlet/GetPDFServlet?filetype=pdf&id=SMJCAT000024000006001313000001&idtype=cvips&prog=normal">Scheduling parallel machines online</a> Shmoys Wein Williamson (Matteo, Andrew)
+
+<li>
+<a href="srpt.ps">SRPT is 1.86-Competitive for Completion Time Scheduling</a>, 
+Christine Chung, Tim Nonner, Alexander Souza. ACM SIAM SODA 2010.
+
+<li> <a href="http://www.cs.princeton.edu/~chazelle/pubs/mstapprox.pdf">Approximating the minimum spanning tree weight in sublinear time</a> (Adrian, Sid)
+
+
+<li> <a href="http://www.cs.ucla.edu/~awm/papers/ofl.pdf">Online facility location</a> (David, Steven)
+
+<li> <a href="http://infolab.stanford.edu/~loc/tkdepaper.pdf">Clustering data streams</a> (Olya, Foteini)
+
+<li> <a href="http://www.ccs.neu.edu/home/ljp/online-match-SODA.pdf">Randomized online algorithms for minimum metric bipartite matching</a> (Rebecca, Erik)
+
+<li>
+A 1.4-Competitive Online Graph Edge Coloring Algorithm in the Random Order Arrival Model. 
+Bahman Bahmani, Aranyak Mehta, Rajeev Motwani. ACM SIAM SODA 2010.
+
+<li>
+A multiple-choice secretary algorithm with applications to online auctions,
+Robert Kleinberg, ACM SIAM SODA 2005 (or the related, more recent paper on the Hiring problem by Upfal et al)
+
+<li>
+S. Albers and Hiroshi Fujiwara.  <a href="http://www.informatik.uni-freiburg.de/~salbers/stacs06.ps">Energy-efficient algorithms for flow time minimization.</a>  In  Proc. 23rd International Symposium on Theoretical Aspects of Computer Science (STACS'06), Springer LNCS 3884, 621-633, 2006. 
+
+<li>
+<a href="http://www.cs.cornell.edu/~rdk/papers/bandits-lip.pdf">Multi-armed bandit problems in metric spaces</a>
+    Robert Kleinberg, Aleksandrs Slivkins, and Eli Upfal.
+    In Proceedings of the 40th ACM Symposium on Theory of Computing (STOC 2008), 681-690.
+
+<li>
+<a href="http://www.cs.technion.ac.il/~nivb/papers/weighted-paging.pdf">  A Primal-Dual Randomized Algorithm for Weighted Paging</a>  Nikhil Bansal, Niv Buchbinder and Seffi Naor, 48th  annual ieee Symposium on Foundations of Computer Science (FOCS 2007)
+
+
+<li>
+<a href="http://arxiv.org/pdf/0805.1213v1">Online Ad Slotting With Cancellations</a>
+Authors: Florin Constantin, Jon Feldman, S. Muthukrishnan, Martin Pal, SODA 2009
+
+
+
+
+	 
+
+
+

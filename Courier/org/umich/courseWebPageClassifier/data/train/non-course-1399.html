@@ -1,0 +1,961 @@
+
+<!DOCTYPE HTML>
+
+<html><head><title>EECS Events</title>
+
+		<meta charset="utf-8">
+		<meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<script src=/eecs/templates/js/modernizr.js></script>
+		<script src=/eecs/templates/js/jquery.js></script>
+		<link rel="stylesheet" href="/eecs/templates/css/eecs_main.css">
+		<link rel="stylesheet" href="/eecs/templates/css/internal.css">
+		<link rel="stylesheet" href="/eecs/templates/css/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/eecs/templates/css/slicknav.css">
+		<link rel="stylesheet" href="/eecs/templates/css/magnific-popup.css">
+	</head>
+<body>
+	<div class=blue_bar></div>
+	<header>
+		<a href="/" title="EECS"><div id=eecs_logo_full></div></a><!--eecs_logo_full-->
+		<div id=eecs_logo_mobile>
+			<a href="/" title=""><img src="/eecs/images/EECS-Logo-Mobile.png" alt="Electrical Engineering and Computer Science"></a>
+		</div><!-- eecs_logo_mobile-->
+		<div id=header_right>
+			<div id=header_tabs>
+                                <a href="http://www.eecs.umich.edu/cse"><div class="header_tabs cse_tab"></div></a>
+                                <a href="http://www.eecs.umich.edu/ece"><div class="header_tabs ece_tab"></div></a>
+				<a href="http://www.eecs.umich.edu"><div class="header_tabs eecs_tab"></div></a>
+			</div><!-- header_tabs -->
+			<div id=header_search>
+				<form action="http://www.eecs.umich.edu/eecs/search/" id="cse-search-box">
+				<div>
+				<input type="hidden" name="client" value="google-csbe" />
+				<input type="hidden" name="cx" value="004529872488972209334:ccbftyq9b3e" />
+				<input type="hidden" name="cof" value="FORID:11" />
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="text" name="q" id=search_field class=search_button value="Search" />
+				<input type="submit" name="sa" value="Search" style=display:none; />
+				</div>
+				</form>
+				<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+				<div class=social_wrapper>
+					<ul class="social-icons">
+				        <li><a href="https://www.facebook.com/pages/Electrical-Engineering-and-Computer-Science-Department-at-Michigan/65666857760"><em>facebook</em><i class="fa fa-facebook"></i></a></li>
+				        <li><a href="https://www.youtube.com/user/EECSatUM"><em>youtube</em><i class="fa fa-youtube"></i></a></li>
+				        <li><a href="http://www.linkedin.com/groups/Electrical-Engineering-Computer-Science-Michigan-1062957/about"><em>linkedin</em><i class="fa fa-linkedin"></i></a></li>
+				        <li><a href="https://twitter.com/EECSatMI"><em>twitter</em><i class="fa fa-twitter"></i></a></li>
+				    </ul>
+				</div><!-- social_wrapper -->
+			</div><!-- header search -->
+			<div class=clear_fix></div>
+		</div><!-- header_right -->
+	</header>
+	<div id=mobile_hack><div id=mobile_search><form id=search name=search><input type=text name=search_field id=search_field class=search_button value="Search"></form></div><div class=clear_fix></div></div>
+	<div class=blue_bar2>
+		<div id=main_menu_holder>
+			<nav class=main_menu>
+				<ul id="main_menu">
+					<div id=menu_left_wrapper>
+						<li class="first"><a href="/eecs/academics/academics.html" class="parent">Academics+Admissions</a>
+							<ul class="first subs">
+								<li><a href="/eecs/academics/courses.html">Course Information</a></li>
+								<li><a href="/eecs/academics/class_schedule.html">Class Schedules &amp; Books</a></li>
+								<li><a href="/eecs/undergraduate/">Undergraduate Programs</a></li>
+								<li><a href="/eecs/undergraduate/undergraduate_admissions.html">Undergraduate Admissions</a></li>
+								<li><a href="/eecs/graduate/">Graduate Programs</a></li>
+								<li><a href="/eecs/visitors/student-visits.html">Student Visits</a></li>
+								<li><a href="/eecs/students/fin_aid.html">Financial Aid</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">Research</a>
+							<ul class="subs">
+								<li><a href="/eecs/research/areas.html">Research Areas</a></li>
+								<li><a href="/eecs/research/reslabs.html">Labs and Centers</a></li>
+                                                                <li><a href="/eecs/undergraduate/research/undergrad-research.html">Undergrad Research</a></li>
+								<li><a href="/eecs/research/tech_reports.html">Technical Reports</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">People</a>
+							<ul class="subs">
+								<li><a href="/eecs/faculty/eecsfaculty.html">Faculty</a></li>
+                                <li><a href="/eecs/postdocs/eecspostdocs.html">Postdocs</a></li>
+								<li><a href="/eecs/staff/staff.html">Staff</a></li>
+								<li><a href="/eecs/etc/people/byalpha.cgi">All Faculty and Staff</a></li>
+								<li><a href="/eecs/students/students.html">Students</a></li>
+                                <li><a href="/eecs/alumni/">Alumni</a></li>
+								<li><a href="/eecs/jobs/">Faculty Positions</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">Industry</a>
+							<ul class="subs">
+								<li><a href="/eecs/corporate/students.html">Connect with Students</a></li>
+								<li><a href="/eecs/corporate/researchops.html">Partners in Research</a></li>
+								<li><a href="/eecs/corporate/techtransfer.html">Tech Transfer</a></li>
+								<li><a href="http://www.engin.umich.edu/college/info/corporate" target="_blank">CoE Corporate Relations</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="parent">News+Awards</a>
+							<ul class="subs">
+								<li><a href="/eecs/etc/news/eecsnews.html">News</a></li>
+                                <li><a href="/cse/awards/">CSE Awards</a></li>
+                                <li><a href="/ece/awards/">ECE Awards</a></li>
+								<li><a href="/eecs/about/videos.html">Videos</a></li>
+								<li><a href="/eecs/about/publications.html">Publications</a></li>
+							</ul>
+						</li>
+						<li><a href="/eecs/etc/events/eecsevents.html">Events</a></li>
+					</div>
+					<div id=menu_right_wrapper>
+						<li class=menu_right><a href="" class="parent">About</a>
+							<ul class="subs">
+								<li><a href="/eecs/about/welcome.html">Welcome to EECS</a></li>
+								<li><a href="/eecs/about/why-eecs.html">Why EECS at Michigan?</a></li>
+								<li><a href="/eecs/about/eecsdiversity.html">EECS Diversity &amp; Outreach</a></li>
+								<li><a href="/eecs/visitors/area-info.html">Area Information</a></li>
+								<li><a href="/eecs/visitors/travel.html">Travel and Lodging</a></li>
+								<li><a href="/eecs/about/contact.html">Contact Us</a></li>
+							</ul>
+						</li>
+						<li class=menu_right><a href="" class="parent">Resources</a>
+							<ul class="subs">
+								<li><a href="https://www.eecs.umich.edu/eecs/etc/admin/administrative.html">Admin Tools</a></li>
+				                                <li><a href="https://www.eecs.umich.edu/eecs/about/computing.html">Computing Resources</a></li>
+                                				<li><a href="https://www.eecs.umich.edu/eecs/dept-affairs/index.html">Dept Affairs</a></li>
+								<li><a href="https://www.eecs.umich.edu/dept-mailing-lists/index.html">Email Groups</a></li>
+								<li><a href="https://www.eecs.umich.edu/eecs/labsupport/">Lab Support</a></li>
+								<li><a href="https://www.eecs.umich.edu/eecs/resources/logos.html">Logos</a></li>
+								<li><a href="https://www.eecs.umich.edu/eecs/etc/rooms/dco-dbroom.html">Room Scheduler</a></li>
+                                                                <li><a href="http://caen.engin.umich.edu/classrooms/overview" target="_blank">CoE Classrooms</a></li>
+							</ul>
+						</li>
+						<li class=menu_right><a href="" class="parent">Donate</a>
+                            <ul class="subs">
+                                    <li><a href="/ece/giving/">Give Back to ECE</a></li>
+                                    <li><a href="/cse/giving/">Give Back to CSE</a></li>
+                            </ul>
+                        </li>
+					</div>
+				</ul>
+			</nav>
+		<div class=clear_fix></div>
+		</div><!-- main menu -->
+	</div><!-- blue bar -->
+
+<div id="content_holder" class="columns">
+<div id="content_row">
+
+
+<div id="left_sidebar">
+	<nav id="left_nav">
+		<h3>EECS Events</h3>
+		<ul id="left_menu">
+			<li><a href="/eecs/etc/events/eecsevents.html">EECS Events</a></li>
+                        <li class=last><a href="https://www.eecs.umich.edu/eecs/events/seminars.html">Email Subscriptions</a></li>
+		</ul>
+	</nav>
+		<div id=mid_menu class=internal_mid>
+		<div id=ra_wrapper><a href="" class="parent">Research <span class=hide_mob>Areas </span><span class=accordion_tag>+</span></a>
+			<div class=subs><div class=sub_drop>
+				<ul>
+                                        <li><a href="/eecs/research/area.html?r_id=2">Artificial Intelligence</a></li>
+					<li><a href="/eecs/research/area.html?r_id=1">Applied Electromagnetics</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=5">Communications</a></li>
+					<li><a href="/eecs/research/area.html?r_id=7">Computer Architecture</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=9">Computer-Aided Design and VLSI</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=10">Control Systems</a></li>
+					<li><a href="/eecs/research/area.html?r_id=47">Energy Science and Engineering</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=44">Integrated Circuits and VLSI</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=19">Interactive Systems</a></li>
+					<li><a href="/eecs/research/area.html?r_id=20">MEMS and Microsystems</a></li>
+				</ul> 
+				<ul>
+                                        <li><a href="/eecs/research/area.html?r_id=26">Optics and Photonics</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=46">Plasma Science and Engineering</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=48">Power and Energy</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=31">Quantum Science and Devices</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=45">Robotics and Computer Vision</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=36">Signal and Image Processing</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=37">Software Systems</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=38">Solid-State Devices and Nanotechnology</a></li>
+                                        <li><a href="/eecs/research/area.html?r_id=40">Theory of Computation</a></li>
+				</ul>
+			</div></div>
+		</div>
+		<div id=ql_wrapper><a href="" class="parent">Quick Links <span class=accordion_tag>+</span></a>
+			<div class=subs><div class=sub_drop>
+				<ul>
+					<li><a href="/eecs/about/why-eecs.html">Why EECS at Michigan?</a></li>
+					<li><a href="/eecs/graduate/index.html">Graduate Programs</a></li>
+					<li><a href="/eecs/undergraduate/index.html">Undergraduate Programs</a></li>
+					<li><a href="/eecs/academics/courses.html">Course Info</a></li>
+					<li><a href="/eecs/students/Student_Organizations.html">Student Organizations</a></li>
+				</ul> 
+				<ul>
+					
+					<li><a href="/eecs/etc/fac/EECSfaculty.html">Faculty Directory</a></li>
+					<li><a href="/eecs/jobs/">Faculty Positions</a></li>
+                    <li><a href="/eecs/alumni/spotlights.html">Alumni Spotlights</a></li>
+					<li><a href="/eecs/about/publications.html">EECS Publications</a></li>
+					<li><a href="/eecs/about/contact.html">Contact EECS</a></li>
+				</ul>
+			</div></div>
+		</div>
+		<div class=clear_fix></div>
+	</div><!-- mid_menu -->
+
+	
+</div>
+<!-- left_sidebar -->
+<div id="content_body">
+
+
+
+<style>
+.left{display:inline-block; float:left}
+.right{display:inline-block; float:left;}
+</style><table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr><td><h1>Upcoming Events</h1>
+</td></tr>
+<tr><td><b>Tuesday, Mar 24, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3480>What’s in My Data? Fast, Principled Algorithms for Exploring Large Graphs</a><br>
+Speaker: Danai Koutra<br>Speaker Title: PhD Candidate<br>Event Type: Faculty Candidate Seminars<br>9:00am - 10:00am in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=What’s in My Data? Fast, Principled Algorithms for Exploring Large Graphs&
+dates=20150324T130000Z/20150324T140000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Danai Koutra,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3480" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Mar 25, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3484>Topics in steady-state MRI sequences and RF pulse optimization</a><br>
+Speaker: Hao Sun<br>Event Type: Student Defenses<br>10:00am - 12:00pm in 3316 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Topics in steady-state MRI sequences and RF pulse optimization&
+dates=20150325T140000Z/20150325T160000Z&
+details=Event Type: Student Defenses,%0ASpeaker: Hao Sun,%0ALocation: 3316 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3484" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Mar 25, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3474>Spread-Spectrum Wireless Power Transfer for Implantable and Wearable Biomedical Applications</a><br>
+Speaker: Al-Thaddeus Avestruz<br>Speaker Title: Research Assistant <br>Event Type: Faculty Candidate Seminars<br>3:00pm - 4:00pm in 1200 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Spread-Spectrum Wireless Power Transfer for Implantable and Wearable Biomedical Applications&
+dates=20150325T190000Z/20150325T200000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Al-Thaddeus Avestruz,%0ALocation: 1200 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3474" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Mar 25, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3427>Structuring Peer Interactions for Learning at Scale</a><br>
+Speaker: Chinmay Kulkarni<br>Speaker Title: PhD Candidate<br>Event Type: Faculty Candidate Seminars<br>4:00pm - 5:00pm in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Structuring Peer Interactions for Learning at Scale&
+dates=20150325T200000Z/20150325T210000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Chinmay Kulkarni,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3427" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Mar 26, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3428>Performance and Reliability in Modern Storage Systems</a><br>
+Speaker: Vijay Chidambaram<br>Speaker Title: PhD Candidate<br>Event Type: Faculty Candidate Seminars<br>9:00am - 10:00am in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Performance and Reliability in Modern Storage Systems&
+dates=20150326T130000Z/20150326T140000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Vijay Chidambaram,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3428" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Mar 26, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3445>Online Robust PCA or Online Sparse + Low-Rank Matrix Recovery</a><br>
+Speaker: Namrata Vaswani<br>Event Type: Communications & Signal Processing (CSP) Seminars<br>4:00pm - 5:00pm in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Online Robust PCA or Online Sparse + Low-Rank Matrix Recovery&
+dates=20150326T200000Z/20150326T210000Z&
+details=Event Type: Communications & Signal Processing (CSP) Seminars,%0ASpeaker: Namrata Vaswani,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3445" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Mar 27, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3505>Approximation Algorithms for Stochastic Orienteering</a><br>
+Speaker: Viswanath Nagarajan<br>Event Type: Theory Seminars<br>10:30am - 11:30am in BBB 4901<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Approximation Algorithms for Stochastic Orienteering&
+dates=20150327T143000Z/20150327T153000Z&
+details=Event Type: Theory Seminars,%0ASpeaker: Viswanath Nagarajan,%0ALocation: BBB 4901&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3505" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Mar 27, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3437>Robust and Efficient Real-time Mapping for Autonomous Robots</a><br>
+Speaker: Michael Kaess<br>Speaker Title: Assistant Research Professor<br>Event Type: Control Systems Seminars<br>3:30pm - 4:30pm in 1500 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Robust and Efficient Real-time Mapping for Autonomous Robots&
+dates=20150327T193000Z/20150327T203000Z&
+details=Event Type: Control Systems Seminars,%0ASpeaker: Michael Kaess,%0ALocation: 1500 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3437" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Mar 30, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3506>Applications, Benefits, and Challenges of Wide Bandgap based Power Inversion.</a><br>
+Speaker: Mark J. Scott<br>Speaker Title: Ph.D. Candidate<br>Event Type: Faculty Candidate Seminars<br>9:00am - 10:00am in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Applications, Benefits, and Challenges of Wide Bandgap based Power Inversion.&
+dates=20150330T130000Z/20150330T140000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Mark J. Scott,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3506" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Mar 30, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3435>Building Mobile Technologies for Underserved Communities</a><br>
+Speaker: Nicola Dell<br>Speaker Title: PhD Candidate<br>Event Type: Faculty Candidate Seminars<br>4:00pm - 5:00pm in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Building Mobile Technologies for Underserved Communities&
+dates=20150330T200000Z/20150330T210000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Nicola Dell,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3435" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Mar 30, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3478>On extremal auxiliaries in multiuser information theory</a><br>
+Speaker: Chandra Nair<br>Speaker Title: Professor<br>Event Type: Communications & Signal Processing (CSP) Seminars<br>4:00pm - 5:00pm in EECS 3316<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=On extremal auxiliaries in multiuser information theory&
+dates=20150330T200000Z/20150330T210000Z&
+details=Event Type: Communications & Signal Processing (CSP) Seminars,%0ASpeaker: Chandra Nair,%0ALocation: EECS 3316&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3478" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Apr 1, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3507>Sensor, Brain and the Interface</a><br>
+Speaker: Milin Zhang<br>Speaker Title: Post-Doctoral Researcher<br>Event Type: Faculty Candidate Seminars<br>3:00pm - 4:00pm in 1200 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Sensor, Brain and the Interface&
+dates=20150401T190000Z/20150401T200000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Milin Zhang,%0ALocation: 1200 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3507" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Apr 2, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3471>Perception of People and Scenes for Robot Learning from Demonstration</a><br>
+Speaker: Chad Jenkins<br>Speaker Title: Associate Professor<br>Event Type: Computer Science and Engineering Seminars<br>9:00am - 10:00am in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Perception of People and Scenes for Robot Learning from Demonstration&
+dates=20150402T130000Z/20150402T140000Z&
+details=Event Type: Computer Science and Engineering Seminars,%0ASpeaker: Chad Jenkins,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3471" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Apr 2, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3483>III-Nitride Semiconductor Photonics:  Beyond LED Lighting</a><br>
+Speaker: Zetian Mi<br>Speaker Title: Associate Professor, and William Dawson Scholar<br>Event Type: Electrical and Computer Science Seminars<br>3:30pm - 4:30pm in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=III-Nitride Semiconductor Photonics:  Beyond LED Lighting&
+dates=20150402T193000Z/20150402T203000Z&
+details=Event Type: Electrical and Computer Science Seminars,%0ASpeaker: Zetian Mi,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3483" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Apr 2, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3477>Convergence to pure-strategy Nash equilibria under simple learning rules and selection of resilient pure-strategy Nash equilibria</a><br>
+Speaker: Richard La<br>Speaker Title: Professor<br>Event Type: Communications & Signal Processing (CSP) Seminars<br>4:00pm - 5:00pm in Dow 1010<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Convergence to pure-strategy Nash equilibria under simple learning rules and selection of resilient pure-strategy Nash equilibria&
+dates=20150402T200000Z/20150402T210000Z&
+details=Event Type: Communications & Signal Processing (CSP) Seminars,%0ASpeaker: Richard La,%0ALocation: Dow 1010&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3477" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Apr 3, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3438>Infinite Dimensional Optimization for Safety Critical Human-in-the-Loop Systems</a><br>
+Speaker: Ram Vasudevan<br>Speaker Title: Assistant Professor<br>Event Type: Control Systems Seminars<br>3:30pm - 4:30pm in 1500 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Infinite Dimensional Optimization for Safety Critical Human-in-the-Loop Systems&
+dates=20150403T193000Z/20150403T203000Z&
+details=Event Type: Control Systems Seminars,%0ASpeaker: Ram Vasudevan,%0ALocation: 1500 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3438" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Apr 6, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3508>Applications of Integrated Photonics technology - from optical interconnects to neurophotonics</a><br>
+Speaker: Yurii Vlasov<br>Speaker Title: Manager, Principal Research Staff Member<br>Event Type: Electrical and Computer Science Seminars<br>9:00am - 10:00am in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Applications of Integrated Photonics technology - from optical interconnects to neurophotonics&
+dates=20150406T130000Z/20150406T140000Z&
+details=Event Type: Electrical and Computer Science Seminars,%0ASpeaker: Yurii Vlasov,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3508" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Apr 6, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3453>Making Data Analysis Really About Analysis</a><br>
+Speaker: Jiannan Wang<br>Speaker Title: Post Doc<br>Event Type: Faculty Candidate Seminars<br>4:00pm - 5:00pm in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Making Data Analysis Really About Analysis&
+dates=20150406T200000Z/20150406T210000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Jiannan Wang,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3453" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Apr 8, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3466>Architecting Components for a 10 Billion Transistor Processor</a><br>
+Speaker: Reetuparna Das<br>Speaker Title: Asst Research Scientist<br>Event Type: Faculty Candidate Seminars<br>4:00pm - 5:00pm in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Architecting Components for a 10 Billion Transistor Processor&
+dates=20150408T200000Z/20150408T210000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Reetuparna Das,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3466" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Apr 8, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3488>Advances in III-V Heterostructure Devices and Integration for Millimeter-Wave and THz   Sensing and Imaging</a><br>
+Speaker: Patrick Fay<br>Speaker Title: Professor<br>Event Type: Michigan Integrated Circuits Laboratory (MICL) Seminars<br>5:30pm - 7:00pm in 1303 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Advances in III-V Heterostructure Devices and Integration for Millimeter-Wave and THz   Sensing and Imaging&
+dates=20150408T213000Z/20150408T230000Z&
+details=Event Type: Michigan Integrated Circuits Laboratory (MICL) Seminars,%0ASpeaker: Patrick Fay,%0ALocation: 1303 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3488" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Apr 9, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3446>A Geometric Approach to Learning Mixture-Models</a><br>
+Speaker: Venkatesh Saligrama<br>Speaker Title: Professor<br>Event Type: Communications & Signal Processing (CSP) Seminars<br>4:00pm - 5:00pm in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=A Geometric Approach to Learning Mixture-Models&
+dates=20150409T200000Z/20150409T210000Z&
+details=Event Type: Communications & Signal Processing (CSP) Seminars,%0ASpeaker: Venkatesh Saligrama,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3446" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Apr 10, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3314>A Long-term View of SLAM</a><br>
+Speaker: John J. Leonard<br>Speaker Title: Professor<br>Event Type: Control Systems Seminars<br>3:30pm - 4:30pm in 1500 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=A Long-term View of SLAM&
+dates=20150410T193000Z/20150410T203000Z&
+details=Event Type: Control Systems Seminars,%0ASpeaker: John J. Leonard,%0ALocation: 1500 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3314" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Apr 13, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3509>Scalable probabilistic inference for high dimensional structured variables</a><br>
+Speaker: Oluwasanmi Koyejo<br>Speaker Title: Engineering Research Associate<br>Event Type: Faculty Candidate Seminars<br>9:00am - 10:00am in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Scalable probabilistic inference for high dimensional structured variables&
+dates=20150413T130000Z/20150413T140000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Oluwasanmi Koyejo,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3509" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Apr 13, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3464>CSE Seminar</a><br>
+Speaker: Scott Aaronson<br>Speaker Title: Associate Professor<br>Event Type: Computer Science and Engineering Seminars<br>4:00pm - 5:00pm in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=CSE Seminar&
+dates=20150413T200000Z/20150413T210000Z&
+details=Event Type: Computer Science and Engineering Seminars,%0ASpeaker: Scott Aaronson,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3464" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Apr 14, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3465>CSE Seminar</a><br>
+Speaker: Dana Moshkovitz Aaronson<br>Speaker Title: Assistant Professor<br>Event Type: Computer Science and Engineering Seminars<br>9:00am - 10:00am in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=CSE Seminar&
+dates=20150414T130000Z/20150414T140000Z&
+details=Event Type: Computer Science and Engineering Seminars,%0ASpeaker: Dana Moshkovitz Aaronson,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3465" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Apr 16, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3468>CSE Faculty Candidate Seminar</a><br>
+Speaker: Ron Dreslinski<br>Speaker Title: Asst Research Scientist<br>Event Type: Faculty Candidate Seminars<br>9:00am - 10:00am in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=CSE Faculty Candidate Seminar&
+dates=20150416T130000Z/20150416T140000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Ron Dreslinski,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3468" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Apr 17, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3439>Modeling, Sensing and Control of Unstable Physical Human-Machine Interactions: A Rider-Bicycle Example</a><br>
+Speaker: Jingang Yi<br>Speaker Title: Professor<br>Event Type: Control Systems Seminars<br>3:30pm - 4:30pm in 1500 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Modeling, Sensing and Control of Unstable Physical Human-Machine Interactions: A Rider-Bicycle Example&
+dates=20150417T193000Z/20150417T203000Z&
+details=Event Type: Control Systems Seminars,%0ASpeaker: Jingang Yi,%0ALocation: 1500 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3439" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Apr 20, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3504>Power Struggles: Designing Processors In the Energy-Constrained Future</a><br>
+Speaker: Emily Blem<br>Speaker Title: Software Engineer<br>Event Type: Faculty Candidate Seminars<br>4:00pm - 5:00pm in 1690 Beyster<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Power Struggles: Designing Processors In the Energy-Constrained Future&
+dates=20150420T200000Z/20150420T210000Z&
+details=Event Type: Faculty Candidate Seminars,%0ASpeaker: Emily Blem,%0ALocation: 1690 Beyster&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3504" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Apr 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3449>TBA</a><br>
+Speaker: Jeff Fessler<br>Speaker Title: Professor<br>Event Type: Communications & Signal Processing (CSP) Seminars<br>4:00pm - 5:00pm in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=TBA&
+dates=20150423T200000Z/20150423T210000Z&
+details=Event Type: Communications & Signal Processing (CSP) Seminars,%0ASpeaker: Jeff Fessler,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3449" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, May 14, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3447>TBA</a><br>
+Speaker: Laura Balzano<br>Speaker Title: Assistant Professor<br>Event Type: Communications & Signal Processing (CSP) Seminars<br>4:00pm - 5:00pm in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=TBA&
+dates=20150514T200000Z/20150514T210000Z&
+details=Event Type: Communications & Signal Processing (CSP) Seminars,%0ASpeaker: Laura Balzano,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3447" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, May 28, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3450>TBA</a><br>
+Speaker: Wayne Stark<br>Speaker Title: Professor<br>Event Type: Communications & Signal Processing (CSP) Seminars<br>4:00pm - 5:00pm in 1005 EECS<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=TBA&
+dates=20150528T200000Z/20150528T210000Z&
+details=Event Type: Communications & Signal Processing (CSP) Seminars,%0ASpeaker: Wayne Stark,%0ALocation: 1005 EECS&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3450" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Jun 22, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3398>MiBytes - Tinkering with Mobile Apps Day 1</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Tinkering with Mobile Apps Day 1&
+dates=20150622T120000Z/20150622T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3398" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Jun 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3397>MiBytes - Tinkering with Mobile Apps Day 2</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Tinkering with Mobile Apps Day 2&
+dates=20150623T120000Z/20150623T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3397" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Jun 24, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3399>MiBytes - Tinkering with Mobile Apps Day 3</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Tinkering with Mobile Apps Day 3&
+dates=20150624T120000Z/20150624T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3399" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Jun 25, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3400>MiBytes - Tinkering with Mobile Apps Day 4</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Tinkering with Mobile Apps Day 4&
+dates=20150625T120000Z/20150625T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3400" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Jun 26, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3401>MiBytes - Tinkering with Mobile Apps Day 5</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Tinkering with Mobile Apps Day 5&
+dates=20150626T120000Z/20150626T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3401" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Jul 6, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3402>MiBytes - Game Design & Development Day 1</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Game Design & Development Day 1&
+dates=20150706T120000Z/20150706T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3402" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Jul 7, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3403>MiBytes - Game Design & Development Day 2</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Game Design & Development Day 2&
+dates=20150707T120000Z/20150707T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3403" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Jul 8, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3404>MiBytes - Game Design & Development Day 3</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Game Design & Development Day 3&
+dates=20150708T120000Z/20150708T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3404" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Jul 9, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3405>MiBytes - Game Design & Development Day 4</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Game Design & Development Day 4&
+dates=20150709T120000Z/20150709T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3405" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Jul 10, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3406>MiBytes - Game Design & Development Day 5</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Game Design & Development Day 5&
+dates=20150710T120000Z/20150710T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3406" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Jul 13, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3407>MiBytes - Hacking in a Digital World Day 1</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 1&
+dates=20150713T120000Z/20150713T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3407" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Jul 13, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3489>Electrify - Power Up Power and Energy Tech Camp Day 1</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Power Up Power and Energy Tech Camp Day 1&
+dates=20150713T120000Z/20150713T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3489" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Jul 14, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3408>MiBytes - Hacking in a Digital World Day 2</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 2&
+dates=20150714T120000Z/20150714T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3408" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Jul 14, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3490>Electrify - Power Up Power and Energy Tech Camp Day 2</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Power Up Power and Energy Tech Camp Day 2&
+dates=20150714T120000Z/20150714T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3490" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Jul 15, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3409>MiBytes - Hacking in a Digital World Day 3</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 3&
+dates=20150715T120000Z/20150715T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3409" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Jul 15, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3491>Electrify - Power Up Power and Energy Tech Camp Day 3</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Power Up Power and Energy Tech Camp Day 3&
+dates=20150715T120000Z/20150715T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3491" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Jul 16, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3410>MiBytes - Hacking in a Digital World Day 4</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 4&
+dates=20150716T120000Z/20150716T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3410" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Jul 16, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3492>Electrify - Power Up Power and Energy Tech Camp Day 4</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Power Up Power and Energy Tech Camp Day 4&
+dates=20150716T120000Z/20150716T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3492" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Jul 17, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3411>MiBytes - Hacking in a Digital World Day 5</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 5&
+dates=20150717T120000Z/20150717T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3411" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Jul 17, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3493>Electrify - Power Up Power and Energy Tech Camp Day 5</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Power Up Power and Energy Tech Camp Day 5&
+dates=20150717T120000Z/20150717T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3493" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Jul 20, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3412>MiBytes - Hacking in a Digital World Day 6</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 6&
+dates=20150720T120000Z/20150720T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3412" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Jul 20, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3494>Electrify - Light It Up Optics and Photonics Tech Camp Day 1</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Light It Up Optics and Photonics Tech Camp Day 1&
+dates=20150720T120000Z/20150720T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3494" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Jul 21, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3413>MiBytes - Hacking in a Digital World Day 7</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 7&
+dates=20150721T120000Z/20150721T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3413" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Jul 21, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3495>Electrify - Light It Up Optics and Photonics Tech Camp Day 2</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Light It Up Optics and Photonics Tech Camp Day 2&
+dates=20150721T120000Z/20150721T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3495" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Jul 22, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3414>MiBytes - Hacking in a Digital World Day 8</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 8&
+dates=20150722T120000Z/20150722T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3414" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Jul 22, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3496>Electrify - Light It Up Optics and Photonics Tech Camp Day 3</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Light It Up Optics and Photonics Tech Camp Day 3&
+dates=20150722T120000Z/20150722T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3496" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Jul 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3415>MiBytes - Hacking in a Digital World Day 9</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 9&
+dates=20150723T120000Z/20150723T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3415" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Jul 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3497>Electrify - Light It Up Optics and Photonics Tech Camp Day 4</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in E<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Light It Up Optics and Photonics Tech Camp Day 4&
+dates=20150723T120000Z/20150723T210000Z&
+details=Event Type: Other Events,%0ALocation: E&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3497" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Jul 24, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3416>MiBytes - Hacking in a Digital World Day 10</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in Beyster Building <br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=MiBytes - Hacking in a Digital World Day 10&
+dates=20150724T120000Z/20150724T210000Z&
+details=Event Type: Other Events,%0ALocation: Beyster Building &
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3416" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Jul 24, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3498>Electrify - Light It Up Optics and Photonics Tech Camp Day 5</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Light It Up Optics and Photonics Tech Camp Day 5&
+dates=20150724T120000Z/20150724T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3498" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Monday, Jul 27, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3499>Electrify - Sense It Wireless Sensors Tech Camp Day 1</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Sense It Wireless Sensors Tech Camp Day 1&
+dates=20150727T120000Z/20150727T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3499" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Tuesday, Jul 28, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3500>Electrify - Sense It Wireless Sensors Tech Camp Day 2</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Sense It Wireless Sensors Tech Camp Day 2&
+dates=20150728T120000Z/20150728T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3500" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Wednesday, Jul 29, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3501>Electrify - Sense It Wireless Sensors Tech Camp Day 3</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Sense It Wireless Sensors Tech Camp Day 3&
+dates=20150729T120000Z/20150729T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3501" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Thursday, Jul 30, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3502>Electrify - Sense It Wireless Sensors Tech Camp Day 4</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Sense It Wireless Sensors Tech Camp Day 4&
+dates=20150730T120000Z/20150730T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3502" target="_blank"><font size="1">Add to Google Calendar</font></a><br><br><b>Friday, Jul 31, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3503>Electrify - Sense It Wireless Sensors Tech Camp Day 5</a><br>
+Event Type: Other Events<br>8:00am - 5:00pm in EECS Building<br><a href="http://www.google.com/calendar/event?action=TEMPLATE&
+text=Electrify - Sense It Wireless Sensors Tech Camp Day 5&
+dates=20150731T120000Z/20150731T210000Z&
+details=Event Type: Other Events,%0ALocation: EECS Building&
+location=University of Michigan EECS%20Dept.&
+trp=false&
+sprop=EECS%20Event&
+sprop=name:http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?id=3503" target="_blank"><font size="1">Add to Google Calendar</font></a><br></td></tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr><td><br><h1>Recent Events</h1>
+</td></tr>
+<tr><td><b>Monday, Mar 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3482>Accelerating adoption of effective teaching practices through an evidence-based faculty development program</a><br>
+Speaker: Cynthia Finelli<br>Speaker Title: Director, Center for Research on Learning and Teaching in Engineering & Research Associate Professor<br>Event Type: Electrical and Computer Science Seminars<br>9:00am - 10:00am in 1005 EECS<br><br><b>Monday, Mar 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3486>Integrated Circuit Design for Radiation Sensing and Hardening</a><br>
+Speaker: Inyong Kwon<br>Speaker Title: PhD Candidate<br>Event Type: Student Defenses<br>10:00am - 12:00pm in 2000A Phoenix Memorial Laboratory<br><br><b>Monday, Mar 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3470>What the $#@! Is Parallelism? (And Why Should Anyone Care?)</a><br>
+Speaker: Charles E. Leiserson<br>Speaker Title: Edwin Sibley Webster Professor of EECS<br>Event Type: Other Events<br>3:00pm - 4:00pm in Cooley G906<br><br><b>Monday, Mar 23, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3216>Emotion Technology, Wearables, and Surprises </a><br>
+Speaker: Rosalind Picard<br>Speaker Title: Founder and Director of the Affective Computing Research Group <br>Event Type: Distinguished Lecture Series<br>4:30pm - 5:30pm in 1670 Beyster<br><br><b>Friday, Mar 20, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3487>CoE Control Group Tea</a><br>
+Event Type: Other Events<br>2:30pm - 3:30pm in GGB Galleria (new GGB addition)<br><br><b>Friday, Mar 20, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3436>Control of Solid Oxide Fuel Cells for Power Tracking</a><br>
+Speaker: Faryar Jabbari<br>Speaker Title: Professor<br>Event Type: Control Systems Seminars<br>3:30pm - 4:30pm in 1500 EECS<br><br><b>Friday, Mar 20, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3476>Wolverine Soft Shammy Jam</a><br>
+Event Type: Student Events<br>5:00pm - Next Day in Windows Training Rooms, 3rd floor Duderstadt Cente<br><br><b>Thursday, Mar 19, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3426>Mending the Application-Network Gap in Big Data Analytics</a><br>
+Speaker: Mosharaf Chowdhury<br>Speaker Title: PhD Candidate<br>Event Type: Faculty Candidate Seminars<br>9:00am - 10:00am in 1690 Beyster<br><br><b>Wednesday, Mar 18, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3479>Higher lower bounds from the 3SUM conjecture</a><br>
+Speaker: Tsvi Kopelowitz<br>Speaker Title: Postdoctoral Researcher<br>Event Type: Theory Seminars<br>10:00am - 11:00am in BBB 3941<br><br><b>Wednesday, Mar 18, 2015 </b><br>
+<a href=/eecs/etc/events/showevent.cgi?3485>Atomic Layer Deposition for MEMS and Sensor Applications</a><br>
+Speaker: Dr. John &#034J&#034 Provine<br>Speaker Title: Senior Research Associate<br>Event Type: Solid State Electronics Laboratory (SSEL) Seminars<br>11:00am - 12:30pm in 1340 EECS (LNF Conference Room)<br></td></tr>
+</table>
+<br><a href="http://www.eecs.umich.edu/eecs/etc/events/eecsevents.html?cat=&showall=yes">Show Last 100 Events</a>
+
+</div><!--content body -->
+<div id="right_sidebar">
+<nav id="right_nav">
+<ul id="right_menu">
+<li class=subtitle>Event Categories</li>
+
+<li><a href="/eecs/etc/events/eecsevents.html">All EECS Events</a></li>
+<li><a href="/eecs/etc/events/dow-events.html">EECS Dow Lectureship</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Distinguished">EECS Distinguished Lectures</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Defense">EECS Student Defenses</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Student">EECS Student Events</a></li>
+
+<li class=subtitle>EECS Seminars:</li>
+
+<li><a href="/eecs/etc/events/eecsevents.html?cat=All">All EECS Seminars</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_ACAL">Adv. Computer Architecture</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_AI">Artificial Intelligence</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=C-PHOM">Ctr Photonic & Mult. Nano.</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_CUOS">Center for Ultrafast Optical Sci</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Signal_Processing">Comm. & Signal Processing</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Control">Control Systems</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Interactive">Interactive Systems</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=LNF">Lurie Nanofabrication Facility</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=MICL">Mich. Integrated Circuits Lab</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=MINDS">MINDS</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_MIPSE">Mich. Inst. for Plasma Sci</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=MPEL">Mich. Power & Energy Lab</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=NNIN">Nat. Nano. Infr. Network</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Optics">Optics and Photonics Lab</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Radlab">Radiation Laboratory</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Robotics">Robotics and Autn. Systems</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Quantum">Quantum Info. Processing</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Software">Software</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_SSEL">Solid State Electronics Lab</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=SSELS">SSEL Special Lecture Series</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Systems">Systems Science</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Theory">Theory</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Sem_Other">Other Seminars</a></li>
+<li><a href="/eecs/etc/events/eecsevents.html?cat=Other">Other Events</a></li>
+
+</ul>
+</nav>
+
+<br><br>
+
+
+
+</div><!-- closes right sidebar on files that use it; closes content_body on others -->
+
+</div><!-- content row -->
+</div><!-- content columns -->
+
+	<div class=footer_bar>
+		<div id=footer>
+			<div id=footer_left>
+				<a href="/"><div id=footer_logo></div></a>
+				<nav class=footer>
+					<ul><li class=first><a href="http://www.engin.umich.edu/college/" target="_blank">College of Engineering</a></li><li class=last><a href="http://umich.edu" target="_blank">University of Michigan</a></li></ul>
+				</nav>
+			</div>
+			<div id=footer_right>
+				<div class=footer_social_wrapper>
+					<ul class="social-icons">
+				        <li><a href="https://www.facebook.com/pages/Electrical-Engineering-and-Computer-Science-Department-at-Michigan/65666857760" target="_blank"><em>facebook</em><i class="fa fa-facebook"></i></a></li>
+				        <li><a href="https://www.youtube.com/user/EECSatUM" target="_blank"><em>youtube</em><i class="fa fa-youtube"></i></a></li>
+				        <li><a href="http://www.linkedin.com/groups/Electrical-Engineering-Computer-Science-Michigan-1062957/about" target="_blank"><em>linkedin</em><i class="fa fa-linkedin"></i></a></li>
+				        <li><a href="https://twitter.com/EECSatMI" target="_blank"><em>twitter</em><i class="fa fa-twitter"></i></a></li>
+				    </ul>
+				</div><!-- social_wrapper -->
+				<nav class=footer2>
+					<ul><li><a href="/eecs/about/contact.html">Contact Us</a></li></ul>
+				</nav>
+				<div id=copyright><ul><li>&copy; <script>var d = new Date();var n = d.getFullYear();document.write(n);</script> <a href="http://regents.umich.edu/" target="_blank">The Regents of the University of Michigan</a></li></ul></div>
+			</div><!-- footer_right -->
+			<div class=clear_fix></div>
+		</div><!-- footer-->
+	</div>
+
+<script src="/eecs/templates/js/scripts.js"></script>
+<!-- SlidesJS Required: Link to jquery.slides.js -->
+<script src="/eecs/templates/js/jquery.slides.min.js"></script>
+<!-- End SlidesJS Required -->
+<script src="/eecs/templates/js/jquery.slicknav.js"></script>
+<script src="/eecs/templates/js/jquery.magnific-popup.min.js"></script>
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+  if ($('#slides').length) {
+  slide_no = Math.floor((Math.random() * 10) + 1);
+    $(function() {
+      $('#slides').slidesjs({
+      	start : slide_no,
+        width: 1024,
+        height: 381,
+        navigation: false,
+        pagination: {
+          effect: "fade"
+        },
+        effect: {
+          fade: {
+            speed: 400
+          }
+        },
+        play: {
+          active: false,
+          auto: true,
+          interval: 10000,
+          swap: true,
+          effect: "fade",
+          pauseOnHover: true
+        }
+      });
+    });
+    };
+  </script>
+  <!-- End SlidesJS Required -->
+</body>
+</html>
+
+

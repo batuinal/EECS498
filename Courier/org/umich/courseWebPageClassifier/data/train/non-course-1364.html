@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7 lte9 lte8 lte7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+      <title>
+       Advanced Multi-core Systems | Stanford Online
+      </title>
+  
+
+  <script type="text/javascript">
+    /* immediately break out of an iframe if coming from the marketing website */
+    (function(window) {
+      if (window.location !== window.top.location) {
+        window.top.location = window.location;
+      }
+    })(this);
+  </script>
+
+  <script type="text/javascript" src="/jsi18n/"></script>
+
+  <link rel="icon" type="image/x-icon" href="/static/themes/stanford/images/favicon.6ddd1b867f66.ico" />
+
+  
+  
+
+    <link href="/static/css/lms-style-vendor.a551063e5c64.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+  
+
+    <link href="/static/css/lms-style-app.270ee2b30ac6.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+  
+
+    <link href="/static/css/lms-style-app-extend1.48aa763ccf45.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+  
+
+    <link href="/static/css/lms-style-app-extend2.cee5808751db.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    
+    <script type="text/javascript" src="/static/js/lms-main_vendor.c7b715fdaa67.js" charset="utf-8"></script>
+
+
+
+  
+
+  
+  
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40837107-1', 'class.stanford.edu');
+  ga('send', 'pageview');
+
+</script>
+
+
+  <meta property="og:title" content="Advanced Multi-core Systems" />
+  <meta property="og:description" content="CS316 provides in-depth coverage of the architectural techniques used in modern multi-core chips for mobile and server systems. " />
+
+
+
+  
+  
+
+    
+
+<link rel="stylesheet" href="/static/themes/stanford/css/vendor/su-identity.444ea056fb49.css" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic,400italic,700italic,900italic,' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      alert("Warning: you are using an unsupported browser\nand may be unable to use some features.\n\nWe suggest you use either Mozilla Firefox or\nGoogle Chrome.");
+    });
+  </script>
+<![endif]-->
+<!--[if IE 8]>
+  <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
+<![endif]-->
+<!--[if IE 7]>
+  <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
+<![endif]-->
+
+
+  <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.d5e37d8ee1a4.js"></script>
+  <![endif]-->
+
+  
+  <!-- dummy segment.io -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    pageview: function() { return; }
+  };
+</script>
+<!-- end dummy segment.io -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40837107-1', 'class.stanford.edu');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+</head>
+
+<body class="ltr  lang_en">
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#content">Skip to this view's content</a>
+
+    
+<!--[if IE]>
+<div class="sr message-accessibility message" id="mathjax-accessibility-message" aria-hidden="true">
+	<p class="copy">This page features MathJax technology to render mathematical formulae. To make math accessibile, we suggest using the MathPlayer plugin. Please visit the <a href="//www.dessci.com/en/products/mathplayer/download.htm">MathPlayer Download Page</a> to download the plugin for your browser.</p>
+</div>
+<div class="sr message-accessibility message" id="mathplayer-browser-message" aria-hidden="true">
+	<p class="copy">
+	 Your browser does not support the MathPlayer plugin. To use MathPlayer, please use Internet Explorer 6 through 9.
+	 </p>
+</div>
+<![endif]-->
+
+
+    
+
+
+
+
+
+
+
+  <div id="su-header">
+    <div class="su-container">
+      <a href="http://www.stanford.edu">
+        <img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="Stanford University" width="152" height="23">
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+
+  <header class="global slim" aria-label="Global Navigation">
+    <nav>
+    <h1 class="logo">
+      <a href="/">
+        
+  <img src="/static/themes/stanford/images/stanford-S-logo.ac1a37d62c92.png" height="35" alt="Stanford Online, Courses List" />
+
+      </a>
+    </h1>
+
+    <h2><span class="provider">Engineering:</span> CS316 Advanced Multi-core Systems</h2>
+
+    <ol class="left nav-global">
+      
+  <li class="nav-global-01">
+    <a href="/about">About</a>
+  </li>
+
+    </ol>
+
+    <ol class="right nav-courseware">
+        <li class="nav-courseware-01">
+          <a class="cta cta-register" href="/course_specific_register/Engineering/CS-316/Fall2014/">Register</a>
+        </li>
+      <li class="nav-courseware-02">
+            <a class="cta cta-login nav-courseware-button" href="/course_specific_login/Engineering/CS-316/Fall2014/">Log in</a>
+      </li>
+    </ol>
+
+  </nav>
+</header>
+<!--[if lte IE 8]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+  
+
+
+
+<section id="forgot-password-modal" class="modal" role="dialog" tabindex="-1" aria-label="Password Reset">
+  <div class="inner-wrapper">
+    <button class="close-modal">
+      <i class="icon-remove"></i> 
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <div id="password-reset">
+      <header>
+        <h2>Password Reset</h2>
+      </header>
+
+      <div class="instructions">
+        <p>Please enter your email address below, and we will email instructions for setting a new password.</p>
+      </div>
+
+      <form id="pwd_reset_form" action="/password_reset/" method="post" data-remote="true">
+        <fieldset class="group group-form group-form-requiredinformation">
+          <legend class="sr">Required Information</legend>
+
+          <ol class="list-input">
+            <li class="field required text" id="forgot-password-modal-field-email">
+              <label for="pwd_reset_email">Your E-mail Address</label>
+              <input class="" id="pwd_reset_email" type="email" name="email" value="" placeholder="example: username@domain.com" aria-describedby="pwd_reset_email-tip" aria-required="true" />
+              <span class="tip tip-input" id="pwd_reset_email-tip">This should be the email address you used to register with Stanford Online</span>
+            </li>
+          </ol>
+        </fieldset>
+
+        <div class="form-actions">
+          <button name="submit" type="submit" id="pwd_reset_button" class="action action-primary action-update">Reset My Password</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  (function() {
+    $(document).delegate('#pwd_reset_form', 'ajax:success', function(data, json, xhr) {
+      if(json.success) {
+        $("#password-reset").html(json.value);
+      } else {
+        if($('#pwd_error').length == 0) {
+          $('#pwd_reset_form').prepend('<div id="pwd_error" class="modal-form-error">Email is incorrect.</div>');
+        }
+        $('#pwd_error').stop().css("display", "block");
+      }
+    });
+
+    // removing close link's default behavior
+    $('#login-modal .close-modal').click(function(e) {
+     e.preventDefault();
+    });
+
+    var onModalClose = function() {
+      $("#forgot-password-modal").attr("aria-hidden", "true");
+      $("#forgot-password-link").focus();
+    };
+    
+    var cycle_modal_tab = function(from_element_name, to_element_name) {
+      $(from_element_name).on('keydown', function(e) {
+          var keyCode = e.keyCode || e.which;
+          var TAB_KEY = 9;  // 9 corresponds to the tab key
+          if (keyCode === TAB_KEY) {
+              e.preventDefault();
+              $(to_element_name).focus();
+          }
+      });
+    };
+    $("#forgot-password-modal .close-modal").click(onModalClose);
+    cycle_modal_tab("#forgot-password-modal .close-modal", "#pwd_reset_email");
+    cycle_modal_tab("#pwd_reset_email", "#pwd_reset_button");
+    cycle_modal_tab("#pwd_reset_button", "#forgot-password-modal .close-modal");
+
+    // Hitting the ESC key will exit the modal
+    $("#forgot-password-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        // 27 is the ESC key
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#forgot-password-modal .close-modal").click();
+        }
+    });
+
+  })(this)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="help-tab">
+
+  
+      <a href="#help-modal" rel="leanModal" role="button">Help</a>
+</div>
+
+<section id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-label="Stanford Online Help">
+  <div class="inner-wrapper" id="help_wrapper">
+    <button class="close-modal "tabindex="0">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+	<span class="edx">Stanford Online</span> Help
+      </h2>
+      <hr>
+    </header>
+
+
+
+
+    <p>Have <strong>general questions about Stanford Online</strong>? You can find lots of helpful information in the Stanford Online Help Center.</p>
+	
+	<ul class="help-buttons">
+	  <li><a class="help-modal-button" href="https://stanfordonline.zendesk.com/hc" target="_blank">
+		Access the Help Center
+	  </a></li>
+	</ul>
+
+	<hr>
+    <p>Can't find an answer to your question? You can contact the Stanford Online general support team directly <a href="#" id="feedback_link_question">by clicking here</a>.</p>
+
+    <p class="note">Please note: The Stanford Online support team is English speaking. While we will do our best to address your inquiry in any language, our responses will be in English.</p>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_form_wrapper">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header></header>
+
+    <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="/submit_feedback">
+      <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+      <label data-field="name" for="feedback_form_name">Name*</label>
+      <input name="name" type="text" id="feedback_form_name" aria-required="true">
+      <label data-field="email" for="feedback_form_email">E-mail*</label>
+      <input name="email" type="text" id="feedback_form_email" aria-required="true">
+      <label data-field="subject" for="feedback_form_subject">Briefly describe your issue*</label>
+      <input name="subject" type="text" id="feedback_form_subject" aria-required="true">
+      <label data-field="details" for="feedback_form_details">Tell us the details*
+<span class="tip">Include error messages, steps which lead to the issue, etc</span></label>
+      <textarea name="details" id="feedback_form_details" aria-required="true"></textarea>
+      <input name="issue_type" type="hidden">
+      <input name="course_id" type="hidden" value="Engineering/CS-316/Fall2014">
+      <div class="submit">
+        <input name="submit" type="submit" value="Submit" id="feedback_submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>Thank You!</h2>
+      <hr>
+    </header>
+
+    
+    <p>
+    Thank you for your inquiry or feedback. We typically respond to a request within three business days. In the meantime, please review our <a href="https://stanfordonline.zendesk.com/hc/en-us" target="_blank" id="feedback-faq-link" tabindex="0">Help Center articles</a>, where answers to many common questions have been posted.
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $(".help-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#help-modal").attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".help-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#feedback_form")[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $("#help-modal").attr("aria-hidden", "false");
+        $("#help-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#help_wrapper .close-modal").focus();
+    });
+    showFeedback = function(event, issue_type, title, subject_label, details_label) {
+        $("#help_wrapper").css("display", "none");
+        $("#feedback_form input[name='issue_type']").val(issue_type);
+        $("#feedback_form_wrapper").css("display", "block");
+        $("#feedback_form_wrapper header").html("<h2>" + title + "</h2><hr>");
+        $("#feedback_form_wrapper label[data-field='subject']").html(subject_label);
+        $("#feedback_form_wrapper label[data-field='details']").html(details_label);
+        $("#feedback_form_wrapper .close-modal").focus();
+        event.preventDefault();
+    };
+    cycle_modal_tab("#feedback_link_question", "#help_wrapper .close-modal");
+    cycle_modal_tab("#feedback_submit", "#feedback_form_wrapper .close-modal");
+    cycle_modal_tab("#feedback-faq-link", "#feedback_success_wrapper .close-modal");
+    $("#help-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#help_wrapper .close-modal").click();
+        }
+    });
+    $("#feedback_link_problem").click(function(event) {
+        showFeedback(
+            event,
+            "problem",
+            "Report a Problem",
+            "Brief description of the problem" + "*",
+            "Details of the problem you are encountering" + "*" + "<span class='tip'>" +
+              "Include error messages, steps which lead to the issue, etc." + "</span>"
+        );
+    });
+    $("#feedback_link_suggestion").click(function(event) {
+        showFeedback(
+            event,
+            "suggestion",
+            "Make a Suggestion",
+            "Brief description of your suggestion" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_link_question").click(function(event) {
+        showFeedback(
+            event,
+            "question",
+            "Ask a Question",
+            "Brief summary of your question" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $('area,input,select,textarea,button').attr('tabindex', -1);
+        $("#feedback_form_wrapper .close-modal").focus();
+    });
+    $("#feedback_form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#feedback_form").on("ajax:success", function(event, data, status, xhr) {
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        $("#feedback_success_wrapper").focus();
+    });
+    $("#feedback_form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            // If no email is configured, we can't do much other than
+            // ask the user to try again later
+            htmlStr += "Please try again later.";
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+})(this)
+</script>
+
+
+  
+
+
+
+
+
+
+<div class="report-tab">
+  <a href="#report-modal" rel="leanModal" role="button">Problem on Page?</a>
+</div>
+
+<section id="report-modal" class="modal" aria-hidden="true" role="dialog" aria-label="Stanford Online Problem Reports">
+  <div class="inner-wrapper" id="report-form-wrapper">
+    <button class="close-modal "tabindex="0">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header><h2>Report A Problem</h2><hr></header>
+
+    <form id="report-form" method="post" data-remote="true" action="/submit_feedback">
+      <p>If you've found a problem on this page (e.g. an error), please let us know! For other questions, please check out the 'Help' tab.</p>
+      <hr>
+      <div id="report-error" class="modal-form-error" tabindex="-1"></div>
+      <label data-field="name" for="report-form-name">Name*</label>
+      <input name="name" type="text" id="report-form-name" aria-required="true">
+      <label data-field="email" for="report-form-email">E-mail*</label>
+      <input name="email" type="text" id="report-form-email" aria-required="true">
+      <label data-field="subject" for="report-form-subject">Brief description of the problem*</label>
+      <input name="subject" type="text" id="report-form-subject" aria-required="true">
+      <label data-field="details" for="report-form-details">Details of the problem you are encountering*</label>
+      <textarea name="details" id="report-form-details" aria-required="true" placeholder="Include error messages, steps which lead to the issue, etc."></textarea>
+      <input name="issue_type" type="hidden" value="problem_report_modal">
+      <input name="course_id" type="hidden" value="Engineering/CS-316/Fall2014">
+      <div class="submit">
+        <input name="submit" type="submit" value="Submit Problem Report" id="report-submit">
+      </div>
+      <p>Unfortunately, we won't be able to send personal replies for problem reports, but we'll look at them all, and try to make fixes as quickly as we can.</p>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="report-success-wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>Thank You!</h2>
+      <hr>
+    </header>
+
+    <p>
+    Thank you for reporting your problem. We will look at it shortly and make fixes as quickly as we can. In the meantime, please visit the discussion forum to see if others have encountered or solved your problem.
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $("#report-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#report-modal").attr("aria-hidden", "true");
+            $("#report-form-wrapper").find("area,input,select,textarea,button").removeAttr('tabindex');
+            $(".report-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".report-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#report-form")[0].reset();
+        $("#report-form input[type='submit']").removeAttr("disabled");
+        $("#report-error").css("display", "none");
+        $("#report-success-wrapper").css("display", "none");
+        $("#report-form-wrapper").css("display", "block");
+        $("#report-modal").attr("aria-hidden", "false");
+        $("#report-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#report-form-wrapper .close-modal").focus();
+    });
+    cycle_modal_tab("#report-submit", "#report-form-wrapper .close-modal");
+    cycle_modal_tab("#report-success-wrapper .close-modal", "#report-success-wrapper");
+    $("#report-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#report-form-wrapper .close-modal").click();
+        }
+    });
+    $("#report-form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $("#report-form-wrapper").find("area,input,select,textarea,button").attr('tabindex', -1);
+        $("#report-form-wrapper .close-modal").focus();
+    });
+    $("#report-form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#report-form").on("ajax:success", function(event, data, status, xhr) {
+        $("#report-form-wrapper").css("display", "none");
+        $("#report-success-wrapper").css("display", "block");
+        $("#report-success-wrapper .close-modal").focus();
+    });
+    $("#report-form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#report-error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            // If no email is configured, we can't do much other than
+            // ask the user to try again later
+            htmlStr += " Please try again later.";
+            $("#report-error").html(htmlStr).stop().css("display", "block");
+        }
+        // Make change explicit to assistive technology
+        $("#report-error").focus();
+    });
+})(this)
+</script>
+
+
+
+    <div class="content-wrapper" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<section class="course-info">
+  <header class="course-profile">
+    <div class="intro-inner-wrapper">
+      <div class="table">
+      <section class="intro">
+        <hgroup>
+          <h1>
+            Advanced Multi-core Systems
+
+            </h1>
+
+  
+          </hgroup>
+
+        <div class="main-cta">
+          <a href="#" class="register">
+            Register for CS316
+          </a>
+          <div id="register_error"></div>
+        </div>
+
+      </section>
+      <div class="media">
+        <div class="hero">
+          <img src="/c4x/Engineering/CS-316/asset/processor.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+      </div>
+  </header>
+
+  <section class="container">
+
+  
+          <section class="details">
+
+      <nav>
+        <a href="#" class="active">Overview</a>
+      </nav>
+
+      <div class="inner-wrapper">
+        <section class="about">
+  <h2>About This Course</h2>
+  <p> CS316 provides in-depth coverage of the architectural techniques used in modern multi-core chips for mobile and server systems. It covers advanced processor design techniques (superscalar cores, VLIW cores, multi-threaded cores, energy-efficient cores), cache coherence, memory consistency, vector processors, graphics processors, heterogeneous processors, and hardware support for security and parallel programming, and advanced memory systems. The students will become familiar with complex trade-offs between performance-power-complexity, hardware-software interactions, and architecture-technology interactions. A central part of CS316 is a project on an open research question on multi-core technologies. CS316 replaces CS315a, CS315b, and EE382a in years they are not offered and should fulfill any degree requirements these classes fulfill at the undergraduate or graduate level. </p>
+  
+  <p> For further details, please read the class information <a href="/c4x/Engineering/CS-316/asset/cs316.info.pdf">handout</a> for Fall 2014-15.</p>
+</section>
+
+<section class="prerequisites">
+  <h2>Prerequisites:</h2>
+  <p> Required: Good understanding of basic processor microarchitecture (pipelining, caching, and virtual memory) as covered in EE 108B or similar courses in other institutions. Recommended: EE 282, CS 149, CS 140.</p>
+</section>
+
+<section class="lectures">
+  <h2>Lecture</h2>
+  <p>Lectures on Monday and Wednesday, 9-10:15pm, room 540-108 (Blume Earthquake Center). Review sessions on Fridays, 2:15pm-3:05pm, room Hewlett 103.</p>
+</section>
+
+
+<section class="course-staff">
+  <h2>Course Staff</h2>
+  <article class="teacher">
+    <div class="teacher-image">
+      <img src="/c4x/Engineering/CS-316/asset/christos_thumb.jpg" align="left" style="margin:0 20 px 0">
+    </div>
+
+    <h3>Christos Kozyrakis</h3>
+    <p>Christos Kozyrakis is an Associate Professor of Electrical Engineering &amp; Computer Science at Stanford University. He is also the Willard R. and Inez Kerr Bell faculty scholar. Christos works on architectures, runtime environments, and programming models for parallel computer systems. His current research focuses on resource management in large-scale multi-core systems, energy efficient data centers, and architectural support for security. Christos joined Stanford in 2002 after receiving a PhD in Computer Science from UC Berkeley. His alma mater is the University of Crete in Greece.</p>
+  </article>
+  <article class="teacher">
+    <div class="teacher-image">
+     <!-- <img src="/c4x/Engineering/CS-316/asset/Rakesh_Ramesh.jpg" align="left" style="margin:0 20 px 0"> -->
+    </div>
+    <h3>Adam Belay</h3>
+    <p>Adam is a PhD Candidate in Computer Science.</p>
+  </article>
+  <article class="teacher">
+    <div class="teacher-image">
+      <img src="/c4x/Engineering/CS-316/asset/cdel.jpg" align="left" width="80%" margin:"0 20 px 0"> 
+    </div>
+    <h3>Christina Delimitrou</h3>
+    <p>Christina is a PhD Candidate in Electrical Engineering. She is mainly interested on computer architecture and systems, and specifically she works on designing and building practical systems for scheduling and resource management in large-scale datacenters. She has earned an MS from Stanford in 2011 and a diploma in Electrical and Computer Engineering from the National Technical University of Athens. More information can be found in: http://www.stanford.edu/~cdel/ </p>
+  </article>
+  <article class="teacher">
+    <div class="teacher-image">
+     <!-- <img src="/c4x/Engineering/CS-316/asset/Rakesh_Ramesh.jpg" align="left" style="margin:0 20 px 0"> -->
+    </div>
+    <h3>Heiner Litz</h3>
+    <p>Heiner is a postdoc researcher in Computer Sciennce.</p>
+  </article>
+</section>
+
+
+<!-- <section class="faq">
+  <section class="responses">
+    <h2>Frequently Asked Questions</h2>
+    <article class="response">
+      <h3>Do I need to buy a textbook?</h3>
+      <p>No, a free online version of Chemistry: Principles, Patterns, and Applications, First Edition by Bruce Averill and Patricia Eldredge will be available, though you can purchase a printed version (published by FlatWorld Knowledge) if you’d like.</p>
+    </article>
+
+    <article class="response">
+      <h3>Question #2</h3>
+      <p>Your answer would be displayed here.</p>
+    </article>
+  </section>
+</section> -->
+      </div>
+    </section>
+
+
+  
+      <section class="course-sidebar">
+      <section class="course-summary">
+        <header>
+          <div class="social-sharing">
+            <div class="sharing-message">Share with friends and family!</div>
+
+  
+                <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+CS-316+Advanced Multi-core Systems!+(http://class.stanford.edu)" class="share">
+                <i class="icon icon-twitter"></i><span class="sr">Tweet that you've registered for this course</span>
+              </a>
+              <a href="mailto:?subject=Take%20a%20course%20at%20Stanford%20online!&body=I%20just%20registered%20for%20CS-316%20Advanced Multi-core Systems+(http://class.stanford.edu)" class="share">
+                <i class="icon icon-envelope"></i><span class="sr">Email someone to say you've registered for this course</span>
+              </a>
+          </div>
+        </header>
+
+        <ol class="important-dates">
+          <li><i class="icon icon-info-sign"></i><p>Course Number</p><span class="course-number">CS316</span></li>
+            <li><i class="icon icon-calendar"></i><p>Classes Start</p><span class="start-date">Sep 19, 2014</span></li>
+            <li>
+                <i class="icon icon-calendar"></i>
+                <p>Classes End</p><span class="final-date">
+                    Dec 13, 2014
+                </span>
+            </li>
+
+
+
+          <li>
+              <i class="icon icon-money"></i>
+              <p>Price</p>
+              <span>Free</span>
+          </li>
+
+        </ol>
+
+  
+            
+        <section class="research-info">
+          <h2>Our Research Community</h2>
+          <p>Stanford University pursues the science of learning. Online learners are important participants in that pursuit. The information we gather from your engagement with our instructional offerings makes it possible for faculty, researchers, designers and engineers to continuously improve their work and, in that process, build learning science.</p>
+          <p>By registering as an online learner, you are also participating in research... <br /><a href="/tos">Read Terms of Service and Privacy Policy.</a></p>
+        </section>
+
+      </section>
+  
+  
+        
+    </section>
+  </section>
+</section>
+
+  <div style="display: none;">
+    <form id="class_enroll_form" method="post" data-remote="true" action="/change_enrollment">
+      <fieldset class="enroll_fieldset">
+        <input name="course_id" type="hidden" value="Engineering/CS-316/Fall2014">
+        <input name="enrollment_action" type="hidden" value="enroll">
+      </fieldset>
+      <div class="submit">
+        <input name="submit" type="submit" value="enroll">
+      </div>
+    </form>
+  </div>
+
+
+
+
+<section id="video-modal" class="modal video-modal">
+  <div class="inner-wrapper">
+    
+  </div>
+</section>
+
+
+      
+    </div>
+
+    
+<div class="wrapper-footer">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+        <ol>
+          <li><a href="/tos">Terms of Service <br />(Revised 06/14/14)</a></li>
+          <li><a href="/tos#privacy">Privacy Policy <br />(Revised 06/14/14)</a></li>
+          <li><a href="/tos#honor">Honor Code</a></li>
+          <li><a href="/tos#copyright">Copyright</a></li>
+          <li><a href="/about#contact">Contact</a></li>
+          <li><a href="https://stanfordonline.zendesk.com/hc">Help</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="references">
+      <a id="stanford-footer-edx-image" href="http://openedx.org">
+        <span class="sr">Powered by Open edX</span>
+      </a>
+    </div>
+  </footer>
+</div>
+
+<div id="su-footer">
+  <div class="su-container">
+    <div class="su-row">
+      <div id="su-footer-logo" class="span2">
+        <a href="http://www.stanford.edu">
+          <img src="https://www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49"/>
+        </a>
+      </div>
+      <div id="su-footer-text" class="span10">
+        <ul>
+          <li class="home"><a href="http://www.stanford.edu">SU Home</a></li>
+          <li class="maps alt"><a href="http://visit.stanford.edu/plan/maps.html">Maps &amp; Directions</a></li>
+          <li class="search-stanford"><a href="http://www.stanford.edu/search/">Search Stanford</a></li>
+          <li class="terms alt"><a href="http://www.stanford.edu/site/terms.html">Terms of Use</a></li>
+          <li class="copyright"><a href="http://www.stanford.edu/site/copyright.html">Copyright Complaints</a></li>
+        </ul>
+        <div class="clear"></div>
+        <p class="copyright vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span> </span></p>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  <script>window.baseUrl = "/static/";</script>
+    
+    <script type="text/javascript" src="/static/js/lms-application.af5f2475e128.js" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="/static/js/lms-modules.da358730fe78.js" charset="utf-8"></script>
+
+
+
+  
+
+  <script type="text/javascript">
+  (function() {
+    $(".register").click(function(event) {
+      $("#class_enroll_form").submit();
+      event.preventDefault();
+    });
+
+    sneakpeek_handler = function(jqXHR) {
+      if (jqXHR.status == 200) {
+        location.href = "/courses/Engineering/CS-316/Fall2014/info";
+      }
+      else {
+        $("#register_error")
+        .html("An error occurred. Please try again later.")
+        .css("display", "block");
+      }
+    };
+
+    $(".course_sneakpeek").click(function(event) {
+      $.ajax({
+        url: "/course_sneakpeek/Engineering/CS-316/Fall2014/",
+        type: "POST",
+        complete: sneakpeek_handler
+      });
+      event.preventDefault();
+    });
+
+
+      
+    $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
+      if(xhr.status == 200) {
+        location.href = "/dashboard";
+      } else if (xhr.status == 403) {
+        location.href = "/course_specific_register/Engineering/CS-316/Fall2014/?course_id=Engineering%2FCS-316%2FFall2014&enrollment_action=enroll";
+      } else if (xhr.status == 400) { //This means the user did not have permission
+        $('#register_error').html("The currently logged-in user account does not have permission to enroll in this course. You may need to <a href='/logout'>log out</a> then try the register button again. Please visit the <a href='None'>help page</a> for a possible solution.").css("display", "block");
+      } else {
+        $('#register_error').html(
+            (xhr.responseText ? xhr.responseText : "An error occurred. Please try again later.")
+        ).css("display", "block");
+      }
+    });
+
+
+  })(this)
+  </script>
+
+  <script src="/static/js/course_info.40bc0fcfaae1.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,532 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=ISO-8859-1">
+  <meta name="description"
+ content="Mathematics - California Institute of Technology">
+  <title>[Ma157a - Fall 14 - 15] -Riemannian Geometry</title>
+  <csactions></csactions> <csaction name="116bde93"
+ class="Wipe Transition" type="onevent" val0="" val1="5"
+ val2="&quot;_inCenter&quot;"></csaction><csscriptdict import=""></csscriptdict>
+  <script type="text/javascript"
+ src="file:///C:/Documents%20and%20Settings/scroomes/Application%20Data/Adobe/Adobe%20GoLive/Settings8/JScripts/GlobalScripts/CSScriptLib.js"></script><csactiondict></csactiondict>
+  <script type="text/javascript"><!--
+CSAct[/*CMP*/ '116bde93'] = new Array(CSStartWipe,/*CMP*/ '',5,"_inCenter");
+
+// --></script>
+  <style type="text/css">
+<!--
+.style1 {
+	font-size: 10px
+}
+.style2 {font-weight: bold}
+-->
+  </style>
+</head>
+<body
+ style="color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); font-family: Verdana; font-size: 8pt;"
+ link="#006699" vlink="#006699" alink="#6666ff">
+<table width="750" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="60%"><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="5" color="#ba650a"><b>Math 157a</b></font></td>
+      <td rowspan="4">
+      <div align="center"> &nbsp;<a href="http://www.math.caltech.edu/"
+ target="_blank"><img src="citlogo.gif" alt="" height="80" width="79"
+ border="0"></a></div>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%"><i> <font
+ face="Verdana, Arial, Helvetica, sans-serif" size="3" color="#000000">Riemannian
+Geometry
+
+
+      </font><font face="Verdana, Arial, Helvetica, sans-serif" size="3"
+ color="#000000"><br>
+      </font></i></td>
+    </tr>
+    <tr>
+      <td width="60%"><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#999999">Fall 2014-15</font></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table height="20" width="750" align="center" bgcolor="#cccccc"
+ border="0" cellpadding="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="15" bgcolor="#ba650a">
+      <div align="right"> <a id="top" name="top"></a><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#ffffff"><b>TR
+9:00 AM
+// 106 ANB <br>
+      </b></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table height="30" width="750" align="center" bgcolor="#dcdcdc"
+ border="0" cellpadding="3" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="15">
+      <center> <font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><a href="#des">Course Description</a> | <a href="#pol">Policies</a>
+| <a href="#text">Textbooks</a> | <a href="#lect">Lecture Notes</a> |
+      <a href="#hand">Handouts</a> | <a href="#hw">Homework</a> | <a
+ href="#sections">Sections</a></font> </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffffff">
+      <div align="left">
+      <p><font size="2"><b><font
+ face="Verdana, Arial, Helvetica, sans-serif" color="#000000">Instructor:&nbsp;
+      </font></b><font face="Verdana, Arial, Helvetica, sans-serif"
+ color="#000000">Maria Trnkova, 280 Sloan, 626-395-4369, mtrnkova at caltech.edu</font></font><b><br>
+      <big><font size="2">Office Hours:</font><font size="3"> </font>&nbsp;</big></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Tuesdays, 
+		11 am</font><br>
+      <big><br>
+      </big></p>
+      </div>
+      <div align="left">
+      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+      <b><br>
+      </b></font></p>
+      <hr noshade="noshade" size="1" width="750"> </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table width="700" align="center" border="0" cellpadding="8"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left">
+      <div align="center"> <font
+ face="Verdana, Arial, Helvetica, sans-serif" size="3"><strong>Feedback
+Form</strong></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td
+ onmouseover="CSAction(new Array(/*CMP*/'116bde93'));return true;"
+ csover="116bde93" width="175" bgcolor="#ba650a">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="ann"></a>Announcements</font></b> </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">&nbsp;
+      <p>&nbsp;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="3"
+ cellspacing="0">
+  <tbody>
+    <tr valign="top" align="left">
+      <td>09/26/14 If you find the course schedules inconvenient we can work on 
+		it and shift to 10:30 am.<br>
+      </td>
+    </tr>
+    <tr valign="top" align="left">
+      <td>10/29/14 The due date of the HW2 was postponed for one week.</td>
+    </tr>
+    <tr valign="top" align="left">
+      <td>10/30/14 I will add topics for the oral presentation <a href="topics.pdf"> here</a>.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="des" id="des"></a>Course Description</font></b>
+      </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<a
+ href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="8"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left"><big><font
+ face="Verdana, Arial, Helvetica, sans-serif">The goal of the course is
+to define basic concepts of Riemannian Geometry (metric, connection,
+geodesics, curvature, completeness, exponential map), to study the
+relationships between geodesics and curvature (Jacobi field) and
+connection between local and global properties of Riemannian Manifolds
+(e.g. Hopf-Rinow, Hadamard Theorems). We also consider spaces of
+constant curvature.<br>
+      </font></big><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><br>
+      </font><b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><br>
+      </font></b></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="pol" id="pol"></a>Policies</font></b>
+      </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<a
+ href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="8"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left">
+		<font
+ face="Verdana, Arial, Helvetica, sans-serif"><span
+ style="font-weight: bold;">Grading:</span> Grading is based on home works.</font><p>
+		<span style="font-weight: 700">
+		<font face="Verdana, Arial, Helvetica, sans-serif">Homework </font>
+		</span><font
+ face="Verdana, Arial, Helvetica, sans-serif">
+		<span
+ style="font-weight: bold;">Policy:</span> There will be five home works (every 
+		second week). One home work can be replaced by an oral presentation for 
+		~20 minutes of a topic in Riemannian Geometry. Collaborations are 
+		allowed but write your own solution.</font><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="4"><br>
+      </font><span style="font-family: Verdana,sans-serif;">Homeworks should be 
+		handed in at the beginning of a class at 9 am in 106 ANB. The due date will be 
+		written on the list of problems. </span><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="4">
+      <br>
+      </font></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="text" id="text"></a>Textbooks</font></b>
+      </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<a
+ href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="3"
+ cellspacing="0">
+  <tbody>
+    <tr valign="top" align="left">
+      <td>
+      <p><big><span style="font-family: Verdana;">1) Gallot, Hulin and
+Lafontaine, Riemannian Geometry, Springer-Verlag, Universitext, 3rd
+edition or later. ISBN-13: 978-3540204930, ISBN-10: 3540204938, 2004.<br>
+      <br>
+2) Do Carmo, Riemannian Geometry, Birkh&auml;user Boston, ISBN-13:
+978-0817634902, ISBN-10: 0817634908, 1992.<br>
+      <br>
+3) Lee, Riemannian Manifolds: An Introduction to Curvature, Springer,
+ISBN 978-0-387-98271-7, 1997.<br>
+      </span></big><br>
+      <br>
+      </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="lect" id="lect"></a>Lecture Notes </font></b>
+      </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<a
+ href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="31" bgcolor="#999999">
+      <center>
+      <table width="700" border="0" cellpadding="4" cellspacing="1">
+        <tbody>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Date</b></font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="hand" id="hand"></a>Handouts</font></b>
+      </center>
+      </td>
+      <td bgcolor="#dcdcdc">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<a
+ href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="31" bgcolor="#999999">
+      <center>
+      <table width="700" border="0" cellpadding="4" cellspacing="1">
+        <tbody>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Date </b></font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="hw" id="hw"></a>Homework</font></b> </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">
+      <div align="right"> &nbsp;<font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2">&nbsp;<a
+ href="#top">Top</a></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="31" bgcolor="#999999">
+      <center>
+      <table width="713" border="0" cellpadding="4" cellspacing="1">
+        <tbody>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="126"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Due Date </b></font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><b>Homework</b>&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><b>Solutions </b> </font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="126">October 16</td>
+            <td bgcolor="#ffffff">
+			<p>
+			<a href="./HW/157aHW1.pdf">HW1</a></td>
+            <td bgcolor="#ffffff">&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="126"><font color="#FF0000">November 6</font> - NEW! (October 30 
+			- old)<br>
+            </td>
+            <td><a href="./HW/157aHW2.pdf">HW2</a><br>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="126">November 14<br>
+            </td>
+            <td><a href="./HW/157aHW3.pdf">HW3</a><br>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="126">December 2<br>
+            </td>
+            <td><a href="./HW/157aHW4.pdf">HW4</a><br>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td>December 12<br>
+            </td>
+            <td><a href="./HW/157aHW5.pdf">HW5</a><br>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr noshade="noshade" size="1" width="750">
+<table height="20" width="750" align="center" bgcolor="#cccccc"
+ border="0" cellpadding="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="15" bgcolor="#ba650a">
+      <center> <span class="style1"><font
+ face="Verdana, Arial, Helvetica, sans-serif" color="#ffffff">&nbsp;<span
+ class="style2">
+      <script language="JavaScript">
+<!--
+var days = new Array(8);
+days[1] = "Sunday";
+days[2] = "Monday";
+days[3] = "Tuesday";
+days[4] = "Wednesday";
+days[5] = "Thursday";
+days[6] = "Friday";
+days[7] = "Saturday";
+var months = new Array(13);
+months[1] = "January";
+months[2] = "February";
+months[3] = "March";
+months[4] = "April";
+months[5] = "May";
+months[6] = "June";
+months[7] = "July";
+months[8] = "August";
+months[9] = "September";
+months[10] = "October";
+months[11] = "November";
+months[12] = "December";
+var dateObj = new Date(document.lastModified);
+var wday = days[dateObj.getDay() + 1];
+var lmonth = months[dateObj.getMonth() + 1];
+var date = dateObj.getDate();
+var fyear = dateObj.getYear();
+if (fyear < 2000) {fyear = fyear + 1900;};
+document.writeln("Page Updated:&nbsp;&nbsp;" + wday
++ ",&nbsp;" + lmonth + "&nbsp;" + date + ",&nbsp;" + fyear + "");
+
+
+// -->
+      </script>|
+&copy;
+California
+Institute
+of Technology</span></font><span class="style2"><b><font
+ face="Verdana, Arial, Helvetica, sans-serif" color="#ffffff"> |
+Questions?
+&nbsp;kaubry @ caltech.edu</font></b></span></span> </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

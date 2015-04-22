@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CS 145 - Introduction to Databases (Autumn 2014)</title>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<div class="container">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CS 145</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#description">Description</a></li>
+              <li><a href="#lecture">Lecture Plan</a></li>
+              <li><a href="#grading">Grading</a></li>
+              <li class="divider"></li>
+              <li><a href="#staff">Staff</a></li>
+              <li class="divider"></li>
+              <li><a href="#late-policy">Late Policy</a></li>
+              <li><a href="#honor-code">Honor Code</a></li>
+              <li><a href="#disability">Disability</a></li>
+            </ul>
+          </li>
+          <li><a href="#office-hours">Office Hours</a></li>
+          <li><a href="#homework">Homework</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="https://piazza.com/class/hykx4ym0gq8lk">Piazza</a></li>
+          <li><a href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/">EdX</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="jumbotron">
+<h1>CS145 Introduction to Databases</h1>
+<h3>NVIDIA Auditorium on MW 11:00-12:15</h3>
+<p class="lead">Email us at <a href="mailto:cs145-staff@cs.stanford.edu">cs145-staff@cs.stanford.edu</a> if you have any questions.</p>
+</div>
+
+<a name="description"></a>
+<div class="panel panel-default">
+  <div class="panel-heading">Description</div>
+  <div class="panel-body">
+The course mainly covers database design and the use of databases in
+applications, with a short introduction to back-end structure of
+database systems. It includes extensive coverage of the relational
+model, relational algebra, and SQL. The course also features database
+design, and relational design principles based on dependencies and
+normal forms. Many additional key database topics from the design and
+application-building perspective are also covered: indexes, views,
+transactions, authorization, integrity constraints, triggers, and
+on-line analytical processing (OLAP). Emerging NoSQL systems such as
+MapReduce framework and document-store database with JSON-based data
+model will also be covered. There will be a programming project, which
+explores database design and management in web applications by
+utilizing appropriate features in SQL.
+  </div>
+</div>
+
+<!--
+<div class="panel">
+<h2>Midterm Information</h2>
+
+<ul>
+  <li>Time: <strong>Wednesday night, October 22nd, from 7pm to 8:30pm</strong></li>
+  <li>Location:
+    <ul>
+      <li>If your last name begins with <strong>A through M</strong>, you'll be taking the exam in <strong>Nvidia Auditorium</strong>, where we normally hold lecture.</li>
+      <li>If your last name begins with <strong>N through Z</strong>, you'll be taking the exam in <strong>Bishop Auditorium</strong>, which is in the new Lathrop Library.</li>
+    </ul>
+  </li>
+  <li>SCPD:
+    <ul>
+      <li>If you're taking the course nearby (i.e. within 25 miles of campus), we strongly encourage you to take the midterm exam on campus.</li>
+      <li>If you do decide to take the exam on campus, please email Firas (fabuzaid at stanford dot edu) by Wednesday, October 15th, to let us know.</li>
+      <li>If, instead, you are taking the exam remotely, please contact the <a href="mailto:scpd-distribution@lists.stanford.edu">SCPD distribution office</a> to arrange the timing and proctoring of your exam.</li>
+    </ul>
+  </li>
+</ul>
+
+</div>-->
+
+<div class="panel panel-default">
+<div class="panel-heading">Final</div>
+  <div class="panel-body">
+	<a name="final"></a>
+<h3>Final Logistics</h3>
+<p>The CS145 Final Exam is scheduled to take place on <strong>Thursday, December 11th</strong>, from <strong>8:30am to 11:30am</strong>, in Cemex Auditorium.</p>
+
+<p>You are allowed one double-sided sheet of notes.</p>
+
+	<p>Study Guide: <a href="http://web.stanford.edu/class/cs145/LECTURES/145newMaterialStudyGuide.pdf" class="btn btn-primary">PDF</a></p>
+	</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">Homework</div>
+  <div class="panel-body">
+	<a name="homework"></a>
+
+	<h3>Relational Algebra Template</h3>
+	Download: <a href="./hw/ra_template.pdf" class="btn btn-primary">PDF</a> <a href="./hw/ra_template.tex" class="btn btn-primary">TEX</a>
+	<h3>Problem Set 1</h3>
+	Download: <a href="./hw/pset1.pdf" class="btn btn-primary">PDF</a> <a href="./hw/pset1_solutions.pdf" class="btn btn-primary">Solutions</a>
+	<h3>Problem Set 2</h3>
+	Download: <a href="./hw/pset2.pdf" class="btn btn-primary">PDF</a> <a href="./hw/pset2_solutions.pdf" class="btn btn-primary">Solutions</a>
+	<h3>Problem Set 3</h3>
+	Download: <a href="./hw/pset3.pdf" class="btn btn-primary">PDF</a> <a href="./hw/pset3_solutions.pdf" class="btn btn-primary">Solutions</a>
+	</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Activities</div>
+  <div class="panel-body">
+	<a name="activities"></a>
+
+	<h3>SQL</h3>
+	Download:
+  <a href="./activities/SQL Activity Slides.pdf" class="btn btn-primary">Slides</a>
+  <a href="./activities/SQL Equivalence Activity.pdf" class="btn btn-primary">Handout</a>
+  <a href="./activities/SQL Equivalence Activity (Solutions).pdf" class="btn btn-primary">Solutions</a>
+  <a href="./activities/SQL Activity FAQ.pdf" class="btn btn-primary">FAQ</a>
+
+  <h3>Triggers</h3>
+  Download:
+  <a href="./activities/Triggers Slides.pdf" class="btn btn-primary">Slides</a>
+  <a href="./activities/Triggers Handout.pdf" class="btn btn-primary">Handout</a>
+  <a href="./activities/Triggers Solutions.zip" class="btn btn-primary">Solutions</a>
+
+  <h3>Redis</h3>
+  Download:
+  <a href="./activities/RedisActivityLecture.pdf" class="btn btn-primary">Slides</a>
+  <a href="./activities/RedisActivity.pdf" class="btn btn-primary">Handout</a>
+  <a href="./activities/RedisActivityData.txt" class="btn btn-primary">Data</a>
+
+  <h3>OLAP</h3>
+  Download:
+  <a href="./activities/OLAPSlides.pdf" class="btn btn-primary">Slides</a>
+  <a href="./activities/OLAP.pdf" class="btn btn-primary">Handout</a>
+  <a href="./activities/OLAPAnswers.pdf" class="btn btn-primary">Solutions</a>
+  <a href="./activities/install.pdf" class="btn btn-primary">Setup</a>
+  <a href="./activities/raw_search_log.zip" class="btn btn-primary">Data</a>
+  </div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">Midterm</div>
+  <div class="panel-body">
+	<a name="midterm"></a>
+
+	<h3>Midterm Solutions</h3>
+	Download: <a href="./docs/CS145_Midterm_Solutions.pdf" class="btn btn-primary">Solutions</a>
+	</div>
+</div>
+
+<div class="panel">
+<a name="lecture"></a>
+<h2>Lecture Plan</h2>
+
+<p class="comment">This class is semiflipped.</p>
+
+<p class="comment">Flipped lectures are highlighted in red and are marked with an F next to
+the course number. For each flipped lecture, there are one or more
+assigned videos that should be watched <b>before</b> that class. There is
+a host of other great videos on almost all topics in the course, but these
+videos are optional. The number in parenthesis indicates the approximate
+running time, e.g., SQL (125) indicates that Jennifer's SQL videos
+take approximately two hours.</p>
+
+<table class="plan">
+<tr>
+<th>Lecture</th>
+<th>Date</th>
+<th>Topic</th>
+<th>
+<a class="lecturelink" href="http://myvideosu.stanford.edu">Videos of this
+  Class</a> and<br> EdX material with previous lectures <a class="lecturelink" href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/">here</a></th>
+<th>Assignment Due Dates</th>
+</tr>
+<tbody>
+<tr>
+<td align="center" colspan="4" class="small-section-header"> Introduction and Querying </td>
+</tr>
+<tr>
+<td>1</td>
+<td>9/22</td>
+<td>Course Logistics and Database History</td>
+<td><a class="lecturelink" href="LECTURES/CS145-Lecture1.pptx">Lecture
+    1</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture1.pdf">pdf</a>)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9/24</td>
+<td>Relational Model and Relational Algebra</td>
+<td><a class="lecturelink" href="LECTURES/CS145-Lecture2.pptx">Lecture
+    2</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture2.pdf">pdf</a>)
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9/29</td>
+<td>SQL Introduction</td>
+<td>
+<a class="lecturelink" href="LECTURES/CS145-Lecture3.pptx">Lecture 3</a>
+ (<a class="lecturelink" href="LECTURES/CS145-Lecture3.pdf">pdf</a>)
+</td>
+</tr>
+
+<tr class="flipped">
+<td>4 F</td>
+<td>10/1</td>
+<td>SQL Activity</td>
+<td><a href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/courseware/ch-sql/">SQL (125)</a></td>
+</tr>
+<tr>
+<td align="center" colspan="4" class="small-section-header">
+Database Design and Normal Forms</td>
+</tr>
+<tr>
+<td>5</td>
+<td>10/6</td>
+<td>Design Theory</td>
+<td>
+<a class="lecturelink" href="LECTURES/CS145-Lecture5.pptx">Lecture 5</a>
+ (<a class="lecturelink" href="LECTURES/CS145-Lecture5.pdf">pdf</a>)
+</td>
+<td><a href="./hw/pset1.pdf">Problem Set 1</a></td>
+</tr>
+<tr class="flipped">
+<td>6 F</td>
+<td>10/8</td>
+<td>Constraints and Trigger Activity</a></td>
+<td><a href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/courseware/ch-constraints_and_triggers/">Constraints
+    and Triggers (119)</a><br>
+<a class="lecturelink" href="LECTURES/CS145-Lecture6.pptx">Lecture 6</a>
+ (<a class="lecturelink" href="LECTURES/CS145-Lecture6.pdf">pdf</a>)
+</tr>
+<td align="center" colspan="4" class="small-section-header">
+Applications and Auction Base</td>
+<tr>
+<td>7</td>
+<td>10/13</td>
+<td>Project Overview and Q&amp;A Day </td>
+<td>
+<a class="lecturelink" href="LECTURES/CS145-Lecture7.pptx">Lecture 7</a>
+ (<a class="lecturelink" href="LECTURES/CS145-Lecture7.pdf">pdf</a>)
+</td>
+<td><a href="./hw/pset2.pdf">Problem Set 2</a></td>
+</tr>
+<tr class="guest">
+<td>8</td>
+<td>10/15</td>
+<td>Guest Lecture: Data Challenges in Google Ads. </td>
+<td></td>
+</tr>
+<td align="center" colspan="4" class="small-section-header">
+Midterm Week</td>
+<tr class="exam">
+<td>9</td>
+<td>10/20</td>
+<td>Midterm Review</td>
+<td><a href="LECTURES/CS145-MidtermReview.pptx">Lecture Notes</a>
+  (<a href="LECTURES/CS145-MidtermReview.pdf">pdf</a>)<br>
+<a href="LECTURES/cheat_sheet.pdf">Cheat Sheet</a>
+</td>
+<td style="background-color: rgb(255,255,255); color: rgb(0,0,0);">
+<a class="lecturelink" href="https://web.stanford.edu/class/cs145/docs/CS_145_Project_Part_1.pdf">Project #1</a></td>
+</tr>
+<tr class="exam">
+<td>10</td>
+<td>10/22</td>
+<td>Midterm!</td>
+<td></td>
+</tr>
+<td align="center" colspan="4" class="small-section-header">
+Transactions</td>
+<tr>
+<td>11</td>
+<td>10/27</td>
+<td>Concurrency and Parallelism</td>
+<td><a class="lecturelink" href="LECTURES/CS145-Lecture11.pptx">Lecture
+    11</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture11.pdf">pdf</a>)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>10/29</td>
+<td>Distributed Transactions</td>
+<td>
+<a class="lecturelink" href="LECTURES/CS145-Lecture12.pptx">Lecture
+    12</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture12.pdf">pdf</a>)
+</td>
+</tr>
+<td align="center" colspan="4" class="small-section-header">
+Introduction to Database Systems</td>
+<tr>
+<td>13</td>
+<td>11/3</td>
+<td>Indexing, Btrees, and Sorting</td>
+<td>
+<a class="lecturelink" href="LECTURES/CS145-Lecture13.pptx">Lecture
+    13</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture13.pdf">pdf</a>)
+</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>11/5</td>
+<td>Database Systems Overview</td>
+<td>
+<a class="lecturelink" href="LECTURES/CS145-Lecture14.pptx">Lecture 14</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture14.pdf">pdf</a>)</td>
+</tr>
+<td align="center" colspan="4" class="small-section-header">
+Not-yet-SQL Systems</td>
+<tr>
+<td>15</td>
+<td>11/10</td>
+<td>NoSQL, NewSQL, and Not-yet-SQL</td>
+<td>
+<a class="lecturelink" href="LECTURES/CS145-Lecture15.pptx">Lecture 15</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture15.pdf">pdf</a>)</td>
+</td>
+<td><a class="lecturelink" href="https://web.stanford.edu/class/cs145/docs/CS_145_Project_Part_2.pdf">Project #2</a></td>
+</tr>
+<tr class="flipped">
+<td>16 F</td>
+<td>11/12</td>
+<td>NoSQL Activity</td>
+<td><a href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/courseware/ch-nosql_systems/seq-vid-nosql_motivation/">NoSQL Systems</a> (47)</td>
+</tr>
+<td align="center" colspan="4" class="small-section-header">
+Analytics and Visualization</td>
+<tr class="flipped">
+<td>15 F</td>
+<td>11/17</td>
+<td>OLAP and Cubes</td>
+<td><a href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/courseware/ch-views/seq-vid-defining_and_using_views/">Views (95)</a> and <a href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/courseware/ch-on-line_analytical_processing/seq-vid-olap/">On-Line Analytic Processing (45)</a></td>
+</tr>
+<tr class="guest">
+<td>16</td>
+<td>11/19</td>
+<td>Guest Lecture: Visualization, Vadim Ogievetsky (<a target="_blank" href="https://www.youtube.com/watch?v=yqsxON6Bk2U">Previous Talk</a>)</td>
+</td>
+<td>
+</tr>
+<td align="center" colspan="4" class="small-comment-header">
+Thanksgiving Break: 11/24-11/28</td>
+<tr>
+<td>19</td>
+<td>12/1</td>
+<td>Graph Processing</td>
+<td><a class="lecturelink" href="LECTURES/CS145-Lecture19.pptx">Lecture 19</a>
+(<a class="lecturelink" href="LECTURES/CS145-Lecture19.pdf">pdf</a>)</td>
+<td><a href="./hw/pset3.pdf">Problem Set 3</a></td>
+</tr>
+<tr>
+<td align="center" colspan="4" class="small-section-header">
+Wrap up and Final</td>
+</tr>
+<tr class="exam">
+<td>20</td>
+<td>12/3</td>
+<td>Final Exam Review</td>
+<td><a href="LECTURES/145newMaterialStudyGuide.pdf">Study Guide</a>
+  (<a href="LECTURES/FinalExam.pptx">Exam Details</a> <a href="LECTURES/FinalExam.pdf">pdf</a>)</td>
+<td style="background-color: rgb(255,255,255); color: rgb(0,0,0);">
+<a class="lecturelink" href="https://web.stanford.edu/class/cs145/docs/CS_145_Project_Part_3.pdf">Project #3</a> (10/5)</td>
+</tr>
+<tr class="exam">
+<td></td>
+<td>12/11</td>
+<td>Final Exam<br>8:30am - 11:30am, Cemex Auditorium</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="panel">
+<a name="grading"></a>
+<h2>Grading</h2>
+
+<table>
+<tr><td>Attendance (8 Classes)</td><td>10%</td></tr>
+<tr><td>Problem Sets</td><td>20%</td></tr>
+<tr><td>Programming Project</td><td>20%</td></tr>
+<tr><td>Midterm</td><td>20%</td></tr>
+<tr><td>Final</td><td>30%</td></tr>
+</table>
+</div>
+
+
+<div class="panel">
+<a name="office-hours"></a>
+<h2>Office Hours</h2>
+<p>Unless otherwise indicated in the calendar, office hours will be held in the <strong>open area of the Huang basement</strong>. CAs will bring signs to identify themselves. Note: the schedule of office hours may change from time to time, so be sure to check the calendar before going to an office hour.</p>
+<iframe src="https://www.google.com/calendar/embed?mode=WEEK&amp;src=utb5pbh8k92fh7js8oitp6tt24%40group.calendar.google.com&amp;ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<a name="staff"></a>
+<div class="panel">
+<h2>Staff</h2>
+
+<table class="staff-list">
+<tr><td><img src="./img/chris.jpg"></td><td><a href="http://cs.stanford.edu/people/chrismre/">Chris</a></td><td>Office Hours: MW 10-11, Gates 433 (or by appt.)</td></tr>
+<tr><td><img src="./img/firas.jpg"></td><td>Firas Abuzaid</td><td></td></tr>
+<tr><td><img src="./img/vien.jpg"></td><td>Vien Duong Dinh</td><td></td></tr>
+<tr><td><img src="./img/michael.jpg"></td><td>Michael Fitzpatrick</td><td></td></tr>
+<tr><td><img src="./img/angela.jpg"></td><td>Angela Gong</td><td></td></tr>
+<tr><td><img src="./img/patrick.jpg"></td><td>Patrick Harvey</td><td></td></tr>
+<tr><td><img src="./img/yifei.jpg"></td><td>Yifei Huang</td><td></td></tr>
+<tr><td><img src="./img/raven.jpg"></td><td>Raven Jiang</td><td></td></tr>
+<tr><td><img src="./img/curran.jpg"></td><td>Curran Kaushik</td><td></td></tr>
+<tr><td><img src="./img/sam.jpg"></td><td>Sam Keller</td><td></td></tr>
+<tr><td><img src="./img/joy.jpg"></td><td>Joy Kim</td><td></td></tr>
+<tr><td><img src="./img/kevin.jpg"></td><td>Kevin McKenzie</td><td></td></tr>
+<tr><td><img src="./img/gina.jpg"></td><td>Gina Pai</td><td></td></tr>
+<tr><td><img src="./img/vishnu.jpg"></td><td>Vishnu Sundaresan</td><td></td></tr>
+</table>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Late Policy</div>
+  <div class="panel-body">
+  <a name="late-policy"></a>
+	You will have three 24-hour "late days" that you can use throughout
+	the quarter on any of the Problem Sets or Programming Projects, unless
+	specified otherwise. Note, however, that late days cannot be applied
+	to automated quizzes and exercises on <a href="https://class.stanford.edu/courses/Engineering/CS145/Fall2014/">Open EdX</a>.</p>
+
+	Beyond these three late days, we will only grant extensions in the
+	case of a severe medical or family emergency. Please use your late
+	days wisely.
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Honor Code and Collaboration Policy</div>
+  <div class="panel-body">
+<a name="honor-code"></a>
+
+<p>We encourage you to discuss the Programming Projects and Problem Sets
+with other students; it's fine to discuss overall strategy and
+collaborate with a partner or in a small group, as both giving and
+receiving advice will help you to learn.</p>
+
+<p>However, for the Programming Projects, you must write your own code: it's not OK to share code or write code collaboratively. (This includes posting and/or sharing your code publicly, such as on GitHub!) Likewise, for the Problem Sets, you must write up your own solutions to all of the problems, and you must cite all people you worked with. If you do not do so, we will consider this a violation of the <a href="http://studentaffairs.stanford.edu/communitystandards/policy/honor-code">Stanford Honor Code</a>.</p>
+
+<p>If you consult any resources outside of the materials provided in
+class, you must cite these sources. We reserve the right to assign a
+penalty if your answers are substantially derivative, but, as long as
+you provide appropriate citations, we will not consider this an Honor
+Code violation.</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Students with Documented Disabilities</div>
+  <div class="panel-body">
+<a name="disability"></a>
+Students who may need an academic accommodation based on the impact of
+a disability must initiate the request through the Office of
+Accessible Education (OAE). OAE staff will evaluate the request with
+required documentation, recommend reasonable accommodations, and
+prepare an Accommodation Letter for faculty dated in the current
+quarter in which the request is being made. Students should contact
+OAE as soon as possible since timely notice is needed to coordinate
+accommodations: 563 Salvatierra Walk; phone: (650) 723-1066.
+  </div>
+</div>
+
+</div>
+</body>
+
+</html>

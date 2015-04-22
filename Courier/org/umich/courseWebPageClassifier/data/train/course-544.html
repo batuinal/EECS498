@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <!-- Below line includes the common website header using SSI -->
+  <head>
+  <title>CS106X: Programming Abstractions</title>
+  <meta charset=utf-8 />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://www.stanford.edu/class/cs106x/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://www.stanford.edu/class/cs106x/js/bootstrap.min.js"></script>
+  <script src="https://www.stanford.edu/class/cs106x/js/preview.js"></script>
+  <style type="text/css">
+    body {
+    padding-top: 56px;
+    }
+  </style>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-left navbar-inverse"
+       role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+	      <a class="navbar-brand" href="http://www.stanford.edu/class/cs106x/index.html">CS106X</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="main-header">
+	      <ul class="nav navbar-nav">
+          <li><a href="http://www.stanford.edu/class/cs106x/handouts.html">Handouts</a></li>
+          <li><a href="http://www.stanford.edu/class/cs106x/lectures.html">Lectures</a></li>
+          <li><a href="http://www.stanford.edu/class/cs106x/assignments.html">Assignments</a></li>
+          <li><a href="http://www.stanford.edu/class/cs106x/section.html">Section</a></li>
+          <li><a href="http://www.stanford.edu/class/cs106x/exams.html">Exams</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course Resources<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="http://stanford.edu/~stepp/cppdoc/">Stanford C++ Documentation</a></li>
+                <li><a href="http://paperless.stanford.edu/">Paperless</a></li>
+                <li><a href="http://web.stanford.edu/class/cs106x/qtcreator.html">Qt Creator</a></li>
+                <li><a href="https://cs198.stanford.edu/cs106/LairHelp/HelperSchedule.aspx">LaIR Schedule</a></li>
+                <li><a href="https://piazza.com/class/i4j0wn33ylo21s">Course Forum</a></li>
+                <li><a href="http://www.stanford.edu/class/cs106x/faq.html">FAQ</a></li>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+
+  <body>
+    <div class="container" id="main">
+      <header id="page-header">
+	<h1>CS106X: Programming Abstractions<br>
+	  <small>Winter 2015 | Mon Wed Fri 1:15-2:05pm in Building 200, Room 002</small>
+	</h1>
+      </header>
+      <div class="row">
+	<div class="col-md-6">
+  	  <div><h3>Announcements</h3></div>
+
+	  <div class="data"><b>March 7<sup>th</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                <a href="http://wics.stanford.edu">WICS</a> is hosting <a href="http://web.stanford.edu/group/wics/hackoverflow/spr2015/">HackOverflow</a>
+                on Saturday, April 25<sup>th</sup> from 10am - 10pm.  HackOverflow will focus on the use of hardware to build interesting products.
+                This particular hackathon is specifically set up to be accessible to those who've only taken CS106A, which means everyone here
+                is more than qualified take part.
+              </p>
+              <p>
+                If you're interested, then you should sign up <a href="https://hackoverflow.typeform.com/to/zNSIMK">right here</a>.
+              </p>
+            </li>
+          </ul>
+	  <div class="data"><b>March 2<sup>nd</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                I've uploaded Open Office and PDF versions of the slide decks I relied on
+                during today's lecture, and I've placed those materials
+                <a href="http://cs106x.stanford.edu/lectures/graph-algorithm-slides.zip">right here</a>.
+              </p>
+            </li>
+          </ul>
+
+	  <div class="data"><b>February 23<sup>th</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                Hey there, happy CS106X folk.  Check this out:
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://wics.stanford.edu">WICS</a> has put together a panel for this Wednesday evening.  The panel is
+                designed for undergraduates who are considering a CS major but would like to know more about the CS tracks.
+                Here's <a href="http://cs106x.stanford.edu/materials/ecsplore.pdf">a flyer</a> with all of the details, and if you think you're going to make it, you should
+                RSVP <a href="http://goo.gl/forms/ASYy3VHk8A">right here</a>.
+              </p>
+            </li>
+          </ul>
+	  <div class="data"><b>February 22<sup>nd</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                Happy Sunday, everyone.  I hope everyone is having a great weekend.  Several announcements...
+              </p>
+            </li>
+            <li>
+              <p>
+                First, I have conflict with two of the three remaining Thursday office hour blocks, so I've decided
+                to just move all Thursday hours to Wednesdays immediately following CS106X lecture.  That means I now
+                have office hours on Tuesday from 1 until 4 and on Wednesdays from 2:30 until 5.  
+              </p>
+            </li>
+            <li>
+              <p>
+                Second, remember that you have another midterm a week from this Thurdsday evening, once again
+                in Cubberley Auditorium from 7 until 10 pm.  The exam will cover everything up through and including
+                the material addressed by Handout 31 on tries.  In particular, the moment we finish talking about all things
+                tree is the moment we've covered all testable material.
+              </p>
+            </li>
+            <li>
+              <p>
+                Finally, I've gone ahead and posted working implementations and test frameworks for the
+                <tt><b><a href="lectures/hash-maps.zip">HashMap</a></b></tt>, the <tt><b><a href="lectures/tree-maps.zip">TreeMap</a></b></tt>,
+                and the <tt><b><a href="lectures/lexicon.zip">Lexicon</a></b></tt>.  Feel free to download and tinker!
+              </p>
+            </li>
+          </ul>
+
+	  <div class="data"><b>February 7<sup>th</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                I've gone ahead and created a second challenge problem right
+                <a href="extras/sharing-chocolate.pdf">here</a>.  It relies on
+                your ability to leverage recursive backtracking and memoization
+                to solve what was presented as an ACM World Finals Contest Problem
+                back in 2010.  (Understand that you problem needs to be super fast
+                for all input sizes specified in the problem statement.)
+              </p>
+            </li>
+            <li>
+              <p>
+                Those who solve it will be treated to dinner out with Jerry, TA Kevin,
+                and the other students who solved the problem.  Unfortunately, those
+                who solved the first problem who also solve this problem can't be taken
+                to dinner twice.  (You're still welcome to submit a solution, though.)
+              <p>
+            </li>
+          </ul>
+
+	  <div class="data"><b>February 7<sup>th</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                One of my CS110 students built a web application to
+                help Stanford students search for and discover new courses.  I've
+                been playing with it for a few minutes, and I think it's really
+                nicely done.  Check it out at <a href="http://edusalsa.com/">http://edusalsa.com/</a>.
+              </p>
+            </li>
+          </ul>
+
+	  <div class="data"><b>February 3<sup>rd</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                I need to cancel today's office hours, as I need to be up in San Francisco this afternoon.
+                My office hours will resume on Thursday.
+              </p>
+            </li>
+            <li>
+              <p>
+                I received word that Google and IEEE are sponsoring a programming competition
+                on Saturday, February 14<sup>th</sup>.  More information about the contest
+                can be found right <a href="https://docs.google.com/forms/d/19KA2mhNOsSv73PRuo_bWuaiamXdqFNNQ3SE8mwZFRRM/viewform">here</a>.
+              </p>
+            </li>
+          </ul>
+	  <div class="data"><b>January 29<sup>th</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                I've gone ahead and posted a <a href="handouts/17-CS106X-Practice-Exam.pdf">practice midterm</a>
+                and the <a href="handouts/17S-CS106X-Practice-Solution.pdf">solution</a>.  The exam
+                is a week from tonight, and I'm allowing you to bring in your course textbook, copies
+                of the course handouts, your own notes, and copies of your assignment submissions.
+                You may not, however, use any electronic devices while taking the exam.
+              </p>
+            </li>
+            <li>
+              <p>
+                Also, I've gone ahead and posted an advanced programming problem right
+                <a href="extras/color-wriggles.pdf">here</a>.  I don't give extra credit
+                for completing it, but I will take the first six students to submit an efficient
+                solution out to dinner somewhere fancy.
+              </p>
+            </li>
+          </ul>
+	  <div class="data"><b>January 15<sup>th</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                In a rare display of organization, I've gone ahead and posted the
+                <a href="handouts/10-Assignment-2-ADTs.pdf">Assignment 2 handout</a> and the
+                <a href="assignments/assign-2-adts.zip">starter files</a>.  (We'll post demo programs
+                later tonight.)
+              </p>
+            </li>
+            <li>
+              <p>
+                If you're twiddling your thumbs already, then feel free to tackle the new assignment.
+                Note that the submission is due a week from Monday at <b>noon</b>, not 5:00 p.m.
+              </p>
+            </li>
+          </ul>
+	  <div class="data"><b>January 9<sup>th</sup>, 2015</b></div>
+          <ul>
+            <li>
+              <p>
+                Remember that you need to state your discussion section time preferences by going
+                <a href="http://cs198.stanford.edu">here</a> at some point before
+                Sunday at 5:00 p.m.  There's no reward for managing this sooner instead of later, but
+                make sure you don't miss the Sunday deadline, else you won't be assigned to a discussion
+                section.
+              </p>
+            </li>
+          </ul>
+	  <div class="data"><b>January 7<sup>th</sup>, 2015</b></div>
+	  <ul>
+	    <li>
+              <p>
+                Hey there, CS106X'ers!  If you're reading this, then you're still with us, and that's
+                all kinds of awesome.
+              </p>
+            </li>
+            <li>
+              <p>
+                Remember that you need to state your discussion section time preferences by going
+                <a href="http://cs198.stanford.edu">here</a> at some point between Thursday at 5:00 p.m.
+                and Sunday at 5:00 p.m.  There's no reward for managing this sooner instead of later, but
+                make sure you don't miss the Sunday deadline, else you won't be assigned to a discussion
+                section, and that'll be bad.
+              </p>
+            </li>
+            <li>
+              <p>
+                Also, when you get a block of free time, spend that time installing the development
+                environment you're required to use for CS106X.  The name of that development environment
+                is Qt Creator, and installation instructions can be found right
+                <a href="qtcreator.html">here</a>.  The installation process
+                requires you download a good number of large files, so it takes a little bit of time.
+              </p>
+            </li>
+            <li>
+              <p>
+                I've gone ahead and posted the next three handouts for today's lecture:
+                <ul>
+                  <li>
+                    <a href="handouts/04-Queen-Safety.pdf">Handout 04: Queen Safety</a>
+                    [<a href="lectures/queen-safety.zip">Code</a>]
+                  </li>
+                  <li><a href="handouts/05-C++-Strings.pdf">Handout 05: C++ Strings</a></li>
+                  <li>
+                    <a href="handouts/06-Assignment-1-Life.pdf">Handout 06: Assignment 1</a>
+                    [<a href="assignments/assign-1-life.zip">Project</a>]
+                    [<a href="assignments/assign-1-life-demos.zip">Demos</a>]
+                  </li>
+                </ul>
+              </p>
+              <p>
+                The first of these three handout houses the larger example I'll start on today and finish
+                either today or on Friday.  The second handout is for reference (I won't explicitly cover it
+                in lecture), and the third is your very first assignment (due a week from Friday).
+              </p>
+            </li>
+            <li>
+              <p>
+                In general, I won't post an announcement every time I'm about to lecture.  You're expected
+                to visit the <a href="lectures.html">Lectures</a> and <a href="assignments.html">Assignments</a>
+                pages via the tabs and dropdown menus at the top of this page.  You should visit those
+                pages regularly to ensure you're always in the know.
+              </p>
+	    </li>
+          </ul>
+	  <div class="data"><b>January 5<sup>th</sup>, 2015</b></div>
+	  <ul>
+	    <li>
+              <p>
+                Welcome to CS106X!  If you're here, I assume you're taking (or at least considering)
+                CS106X this quarter.  I'm more or less set to fire up today at 1:15pm, and look
+                forward to meeting all of you and having a great ten weeks together.
+              </p>
+            </li>
+            <li>
+              <p>
+                I've gone ahead and posted the first three handouts for today's lecture, and they're
+                right here:
+                <ul>
+                  <li><a href="handouts/01-CS106X-Course-Information.pdf">Handout 01: CS106X Course Information</a></li>
+                  <li><a href="handouts/02-CS106X-Course-Syllabus.pdf">Handout 02: CS106X Course Syllabus</a></li>
+                  <li><a href="handouts/03-Getting-Started.pdf">Handout 03: Getting Started</a></li>
+                </ul>
+              </p>
+	    </li>
+          </ul>
+	</div>
+	<div class="col-md-4">
+          <iframe src="https://www.google.com/calendar/embed?src=82ap97mi171881mar65cmcb260%40group.calendar.google.com&ctz=America/Los_Angeles" style="border-width:0" width="450" height="275" frameborder="0" scrolling="no"></iframe>
+	  <br/>
+          <br/>
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+              <b>Lecturer</b>: Jerry Cain
+            </div>
+	    <table class="table">
+	      <tr>
+		<td>
+		  <b>Email</b>: <a href="mailto:jerry@cs.stanford.edu?">jerry@cs.stanford.edu</a>
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <b>Office</b>: Gates 192
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <b>Office Hours</b>:
+		  <ul>
+		    <li>Tuesdays, 1:00-4:00pm</li>
+		    <li>Wednesdays, 2:30-5:00pm</li>
+		    <li>By appointment (email to schedule)</li>
+		  </ul>
+		</td>
+	      </tr>
+	    </table>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+              <b>Head TA</b>: Kevin Shin
+            </div>
+	    <table class="table">
+	      <tr>
+		<td>
+		  <b>Email</b>: <a href="mailto:hgkshin@stanford.edu?">hgkshin@stanford.edu</a>
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <b>Office</b>: Gates 160
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <b>Office Hours</b>:
+		  <ul>
+                    <li>Tuesdays and Thursdays, 10:30am-12:30pm</li>
+                    <li>By appointment (email to schedule)</li>
+		  </ul>
+		</td>
+	      </tr>
+	    </table>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+              <b>Website Design: </b>: Jess Fisher
+            </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

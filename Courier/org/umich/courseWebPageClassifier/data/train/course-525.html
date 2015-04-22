@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CS225A Experimental Robotics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="samir" >
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">-->
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+					 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 </button> 
+					 <a class="navbar-brand" >CS225A</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="./index.html">Home</a>
+						</li>
+						<li>
+							<a href="./projects.html">Projects</a>
+						</li>
+						<li>
+							<a href="http://web.stanford.edu/~smenon/scl.html" target="_blank">Control & Simulation</a>
+						</li>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="http://piazza.com/stanford/fall2014/cs225a" target="_blank">Piazza</a>
+						</li>
+						<li>
+							<a href="http://cs.stanford.edu/groups/manips/" target="_blank">Stanford Robotics</a>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+			<div class="carousel slide" id="carousel-25687">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-25687">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-25687">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-25687">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="" src="./pictures/PaintAndHelipad-crop.png">
+						<div class="carousel-caption">
+							<h3>
+								The Kuka MoHPad and Puma Boticelli Projects
+							</h3>
+						</div>
+					</div>
+					<div class="item">
+						<img alt="" src="./pictures/JediBot-crop.jpg">
+						<div class="carousel-caption">
+							<h3>
+								The JediBot Project
+							</h3>
+						</div>
+					</div>
+					<div class="item">
+						<img alt="" src="./pictures/PumaSnooker2-crop.png">
+						<div class="carousel-caption">
+							<h3>
+								The SnookerBot Project
+							</h3>
+						</div>
+					</div>
+				</div> <a class="left carousel-control" href="#carousel-25687" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-25687" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<div class="row clearfix">
+				<h2> CS225A : Experimental Robotics, Fall 2014</h2>
+				<h3> Class : Tue, Thu 3.15-4.30pm. Gates B12.</h3>
+				<h4> Section : Fri 10.00-11.30am. Gates 119 (Robotics Lab).</h4>
+				<h4> Snacks & discussion will be at Gates 119 (See schedule).</h4>
+				<br />
+				<p>
+					The goal of this class is to introduce you to the intricate art of programming articulated robots.
+					The course will review the basics of control theory in the first half of the quarter, and will require groups of
+					three to four students to	implement a motor task on one of our available robotic manipulators.
+					Most projects involve some aspect of robot control, computer vision, and potentially some mechanical engineeering,
+					so teams should ideally posess programming as well as some mechanical expertise.<br /><br />  
+					The choice of project is yours! We expect great things...
+				</p>
+			</div>
+			
+			<div class="hrline"> <hr /> </div> 
+			<div class="row clearfix">
+				<h3> Staff </h3>	
+				<div class="row clearfix">
+					<div class="col-md-3 column">
+						<h4> Oussama Khatib </h4>
+						<p>
+							Instructor<br />
+							<a href="http://cs.stanford.edu/groups/manips/" target="_blank">Webpage</a> 
+						</p>
+					</div>
+					<div class="col-md-3 column">
+						<h4> Samir Menon </h4>
+						<p>
+							Guest Lecturer<br />
+							<a href="http://www.samirmenon.org" target="_blank">Webpage</a> 
+						</p>
+					</div>
+				</div>	
+				<div class="row clearfix">
+					<div class="col-md-3 column">
+						<h4> Xiyang Yeh </h4>
+						<p>
+							Course Assistant <br />
+							Office hours : Mon: 3:30-4:30p 
+						</p>
+					</div>
+					<div class="col-md-3 column">
+						<h4> Gerald Brantner </h4>
+						<p>
+							Course Assistant <br />
+							Office hours : Mon: 2:30-3:30p
+						</p>
+					</div>
+					<div class="col-md-3 column">
+						<h4> Chen Bai </h4>
+						<p>
+							Course Assistant <br />
+							Office hours : Tue/Thu 4:30-5.15p
+						</p>
+					</div>
+					<div class="col-md-3 column">
+						<h4> Brian Soe </h4>
+						<p>
+							Course Assistant <br />
+							Office hours : Tue/Thu 4:30-5.15p
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="hrline"> <hr /> </div> <br />		
+			<h3>Timeline</h3>
+			<table class="table">
+				<thead>
+					<tr>
+						<th> Date </th>
+						<th> Lecture </th>
+						<th> Handouts </th>
+						<th> Homework (all due @ 11:59pm) </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> Tue, Sep 23 </td>
+						<td> Introduction & Course Review </td>
+						<td>  </td>
+						<td></td>
+					</tr>
+					<tr>
+						<td> Thu, Sep 25 </td>
+						<td> Kinematics </td>
+						<td> <a href="./handouts/CS225a-F14-L2.pdf"> Lec2.pdf </a> </td>
+						<td> <a href="./hw0.html" target="_blank">Homework 0</a>. Due Oct 2. 
+						 <a href="./handouts/CS225A_HW_0_Solution.pdf" target="_blank">Solutions</a>.  
+						</td>
+					</tr>
+					<tr class="active">
+						<td> Fri, Sep 26 </td>
+						<td> Section: Set up Linux & Control Environment </td>
+						<td> (see the <a href="https://bitbucket.org/samirmenon/scl-manips-v2/wiki/Home" target="_blank">Wiki</a>) </td>
+						<td> <em>CAs</em>: CB, XY</td>
+					</tr>
+					<tr>
+						<td> Tue, Sep 30 </td>
+						<td> Dynamics & Control </td>
+						<td> (see Lec 2 notes) </td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td> Thu, Oct 2 </td>
+						<td> <em>Snacks & Discussion</em>: Simulation and Graphics </td>
+						<td> <a href="./handouts/CS225a-F14-L4.pdf">Lec4.pdf</a> </td>
+						<td> <a href="./hw1.html" target="_blank">Homework 1</a>, Due Oct9.
+						   <a href="./handouts/CS225A_HW_1_Solution.pdf" target="_blank">Solutions</a>.  
+						</td>
+					</tr>
+					<tr class="active">
+						<td> Fri, Oct 3 </td>
+						<td> Section: Dynamics & Hw </td>
+						<td> <a href="handouts/session1.zip">session1.zip</a> </td>
+						<td> <em>CAs</em>: BS, CB </td>
+					</tr>
+					<tr>
+						<td> Tue, Oct 7 </td>
+						<td> <em>Snacks & Discussion</em>: Fine-Tuning Controllers for Real Robots</td>
+						<td> <a href="./handouts/CS225a-F14-L5.pdf">Lec5.pdf</a> </td>
+						<td> Project groups & outline due</td>
+					</tr>
+					<tr>
+						<td> Thu, Oct 9 </td>
+						<td> <em>Snacks & Discussion</em>: Trajectory Generation & Haptic Teleoperation </td>
+						<td> <a href="./handouts/CS225a-F14-L6.pdf">Lec6.pdf</a> </td>
+						<td> <a href="./hw2.html" target="_blank">Homework 2</a>. Due Oct 16. </td>
+					</tr>
+					<tr class="active">
+						<td> Fri, Oct 10 </td>
+						<td> Section: Troubleshooting control & Finalizing Groups </td>
+						<td> Sec-control.pdf </td>
+						<td> <em>CAs</em>: BS, GB </td>
+					</tr>
+					<tr class="success">
+						<td> Tue, Oct 14 </td>
+						<td> Operational Space Control & Project Announcement </td>
+						<td> Lec7.pdf </td>
+						<td>  </td>
+					</tr>
+					<tr>
+						<td> Thu, Oct 16 </td>
+						<td> Lab Experiments with Robots </td>
+						<td> Lec8.pdf </td>
+						<td> <a href="./hw3.html" target="_blank">Homework 3</a>. Due Oct 30 </td>
+					</tr>
+					<tr class="active">
+						<td> Fri, Oct 17 </td>
+						<td> Section: Controlling real robots </td>
+						<td> Sec-robots.pdf </td>
+						<td> <em>CAs</em>: GB (haptics), XY (puma) </td>
+					</tr>
+					<tr >
+						<td> Tue, Oct 21 </td>
+						<td> Operational Space Control II </td>
+						<td> Lec9.pdf </td>
+						<td> Discuss project options with TAs</td>
+					</tr>
+					<tr>
+						<td> Thu, Oct 23 </td>
+						<td> <em>Snacks & Discussion</em>: Finalizing Projects </td>
+						<td>  </td>
+						<td>  Detailed project plan due  </td>
+					</tr>
+					<tr class="active">
+						<td> Fri, Oct 24 </td>
+						<td> Section: Project Critique & Discussion </td>
+						<td> </td>
+						<td> <em>CAs</em>: BS, CB, GB, XY </td>
+					</tr>
+					<tr>
+						<td> Thu, Nov 6 </td>
+						<td> Project Review & Milestone I </td>
+						<td>  </td>
+						<td> Short report due </td>
+					</tr>
+					<tr class="active">
+						<td> Fri, Nov 14 </td>
+						<td> Section: Project Discussion </td>
+						<td> </td>
+						<td> <em>CAs</em>: TBD </td>
+					</tr>
+					<tr class="active">
+						<td> Fri, Nov 21 </td>
+						<td> Section: Project Discussion </td>
+						<td> </td>
+						<td> <em>CAs</em>: TBD </td>
+					</tr>
+					<tr>
+						<td> Nov 24-28 </td>
+						<td> Thanksgiving break </td>
+						<td>  </td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td> Mon, Dec 1 </td>
+						<td> Project Review & Milestone II </td>
+						<td>  </td>
+						<td> Short report due </td>
+					</tr>
+					<tr class="warning">
+						<td> Thu, Dec 4th </td>
+						<td> Project demonstrations </td>
+						<td>  </td>
+						<td>  </td>
+					</tr>
+					<tr>
+						<td> Thu, Dec 11 </td>
+						<td> Web project report </td>
+						<td>  </td>
+						<td>  Full report due </td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td> Legend </td>
+						<td>Green : <em>Current class</em>. Gray : <em>Section</em>. Yellow : <em>Final project</em>.</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				<!-- <tr class="success">
+				<tr class="warning">
+					<tr class="danger">-->
+				</tbody>
+			</table>	
+
+			<br />
+			<div class="hrline"> <hr /> </div> 
+			<br />
+			<h3> Grading </h3>	
+			<table class="table">
+				<thead>
+					<tr>
+						<th> Component </th>
+						<th> Contribution to Grade </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> Homework </td>
+						<td> 40% </td>
+					</tr>
+					<tr>
+						<td> Final Project Demonstration </td>
+						<td> 50% </td>
+					</tr>
+					<tr>
+						<td> Final Project Web Report </td>
+						<td> 10% </td>
+					</tr>
+					<tr class="active">
+						<td> Total</td>
+						<td> 100%</td>
+					</tr>
+					<tr>
+						<td> Extra Credit : Contribute a self-sufficient robotics/programming module </td>
+						<td>  </td>
+					</tr>
+					<tr>
+						<td> </td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+	<br />
+	
+	<!-- The footer -->
+	<div class="hrline"> <hr /> </div> <br />			
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+		</div>
+		<div class="col-md-6 column">
+				<div class = "text-center">			
+					<p>
+					   &nbsp;&nbsp;&nbsp; Designed by Samir Menon. <br />
+						&nbsp;&nbsp;&nbsp; &#169; Stanford University. <br />
+						&nbsp;&nbsp;&nbsp; Last updated on Sep 21, 2014
+					</p>
+				</div>
+		</div>
+		<div class="col-md-3 column">
+		</div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<!-- End of document -->
+</div>
+</body>
+</html>

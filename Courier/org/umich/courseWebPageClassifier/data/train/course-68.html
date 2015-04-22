@@ -1,0 +1,605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD html 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<title>CS 143 Introduction to Computer Vision</title>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<script src="./bin/lib.js" type=text/javascript></script>
+<script src="./bin/popup.js" type=text/javascript></script>
+
+<script type=text/javascript>
+// redefining default features
+var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,status=1';
+</script>
+
+<link media=all href="./css/glab.css" type=text/css rel=StyleSheet>
+<style type=text/css media=all>
+img {
+	padding-right: 0px; padding-left: 10px; FLOAT: right; padding-bottom: 10px; padding-top: 10px
+}
+
+#primarycontent {
+	margin-left: auto;  
+    width: expression(document.body.clientWidth > 995? "995px": "auto" );
+    margin-right: auto;
+    text-align: left;
+    max-width: 995px 
+}
+
+body {
+	text-align: center
+}
+</style>
+
+<meta content="MShtml 6.00.2800.1400" name=GENERATOR></HEAD>
+
+<body>
+
+<div id=primarycontent>
+<center><h1>CS 143 Introduction to Computer Vision</h1>
+<h2>Fall 2013, MWF 1:00 to 1:50, Kasser House, Foxboro Auditorium<br>
+Instructor: <a href="http://www.cs.brown.edu/~hays/">James Hays</a></h2>
+<h3>
+TAs: Hari Narayanan (HTA), Libin "Geoffrey" Sun, Greg Yauney, Bryce Aebi, Charles Yeh, and Kurt Spindler.
+</h3>
+
+</center>
+<br>
+<a href="http://kirkh.deviantart.com/art/BioMech-Eye-168367549">
+    <img style="float: right; padding: 15px; padding-right: 0px;"
+        width="550" height="365" 
+        alt="Computer Vision, art by kirkh.deviantart.com" 
+        src="comp_vision_teaser_by_kirkh.jpg"></a>
+
+<h2>Course Description</h2>
+<small><a href="http://www.cs.brown.edu/courses/csci1430.html">Course Catalog Entry</a></small> 
+<br>
+How can computers understand the visual world of humans? This course treats vision as a process of inference from noisy and uncertain data and emphasizes probabilistic, statistical, data-driven approaches. Topics include image processing; segmentation, grouping, and boundary detection; recognition and detection; motion estimation and structure from motion. This offering of CS 143 will emphasize the core vision tasks of <i>scene understanding</i> and <i>recognition</i>. We will train and evaluate classifiers to recognize various visual phenomena.
+<br><br>
+The course will consist of five programming projects and two written quizzes. This course satisfies the graduate A.I area requirement.
+
+<h2>Prerequisites</h2>
+This course requires programming experience as well as linear algebra, basic calculus, and basic probability. Previous knowledge of visual computing will be helpful. The following courses (or equivalent courses at other institutions) are helpful prerequisites:
+<ul id=prereqs>
+  <li><a href="http://www.cs.brown.edu/courses/csci1230.html">CS 123, Introduction to Computer Graphics</a>
+  <li><a href="http://www.cs.brown.edu/courses/csci1290.html">CS 129, Computational Photography</a>
+  <li><a href="http://www.cs.brown.edu/courses/csci1950-f.html">CS 195-F, Introduction to Machine Learning</a>
+</li></ul>
+Some of the course topics overlap with these related courses, but none of the assignments will.
+
+<table cellpadding=10 width="100%">
+<tr><td width="35%"><h2>Assignments</h2> </td><td width="40%"><h2>Winning projects</h2></td><td 
+width="25%"><h2>All Results</h2></td></tr>
+
+<tr><td>
+  <a href="proj1">Image Filtering and Hybrid images</a>
+</td><td>
+<a href="http://cs.brown.edu/courses/cs143/results/proj1/zyp/">Yipin Zhou</a>, <a href="http://cs.brown.edu/courses/cs143/results/proj1/tuo/">Tuo Shao</a>, <a href="http://cs.brown.edu/courses/cs143/results/proj1/smparker/">Sarah Parker</a>
+</td><td>
+  <a rel="proj1_results" href="results/proj1">Project 1 results</a>
+</td></tr>
+
+<tr><td>
+  <a href="proj2">Local Feature Matching</a>
+</td><td>
+<a href="http://cs.brown.edu/courses/cs143/results/proj2/tuo/">Tuo Shao</a>, <a href="http://cs.brown.edu/courses/cs143/results/proj2/jx30/">Junzhe Xu</a>, <a href="http://cs.brown.edu/courses/cs143/results/proj2/psangkloy/">Patsorn Sangkloy</a>
+</td><td>
+  <a rel="proj2_results" href="results/proj2">Project 2 results</a>
+</td></tr>
+
+<tr><td>
+  <a href="proj3">Scene Recognition with Bag of Words</a>
+</td><td>
+<a href="http://cs.brown.edu/courses/cs143/results/proj3/ccwang/">Chun-Che Wang</a>,
+<a href="http://cs.brown.edu/courses/cs143/results/proj3/psangkloy/">Patsorn Sangkloy</a>,<br>
+<a href="http://cs.brown.edu/courses/cs143/results/proj3/jx30/">Junzhe Xu</a>,
+<a href="http://cs.brown.edu/courses/cs143/results/proj3/mswang/">Michael Wang</a>
+</td><td>
+  <a rel="proj3_results" href="results/proj3">Project 3 results</a>
+</td></tr>
+
+<tr><td>
+  <a href="proj4">Face Detection with a Sliding Window</a>
+</td><td>
+<a href="http://cs.brown.edu/courses/cs143/results/proj4/jte/">Jake Ellis</a>,
+<a href="http://cs.brown.edu/courses/cs143/results/proj4/jl253/">Jincheng Li</a>,<br>
+<a href="http://cs.brown.edu/courses/cs143/results/proj4/psangkloy/">Patsorn Sangkloy</a>,
+<a href="http://cs.brown.edu/courses/cs143/results/proj4/zyp/">Yipin Zhou</a>,
+</td><td>
+  <a rel="proj4_results" href="results/proj4">Project 4 results</a>
+</td></tr>
+
+<tr><td>
+ <a href="proj5">Boundary Detection with Sketch Tokens</a>
+</td><td>
+<a href="http://cs.brown.edu/courses/cs143/results/proj5/jx30/">Junzhe Xu</a>,
+<a href="http://cs.brown.edu/courses/cs143/results/proj5/sphene/">Sonia Phene</a>,
+<a href="http://cs.brown.edu/courses/cs143/results/proj5/ccwang/">Chun-Che Wang</a>,<br>
+<a href="http://cs.brown.edu/courses/cs143/results/proj5/valayshah/">Valay Shah</a>,
+<a href="http://cs.brown.edu/courses/cs143/results/proj5/yunmiao/">Yun Miao</a>
+</td><td>
+  <a rel="proj5_results" href="results/proj5">Project 5 results</a>
+</td></tr>
+
+</table>
+
+It is strongly recommended that all projects be completed in Matlab. All starter code will be provided for Matlab. Students may implement projects through other means but it will generally be more difficult.
+
+<h2>Textbook</h2>
+Readings will be assigned in <a href="http://szeliski.org/Book/">"Computer Vision: Algorithms and Applications"</a> by <a href="http://research.microsoft.com/en-us/um/people/szeliski/">Richard Szeliski</a>. The book is available for free online or available for purchase.
+
+<h2>Grading</h2>
+Your final grade will be made up from
+<ul id=grades>
+  <li>80% 5 programming projects</li>
+  <li>20% 2 written quizzes</li>
+</ul>
+You will lose 10% each day for late projects. However, you have three "late days" for the whole course. That is to say, the first 24 hours after the due date and time counts as 1 day, up to 48 hours is two and 72 for the third late day. This will not be reflected in the initial grade reports for your assignment, but they will be factored in and distributed at the end of the semester so that you get the most points possible.
+
+
+<h2 id="important_links"> Important Links: </h2>
+<ul id=all>
+<!--
+    <li><a href="https://lists.cs.brown.edu/sympa/info/cs143.2011-12.f"> Mailing List </a></li>
+-->
+    <li><a href="docs/collaboration.pdf">Collaboration Policy</a></li>
+    <li><a href="docs/matlab-tutorial/index.html">Matlab Tutorial</a></li>
+<!--
+    <li><a href="asgn">All Available Assignments</a></li>
+    <li><a href="results">All Project Results</a></li>
+-->
+</ul>
+
+<h2 id="hours"> Contact Info and Office Hours: </h2>
+You can contact the professor or TA staff with any of the following:
+<ul>
+<li> James: hays[at]cs.brown.edu </li>
+<li> HTA and Professor: cs143headtas[at]cs.brown.edu </li>
+<li> TAs and Professor: cs143tas[at]cs.brown.edu </li>
+</ul>
+
+Office Hours
+<ul>
+    <li>James (<tt>hays</tt>), Monday and Friday, 2:00-3:00, CIT 375.</li>
+    <li>Geoff (<tt>lbsun</tt>), Wednesday, 3:00-5:00, CIT 311.</li>
+    <li>Hari (<tt>hnarayan</tt>), Sunday 4:00-6:00, CIT 219.</li>
+    <li>Charles (<tt>ccyeh</tt>), Monday 6:00-8:00, CIT 219.</li>
+    <li>Greg (<tt>gyauney</tt>), Monday 8:00-10:00, CIT 219.</li>
+    <li>Kurt (<tt>kspindle</tt>), Tuesday 6:00-8:00, CIT 219.</li>
+    <li>Bryce (<tt>baebi</tt>), Thursday 6:00-8:00, CIT 219.</li>
+</ul>
+
+
+<h2><i>Tentative</i> Syllabus</h2>
+<table cellpadding=5 border=1  width="100%">
+<tr>    
+        <td style="width:100px"><b>Class Date</b></td> 
+        <td style="width:350px"><b>Topic</b></td>
+        <td style="width:100px"><b>Slides</b></td>
+        <td style="width:200px"><b>Reading</b></td>
+        <td style="width:100px"><b>Projects</b></td>
+</tr>
+
+<tr>
+    <td>W, Sept 4</td>
+    <td>Introduction to computer vision</td>
+    <td><a href="lectures/01.pptx">.ppt</a>, <a href="lectures/01.pdf">.pdf</a></td> 
+    <td>Szeliski 1</td> 
+    <td></td> 
+</tr>
+
+<tr><td colspan="5" style="background-color:#FFC6A5">
+<center>Image Formation and Filtering</center>
+</td></tr>
+
+<tr>
+    <td>F, Sep 6</td>
+    <td>Cameras and optics</td>
+    <td><a href="lectures/02.pptx">.ppt</a>, <a href="lectures/02.pdf">.pdf</a></td> 
+    <td>Szeliski 2.1, especially 2.1.5</td> 
+    <td><a href="proj1/index.html">Project 1 out</a></td>
+</tr>
+
+<tr>
+    <td>M, Sep 9</td>
+    <td>Light and color</td>
+    <td><a href="lectures/03.ppt">.ppt</a>, <a href="lectures/03.pdf">.pdf</a></td> 
+    <td>Szeliski 2.2 and 2.3</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Sep 11</td>
+    <td>Image filtering</td>
+    <td><a href="lectures/04.ppt">.ppt</a>, <a href="lectures/04.pdf">.pdf</a></td> 
+    <td>Szeliski 3.2</td>
+    <td></td>                                                            
+</tr>
+
+<tr>
+    <td>F, Sep 13</td>
+    <td>Thinking in frequency</td>
+    <td><a href="lectures/05.ppt">.ppt</a>, <a href="lectures/05.pdf">.pdf</a></td> 
+    <td>Szeliski 3.4</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Sep 16</td>
+    <td>Image pyramids and applications</td>
+    <td><a href="lectures/06.ppt">.ppt</a>, <a href="lectures/06.pdf">.pdf</a></td> 
+    <td>Szeliski 3.5.2 and 8.1.1</td>
+    <td></td>
+</tr>
+
+<tr><td colspan="5" style="background-color:#C6C6FF">
+<center>Feature Detection and Matching</center>
+</td></tr>
+
+<tr>
+    <td>W, Sep 18</td>
+    <td>Edge detection</td>
+    <td><a href="lectures/07.ppt">.ppt</a>, <a href="lectures/07.pdf">.pdf</a></td> 
+    <td>Szeliski 4.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Sep 20</td>
+    <td>Interest points and corners</td>
+    <td><a href="lectures/08.ppt">.ppt</a>, <a href="lectures/08.pdf">.pdf</a></td> 
+    <td>Szeliski 4.1.1</td>
+    <td>Project 1 due</td>
+</tr>
+
+<tr>
+    <td>M, Sept 23</td>
+    <td>Local image features</td>
+    <td><a href="lectures/09.pptx">.ppt</a>, <a href="lectures/09.pdf">.pdf</a></td> 
+    <td>Szeliski 4.1.2</td>
+    <td><a href="proj2">Project 2 out</a></td>
+</tr>
+
+<tr>
+    <td>W, Sept 25</td>
+    <td>Feature matching and hough transform</td>
+   <td><a href="lectures/10.pptx">.ppt</a>, <a href="lectures/10.pdf">.pdf</a></td> 
+    <td>Szeliski 4.1.3 and 4.3.2</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>F, Sept 27</td>
+    <td>Model fitting and RANSAC</td>
+    <td><a href="lectures/11.pptx">.ppt</a>, <a href="lectures/11.pdf">.pdf</a></td> 
+    <td>Szeliski 6.1</td>
+    <td></td>
+</tr>
+
+
+<tr><td colspan="5" style="background-color:#F7BDDE">
+<center>Multiple Views and Motion</center>
+</td></tr>
+
+
+<tr>
+    <td>M, Sept 30</td>
+    <td>Stereo</td>
+    <td><a href="lectures/12.ppt">.ppt</a>, <a href="lectures/12.pdf">.pdf</a></td> 
+    <td>Szeliski 11</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 2</td>
+    <td>Epipolar Geometry and Structure from Motion</td>
+    <td><a href="lectures/13.ppt">.ppt</a>, <a href="lectures/13.pdf">.pdf</a></td> 
+    <td>Szeliski 7</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Oct 4</td>
+    <td>Feature Tracking and Optical Flow</td>
+    <td><a href="lectures/14.ppt">.ppt</a>, <a href="lectures/14.pdf">.pdf</a></td> 
+    <td>Szeliski 8.1 and 8.4</td>
+    <td></td>
+</tr>
+
+<tr><td colspan="5" style="background-color:#FFFFC6">
+<center>Machine Learning Crash Course</center>
+</td></tr>
+
+<tr>
+    <td>M, Oct 7</td>
+    <td>Machine learning intro and clustering</td>
+    <td><a href="lectures/15.ppt">.ppt</a>, <a href="lectures/15.pdf">.pdf</a></td> 
+    <td>Szeliski 5.3</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 9</td>
+    <td>Machine learning: clustering continued</td>
+    <td><a href="lectures/16.ppt">.ppt</a>, <a href="lectures/16.pdf">.pdf</a></td> 
+    <td>Szeliski 5.3</td>
+    <td>Project 2 due</td>
+</tr>
+
+<tr>
+    <td>F, Oct 11</td>
+    <td>Machine learning: classification</td>
+    <td><a href="lectures/17.ppt">.ppt</a>, <a href="lectures/17.pdf">.pdf</a></td> 
+    <td></td>
+    <td><A href="proj3">Project 3 out</a></td>
+</tr>
+
+
+<tr>
+    <td>M, Oct 14</td>
+    <td><font color="D60000">No classes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+<tr>
+    <td>W, Oct 16</td>
+    <td><font color="blue">Quiz 1</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+<tr><td colspan="5" style="background-color:#C6E7DE">
+<center>Recognition</center>
+</td></tr>
+
+<tr>
+    <td>F, Oct 18</td>
+    <td>Recognition overview and bag of features</td>
+    <td><a href="lectures/18.ppt">.ppt</a>, <a href="lectures/18.pdf">.pdf</a></td> 
+    <td>Szeliski 14</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Oct 21</td>
+    <td>Large-scale instance recognition</td>
+    <td><a href="lectures/19.ppt">.ppt</a>, <a href="lectures/19.pdf">.pdf</a></td> 
+    <td>Szeliski 14.3.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 23</td>
+    <td>Detection with sliding windows: Viola Jones</td>
+    <td><a href="lectures/20.ppt">.ppt</a>, <a href="lectures/20.pdf">.pdf</a></td> 
+    <td>Szeliski 14.1</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>F, Oct 25</td>
+    <td>Detection continued and Quiz 1 discussion</td>
+    <td>See above</td>
+    <td>Szeliski 14.2</td>
+    <td></td>
+
+</tr>
+
+<tr>
+    <td>M, Oct 28</td>
+    <td>Scene recognition with SUN database</td>
+    <td><a href="lectures/22.pptx">.ppt</a>, <a href="lectures/22.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 30</td>
+    <td>Mixture of Gaussians and advanced feature encoding</td>
+    <td><a href="lectures/23.ppt">.ppt</a>, <a href="lectures/23.pdf">.pdf</a></td> 
+    <td></td>
+    <td>Project 3 Due</td>
+</tr>
+
+<tr>
+    <td>F, Nov 1</td>
+    <td>Modern object detection</td>
+    <td><a href="lectures/24.pptx">.ppt</a>, <a href="lectures/24.pdf">.pdf</a></td> 
+    <td>Szeliski 14.1</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Nov 4</td>
+    <td>Internet scale vision, pt 1</td>
+    <td><a href="lectures/25.ppt">.ppt</a>, <a href="lectures/25.pdf">.pdf</a></td> 
+    <td>Szeliski 14.5</td>
+    <td><a href="proj4">Project 4 out</a></td>
+</tr>
+
+<tr>
+    <td>W, Nov 6</td>
+    <td>Internet scale vision, pt 2</td>
+    <td><a href="lectures/26.ppt">.ppt</a>, <a href="lectures/26.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 8</td>
+    <td><font color="green">Guest lecture: Carl Vondrick, HOGgles</font></td>
+    <td><a href="http://web.mit.edu/vondrick/ihog/">Project page</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Nov 11</td>
+    <td>Human computation and crowdsourcing</td>
+    <td><a href="lectures/27.ppt">.ppt</a>, <a href="lectures/27.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Nov 13</td>
+    <td>Attributes and more crowdsourcing</td>
+    <td><a href="lectures/28.ppt">.ppt</a>, <a href="lectures/28.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 15</td>
+    <td>Sketch Recognition and more crowdsourcing</td>
+    <td><a href="lectures/29.ppt">.ppt</a>, <a href="lectures/29.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Nov 18</td>
+    <td>Modern boundary detection and Pb</td>
+    <td><a href="lectures/30.ppt">.ppt</a>, <a href="lectures/30.pdf">.pdf</a></td>
+    <td>Szeliski 4.2</td>
+    <td>Project 4 due</td>
+</tr>
+
+
+
+<tr>
+    <td>W, Nov 20</td>
+    <td>Modern boundary detection and sketch tokens</td>
+    <td><a href="lectures/31.ppt">.ppt</a>, <a href="lectures/31.pdf">.pdf</a>, <a href="http://vision.caltech.edu/~mmaire/papers/pdf/mafm_cvpr2008_slides.pdf">gPb</a>, <a href="http://people.csail.mit.edu/lim/paper/SketchTokens_cvpr13.pdf">Sketch Tokens</a></td>
+    <td>Szeliski 4.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 22</td>
+    <td><font color="green">Guest lecture: Sobhan Parizi, Deformable Part Models</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Nov 25</td>
+    <td>Project 5 introduction</td>
+    <td><a href="lectures/32.ppt">.ppt</a>, <a href="lectures/32.pdf">.pdf</a></td>
+    <td>Szeliski 5.5</td>
+    <td><a href="proj5">Project 5 out</a></td>
+</tr>
+
+
+<tr>
+    <td>W, Nov 27</td>
+    <td><font color="D60000">No classes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 29</td>
+    <td><font color="D60000">No classes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Dec 2</td>
+    <td>Context and Spatial Layout</td>
+    <td><a href="lectures/33.ppt">.ppt</a>, <a href="lectures/33.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Dec 4</td>
+    <td>Context and Scene parsing</td>
+    <td><a href="lectures/34.pptx">.ppt</a>, <a href="lectures/34.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Dec 6</td>
+    <td><font color="blue">Quiz 2</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Dec 9</td>
+    <td>No classes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Dec 11</td>
+    <td>No classes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>S, Dec 14, 2:00 PM</td>
+    <td><font color="blue">Exam Period</font> - not used</td>
+    <td></td>
+    <td></td>
+    <td>Project 5 due</td>
+</tr>
+
+</table>
+
+<h2>Acknowledgements</h2>
+The materials from this class rely significantly on slides prepared by other instructors, especially Derek Hoiem and Svetlana Lazebnik. Each slide set and assignment contains acknowledgements. 
+Feel free to use these slides for academic or research purposes, but please maintain all acknowledgements.
+
+<h2>Previous Versions of Course</h2>
+The 2011 offering of CS 143 can be found <a href="http://www.cs.brown.edu/courses/cs143/2011/">here</a><br>
+Michael Black's 2009 offering of CS 143 can be found <a href="http://www.cs.brown.edu/courses/cs143/2009/">here</a>
+
+<!-- In particular, many 
+materials are modified from those of Alexei A. Efros, who in turn uses materials from Steve Seitz, Rick 
+Szeliski, Paul Debevec, Stephen Palmer, Paul Heckbert, David Forsyth, Steve Marschner and others, as noted 
+in the slides. -->
+
+<!--
+
+
+<tr><td colspan="5" style="background-color:#C6EF83">
+<center>Grouping</center>
+</td></tr>
+
+
+<h2>Similar Courses at other Universities</h2>
+<ul id=related_courses>
+  <li><a href="http://www.cs.illinois.edu/class/sp11/cs543/">Computer Vision</a> Derek Hoiem, UIUC
+<li><a href="http://www.cs.unc.edu/~lazebnik/spring11/">Computer Vision</a> Svetlana Lazebnik, UNC
+  <li><a href="http://www.cs.utexas.edu/~grauman/courses/spring2011/index.html">Computer Vision</a> Kristin Grauman, Texas
+  <li><a href="http://vision.stanford.edu/teaching/cs223b/">Introduction to Computer Vision</a> Fei Fei Li, Stanford
+ <li><a href="http://groups.csail.mit.edu/vision/courses/6.869/">Advances in Computer Vision</a> William T. Freeman and Antonio Torralba, MIT
+</ul>
+-->
+
+<div id=footer>
+<p style="CLEAR: both; margin: 0px">Comments, questions to <A 
+href="http://www.cs.brown.edu/~hays/">James Hays</A>. 
+</p></div></div></body></html>

@@ -1,0 +1,602 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=ISO-8859-1">
+  <meta name="description"
+ content="Mathematics Course - California Institute of Technology">
+  <title>[Ma120a - Fall 14 - 15] - Abstract Algebra</title>
+  <csactions></csactions> <csaction name="116bde93"
+ class="Wipe Transition" type="onevent" val0="" val1="5"
+ val2="&quot;_inCenter&quot;"></csaction> <csscriptdict import=""></csscriptdict>
+  <script type="text/javascript"
+ src="file:///C:/Documents%20and%20Settings/scroomes/Application%20Data/Adobe/Adobe%20GoLive/Settings8/JScripts/GlobalScripts/CSScriptLib.js"></script>
+  <csactiondict></csactiondict>
+  <script type="text/javascript"><!--
+CSAct[/*CMP*/ '116bde93'] = new Array(CSStartWipe,/*CMP*/ '',5,"_inCenter");
+
+// --></script>
+  <style type="text/css">
+<!--
+.style1 {font-size: 12px}
+-->
+  </style>
+</head>
+<body
+ style="color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);"
+ link="#006699" vlink="#006699" alink="#6666ff">
+<table width="750" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="60%"><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="5" color="#ba650a"><b>Math 120a</b></font></td>
+      <td rowspan="4">
+      <div align="center"> &nbsp;<a href="http://www.math.caltech.edu/"
+ target="http://www.math.caltech.edu/"><img src="logo.gif" alt=""
+ height="80" width="79" border="0"></a></div>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%"><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="3" color="#000000"><i>Abstract
+Algebra</i></font></td>
+    </tr>
+    <tr>
+      <td width="60%"><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="-1" color="#999999">Fall 2014-15</font></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table height="20" width="750" align="center" bgcolor="#cccccc"
+ border="0" cellpadding="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="15" bgcolor="#ba650a">
+      <div align="right"> <b> <font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#ffffff">
+MWF 9:00 am</font></b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><b>
+// 257 Sloan</b></font></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table height="30" width="750" align="center" bgcolor="#dcdcdc"
+ border="0" cellpadding="3" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="15">
+      <center> <font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><a href="#des">Course Description</a> | <a href="#pol">Policies</a>
+| <a href="#text">Textbooks</a> | <a href="#lect">Lecture Notes</a> |
+      <a href="#hand">Handouts</a> | <a href="#hw">Homework</a> | <a
+ href="1term06.html" target="1term09.html">Math Courses</a></font></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffffff">
+      <div align="left"><b><font
+ face="Verdana, Arial, Helvetica, sans-serif" color="#000000">Instructor:</font></b>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"
+ color="#000000">Dinakar Ramakrishnan, 278
+Sloan, 626-395-4348, dinakar@caltech.edu<br>
+Office Hours: Fri: 4:00 - 5:00 PM<br>
+Grader: Serin Hong, 382 Sloan, 395-4081, shong2@caltech.edu<br>
+Office Hours: Sun: 3:00 - 4:00 PM<br>
+      </font></div>
+      <div align="left">
+      <hr noshade="noshade" size="1" width="750"> </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table width="700" align="center" border="0" cellpadding="8"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left">
+      <div align="center"> <a href="feedback_aschbacher.html"><font
+ face="Verdana, Arial, Helvetica, sans-serif"><strong> </strong></font></a><a
+ href="feedback.html"><font face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+      </strong></font></a></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td
+ onmouseover="CSAction(new Array(/*CMP*/'116bde93'));return true;"
+ csover="116bde93" width="175" bgcolor="#ba650a">
+      <center><b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="-1" color="#ffffff"><a name="ann"></a>Announcements</font></b> </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+&nbsp;<p><span style="text-transform: uppercase"><blink><font size="4">
+<font color="#FF0000">The take home Final Exam may be picked from the Math 
+office in Sloan after 2PM on Monday, the 1st of December. It is a timed (4 hr) 
+exam and is due by noon on Wednesday, the 10th of december</font>.</font></blink></span><br>
+</p>
+<table width="700" align="center" border="0" cellpadding="3"
+ cellspacing="0">
+  <tbody>
+    <tr valign="top" align="left">
+      <td>1. The first Homework Assignment will be posted on Tuesday, Sep. 30, 
+		2014. It will be due next Monday (October 6, 2014) by 9AM; please leave 
+		the homework solutions in the slot marked Ma120a in the second floor of 
+		Sloan outside the math office (Sloan 253). <br>
+      </td>
+    </tr>
+    <tr valign="top" align="left">
+      <td>2. There will be no midterm exam, just HW and a comprehensive final 
+		exam, the former worth 60% of the grade, and the latter worth the rest.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center> <b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="-1" color="#ffffff"><a name="des" id="des"></a>Course Description</font></b></center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="8"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td valign="top" align="left"><span
+ style="font-family: Verdana,Arial,Helvetica,sans-serif;"><small>The first term 
+		of Math 120 will be devoted principally to <b><i>C</i></b><i><b>ommutative 
+		Algebra</b></i>, including categories and functors, basic module theory,
+products and coproducts, exact sequences, free modules, tensor
+products, flat modules, localization, chain conditions, projective and
+injective modules, and some homological algebra. The material in a
+substantial undergraduate algebra course (such as our own Math 5) will be
+assumed.</small></span><p><b>Topics in more detail</b>:</p>
+		<p>
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">
+		<font size="2">1.&nbsp; 
+		Basics properties of rings (not necessarily commutative, but always with 
+		1)</font></span><span
+ style="font-family: Verdana,Arial,Helvetica,sans-serif;"><font size="2">, 
+		modules and algebras, and their homomorphisms; rings of endomorphisms;&nbsp; 
+		examples.</font></span></p>
+		<p>
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">
+		<font size="2">2.&nbsp; 
+		Categories and functors</font></span></p>
+		<p>
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">
+		<font size="2">3.&nbsp; 
+		Tensor products</font></span></p>
+		<p>
+		<font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">4.&nbsp; F</span></font><span style="font-family: Verdana,Arial,Helvetica,sans-serif"><font size="2">lat, 
+		free, projective and injective modules</font></span></p>
+		<p>
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">
+		<font size="2">5.&nbsp; </font></span><font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif"><i>
+		Noetherian</i> property, Hilbert basis theorem</span></font></p>
+		<p>
+		<font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">6</span></font><span style="font-family: Verdana,Arial,Helvetica,sans-serif"><font size="2">.&nbsp; 
+		Algebraic sets, Integral extensions, Nullstellensatz</font></span></p>
+		<p>
+		<font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">7</span></font><span style="font-family: Verdana,Arial,Helvetica,sans-serif"><font size="2">.&nbsp; 
+		Primary decompositions, Associated primes </font></span></p>
+		<p>
+		<font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">8</span></font><span style="font-family: Verdana,Arial,Helvetica,sans-serif"><font size="2">.&nbsp; 
+		Transcendental extensions, Differentials and derivations</font></span></p>
+		<p>
+		<font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">9</span></font><span style="font-family: Verdana,Arial,Helvetica,sans-serif"><font size="2">.&nbsp; 
+		Localization, Spectrum of a ring</font></span></p>
+		<p>
+		<font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">10</span></font><span style="font-family: Verdana,Arial,Helvetica,sans-serif"><font size="2">. 
+		Completions, dimension</font></span></p>
+		<p>11. <font size="2">
+		<span style="font-family: Verdana,Arial,Helvetica,sans-serif">D</span></font><span style="font-family: Verdana,Arial,Helvetica,sans-serif"><font size="2">iscrete valuation</font></span> rings</p>
+		<p>12. Homology<span
+ style="font-family: Verdana,Arial,Helvetica,sans-serif;"><br>
+      <br>
+      </span></td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center><b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="pol" id="pol"></a>Policies</font></b>
+      </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="8"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="2" valign="top" align="left"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><strong>Grading</strong>:
+Homework
+=
+		60%
+, Final = 40% .<br>
+      </font>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><strong>Homework:</strong>
+You can work together but must write up your own solution in your own
+words, rather than copy a classmate&#8217;s solution. Except in unusual
+circumstances, homework will not be accepted more than a week late and
+at most one late homework set will be accepted.&nbsp; You should see
+the instructor in advance if it is necessary to turn in homework late. <br>
+      </font></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center><b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="-1" color="#ffffff"><a name="text" id="text"></a>Textbooks</font></b>
+      </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="3"
+ cellspacing="0">
+  <tbody>
+    <tr valign="top" align="left">
+      <td>
+      <ul>
+        <li type="disc"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><strong>Algebra</strong> 
+		by <b><i>Serge
+Lang</i></b>, Springer, ISBN: <a
+ href="http://bookstore.mbsdirect.net/vb_bookpage.php?FVFROM=adoptions&amp;FVAKEY=7661952&amp;FVBKN=22986&amp;FVCLASSNO=26714067&amp;CSID=DWTTDSOUKJ3TAQ2Q2C2C2ADS&amp;VCHI=1&amp;fvTerm=32464&amp;fvSiteList=002161801,%22Mathematics%20%28Ma%29%22&amp;fvCourseList=026714067,%22MA%20120A%22&amp;fvCourseKeyList=026714067&amp;fvCourseXR=002161801,026714067">0387905189</a></font></li>
+      </ul>
+		<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">For 
+		further reading, see</font></p>
+		<ul>
+        <li type="disc">
+		<font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>
+		Commutative Ring Theory</b> by <b><i>H. Matsumura</i></b>, </font>
+		ISBN-13: 978-0521367646<font face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+          </font></li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center><b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="-1" color="#ffffff"><a name="lect" id="lect"></a>Lecture Notes </font></b>
+      </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="31" bgcolor="#999999">
+      <center>
+      <table width="700" border="0" cellpadding="4" cellspacing="1">
+        <tbody>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Date</b></font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center><b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="-1" color="#ffffff"><a name="hand" id="hand"></a>Handouts</font></b>
+      </center>
+      </td>
+      <td bgcolor="#dcdcdc">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="31" bgcolor="#999999">
+      <center>
+      <table width="700" border="0" cellpadding="4" cellspacing="1">
+        <tbody>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Date </b></font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="-1"><b>Description</b></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="125"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="750" align="center" bgcolor="#ffffff" border="0"
+ cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="175" bgcolor="#2d465f">
+      <center><b><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff"><a name="hw" id="hw"></a>Homework</font></b> </center>
+      </td>
+      <td width="575" bgcolor="#dcdcdc">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table width="700" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="31" bgcolor="#999999">
+      <center>
+      <table width="700" border="0" cellpadding="4" cellspacing="1">
+        <tbody>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="197"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Due Date </b></font></td>
+            <td width="45%"><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Homework</b>&nbsp;</font></td>
+            <td><font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2"><b>Solutions </b> </font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td style="font-family: Verdana;" width="197">October 6, 2014,&nbsp; 
+			9AM<br>
+            </td>
+            <td style="font-family: Verdana;" width="45%"
+ bgcolor="#ffffff"><a href="hw/hw1-ma120a-Fall2014-DR.pdf">
+			hw1-ma120a-Fall2014-DR.pdf</a><br>
+            </td>
+            <td style="font-family: Verdana;" bgcolor="#ffffff">
+			<a href="hw/Solns-HW1.pdf">Solns-HW1.pdf</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td style="font-family: Verdana;" width="197">October 13, 2014, 9AM<br>
+            </td>
+            <td style="font-family: Verdana;" width="45%">
+			<a href="hw/hw2-ma120a-Fall2014-DR.pdf">hw2-ma120a-Fall2014-DR.pdf</a><br>
+            </td>
+            <td><a href="hw/Solns-HW2.pdf"><font size="4">Solns-HW2.pdf</font></a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td style="font-family: Verdana;" width="197">October 20, 2014<br>
+            </td>
+            <td style="font-family: Verdana;" width="45%">
+			<a href="hw/hw3-ma120a-Fall2014-DR.pdf">hw3-ma120a-Fall2014-DR.pdf</a><br>
+            </td>
+            <td style="font-family: Verdana;"><a href="hw/Solns-HW3.pdf">
+			Solns-HW3.pdf</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td style="font-family: Verdana;" width="197">October 28, 2014<br>
+            </td>
+            <td style="font-family: Verdana;" width="45%">
+			<a href="hw/hw4-ma120a-Fall2014-DR.pdf">hw4-ma120a-Fall2014-DR.pdf</a><br>
+            </td>
+            <td style="font-family: Verdana;"><a href="hw/Solns-HW4.pdf">
+			Solns-HW4.pdf</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="197"><font size="4">November 3, 2014</font><br>
+            </td>
+            <td width="45%"><a href="hw/hw5-ma120a-Fall2014-DR.pdf">
+			<font size="4">hw5-ma120a-Fall2014-DR.pdf</font></a><br>
+            </td>
+            <td><a href="hw/Solns-HW5.pdf"><font size="4">Solns-HW5.pdf</font></a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="197"><font size="4">November 10, 2014</font><br>
+            </td>
+            <td style="font-family: Verdana;" width="45%">
+			<a href="hw/hw6-ma120a-Fall2014-DR.pdf">hw6-ma120a-Fall2014-DR.pdf</a><br>
+            </td>
+            <td style="font-family: Verdana;"><a href="hw/Solns-HW6.pdf">
+			Solns-HW6.pdf</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td style="font-family: Verdana;" width="197">November 17, 2014<br>
+            </td>
+            <td style="font-family: Verdana;" width="45%">
+			<a href="hw/hw7-ma120a-Fall2014-DR.pdf">hw7-ma120a-Fall2014-DR.pdf</a><br>
+            </td>
+            <td style="font-family: Verdana;"><a href="hw/Solns-HW7.pdf">
+			Solns-HW7.pdf</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="197"><font size="4">November 24, 2014</font><br>
+            </td>
+            <td style="font-family: Verdana;" width="45%">
+			<a href="hw/hw8-ma120a-Fall2014-DR.pdf">hw8-ma120a-Fall2014-DR.pdf</a><br>
+            </td>
+            <td style="font-family: Verdana;"><a href="hw/Solns-HW8.pdf">
+			Solns-HW8.pdf</a><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="197"><br>
+            </td>
+            <td style="font-family: Verdana;" width="45%"><br>
+            </td>
+            <td style="font-family: Verdana;"><br>
+            </td>
+          </tr>
+          <tr bordercolor="#FFFFFF" valign="top" align="left"
+ bgcolor="#ffffff">
+            <td width="197"><br>
+            </td>
+            <td width="45%"><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr noshade="noshade" size="1" width="750">
+<table height="20" width="750" align="center" bgcolor="#cccccc"
+ border="0" cellpadding="1" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="15" bgcolor="#ba650a">
+      <center> <font face="Verdana, Arial, Helvetica, sans-serif"
+ size="2" color="#ffffff">&nbsp;<b><font size="-2">
+      <script language="JavaScript">
+<!--
+var days = new Array(8);
+days[1] = "Sunday";
+days[2] = "Monday";
+days[3] = "Tuesday";
+days[4] = "Wednesday";
+days[5] = "Thursday";
+days[6] = "Friday";
+days[7] = "Saturday";
+var months = new Array(13);
+months[1] = "January";
+months[2] = "February";
+months[3] = "March";
+months[4] = "April";
+months[5] = "May";
+months[6] = "June";
+months[7] = "July";
+months[8] = "August";
+months[9] = "September";
+months[10] = "October";
+months[11] = "November";
+months[12] = "December";
+var dateObj = new Date(document.lastModified);
+var wday = days[dateObj.getDay() + 1];
+var lmonth = months[dateObj.getMonth() + 1];
+var date = dateObj.getDate();
+var fyear = dateObj.getYear();
+if (fyear < 2000) {fyear = fyear + 1900;};
+document.writeln("Page Updated:&nbsp;&nbsp;" + wday
++ ",&nbsp;" + lmonth + "&nbsp;" + date + ",&nbsp;" + fyear + "");
+
+
+// -->
+      </script>|
+&copy;
+California
+Institute
+of Technology</font></b></font><b><font
+ face="Verdana, Arial, Helvetica, sans-serif" size="-2" color="#ffffff">
+| Questions? &nbsp;scroomes @ caltech.edu</font></b></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+</body>
+</html>

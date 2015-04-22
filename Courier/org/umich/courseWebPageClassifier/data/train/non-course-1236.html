@@ -1,0 +1,3482 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+      
+      
+        
+    
+    
+    
+    
+
+      
+      
+      <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />  
+        
+        <title>Architecture | MIT OpenCourseWare | Free Online Course Materials</title>
+    <!-- Begin Automatic Metadata Insertion -->
+    <meta content="architecture" name="WT.cg_n" />
+    <meta content="" name="WT.cg_s" />
+    <meta content="MIT Architecture courses available online and for free."
+          name="Description" />
+    <meta content="" name="keywords" />
+    <meta content="Architecture | MIT OpenCourseWare"
+          name="Search_Display" />
+    <!-- End Automatic Metadata Insertion -->
+
+	<link title="default" rel="stylesheet" type="text/css"
+       href="/styles/grid.css" /><link title="default"
+    rel="stylesheet" type="text/css" href="/styles/base.css" /><link
+    title="default" rel="stylesheet" type="text/css"
+    href="/styles/menu.css" /><link title="default"
+    rel="stylesheet" type="text/css"
+    href="/styles/jquery.bubblepopup.css" /><link
+    title="default" rel="stylesheet" type="text/css"
+    href="/styles/global.css" /><link title="default"
+    rel="stylesheet" type="text/css"
+    href="/styles/courses_new.css" />
+	<link href="/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata" />
+	<link rel="canonical"
+       href="http://ocw.mit.edu/courses/architecture/index.htm">
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	
+	<link rel="alternate" type="application/rss+xml"
+       href="/rss/new/mit-newcourses-4.xml"
+       title="Architecture" />
+	
+	<script type="text/javascript" src="/scripts/jquery.js"></script>
+	<script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
+	<script type="text/javascript"
+         src="/scripts/ocw-media-utils.js"></script>
+	<script type="text/javascript" src="/scripts/ocw.js"></script>
+	<script type="text/javascript"
+         src="/scripts/webtrends.load.js"></script>
+	<script type="text/javascript"
+         src="/scripts/googleanalytics.js"></script>
+	<script type="text/javascript"
+         src="/scripts/jquery.bubblepopup.min.js"></script>
+	<script type="text/javascript"
+         src="/scripts/courseList-popup.js"></script>
+	
+	
+	
+    
+    
+    
+    <script type="text/javascript">
+    $.fn.courserotator = function(previous, next, options){
+        var sliderList = $(this).children()[0];
+        if (sliderList) {
+            var increment = $(sliderList).children().outerWidth("true"),
+            elmnts = $(sliderList).children(),
+            numElmts = elmnts.length,
+            sizeFirstElmnt = increment,
+            shownInViewport = Math.round($(this).width() / sizeFirstElmnt),
+            firstElementOnViewPort = 1,
+            isAnimating = false;
+            
+            var random_number = Math.floor(Math.random()*numElmts);
+            if(random_number!=0) {firstElementOnViewPort = random_number+1;}
+            
+            if (numElmts > 1){
+                jQuery(previous).css('display','block');
+                jQuery(next).css('display','block');
+                jQuery(sliderList).parents('#coro').css('width','611px');
+                jQuery(sliderList).parents('#coro2').css('width','690px');
+            }
+            
+            for (i = 0; i < shownInViewport; i++) {
+                $(sliderList).css('width',(numElmts+shownInViewport)*increment + increment + "px");
+                $(sliderList).append($(elmnts[i]).clone());
+                $(sliderList).css('left', "-" + random_number * sizeFirstElmnt + "px"); 
+                 }
+                                           
+            $(previous).click(function(event){
+                if (!isAnimating) {
+                    if (firstElementOnViewPort == 1) {
+                        $(sliderList).css('left', "-" + numElmts * sizeFirstElmnt + "px");
+                        firstElementOnViewPort = numElmts;
+                    }
+                    else {
+                        firstElementOnViewPort--;
+                    }
+                    
+                    $(sliderList).animate({
+                        left: "+=" + increment,
+                        y: 0,
+                        queue: true
+                    }, "swing", function(){isAnimating = false;});
+                    isAnimating = true;
+                }                
+            });
+            
+            $(next).click(function(event){
+                if (!isAnimating) {
+                    if (firstElementOnViewPort > numElmts) {
+                        firstElementOnViewPort = 2;
+                        $(sliderList).css('left', "0px");
+                    }
+                    else {
+                        firstElementOnViewPort++;
+                    }
+                    $(sliderList).animate({
+                        left: "-=" + increment,
+                        y: 0,
+                        queue: true
+                    }, "swing", function(){isAnimating = false;});
+                    isAnimating = true;
+                }
+            });
+        }
+    };
+    </script>
+    
+    <script type="text/javascript">
+	$(document).ready(function(){
+        $('#carousel_inner').courserotator('#left_scroll', '#right_scroll');        
+    });	
+    </script>
+    
+      
+     
+    	<script type="text/javascript">
+			setTimeout(function(){var a=document.createElement("script");
+			var b=document.getElementsByTagName("script")[0];
+			a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/3534.js?"+Math.floor(new Date().getTime()/3600000);
+			a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+			
+			//google ads script for footer logos
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function() {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') +
+			'//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+			})();
+            
+            //script for sending the pageview request to GA server
+			ga('send', 'pageview', location.pathname + location.search + location.hash);
+		</script>		
+		<script type="text/javascript">		
+			googletag.cmd.push(function() {
+			googletag.defineSlot('/1064917/HOME_CORP_LOGO_1', [145, 53], 'div-gpt-ad-1388181177156-0').addService(googletag.pubads());
+			googletag.defineSlot('/1064917/HOME_CORP_LOGO_2', [145, 53], 'div-gpt-ad-1388181177156-1').addService(googletag.pubads());
+			googletag.defineSlot('/1064917/HOME_CORP_LOGO_3', [145, 53], 'div-gpt-ad-1388181177156-2').addService(googletag.pubads());
+			googletag.defineSlot('/1064917/HOME_CORP_LOGO_4', [145, 53], 'div-gpt-ad-1388181177156-3').addService(googletag.pubads());
+			googletag.defineSlot('/1064917/HOME_CORP_LOGO_5', [145, 53], 'div-gpt-ad-1388181177156-4').addService(googletag.pubads());
+			googletag.defineSlot('/1064917/HOME_CORP_LOGO_6', [145, 53], 'div-gpt-ad-1388181177156-5').addService(googletag.pubads());
+			googletag.pubads().enableSingleRequest();		
+			googletag.enableServices();			
+			});		
+		</script>		 	
+		
+		  
+	   
+		 
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </head>
+    <body itemscope itemtype="http://schema.org/WebPage">
+        
+        <div id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572"
+     class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572"><div class="portletStaticText portlet-static-site-header"><div id="banner" role="banner" class="grid_6 alpha"><a href="/"><img src="/images/ocw_mast.png" alt="MIT OpenCourseWare, Massachusetts Institute of Technology" class="logo" /></a></div> <div id="subscribe" role="form toolbar" class="grid_6 omega"><div class="module"><table class="social">     <tbody>         <tr>             <td class="socialbutton"><a href="/subscribe/index.htm?utm_source=header"><img alt="An icon depicting an envelope." src="/images/trans.gif" />Subscribe to the OCW Newsletter</a></td>             <td><a href="https://plus.google.com/104567381989352550847/posts"><img src="/images/icon_gp.png" alt="Click to visit our Google+ page." /></a><a href="https://www.pinterest.com/mitocw/pins/"><img src="/images/icon_pin.png" alt="Click to visit our Pinterest page." /></a><a href="http://facebook.com/mitocw"><img src="/images/icon_fb.png" alt="Click to visit our Facebook page." /></a><a href="http://twitter.com/mitocw"><img src="/images/icon_tw.png" alt="Click to visit our Twitter feed." /></a></td>         </tr>     </tbody> </table></div> <p class="helplinks"><a href="/help">Help</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/jsp/feedback.jsp?Referer=">Contact Us</a></p></div> <div class="clear">&nbsp;</div></div>
+
+</div>
+
+
+
+
+
+<div id="mega" role="navigation" class="grid_8 alpha">        
+	<ul id="menu">
+        <li id="menu_home">
+            <a href="/"><img src="/images/top-nav_home.png" class="home_icon" alt="Click for site home page." /></a><!-- Begin Home Item -->
+        </li><!-- End Home Item -->        
+        <li class="selected">
+            <a href="#" class="drop">Courses</a><!-- Begin 5 columns Item -->
+            <div class="dropdown_5columns-a mega-courses">                    
+                <div class="col_1a">
+                    <div class="row_1a">
+                        <div class="quart">
+                            <h2 class="nav">Find courses by:</h2>
+                            <ul class="nav-bullet find_by">
+                                <li><a href="/courses/find-by-topic/">Topic</a></li>
+                                <li><a href="/courses/find-by-number/">MIT Course Number</a></li>
+                                <li><a href="/courses/find-by-department/">Department</a></li>
+                            </ul>
+                        </div>
+                        <div class="quart">
+                            <h2 class="nav">Collections</h2>
+                            <ul class="nav-bullet">
+                                <li><a href="/courses/audio-video-courses/">Audio/Video Lectures</a></li>
+                                <li><a href="/courses/online-textbooks/">Online Textbooks</a></li>
+                                <li><a href="/courses/new-courses/">New Courses</a></li>
+                                <li><a href="/courses/most-visited-courses/">Most Visited Courses</a></li>
+                                <li><a href="/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+                                <li><a href="/courses/this-course-at-mit/">This Course at MIT</a></li>
+                                <li><a href="/resources/">Supplemental Resources</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="row_1b">
+                        <h2 class="nav">Cross-Disciplinary Topic Lists</h2>
+                        <div class="quart">
+                        <ul class="nav-bullet">
+                            <li><a href="/courses/energy-courses">Energy</a></li>
+                            <li><a href="/courses/entrepreneurship">Entrepreneurship</a></li>
+                            <li><a href="/courses/environment-courses">Environment</a></li>
+                        </ul>
+                        </div>    
+                        <div class="quart">
+                        <ul class="nav-bullet">
+                        	<li><a href="/courses/intro-programming">Introductory Programming</a></li>
+                            <li><a href="/courses/life-sciences">Life Sciences</a></li>
+                            <li><a href="/courses/transportation-courses">Transportation</a></li>
+                        </ul>
+                        </div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                <div class="col_1b">
+                    <h2 class="nav">Translated Courses</h2>
+                    <ul class="nav-bullet">
+                        <li><a href="/courses/translated-courses/traditional-chinese">&#32321;&#39636;&#23383; / Traditional Chinese</a></li>
+                        <li><a href="/courses/translated-courses/spanish">Espa&#241;ol / Spanish</a></li>
+                        <li><a href="/courses/translated-courses/portuguese">Portugu&#234;s / Portuguese</a></li>
+                        <li><a href="/courses/translated-courses/persian">&#1601;&#1575;&#1585;&#1587;&#1740; / Persian</a></li>
+                        <li><a href="/courses/translated-courses/turkish">T&#252;rk&#231;e / Turkish</a></li>
+                        <li><a href="/courses/translated-courses/korean">(&#48708;&#46356;&#50724;)&#54620;&#44397; / Korean</a></li>
+                        <li><a href="/courses/translated-courses">More...</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="" class="drop">About</a>
+            <div class="dropdown_1column-a">
+                <div class="col_1">
+                    <ul class="nav-bullet mega-div-bottom">
+                        <li><a href="/about/">About MIT OpenCourseWare</a></li>
+                    </ul>
+                    <ul class="nav-bullet mega-div-bottom">
+                        <li><a href="/about/site-statistics/">Site Stats</a></li>
+                        <li><a href="/about/ocw-stories/">OCW Stories</a></li>                        
+                    </ul>
+                    <ul class="nav-bullet mega-div-bottom">
+                        <li><a href="/about/media-coverage/">Media Coverage</a></li>
+                        <li><a href="/about/newsletter/">Newsletter</a></li>
+                        <li><a href="/about/media-coverage/press-releases/">Press Releases</a></li>
+                    </ul>
+                    <ul class="nav-bullet">
+                        <li><a href="/about/next-decade/">OCW's Next Decade</a></li>
+                    </ul>
+                </div>
+            </div>  
+        </li>    
+        <li>
+            <a href="" class="drop">Donate</a>        
+            <div class="dropdown_1column-a">
+                    <div class="col_1">
+                        <ul class="nav-bullet mega-div-bottom">
+                            <li><a href="/donate/">Make a Donation</a></li>
+                            <li><a href="/donate/why-donate/">Why Donate?</a></li>
+                            <li><a href="/donate/ocw-course-champions-program/">Become a Course Champion</a></li>
+                            <li><a href="/donate/our-supporters/">Our Supporters</a></li>
+                            <li><a href="/donate/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+                            <li><a href="/donate/shop-ocw">Shop OCW</a></li>
+                        </ul>
+                        <ul class="nav-bullet">
+                            <li><a href="/support/">Become a Corporate Sponsor</a></li>
+                        </ul>
+                    </div>
+            </div>            
+        </li>        
+        <li>
+            <a href="" class="drop">Featured Sites</a>        
+            <div class="dropdown_1column-a">
+                <div class="col_1">
+                    <ul class="nav-bullet mega-div-bottom">
+                        <li><a href="/high-school/">Highlights for High School</a></li>
+                        <li><a href="/educator/">OCW Educator</a></li>
+                    </ul>
+                    <ul class="nav-bullet mega-div-top">
+                        <li><a href="http://ocw.mit.edu/ans7870/featured/mitx-courses-on-edx.htm">MITx Courses on edX</a></li>
+                        <li><a href="http://teachingexcellence.mit.edu/">Teaching Excellence at MIT</a></li>
+						<li><a href="http://www.oeconsortium.org/">Open Education Consortium</a></li>
+                    </ul>
+                </div>
+            </div>            
+        </li>
+    </ul>        
+</div>
+<div id="search" role="search" class="grid_4 omega">
+    <form method="get" action="http://search.mit.edu/search">
+        <input type="hidden" value="ocw" name="site" />  
+        <input type="hidden" value="mit" name="client" /> 			 
+        <input type="hidden" value="*" name="getfields" />  
+        <input type="hidden" value="xml_no_dtd" name="output" /> 			 
+        <input type="hidden" value="http://ocw.mit.edu/search/google-ocw.xsl" name="proxystylesheet" />
+        <input type="hidden" value="WT%2Ecg_s:Course Home|WT%2Ecg_s:Resource Home" name="requiredfields" /> 
+        <input type="hidden" value="WT%2Ecg_s:Course Home|WT%2Ecg_s:Resource Home" name="sectionlimit" /> 
+        <input type="hidden" value="i" name="as_dt" /> 			 
+        <input type="hidden" value="utf-8" name="oe" />  
+        <input type="hidden" value="web" name="departmentName" />
+        <input type="hidden" value="0" name="filter" />
+        <input type="hidden" name="courseName" />
+        <table class="search">
+            <tbody>
+                <tr>
+                    <td class="black"><input type="text" onblur="fillSearchBox()" onfocus="clearSearchBox()" maxlength="255" value="Search" name="q" class="greytext searchField" id="terms" /></td> 			 
+                    <td class="black"><input type="image" src="/images/button_search.png" name="btnG" class="sub_button" /></td>			 
+                    <td class="text2"><a href="/search/AdvancedSearch.htm">Advanced<br />Search</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+</div>
+<div class="clear"></div>
+<!-- *end header* -->  
+
+				
+				
+			</div><!-- top grid end -->
+		</div><!-- top end -->
+			
+		<div id="center_global">
+		<div id="grid">	
+			<div id="left">
+				<div id="breadcrumb_global">
+					<p>
+
+    <a href="/">Home</a>
+    
+        &raquo;
+        
+    
+    
+        
+            <a href="/courses">Courses</a>
+            
+                &raquo;
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Architecture
+         
+    
+</p>
+
+				</div>
+				<div id="global_title">
+					 <h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Architecture
+        </span>
+    </h1>
+				</div>
+				<div class="global_wrapper">
+					<div id="global_inner">
+                    	<img src="/courses/architecture/dhp_4.jpg"
+                          alt="A photo of several highly stylized buildings lit at night in multiple colors, with their mirror reflection in water."
+                          title="A photo of several highly stylized buildings lit at night in multiple colors, with their mirror reflection in water." />  
+                        <br />                           
+                        
+        <div class=""
+             id="parent-fieldname-image_caption_text">
+            <p class="caption">A brilliant night-time photo of <em>Ciudad de las Artes y las Ciencias</em> in Valencia, Spain, featuring <em>L'Hemisfèric</em> (front right), <em>El Palau de les Arts Reina Sofía</em> (rear center), and <em>El Museu de les Ciències Príncipe Felipe</em> (left). (Photo courtesy of <a href="http://www.flickr.com/people/marcp_dmoz/">marcp_dmoz</a> on Flickr.)</p>
+            
+        </div>
+    
+                     	<br />
+                 		
+                    	
+	<h2 class="global">Featured Courses</h2>
+	 <div id="coro2">
+    	<div id="left_scroll" class="nav">&nbsp;</div>
+	    <div id="carousel_inner">
+		    <ul id="carousel_ul">		    	
+	    			    		
+	    			<li>	
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-101-experiencing-architecture-studio-spring-2003"><img
+    src="/courses/architecture/4-101-experiencing-architecture-studio-spring-2003/4-101s03-th.jpg" /></a>
+			        		<p class="badgeStart">Introductory</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-101-experiencing-architecture-studio-spring-2003">Experiencing Architecture Studio</a></p>
+				        </div>
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-605-introduction-to-the-history-and-theory-of-architecture-spring-2012"><img
+    src="/courses/architecture/4-605-introduction-to-the-history-and-theory-of-architecture-spring-2012/4-605s12-th.jpg" /></a>
+			        		<p class="badgeStart">Introductory</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-605-introduction-to-the-history-and-theory-of-architecture-spring-2012">Introduction to the History and Theory of Architecture</a></p>
+				        </div>
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-125-architecture-studio-building-in-landscapes-fall-2002"><img
+    src="/courses/architecture/4-125-architecture-studio-building-in-landscapes-fall-2002/4-125f02-th.jpg" /></a>
+			        		<p class="badgeVideo">Video</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-125-architecture-studio-building-in-landscapes-fall-2002">Architecture Studio: Building in Landscapes</a></p>
+				        </div>
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-651-art-since-1940-fall-2010"><img
+    src="/courses/architecture/4-651-art-since-1940-fall-2010/4-651f10-th.jpg" /></a>
+			        		<p class="badgeNews">Editor's Pick</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-651-art-since-1940-fall-2010">Art Since 1940</a></p>
+				        </div>
+				    </li>   			
+			    
+	    			    		
+	    			   			
+			    
+	    			    		
+	    			   			
+			    
+	    			    		
+	    			   			
+			    
+	    			    		
+	    			<li>	
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-42j-fundamentals-of-energy-in-buildings-fall-2010"><img
+    src="/courses/architecture/4-42j-fundamentals-of-energy-in-buildings-fall-2010/4-42jf10-th.jpg" /></a>
+			        		<p class="badgePopular">Popular</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-42j-fundamentals-of-energy-in-buildings-fall-2010">Fundamentals of Energy in Buildings</a></p>
+				        </div>
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-341-introduction-to-photography-fall-2002"><img
+    src="/courses/architecture/4-341-introduction-to-photography-fall-2002/4-341f02-th.jpg" /></a>
+			        		<p class="badgePopular">Popular</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-341-introduction-to-photography-fall-2002">Introduction to Photography</a></p>
+				        </div>
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-609-the-art-museum-history-theory-controversy-spring-2014"><img
+    src="/courses/architecture/4-609-the-art-museum-history-theory-controversy-spring-2014/4-609s14-th.jpg" /></a>
+			        		<p class="badgeNone">&nbsp;&nbsp;</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-609-the-art-museum-history-theory-controversy-spring-2014">The Art Museum: History, Theory, Controversy</a></p>
+				        </div>
+		    		   <div class="item">
+			        		<a href="/courses/architecture/4-663-history-of-urban-form-locating-capitalism-producing-early-modern-cities-and-objects-spring-2014"><img
+    src="/courses/architecture/4-663-history-of-urban-form-locating-capitalism-producing-early-modern-cities-and-objects-spring-2014/4-663s14-th.jpg" /></a>
+			        		<p class="badgeNone">&nbsp;&nbsp;</p>		        					        		
+			       		    <p class="cTitle"><a
+    href="/courses/architecture/4-663-history-of-urban-form-locating-capitalism-producing-early-modern-cities-and-objects-spring-2014">History of Urban Form: Locating Capitalism: Producing Early Modern Cities and Objects</a></p>
+				        </div>
+				    </li>   			
+			    
+	    			    		
+	    			   			
+			    
+	    			    		
+	    			   			
+			    
+	    			    		
+	    			   			
+			    
+			   
+		    </ul>
+	    </div>
+	    <div id="right_scroll" class="nav">&nbsp;</div>
+    </div>
+
+	             
+						<p>The Department of Architecture, established in 1865, is the oldest architecture department in the United States and is  consistently ranked as one of the top programs in the U.S.</p> <p>It is a place where the individual creativity of a student can be cultivated and nurtured in a framework that is humanistically, socially, and environmentally responsible.</p> <p>The Department offers degree programs in the areas of Architectural Design, Building Technology, Design Technology, History, Theory and  Criticism and the Visual Arts. Other opportunities for study within the  department are also available through the Aga Khan Program for Islamic Architecture.</p> <p>Notable strengths of the department that cut across the discipline groups are our devoted teaching, the grounding of architecture in both social and material issues, interdisciplinary nature, and the remarkable  internationalism of faculty, students, teaching and research.</p>  
+						
+                   		
+
+    <div class="clear"></div>
+    <br />
+   <h2 class="global">
+        <span class="" id="parent-fieldname-title">
+            Architecture
+        </span>
+    Courses</h2>
+       <table class="courseList">
+			<thead>
+					<tr>
+                             <th class="MCNcol">Course #</th>
+                             <th class="CTcol2">Course Title</th>
+                             <th class="LVcol">Level</th>
+                    </tr>
+            </thead>
+            <tbody>
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-001j-cityscope-new-orleans-spring-2007">
+							  	4.001J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-001j-cityscope-new-orleans-spring-2007">
+                               CityScope: New Orleans
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-001j-cityscope-new-orleans-spring-2007">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-101-experiencing-architecture-studio-spring-2003">
+							  	4.101
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-101-experiencing-architecture-studio-spring-2003">
+                               Experiencing Architecture Studio
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-101-experiencing-architecture-studio-spring-2003">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-104-architecture-studio-intentions-spring-2005">
+							  	4.104
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-104-architecture-studio-intentions-spring-2005">
+                               Architecture Studio: Intentions
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-104-architecture-studio-intentions-spring-2005">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-104-architectural-design-intentions-spring-2004">
+							  	4.104
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-104-architectural-design-intentions-spring-2004">
+                               Architectural Design: Intentions
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-104-architectural-design-intentions-spring-2004">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-110j-design-across-scales-disciplines-and-problem-contexts-spring-2013">
+							  	4.110J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-110j-design-across-scales-disciplines-and-problem-contexts-spring-2013">
+                               Design Across Scales, Disciplines and Problem Contexts
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-110j-design-across-scales-disciplines-and-problem-contexts-spring-2013">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-111-introduction-to-architecture-environmental-design-spring-2014">
+							  	4.111
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-111-introduction-to-architecture-environmental-design-spring-2014">
+                               Introduction to Architecture &amp; Environmental Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-111-introduction-to-architecture-environmental-design-spring-2014">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-112-architecture-design-fundamentals-i-nano-machines-fall-2012">
+							  	4.112
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-112-architecture-design-fundamentals-i-nano-machines-fall-2012">
+                               Architecture Design Fundamentals I: Nano-Machines
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-112-architecture-design-fundamentals-i-nano-machines-fall-2012">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-125-architecture-studio-building-in-landscapes-fall-2002">
+							  	4.125
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-125-architecture-studio-building-in-landscapes-fall-2002">
+                               Architecture Studio: Building in Landscapes
+                               (Fall 2002)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-125-architecture-studio-building-in-landscapes-fall-2002">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-125a-architecture-studio-building-in-landscapes-fall-2005">
+							  	4.125A
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-125a-architecture-studio-building-in-landscapes-fall-2005">
+                               Architecture Studio: Building in Landscapes
+                               (Fall 2005)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-125a-architecture-studio-building-in-landscapes-fall-2005">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-125b-architecture-studio-building-in-landscapes-fall-2005">
+							  	4.125B
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-125b-architecture-studio-building-in-landscapes-fall-2005">
+                               Architecture Studio: Building in Landscapes
+                               (Fall 2005)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-125b-architecture-studio-building-in-landscapes-fall-2005">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-170-ecuador-workshop-fall-2006">
+							  	4.170
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-170-ecuador-workshop-fall-2006">
+                               Ecuador Workshop
+                               (Fall 2006)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-170-ecuador-workshop-fall-2006">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-191-introduction-to-integrated-design-fall-2006">
+							  	4.191
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-191-introduction-to-integrated-design-fall-2006">
+                               Introduction to Integrated Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-191-introduction-to-integrated-design-fall-2006">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-205-analysis-of-contemporary-architecture-fall-2009">
+							  	4.205
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-205-analysis-of-contemporary-architecture-fall-2009">
+                               Analysis of Contemporary Architecture
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-205-analysis-of-contemporary-architecture-fall-2009">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-016j-the-once-and-future-city-spring-2006">
+							  	4.211J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-016j-the-once-and-future-city-spring-2006">
+                               The Once and Future City
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-016j-the-once-and-future-city-spring-2006">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-310j-media-technology-and-city-design-and-development-spring-2002">
+							  	4.243J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-310j-media-technology-and-city-design-and-development-spring-2002">
+                               Media Technology and City Design and Development
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-310j-media-technology-and-city-design-and-development-spring-2002">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-001j-introduction-to-urban-design-and-development-spring-2006">
+							  	4.250J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-001j-introduction-to-urban-design-and-development-spring-2006">
+                               Introduction to Urban Design and Development
+                               (Spring 2006)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-001j-introduction-to-urban-design-and-development-spring-2006">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-301-introduction-to-the-visual-arts-spring-2007">
+							  	4.301
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-301-introduction-to-the-visual-arts-spring-2007">
+                               Introduction to the Visual Arts
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-301-introduction-to-the-visual-arts-spring-2007">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-302-bsad-foundations-in-the-visual-arts-fall-2003">
+							  	4.302
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-302-bsad-foundations-in-the-visual-arts-fall-2003">
+                               BSAD Foundations in the Visual Arts
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-302-bsad-foundations-in-the-visual-arts-fall-2003">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-322-introduction-to-sculpture-fall-2003">
+							  	4.322
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-322-introduction-to-sculpture-fall-2003">
+                               Introduction to Sculpture
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-322-introduction-to-sculpture-fall-2003">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-341-introduction-to-photography-and-related-media-fall-2007">
+							  	4.341
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-341-introduction-to-photography-and-related-media-fall-2007">
+                               Introduction to Photography and Related Media
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-341-introduction-to-photography-and-related-media-fall-2007">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-341-introduction-to-photography-fall-2002">
+							  	4.341
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-341-introduction-to-photography-fall-2002">
+                               Introduction to Photography
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-341-introduction-to-photography-fall-2002">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-351-introduction-to-video-spring-2004">
+							  	4.351
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-351-introduction-to-video-spring-2004">
+                               Introduction to Video
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-351-introduction-to-video-spring-2004">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-366-advanced-projects-in-the-visual-arts-personal-narrative-spring-2004">
+							  	4.366
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-366-advanced-projects-in-the-visual-arts-personal-narrative-spring-2004">
+                               Advanced Projects in the Visual Arts: Personal Narrative
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-366-advanced-projects-in-the-visual-arts-personal-narrative-spring-2004">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-401-introduction-to-building-technology-spring-2006">
+							  	4.401
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-401-introduction-to-building-technology-spring-2006">
+                               Introduction to Building Technology
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-401-introduction-to-building-technology-spring-2006">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-411-building-technology-laboratory-spring-2004">
+							  	4.411
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-411-building-technology-laboratory-spring-2004">
+                               Building Technology Laboratory
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-411-building-technology-laboratory-spring-2004">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-42j-fundamentals-of-energy-in-buildings-fall-2010">
+							  	4.42J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-42j-fundamentals-of-energy-in-buildings-fall-2010">
+                               Fundamentals of Energy in Buildings
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-42j-fundamentals-of-energy-in-buildings-fall-2010">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-440-basic-structural-design-spring-2009">
+							  	4.440
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-440-basic-structural-design-spring-2009">
+                               Basic Structural Design
+                               (Spring 2009)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-440-basic-structural-design-spring-2009">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-500-introduction-to-design-computing-fall-2008">
+							  	4.500
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-500-introduction-to-design-computing-fall-2008">
+                               Introduction to Design Computing
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-500-introduction-to-design-computing-fall-2008">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-501-architectural-construction-and-computation-fall-2005">
+							  	4.501
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-501-architectural-construction-and-computation-fall-2005">
+                               Architectural Construction and Computation
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-501-architectural-construction-and-computation-fall-2005">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-520-computational-design-i-theory-and-applications-fall-2005">
+							  	4.520
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-520-computational-design-i-theory-and-applications-fall-2005">
+                               Computational Design I: Theory and Applications
+                               (Fall 2005)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-520-computational-design-i-theory-and-applications-fall-2005">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-602-modern-art-and-mass-culture-spring-2012">
+							  	4.602
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-602-modern-art-and-mass-culture-spring-2012">
+                               Modern Art and Mass Culture
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-602-modern-art-and-mass-culture-spring-2012">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-605-introduction-to-the-history-and-theory-of-architecture-spring-2012">
+							  	4.605
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-605-introduction-to-the-history-and-theory-of-architecture-spring-2012">
+                               Introduction to the History and Theory of Architecture
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-605-introduction-to-the-history-and-theory-of-architecture-spring-2012">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/global-studies-and-languages/21f-031j-topics-in-the-avant-garde-in-literature-and-cinema-spring-2003">
+							  	4.608J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/global-studies-and-languages/21f-031j-topics-in-the-avant-garde-in-literature-and-cinema-spring-2003">
+                               Topics in the Avant-Garde in Literature and Cinema
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/global-studies-and-languages/21f-031j-topics-in-the-avant-garde-in-literature-and-cinema-spring-2003">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-609-the-art-museum-history-theory-controversy-spring-2014">
+							  	4.609
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-609-the-art-museum-history-theory-controversy-spring-2014">
+                               The Art Museum: History, Theory, Controversy
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-609-the-art-museum-history-theory-controversy-spring-2014">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-614-religious-architecture-and-islamic-cultures-fall-2002">
+							  	4.614
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-614-religious-architecture-and-islamic-cultures-fall-2002">
+                               Religious Architecture and Islamic Cultures
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-614-religious-architecture-and-islamic-cultures-fall-2002">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-615-the-architecture-of-cairo-spring-2002">
+							  	4.615
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-615-the-architecture-of-cairo-spring-2002">
+                               The Architecture of Cairo
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-615-the-architecture-of-cairo-spring-2002">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-651-art-since-1940-fall-2010">
+							  	4.651
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-651-art-since-1940-fall-2010">
+                               Art Since 1940
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-651-art-since-1940-fall-2010">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-a21-stories-without-words-photographing-the-first-year-fall-2006">
+							  	4.A21
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-a21-stories-without-words-photographing-the-first-year-fall-2006">
+                               Stories Without Words: Photographing the First Year
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-a21-stories-without-words-photographing-the-first-year-fall-2006">
+                               
+							   Undergraduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-105-geometric-disciplines-and-architecture-skills-reciprocal-methodologies-fall-2012">
+							  	4.105
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-105-geometric-disciplines-and-architecture-skills-reciprocal-methodologies-fall-2012">
+                               Geometric Disciplines and Architecture Skills: Reciprocal Methodologies
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-105-geometric-disciplines-and-architecture-skills-reciprocal-methodologies-fall-2012">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-107-march-portfolio-seminar-fall-2003">
+							  	4.107
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-107-march-portfolio-seminar-fall-2003">
+                               MArch Portfolio Seminar
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-107-march-portfolio-seminar-fall-2003">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-123-architectural-design-level-i-perceptions-and-processes-fall-2003">
+							  	4.123
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-123-architectural-design-level-i-perceptions-and-processes-fall-2003">
+                               Architectural Design, Level I: Perceptions and Processes
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-123-architectural-design-level-i-perceptions-and-processes-fall-2003">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-131-architectural-design-level-ii-material-essence-the-glass-house-fall-2003">
+							  	4.131
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-131-architectural-design-level-ii-material-essence-the-glass-house-fall-2003">
+                               Architectural Design, Level II: Material Essence: The Glass House
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-131-architectural-design-level-ii-material-essence-the-glass-house-fall-2003">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-131b-architectural-design-level-ii-material-and-tectonic-transformations-the-herreshoff-museum-fall-2003">
+							  	4.131B
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-131b-architectural-design-level-ii-material-and-tectonic-transformations-the-herreshoff-museum-fall-2003">
+                               Architectural Design, Level II: Material and Tectonic Transformations: The Herreshoff Museum
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-131b-architectural-design-level-ii-material-and-tectonic-transformations-the-herreshoff-museum-fall-2003">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-196-architecture-design-level-ii-cuba-studio-spring-2004">
+							  	4.132
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-196-architecture-design-level-ii-cuba-studio-spring-2004">
+                               Architecture Design, Level II: Cuba Studio
+                               (Spring 2004)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-196-architecture-design-level-ii-cuba-studio-spring-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-143-immaterial-limits-process-and-duration-fall-2002">
+							  	4.143
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-143-immaterial-limits-process-and-duration-fall-2002">
+                               Immaterial Limits: Process and Duration
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-143-immaterial-limits-process-and-duration-fall-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-144-architectural-design-level-ii-new-orleans-studio-spring-2006">
+							  	4.144
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-144-architectural-design-level-ii-new-orleans-studio-spring-2006">
+                               Architectural Design, Level II: New Orleans Studio
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-144-architectural-design-level-ii-new-orleans-studio-spring-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-155b-architectural-design-level-iii-a-student-center-for-mit-fall-2004">
+							  	4.155B
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-155b-architectural-design-level-iii-a-student-center-for-mit-fall-2004">
+                               Architectural Design, Level III: A Student Center for MIT
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-155b-architectural-design-level-iii-a-student-center-for-mit-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-163j-urban-design-studio-providence-spring-2005">
+							  	4.163J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-163j-urban-design-studio-providence-spring-2005">
+                               Urban Design Studio: Providence
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-163j-urban-design-studio-providence-spring-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-332j-urban-design-fall-2003">
+							  	4.163J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-332j-urban-design-fall-2003">
+                               Urban Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-332j-urban-design-fall-2003">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-307-beijing-urban-design-studio-summer-2008">
+							  	4.166
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-307-beijing-urban-design-studio-summer-2008">
+                               Beijing Urban Design Studio
+                               (Summer 2008)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-307-beijing-urban-design-studio-summer-2008">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-307-beijing-urban-design-studio-summer-2006">
+							  	4.166
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-307-beijing-urban-design-studio-summer-2006">
+                               Beijing Urban Design Studio
+                               (Summer 2006)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-307-beijing-urban-design-studio-summer-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-170-ecuador-workshop-fall-2006">
+							  	4.171
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-170-ecuador-workshop-fall-2006">
+                               Ecuador Workshop
+                               (Fall 2006)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-170-ecuador-workshop-fall-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-171-the-space-between-workshop-fall-2004">
+							  	4.171
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-171-the-space-between-workshop-fall-2004">
+                               The Space Between Workshop
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-171-the-space-between-workshop-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-175-case-studies-in-city-form-fall-2005">
+							  	4.175
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-175-case-studies-in-city-form-fall-2005">
+                               Case Studies in City Form
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-175-case-studies-in-city-form-fall-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-183-sustainable-design-and-technology-research-workshop-spring-2004">
+							  	4.183
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-183-sustainable-design-and-technology-research-workshop-spring-2004">
+                               Sustainable Design and Technology Research Workshop
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-183-sustainable-design-and-technology-research-workshop-spring-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-184-architectural-design-workshop-collage-method-and-form-spring-2004">
+							  	4.184
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-184-architectural-design-workshop-collage-method-and-form-spring-2004">
+                               Architectural Design Workshop: Collage - Method and Form
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-184-architectural-design-workshop-collage-method-and-form-spring-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-184-architectural-design-workshops-computational-design-for-housing-spring-2002">
+							  	4.184
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-184-architectural-design-workshops-computational-design-for-housing-spring-2002">
+                               Architectural Design Workshops: Computational Design for Housing
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-184-architectural-design-workshops-computational-design-for-housing-spring-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-946j-beijing-urban-design-studio-summer-2004">
+							  	4.185J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-946j-beijing-urban-design-studio-summer-2004">
+                               Beijing Urban Design Studio
+                               (Summer 2004)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-946j-beijing-urban-design-studio-summer-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-195-special-problems-in-architectural-design-spring-2005">
+							  	4.195
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-195-special-problems-in-architectural-design-spring-2005">
+                               Special Problems in Architectural Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-195-special-problems-in-architectural-design-spring-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-196-architecture-design-level-ii-cuba-studio-spring-2004">
+							  	4.196
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-196-architecture-design-level-ii-cuba-studio-spring-2004">
+                               Architecture Design, Level II: Cuba Studio
+                               (Spring 2004)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-196-architecture-design-level-ii-cuba-studio-spring-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-210-precedents-in-critical-practice-fall-2012">
+							  	4.210
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-210-precedents-in-critical-practice-fall-2012">
+                               Precedents in Critical Practice
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-210-precedents-in-critical-practice-fall-2012">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-308j-advanced-seminar-urban-nature-and-city-design-fall-2012">
+							  	4.213J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-308j-advanced-seminar-urban-nature-and-city-design-fall-2012">
+                               Advanced Seminar: Urban Nature and City Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-308j-advanced-seminar-urban-nature-and-city-design-fall-2012">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-309j-sensing-place-photography-as-inquiry-fall-2012">
+							  	4.215J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-309j-sensing-place-photography-as-inquiry-fall-2012">
+                               Sensing Place: Photography as Inquiry
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-309j-sensing-place-photography-as-inquiry-fall-2012">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-309j-sites-in-sight-photography-as-inquiry-fall-2003">
+							  	4.215J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-309j-sites-in-sight-photography-as-inquiry-fall-2003">
+                               Sites in Sight: Photography as Inquiry
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-309j-sites-in-sight-photography-as-inquiry-fall-2003">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-220-urban-housing-paris-london-new-york-fall-2004">
+							  	4.220
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-220-urban-housing-paris-london-new-york-fall-2004">
+                               Urban Housing: Paris, London, New York
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-220-urban-housing-paris-london-new-york-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-328j-urban-design-skills-observing-interpreting-and-representing-the-city-fall-2004">
+							  	4.240J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-328j-urban-design-skills-observing-interpreting-and-representing-the-city-fall-2004">
+                               Urban Design Skills: Observing, Interpreting, and Representing the City
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-328j-urban-design-skills-observing-interpreting-and-representing-the-city-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-241j-theory-of-city-form-spring-2013">
+							  	4.241J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-241j-theory-of-city-form-spring-2013">
+                               Theory of City Form
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-241j-theory-of-city-form-spring-2013">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-337j-urban-design-policy-and-action-spring-2009">
+							  	4.247J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-337j-urban-design-policy-and-action-spring-2009">
+                               Urban Design Policy and Action
+                               (Spring 2009)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-337j-urban-design-policy-and-action-spring-2009">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-337j-urban-design-policy-and-action-spring-2007">
+							  	4.247J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-337j-urban-design-policy-and-action-spring-2007">
+                               Urban Design Policy and Action
+                               (Spring 2007)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-337j-urban-design-policy-and-action-spring-2007">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-301j-introduction-to-urban-design-and-development-fall-2006">
+							  	4.252J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-301j-introduction-to-urban-design-and-development-fall-2006">
+                               Introduction to Urban Design and Development
+                               (Fall 2006)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-301j-introduction-to-urban-design-and-development-fall-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-302j-urban-design-politics-spring-2010">
+							  	4.253J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-302j-urban-design-politics-spring-2010">
+                               Urban Design Politics
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-302j-urban-design-politics-spring-2010">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-304j-site-and-infrastructure-systems-planning-spring-2009">
+							  	4.255J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-304j-site-and-infrastructure-systems-planning-spring-2009">
+                               Site and Infrastructure Systems Planning
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-304j-site-and-infrastructure-systems-planning-spring-2009">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-467j-property-rights-in-transition-spring-2005">
+							  	4.257J
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-467j-property-rights-in-transition-spring-2005">
+                               Property Rights in Transition
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-467j-property-rights-in-transition-spring-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-273-introduction-to-design-inquiry-fall-2004">
+							  	4.273
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-273-introduction-to-design-inquiry-fall-2004">
+                               Introduction to Design Inquiry
+                               (Fall 2004)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-273-introduction-to-design-inquiry-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-273-introduction-to-design-inquiry-fall-2001">
+							  	4.273
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-273-introduction-to-design-inquiry-fall-2001">
+                               Introduction to Design Inquiry
+                               (Fall 2001)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-273-introduction-to-design-inquiry-fall-2001">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-285-research-topics-in-architecture-citizen-centered-design-of-open-governance-systems-fall-2002">
+							  	4.285
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-285-research-topics-in-architecture-citizen-centered-design-of-open-governance-systems-fall-2002">
+                               Research Topics in Architecture: Citizen-Centered Design of Open Governance Systems
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-285-research-topics-in-architecture-citizen-centered-design-of-open-governance-systems-fall-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-948-power-of-place-media-technology-youth-and-city-design-and-development-spring-2001">
+							  	4.285
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/urban-studies-and-planning/11-948-power-of-place-media-technology-youth-and-city-design-and-development-spring-2001">
+                               Power of Place: Media Technology, Youth, and City Design and Development
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/urban-studies-and-planning/11-948-power-of-place-media-technology-youth-and-city-design-and-development-spring-2001">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-296-furniture-making-spring-2005">
+							  	4.296
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-296-furniture-making-spring-2005">
+                               Furniture Making
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-296-furniture-making-spring-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-297-special-problems-in-architecture-studies-fall-2000">
+							  	4.297
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-297-special-problems-in-architecture-studies-fall-2000">
+                               Special Problems in Architecture Studies
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-297-special-problems-in-architecture-studies-fall-2000">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-303-the-production-of-space-art-architecture-and-urbanism-in-dialogue-fall-2006">
+							  	4.303
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-303-the-production-of-space-art-architecture-and-urbanism-in-dialogue-fall-2006">
+                               The Production of Space: Art, Architecture and Urbanism in Dialogue
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-303-the-production-of-space-art-architecture-and-urbanism-in-dialogue-fall-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-303-dialogue-in-art-architecture-and-urbanism-fall-2003">
+							  	4.303
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-303-dialogue-in-art-architecture-and-urbanism-fall-2003">
+                               Dialogue in Art, Architecture, and Urbanism
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-303-dialogue-in-art-architecture-and-urbanism-fall-2003">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-343-photography-and-related-media-fall-2002">
+							  	4.343
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-343-photography-and-related-media-fall-2002">
+                               Photography and Related Media
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-343-photography-and-related-media-fall-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-367-studio-seminar-in-public-art-spring-2006">
+							  	4.367
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-367-studio-seminar-in-public-art-spring-2006">
+                               Studio Seminar in Public Art
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-367-studio-seminar-in-public-art-spring-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-370-interrogative-design-workshop-fall-2005">
+							  	4.370
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-370-interrogative-design-workshop-fall-2005">
+                               Interrogative Design Workshop
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-370-interrogative-design-workshop-fall-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-406-ecologies-of-construction-spring-2007">
+							  	4.406
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-406-ecologies-of-construction-spring-2007">
+                               Ecologies of Construction
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-406-ecologies-of-construction-spring-2007">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-430-daylighting-spring-2012">
+							  	4.430
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-430-daylighting-spring-2012">
+                               Daylighting
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-430-daylighting-spring-2012">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-463-building-technologies-iii-building-structural-systems-ii-fall-2002">
+							  	4.442
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-463-building-technologies-iii-building-structural-systems-ii-fall-2002">
+                               Building Technologies III: Building Structural Systems II
+                               (Fall 2002)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-463-building-technologies-iii-building-structural-systems-ii-fall-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-448-analysis-of-historic-structures-fall-2004">
+							  	4.448
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-448-analysis-of-historic-structures-fall-2004">
+                               Analysis of Historic Structures
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-448-analysis-of-historic-structures-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-461-building-technology-i-materials-and-construction-fall-2004">
+							  	4.461
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-461-building-technology-i-materials-and-construction-fall-2004">
+                               Building Technology I: Materials and Construction
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-461-building-technology-i-materials-and-construction-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-440-basic-structural-design-spring-2009">
+							  	4.462
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-440-basic-structural-design-spring-2009">
+                               Basic Structural Design
+                               (Spring 2009)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-440-basic-structural-design-spring-2009">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-463-building-technology-iii-building-structural-systems-fall-2004">
+							  	4.463
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-463-building-technology-iii-building-structural-systems-fall-2004">
+                               Building Technology III: Building Structural Systems
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-463-building-technology-iii-building-structural-systems-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-463-building-technologies-iii-building-structural-systems-ii-fall-2002">
+							  	4.463
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-463-building-technologies-iii-building-structural-systems-ii-fall-2002">
+                               Building Technologies III: Building Structural Systems II
+                               (Fall 2002)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-463-building-technologies-iii-building-structural-systems-ii-fall-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-491-form-finding-and-structural-optimization-gaudi-workshop-fall-2004">
+							  	4.491
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-491-form-finding-and-structural-optimization-gaudi-workshop-fall-2004">
+                               Form-Finding and Structural Optimization: Gaudi Workshop
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-491-form-finding-and-structural-optimization-gaudi-workshop-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-493-natural-light-in-design-january-iap-2006">
+							  	4.493
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-493-natural-light-in-design-january-iap-2006">
+                               Natural Light in Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-493-natural-light-in-design-january-iap-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-493-emergent-materials-ii-spring-2005">
+							  	4.493
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-493-emergent-materials-ii-spring-2005">
+                               Emergent Materials II
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-493-emergent-materials-ii-spring-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-510-digital-design-fabrication-fall-2008">
+							  	4.510
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-510-digital-design-fabrication-fall-2008">
+                               Digital Design Fabrication
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-510-digital-design-fabrication-fall-2008">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-511-digital-mock-up-workshop-spring-2006">
+							  	4.511
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-511-digital-mock-up-workshop-spring-2006">
+                               Digital Mock-Up Workshop
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-511-digital-mock-up-workshop-spring-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-520-computational-design-i-theory-and-applications-fall-2005">
+							  	4.521
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-520-computational-design-i-theory-and-applications-fall-2005">
+                               Computational Design I: Theory and Applications
+                               (Fall 2005)
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-520-computational-design-i-theory-and-applications-fall-2005">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-580-inquiry-into-computation-and-design-fall-2006">
+							  	4.580
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-580-inquiry-into-computation-and-design-fall-2006">
+                               Inquiry into Computation and Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-580-inquiry-into-computation-and-design-fall-2006">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-607-thinking-about-architecture-in-history-and-at-present-fall-2009">
+							  	4.607
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-607-thinking-about-architecture-in-history-and-at-present-fall-2009">
+                               Thinking About Architecture: In History and at Present
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-607-thinking-about-architecture-in-history-and-at-present-fall-2009">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-638-drawings-numbers-five-centuries-of-digital-design-fall-2002">
+							  	4.638
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-638-drawings-numbers-five-centuries-of-digital-design-fall-2002">
+                               Drawings &amp; Numbers: Five Centuries of Digital Design
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-638-drawings-numbers-five-centuries-of-digital-design-fall-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-645-selected-topics-in-architecture-architecture-from-1750-to-the-present-fall-2004">
+							  	4.645
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-645-selected-topics-in-architecture-architecture-from-1750-to-the-present-fall-2004">
+                               Selected Topics in Architecture: Architecture from 1750 to the Present
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-645-selected-topics-in-architecture-architecture-from-1750-to-the-present-fall-2004">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-661-theory-and-method-in-the-study-of-architecture-and-art-fall-2002">
+							  	4.661
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-661-theory-and-method-in-the-study-of-architecture-and-art-fall-2002">
+                               Theory and Method in the Study of Architecture and Art
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-661-theory-and-method-in-the-study-of-architecture-and-art-fall-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-663-history-of-urban-form-locating-capitalism-producing-early-modern-cities-and-objects-spring-2014">
+							  	4.663
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-663-history-of-urban-form-locating-capitalism-producing-early-modern-cities-and-objects-spring-2014">
+                               History of Urban Form: Locating Capitalism: Producing Early Modern Cities and Objects
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-663-history-of-urban-form-locating-capitalism-producing-early-modern-cities-and-objects-spring-2014">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="odd">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-665-contemporary-architecture-and-critical-debate-spring-2002">
+							  	4.665
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-665-contemporary-architecture-and-critical-debate-spring-2002">
+                               Contemporary Architecture and Critical Debate
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-665-contemporary-architecture-and-critical-debate-spring-2002">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+                
+                    <tr class="even">
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-696-a-global-history-of-architecture-writing-seminar-spring-2008">
+							  	4.696
+							</a>
+						</td>						
+					 	<td>					 		
+                            <a rel="coursePreview"
+    class="preview"
+    href="/courses/architecture/4-696-a-global-history-of-architecture-writing-seminar-spring-2008">
+                               A Global History of Architecture Writing Seminar
+                               
+                            </a>              
+                        </td>                        
+                       	<td>
+							<a rel="coursePreview" class="preview"
+          href="/courses/architecture/4-696-a-global-history-of-architecture-writing-seminar-spring-2008">
+                               
+							   Graduate
+							   
+							</a>
+					  </td>
+                   </tr>
+                
+             </tbody>
+       </table>  
+ 
+ 		
+   
+
+ <div id="coursePreview" class="coursePreview" style="display: none; width: 468px;">
+   	<div id="courseInfoInner">	
+	<a class="close" href="#">
+			<img class="btn_close" alt="Close" title="Close Window" src="/images/close.png">
+		</a>
+				<div class="coursePreviewTop"> <h3 id="courseTitle">Ocean Wave Interaction with Ships and Offshore Energy Systems (13.022)</h3>
+				</div>
+				<div class="coursePreviewBottom">
+					<div class="images">
+						<img id="courseThumb" class="first" alt="Course image thumbnail alt-text goes here." src="">
+							<br />
+						<a href="" id="viewCourse"><img alt="Click here to view this course." src="/images/button_view-course.png">
+						</a>
+					</div>
+					<div class="info">
+						<table class="coursePreviewTable">
+						  <tbody>
+							<tr>
+								 <td colspan="2">
+									<p id="courseDesc" class="intro">Some Description</p>
+								</td>
+							</tr>
+							<tr class="instructor">
+								<td class="first">
+									<p>
+										<strong>Instructor(s)</strong>
+									</p>
+								</td>
+								<td>
+									<p id="courseInstructors">Prof.</p>
+								</td>
+							</tr>
+														
+							<tr>
+								<td class="first">
+									<p>
+										<strong>As Taught In</strong>
+									</p>
+								</td>
+								<td>
+									<p id="courseSem">Spring 2002</p>
+								</td>
+							</tr>							
+							<tr>
+								<td>
+									<p>
+										<strong>Course Number</strong>
+									</p>
+								</td>
+								<td>
+									<p id="courseNo">2.24</p>
+								</td>
+							</tr>
+							
+							<tr id="level">
+								<td>
+									<p>
+										<strong>Level</strong>
+									</p>
+								</td>
+								<td>
+									<p id="courseLevel">Undergraduate/Graduate</p>
+								</td>
+							</tr>		
+							<tr class="last">
+								<td>
+									<p>
+										<strong>Features</strong>
+									</p>
+								</td>
+								<td>
+									<p id="courseFeatures">Lecture Notes, Student Work</p>
+								</td>
+							</tr>
+						  </tbody>
+						</table>
+					</div>		
+				</div>
+			</div>
+		</div>			
+
+                           			     
+					</div><!-- global_inner end -->
+				</div><!-- global_wrapper end -->
+			</div><!-- left end -->
+			<div id="right_global">	
+					<div>
+    
+<div id="portletwrapper-6f63772e7269676874746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a646f6e617465"
+     class="portletWrapper kssattr-portlethash-6f63772e7269676874746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a646f6e617465"><div class="portletStaticText portlet-static-donate"><p class="zero"><a href="http://ocw.mit.edu/donate"><img src="/images/button_donate-now.png" alt="Donate Now." class="donate" /></a></p></div>
+
+</div>
+
+
+
+
+</div>
+	 	
+					
+							     
+				<div class="white_side">
+					
+        <div class="" id="parent-fieldname-bottom_text_1">
+            <h4 class="dept_link">Department of Architecture Links</h4> <ul class="news-dept">     <li><a href="http://architecture.mit.edu/" class="bullet">Architecture Website</a></li>     <li><a href="/courses/mit-curriculum-guide/#4" class="bullet">Department Curriculum</a></li> </ul>
+            
+        </div>
+    
+				</div>	
+				  <div>
+    
+
+
+
+</div>
+
+<!-- RSI google ad space-->
+
+
+<div id="google_ads">    
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">GS_googleAddAdSenseService("ca-pub-6588555046597237");GS_googleEnableAllServices();</script>
+    <script type="text/javascript">GA_googleAddSlot("ca-pub-6588555046597237", "DHP_SLOT_A");GA_googleAddSlot("ca-pub-6588555046597237", "DHP_SLOT_B");GA_googleAddSlot("ca-pub-6588555046597237", "DHP_SLOT_C");</script>
+    <script type="text/javascript">GA_googleFetchAds();</script>
+    <script language="javascript" type="text/javascript">
+GA_googleAddAttr("TYPE","HOUSE");
+GA_googleAddAttr("DEPARTMENT","4");
+GA_googleAddAttr("PG_SECTION","DHP");
+GA_googleAddAttr("PG_AREA","DHP");
+GA_googleAddAttr("PG_TLP","DHP");
+</script>
+    <script type="text/javascript">GA_googleFillSlot("DHP_SLOT_A");</script><script type="text/javascript">GA_googleFillSlot("DHP_SLOT_B");</script><script type="text/javascript">GA_googleFillSlot("DHP_SLOT_C");</script>
+</div>
+
+<!-- End RSI ads--> 
+
+<div>
+    
+
+
+
+</div>
+			        
+			</div><!-- right_global end -->			
+		</div>
+	</div>
+		
+		<div id="bottom">
+			<div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572"
+     class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572"><div class="portletStaticText portlet-static-site-footer"><div id="bottom"><div id="grid"><!-- *begin footer* --> <div role="navigation sitemap" id="footer"><div class="grid_2 alpha" id="foot-c1"><h4 class="footer">Courses</h4> <ul class="foot-bullet">     <li><a href="/courses/find-by-topic/">Find by Topic</a></li>     <li><a href="/courses/find-by-number/">Find by Course Number</a></li>     <li><a href="/courses/find-by-department/">Find by Department</a></li>     <li><a href="/courses/audio-video-courses/">Audio/Video Courses</a></li>     <li><a href="/courses/subtitled/">Courses with Subtitles</a></li>     <li><a href="/courses/online-textbooks/">Online Textbooks</a></li>     <li><a href="/courses/new-courses/">New Courses</a></li>     <li><a href="/courses/most-visited-courses/">Most Visited Courses</a></li>     <li><a href="/courses/ocw-scholar/">OCW Scholar Courses</a></li>     <li><a href="/courses/this-course-at-mit/">This Course at MIT</a></li>     <li><a href="/resources/">Supplemental Resources</a></li>     <li><a href="/courses/translated-courses/">Translated Courses</a></li> </ul></div> <div class="grid_2" id="foot-c2"><h4 class="footer">About</h4> <ul class="foot-bullet">     <li><a href="/about/">About OpenCourseWare</a></li>     <li><a href="/about/site-statistics/">Site Stats</a></li>     <li><a href="/about/ocw-stories/">OCW Stories</a></li>     <li><a href="/about/media-coverage/">Media Coverage</a></li>     <li><a href="/about/newsletter/">Newsletter</a></li>     <li><a href="/about/media-coverage/press-releases/">Press Releases</a></li>     <li><a href="/about/next-decade/">OCW's Next Decade</a></li> </ul></div> <div class="grid_2" id="foot-c3"><h4 class="footer">Donate</h4> <ul class="foot-bullet">     <li><a href="/donate">Make a Donation</a></li>     <li><a href="/donate/why-donate/">Why Donate?</a></li>     <li><a href="/donate/ocw-course-champions-program/">Become a Course Champion</a></li>     <li><a href="/donate/our-supporters/">Our Supporters</a></li>     <li><a href="/donate/other-ways-to-contribute/">Other Ways to Contribute</a></li>     <li><a href="/donate/shop-ocw/">Shop OCW</a></li>     <li><a href="/support/">Become a Corporate Sponsor</a></li> </ul></div> <div class="grid_2" id="foot-c4"><h4 class="footer">Featured Sites</h4> <ul class="foot-bullet">     <li><a href="/high-school/">Highlights for High School</a></li>     <li><a href="/educator/">OCW Educator</a></li>     <li><a href="http://ocw.mit.edu/ans7870/featured/mitx-courses-on-edx.htm">MITx Courses on edX</a></li>     <li><a href="http://teachingexcellence.mit.edu/">Teaching Excellence at MIT</a></li>     <li><a href="http://www.oeconsortium.org/">Open Education Consortium</a></li> </ul> <h4 style="margin-top: 14px;" class="footer">Tools</h4> <ul class="foot-bullet">     <li><a href="/help/">Help &amp; FAQs</a></li>     <li><a href="/jsp/feedback.jsp">Contact Us</a></li>     <li><a href="/search/AdvancedSearch.htm">Advanced Search</a></li>     <li><a href="/help/site-map/">Site Map</a></li>     <li><a href="/terms/">Privacy &amp; Terms of Use</a></li>     <li><a href="/help/rss/">RSS Feeds</a></li> </ul></div> <div itemtype="http://schema.org/CollegeOrUniversity" itemscope="" itemprop="publisher" class="grid_4 omega" id="foot-c5"><h4 class="footer">About <span itemprop="name">MIT OpenCourseWare</span></h4> <p itemprop="description" class="accent">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,200 courses available, OCW is delivering on the promise of open sharing of knowledge.</p></div> <div class="grid_8 alpha" id="foot-copy"><a href="http://web.mit.edu"><img style="width: 195; height: 44;" alt="Massachusetts Institute of Technology logo and name." src="/images/logo_mit.png" /></a>                 <a href="http://www.oeconsortium.org/"><img style="width: 219px; height: 59px; vertical-align: top;" alt="Open Education Consortium logo." src="/images/logo_oec.png" /></a>                 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" itemprop="useRightsUrl" rel="license"><img style="width: 126px; height: 44px; margin-right: 0;" alt="Creative Commons logo with terms BY-NC-SA." src="/images/cc_by-nc-sa.png" /></a> <p class="copyright">&copy; 2001&ndash;2015<br /> Massachusetts Institute of Technology</p> <p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons License</a> and other <a rel="cc:morePermissions" href="/terms/">terms of use</a>.</p></div> <div class="grid_4 omega" id="foot-support"><h4 class="footer">Our Corporate Supporters</h4> <!-- HOME_CORP_LOGO_1 --> <div class="sponsors_google_ads_even" id="div-gpt-ad-1388181177156-0"><script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+</script></div> <!-- HOME_CORP_LOGO_2 --> <div class="sponsors_google_ads_odd" id="div-gpt-ad-1388181177156-1"><script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+</script></div> <!-- HOME_CORP_LOGO_3 --> <div class="sponsors_google_ads_even" id="div-gpt-ad-1388181177156-2"><script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+</script></div> <!-- HOME_CORP_LOGO_4 --> <div class="sponsors_google_ads_odd" id="div-gpt-ad-1388181177156-3"><script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+</script></div> <!-- HOME_CORP_LOGO_5 --> <div class="sponsors_google_ads_even" id="div-gpt-ad-1388181177156-4"><script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+</script></div> <!-- HOME_CORP_LOGO_6 --> <div class="sponsors_google_ads_odd" id="div-gpt-ad-1388181177156-5"><script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+</script></div></div></div></div></div></div>
+
+</div>
+
+
+
+
+
+<noscript><img alt="dcsimg" id="dcsimg" width="1" height="1" src="//statse.webtrendslive.com/dcs8q9s2ag9xjywz8l6x34ik5_6b3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=10.2.10&amp;dcssip=www.ocw.mit.edu"/></noscript>                
+			</div> <!-- bottom grid end -->
+		</div><!-- bottom end -->
+		
+		
+   </body>
+ </html>
